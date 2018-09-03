@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on </title>
+    <title>Publications on Home</title>
     <link>/publication/</link>
-    <description>Recent content in Publications on </description>
+    <description>Recent content in Publications on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/publication/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Accelerometry data in health research: challenges and opportunities. Review and examples</title>
+      <link>/publication/accelerometry-data-in-health-research/</link>
+      <pubDate>Sat, 02 Jun 2018 18:08:38 -0400</pubDate>
+      
+      <guid>/publication/accelerometry-data-in-health-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Connectivity-Informed Adaptive Regularization for Generalized Outcomes</title>
+      <link>/publication/brain-connectivity-informed-regularization-generalized/</link>
+      <pubDate>Tue, 01 May 2018 17:59:50 -0400</pubDate>
+      
+      <guid>/publication/brain-connectivity-informed-regularization-generalized/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Brain Connectivity Informed Regularization Methods for Regression</title>
+      <link>/publication/brain-connectivity-informed-regularization/</link>
+      <pubDate>Thu, 23 Nov 2017 17:24:49 -0400</pubDate>
+      
+      <guid>/publication/brain-connectivity-informed-regularization/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
