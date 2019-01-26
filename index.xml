@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Accelerometry Data in Health Research: Challenges and Opportunities. Review and Examples</title>
+      <link>/publication/accelerometry-data-in-health-research/</link>
+      <pubDate>Sat, 01 Dec 2018 18:08:38 -0400</pubDate>
+      
+      <guid>/publication/accelerometry-data-in-health-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>[in Polish] Aplikacja na studia doktoranckie (Biostatystyka) w USA: notatki nt. procesu rekrutacji</title>
       <link>/post/2018-09-02-applying-for-phd-in-usa/</link>
       <pubDate>Sun, 02 Sep 2018 19:17:23 -0400</pubDate>
@@ -80,7 +89,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Dostalam sie / dostalam zaproszenie do 2. etapu rekrutacji od nieco &lt;strong&gt;ponad 50% z uczelni&lt;/strong&gt;, do ktorych aplikowalam (2. etap to zaproszenie na rozmowe &amp;ldquo;on site&amp;rdquo; lub jego odpowiednik dla studentow przebywajacych poza USA: rozmowa telefoniczna z czlonkami komitetu rekrutacyjnego; w kilku przypadkach nie kontynuowalam procesu do 2. etapu wiedzac, ze dostalam sie juz do miejsca wyzej na liscie moich preferencji).&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Co interesujace, uczelnie, ktore byly mna zainteresowanie, to niemal dokladnie: polowa uczelni z grupy &amp;ldquo;dream schools&amp;rdquo; + polowa z &amp;ldquo;safe&amp;rdquo; + polowa z &amp;ldquo;po srodku&amp;rdquo; 👏👍&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Co interesujace, uczelnie, ktore byly mna zainteresowanie, to niemal dokladnie: polowa uczelni z grupy &amp;ldquo;dream schools&amp;rdquo; + polowa z &amp;ldquo;safe&amp;rdquo; + polowa z &amp;ldquo;po srodku&amp;rdquo; 👏:+1:&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -241,15 +250,6 @@
     </item>
     
     <item>
-      <title>Accelerometry data in health research: challenges and opportunities. Review and examples</title>
-      <link>/publication/accelerometry-data-in-health-research/</link>
-      <pubDate>Sat, 02 Jun 2018 18:08:38 -0400</pubDate>
-      
-      <guid>/publication/accelerometry-data-in-health-research/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Connectivity-Informed Adaptive Regularization for Generalized Outcomes</title>
       <link>/publication/brain-connectivity-informed-regularization-generalized/</link>
       <pubDate>Tue, 01 May 2018 17:59:50 -0400</pubDate>
@@ -264,6 +264,15 @@
       <pubDate>Thu, 23 Nov 2017 17:24:49 -0400</pubDate>
       
       <guid>/publication/brain-connectivity-informed-regularization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[upcoming!] Some topics seen at RStudio 2019 conference</title>
+      <link>/talk/2019-02-computing_club/</link>
+      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
+      
+      <guid>/talk/2019-02-computing_club/</guid>
       <description></description>
     </item>
     

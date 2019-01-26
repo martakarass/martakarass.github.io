@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>ADaptive Empirical Pattern Transformation (ADEPT) with application to walking stride segmentation</title>
@@ -25,8 +27,16 @@
       <pubDate>Mon, 02 Jul 2018 18:39:28 -0400</pubDate>
       
       <guid>/talk/2018-08-whyr/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;../../img/2018-07-whyr/pic12.jpg&#34; alt=&#34;pic1&#34; /&gt;&lt;/p&gt;
-</description>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[upcoming!] Some topics seen at RStudio 2019 conference</title>
+      <link>/talk/2019-02-computing_club/</link>
+      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
+      
+      <guid>/talk/2019-02-computing_club/</guid>
+      <description></description>
     </item>
     
   </channel>
