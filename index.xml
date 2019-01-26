@@ -20,6 +20,92 @@
     </item>
     
     <item>
+      <title>JH Biostat Computing Club 2018-19</title>
+      <link>/resources/computing-club/</link>
+      <pubDate>Sun, 02 Sep 2018 19:17:23 -0400</pubDate>
+      
+      <guid>/resources/computing-club/</guid>
+      <description>&lt;p&gt;I and &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/directory/students/phd.html&#34; target=&#34;_blank&#34;&gt;Guoqing Wang&lt;/a&gt; we are hosting the Department of Biostatistics students  Computing Club for 2018-19 academic year.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Computing Club is one-hour session which gives students opportunities to share and develop computing skills useful for biostatisticians. It is held &lt;strong&gt;every other Tuesday 12:15-1:15 PM&lt;/strong&gt; at JH SPH. Importantly, food 🍕🍌 is provided in every session!&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Please let us know (&lt;em&gt;mkaras2@jhu.edu&lt;/em&gt;, &lt;em&gt;gwang37@jhmi.edu&lt;/em&gt;) if you are interested in presenting! As always, suggestions for topics are welcome - please share us your ideas!&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Past and upcoming topics and locations for 2018-19 academic year are listed below. This will be updated as speakers are scheduled.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Date (Location)&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Topic&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Presenter&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Sep 18, 2018 (E9519)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Data science project workflow&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.benjaminackerman.com/&#34; target=&#34;_blank&#34;&gt;Ben Ackerman&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Oct 16, 2018 (W2029)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;The JHPCE Cluster: What does it do? Does it do things? Let&amp;rsquo;s find out!&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://github.com/jfiksel&#34; target=&#34;_blank&#34;&gt;Jacob Fiksel&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Nov 13, 2018 (E9519)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;R Packages for the first year PhD curriculum (useful for non-phd students too!)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/directory/students/phd.html&#34; target=&#34;_blank&#34;&gt;Lacey Etzkorn&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Nov 27, 2018 (W4030)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Speeding up R with Rcpp&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/directory/students/phd.html&#34; target=&#34;_blank&#34;&gt;Stephen Cristiano&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Jan 29, 2019 (W2029)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Intro to Deep Learning&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/directory/students/phd.html&#34; target=&#34;_blank&#34;&gt;Guoqing Wang&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Feb 12, 2019 (E9519)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Some topics seen at RStudio 2019 conference&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/directory/students/phd.html&#34; target=&#34;_blank&#34;&gt;Marta Karas&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Links to the previous years&amp;rsquo; Computing Club could be found here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2017-18: TODO&lt;/li&gt;
+&lt;li&gt;2016-17: TODO&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.junruidi.com/compclub.html&#34; target=&#34;_blank&#34;&gt;2015-16&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/~ydu/comp_club.html&#34; target=&#34;_blank&#34;&gt;2014-15&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/~jbai/compclub.html&#34; target=&#34;_blank&#34;&gt;2013-14&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/~afisher/ComputingClub/&#34; target=&#34;_blank&#34;&gt;2012-13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/~afrazee/old/computingclub.html&#34; target=&#34;_blank&#34;&gt;2011-12&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/&#34; target=&#34;_blank&#34;&gt;2010-11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/index_0910.html&#34; target=&#34;_blank&#34;&gt;2009-10&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/index_0809.html&#34; target=&#34;_blank&#34;&gt;2008-09&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/index_0708.html&#34; target=&#34;_blank&#34;&gt;2007-08&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/index_0607.html&#34; target=&#34;_blank&#34;&gt;2006-07&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/index_0506.html&#34; target=&#34;_blank&#34;&gt;2005-06&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>[in Polish] Aplikacja na studia doktoranckie (Biostatystyka) w USA: notatki nt. procesu rekrutacji</title>
       <link>/post/2018-09-02-applying-for-phd-in-usa/</link>
       <pubDate>Sun, 02 Sep 2018 19:17:23 -0400</pubDate>
