@@ -97,6 +97,103 @@
     </item>
     
     <item>
+      <title>Some of topics seen at RStudio conference 2019</title>
+      <link>/post/2019-01-26-favs-of-rstudio2019-conference/</link>
+      <pubDate>Sat, 26 Jan 2019 19:17:23 -0400</pubDate>
+      
+      <guid>/post/2019-01-26-favs-of-rstudio2019-conference/</guid>
+      <description>
+
+&lt;p&gt;I spent last days of 2018-19 winter break in Austin, TX where I traveled for RStudio 2019 conference. I attended e-poster session and two days of the conference: Jan 17-18. Below I list some of the topics from the talks that I particularly liked and think I am likely to benefit from in the future.&lt;/p&gt;
+
+&lt;p&gt;Also:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The official repo with abstracts for every session, workshop (together with &lt;strong&gt;workshop files free to download&lt;/strong&gt; for most if not all of them), and e-poster can be accessed &lt;a href=&#34;https://github.com/rstudio/rstudio-conf/tree/master/2019&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-visualization&#34;&gt;Data visualization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#documents-building&#34;&gt;Documents building&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#community-and-personal-development&#34;&gt;Community and personal development&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+
+&lt;h1 id=&#34;data-visualization&#34;&gt;Data visualization&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Tyler Morgan-Wall (&lt;a href=&#34;http://www.tylermw.com/&#34; target=&#34;_blank&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/tylermorganwall&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;) showing stunning gifs and pics while presenting &amp;ldquo;&lt;em&gt;3D mapping, plotting, and printing with rayshader&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Features showed include shadowing, rotating, water transparency, visualization of simulation of different water levels. The talk had possibly the most exciting &amp;ldquo;furutre work&amp;rdquo; announced - because who doesn&amp;rsquo;t get excited about the idea of &amp;ldquo;rotating 3D ggplots&amp;rdquo;? 💘 The &lt;code&gt;rayshader&lt;/code&gt; package is available on GitHub (&lt;a href=&#34;https://github.com/tylermorganwall/rayshader&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;).&lt;/p&gt;
+
+&lt;table style=&#34;table-layout:fixed&#34;&gt;
+&lt;col style=&#34;width:100%&#34; span=&#34;2&#34; /&gt;
+&lt;tr&gt;
+&lt;td&gt; &lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/tyler.gif&#34; alt=&#34;Drawing&#34; style=&#34;width: 100%;&#34;/&gt; &lt;/td&gt;
+&lt;td&gt; &lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/tyler2.png&#34;  alt=&#34;Drawing&#34; style=&#34;weight: 100%;&#34;/&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+    
+
+&lt;p&gt;&lt;sub&gt;&lt;sup&gt;(The gif on the left and img on the right are both sourced from &amp;lsquo;rayshader&amp;rsquo; package GitHub website (&lt;a href=&#34;https://github.com/tylermorganwall/rayshader&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;), as accessed on Jan 26, 2019.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Thomas Lin Pedersen (&lt;a href=&#34;https://www.data-imaginist.com/&#34; target=&#34;_blank&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/thomasp85&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;) giving a &amp;ldquo;&lt;em&gt;gganimate live cookbook&lt;/em&gt;&amp;rdquo; speach (and joining Tyler&amp;rsquo;s talk on the podium of most fun presentations, I guess 😂)&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;gganimate&lt;/code&gt; package was introduced per &amp;ldquo;&lt;em&gt;extension to ggplot2&lt;/em&gt;&amp;rdquo; providing &amp;ldquo;&lt;em&gt;implementation of the grammar of animated graphics&lt;/em&gt;&amp;rdquo;. Presentation slides are available online  &lt;a href=&#34;https://www.data-imaginist.com/slides/rstudioconf2019/assets/player/keynotedhtmlplayer#1&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;; IMHO worth checking out for inspiring ways of presenting data over time! Besides, &lt;a href=&#34;https://gganimate.com&#34; target=&#34;_blank&#34;&gt;https://gganimate.com&lt;/a&gt; package website comes with a bunch of examples, as the one below.&lt;/p&gt;
+
+&lt;table style=&#34;table-layout:fixed&#34;&gt;
+&lt;col style=&#34;width:100%&#34;  /&gt;
+&lt;tr&gt; 
+ &lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/thomas.gif&#34;  alt=&#34;Drawing&#34; style=&#34;weight: 100%;&#34;/&gt; 
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;sub&gt;&lt;sup&gt;(The gif sourced from &amp;lsquo;gganimate&amp;rsquo; package website (&lt;a href=&#34;https://gganimate.com/&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;), as accessed on Jan 26, 2019.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;documents-building&#34;&gt;Documents building&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Yihui Xie (&lt;a href=&#34;https://yihui.name/&#34; target=&#34;_blank&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/xieyihui&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;) leaving the audience very enthusiastic (or maybe more like: blown away) with all the recent develpment in document building.&lt;/p&gt;
+
+&lt;p&gt;The presentation starts with &amp;ldquo;In HTML and the Web I trust&amp;rdquo; (😍 I share like 99% of my work summaries with advisors and colleagues in a form HTML). With &lt;code&gt;pagedown&lt;/code&gt; we can now go ahead and get &lt;strong&gt;&lt;em&gt;paged&lt;/em&gt;&lt;/strong&gt; HTML documents, e.g. business card, resume, poster. Fairly 👶 development (&amp;rdquo;&lt;em&gt;status: experimental&lt;/em&gt;&amp;rdquo;).
+Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019-rstudio-conf-pagedown.html#1&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/yihui.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;sub&gt;&lt;sup&gt;(Slides 10, 11, 15, 17 from RStudio 2019 conference talk &amp;ldquo;pagedown: Creating Beautiful PDFs with R Markdown + CSS + Your Web Browser&amp;rdquo; by Yihui Xie and Romain Lesur on Jan 18, 2019 in Austin, TX.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Rich Iannone (&lt;a href=&#34;http://rich-iannone.github.io/DiagrammeR/&#34; target=&#34;_blank&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/riannone&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;) introducing the &lt;code&gt;gt&lt;/code&gt; package.&lt;/p&gt;
+
+&lt;p&gt;With &lt;code&gt;gt&lt;/code&gt; package (&lt;a href=&#34;https://github.com/rstudio/gt&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;), one can turn a data table into &amp;ldquo;&lt;em&gt;information-rich, publication-quality&lt;/em&gt;&amp;rdquo; 🎯 table outputs. The table outputs can be in HTML, LaTeX, and RTF. The &amp;ldquo;modular&amp;rdquo; way of building these reminds me of ggplot2 plots construction. Presentation slides are available &lt;a href=&#34;https://github.com/rich-iannone/presentations/tree/master/2019_01-19-rstudio_conf_gt&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/rich2.png&#34; alt=&#34;&#34; /&gt;
+&lt;sub&gt;&lt;sup&gt;(Slide 5. from RStudio 2019 conference talk &amp;ldquo;Introducing the &amp;lsquo;gt&amp;rsquo; package&amp;rdquo; by Rich Iannone on Jan 18, 2019 in Austin, TX.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;community-and-personal-development&#34;&gt;Community and personal development&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;David Robinson (&lt;a href=&#34;http://varianceexplained.org/about/&#34; target=&#34;_blank&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/drob&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;) delivering a keynoote talk &amp;ldquo;The unreasonable effectiveness of public work&amp;rdquo; (&lt;a href=&#34;https://bit.ly/drob-rstudio-2019&#34; target=&#34;_blank&#34;&gt;slides&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;IMHO a phenomenal speach: a kind and resonating talk after which one not only wants to stand up and change the world right now 🔥, but also has same feeling a week after too 💪. Review the slides to: (a) learn Author&amp;rsquo;s points on why it so worth it to spend time on public work, (b) for a pack of actual how-to examples and guidelines on building a public portfolio, &amp;copy; for a bunch of interesting points made about a value of work (Author&amp;rsquo;s work, but fairly generalizable IMHO); my favourite is copy-pasted below! I particularly appreciated that all stages of advancement in building online portfolio were addressed, 👶-steps including!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/david1.png&#34; alt=&#34;&#34; /&gt;
+&lt;sub&gt;&lt;sup&gt;(Slide 63. from RStudio 2019 conference keynote talk &amp;ldquo;The unreasonable effectiveness of public work&amp;rdquo; by David Robinson on Jan 18, 2019 in Austin, TX.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Jesse Mostipak (&lt;a href=&#34;https://www.jessemaegan.com/&#34; target=&#34;_blank&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/kierisi&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;) talking about experience of building R4DS online learning community.&lt;/p&gt;
+
+&lt;p&gt;Some empowering messages came in the lines of this talk - just look at the slides pics below to get the flavour 🙌. My take-home ones include a description of a data scientist: &amp;ldquo;&lt;em&gt;constantly learning, constantly making mistakes, constantly learning from them&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/jesse_b.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;sub&gt;&lt;sup&gt;(Pictures taken during RStudio 2019 conference talk &amp;ldquo;R4DS online learning community&amp;rdquo; by Jesse Mostipak on Jan 17, 2019 in Austin, TX.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Accelerometry Data in Health Research: Challenges and Opportunities. Review and Examples</title>
       <link>/publication/accelerometry-data-in-health-research/</link>
       <pubDate>Sat, 01 Dec 2018 18:08:38 -0400</pubDate>
