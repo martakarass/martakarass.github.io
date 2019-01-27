@@ -11,18 +11,9 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Accelerometry Data in Health Research: Challenges and Opportunities. Review and Examples</title>
-      <link>/publication/accelerometry-data-in-health-research/</link>
-      <pubDate>Sat, 01 Dec 2018 18:08:38 -0400</pubDate>
-      
-      <guid>/publication/accelerometry-data-in-health-research/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>JH Biostat Computing Club 2018-19</title>
       <link>/resources/computing-club/</link>
-      <pubDate>Sun, 02 Sep 2018 19:17:23 -0400</pubDate>
+      <pubDate>Sat, 26 Jan 2019 19:17:23 -0400</pubDate>
       
       <guid>/resources/computing-club/</guid>
       <description>&lt;p&gt;I and &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/directory/students/phd.html&#34; target=&#34;_blank&#34;&gt;Guoqing Wang&lt;/a&gt; we are hosting the Department of Biostatistics students  Computing Club for 2018-19 academic year.&lt;/p&gt;
@@ -47,7 +38,7 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;Sep 18, 2018 (E9519)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Data science project workflow&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Data science project workflow (&lt;a href=&#34;http://www.benjaminackerman.com/files/biostat_computing_club_slides.pdf&#34; target=&#34;_blank&#34;&gt;slides&lt;/a&gt;)&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://www.benjaminackerman.com/&#34; target=&#34;_blank&#34;&gt;Ben Ackerman&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
@@ -103,6 +94,15 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Accelerometry Data in Health Research: Challenges and Opportunities. Review and Examples</title>
+      <link>/publication/accelerometry-data-in-health-research/</link>
+      <pubDate>Sat, 01 Dec 2018 18:08:38 -0400</pubDate>
+      
+      <guid>/publication/accelerometry-data-in-health-research/</guid>
+      <description></description>
     </item>
     
     <item>
