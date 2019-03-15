@@ -11,5 +11,23 @@
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>rstats</title>
+      <link>/tags/rstats/</link>
+      <pubDate>Fri, 15 Mar 2019 11:54:53 -0400</pubDate>
+      
+      <guid>/tags/rstats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>signal-processing</title>
+      <link>/tags/signal-processing/</link>
+      <pubDate>Fri, 15 Mar 2019 11:54:53 -0400</pubDate>
+      
+      <guid>/tags/signal-processing/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

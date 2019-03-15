@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="author" content="Marta Karas">
+  <meta name="description" content="Ph.D. student in Biostatistics">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/project/project-runstats/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-111897145-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Home">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Home">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/project/project-runstats/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@https://twitter.com/martakarass">
+  <meta property="twitter:creator" content="@https://twitter.com/martakarass">
+  
+  <meta property="og:site_name" content="Home">
+  <meta property="og:url" content="/project/project-runstats/">
+  <meta property="og:title" content="runstats R package: Fast Computation of Running Statistics for Time Series | Home">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-03-15T11:54:53-04:00">
+  
+  <meta property="article:modified_time" content="2019-03-15T11:54:53-04:00">
+  
+
+  
+
+  <title>runstats R package: Fast Computation of Running Statistics for Time Series | Home</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#resources">
+            
+            <span>Resources</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/docs/mkaras-cv.pdf">
+            
+            <span>Resume</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article article-project" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+
+    <div class="pub-title">
+      <h1 itemprop="name">runstats R package: Fast Computation of Running Statistics for Time Series</h1>
+      <span class="pub-authors" itemprop="author">&nbsp;</span>
+      <span class="pull-right">
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=runstats%20R%20package%3a%20Fast%20Computation%20of%20Running%20Statistics%20for%20Time%20Series&amp;url=%2fproject%2fproject-runstats%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fproject%2fproject-runstats%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fproject%2fproject-runstats%2f&amp;title=runstats%20R%20package%3a%20Fast%20Computation%20of%20Running%20Statistics%20for%20Time%20Series"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fproject%2fproject-runstats%2f&amp;title=runstats%20R%20package%3a%20Fast%20Computation%20of%20Running%20Statistics%20for%20Time%20Series"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=runstats%20R%20package%3a%20Fast%20Computation%20of%20Running%20Statistics%20for%20Time%20Series&amp;body=%2fproject%2fproject-runstats%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </span>
+    </div>
+
+    
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>Package <code>runstats</code> provides methods for fast computation of running sample statistics for time series. The methods utilize Convolution Theorem to compute convolutions via Fast Fourier Transform (FFT). Implemented running statistics include:</p>
+
+<ol>
+<li>mean,</li>
+<li>standard deviation,</li>
+<li>variance,</li>
+<li>covariance,</li>
+<li>correlation,</li>
+<li>euclidean distance.</li>
+</ol>
+
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#website">Website</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#running-statistics">Running statistics</a></li>
+<li><a href="#performance">Performance</a>
+<ul>
+<li><a href="#compare-runningcov-runstats-with-a-conventional-method">Compare  <code>RunningCov {runstats}</code> with a conventional method</a></li>
+<li><a href="#compare-runningcov-runstats-with-sliding-cov-dvmisc-c-implementation">Compare <code>RunningCov {runstats}</code> with <code>sliding_cov {dvmisc}</code> c++ implementation</a></li>
+<li><a href="#platform-and-system-information">Platform and system information</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+<h1 id="website">Website</h1>
+
+<p>Package website is located <a href="https://martakarass.github.io/runstats/" target="_blank">here</a>.</p>
+
+<h1 id="installation">Installation</h1>
+
+<pre><code class="language-r">devtools::install_github(&quot;martakarass/runstats&quot;)
+</code></pre>
+
+<h1 id="usage">Usage</h1>
+
+<pre><code class="language-r">library(runstats)
+
+## Example: running correlation
+x0 &lt;- sin(seq(0, 2 * pi * 5, length.out = 1000))
+x  &lt;- x0 + rnorm(1000, sd = 0.1)
+pattern &lt;- x0[1:100]
+out1 &lt;- RunningCor(x, pattern)
+out2 &lt;- RunningCor(x, pattern, circular = TRUE)
+
+## Example: running mean
+x &lt;- cumsum(rnorm(1000))
+out1 &lt;- RunningMean(x, W = 100)
+out2 &lt;- RunningMean(x, W = 100, circular = TRUE)
+</code></pre>
+
+<h1 id="running-statistics">Running statistics</h1>
+
+<p>To better explain the details of running statistics, package&rsquo;s function <code>runstats.demo(func.name)</code> allows to visualize how the output of each running statistics method is generated. To run the demo, use <code>func.name</code> being one of the methods&rsquo; names:</p>
+
+<ol>
+<li><code>&quot;RunningMean&quot;</code>,</li>
+<li><code>&quot;RunningSd&quot;</code>,</li>
+<li><code>&quot;RunningVar&quot;</code>,</li>
+<li><code>&quot;RunningCov&quot;</code>,</li>
+<li><code>&quot;RunningCor&quot;</code>,</li>
+<li><code>&quot;RunningL2Norm&quot;</code>.</li>
+</ol>
+
+<pre><code class="language-r">## Example: demo for running correlation method  
+runstats.demo(&quot;RunningCor&quot;)
+</code></pre>
+
+<p><img src="https://i.imgur.com/JQObAu7.gif" alt="" /></p>
+
+<pre><code class="language-r">## Example: demo for running mean method 
+runstats.demo(&quot;RunningMean&quot;)
+</code></pre>
+
+<p><img src="https://i.imgur.com/FWah3aG.gif" alt="" /></p>
+
+<h1 id="performance">Performance</h1>
+
+<p>We use <code>rbenchmark</code> to measure elapsed time of <code>RunningCov</code> execution, for different lengths of time-series <code>x</code> and fixed length of the shorter pattern <code>y</code>.</p>
+
+<pre><code class="language-r">library(rbenchmark)
+library(ggplot2)
+
+set.seed (20190315)
+x.N.seq &lt;- 10^(3:7)
+x.list  &lt;- lapply(x.N.seq, function(N) runif(N))
+y &lt;- runif(100)
+
+## Benchmark execution time of RunningCov 
+out.df &lt;- data.frame()
+for (x.tmp in x.list){
+  out.df.tmp &lt;- benchmark(
+    &quot;runstats&quot; = runstats::RunningCov(x.tmp, y),
+    replications = 10,
+    columns = c(&quot;test&quot;, &quot;replications&quot;, &quot;elapsed&quot;,
+                &quot;relative&quot;, &quot;user.self&quot;, &quot;sys.self&quot;))
+  out.df.tmp$x_length &lt;- length(x.tmp)
+  out.df.tmp$pattern_length &lt;- length(y)
+  out.df &lt;- rbind(out.df, out.df.tmp)
+}
+</code></pre>
+
+<pre><code class="language-r">knitr::kable(out.df)
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="left">test</th>
+<th align="right">replications</th>
+<th align="right">elapsed</th>
+<th align="right">relative</th>
+<th align="right">user.self</th>
+<th align="right">sys.self</th>
+<th align="right">x_length</th>
+<th align="right">pattern_length</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">runstats</td>
+<td align="right">10</td>
+<td align="right">0.005</td>
+<td align="right">1</td>
+<td align="right">0.004</td>
+<td align="right">0.001</td>
+<td align="right">1000</td>
+<td align="right">100</td>
+</tr>
+
+<tr>
+<td align="left">runstats</td>
+<td align="right">10</td>
+<td align="right">0.052</td>
+<td align="right">1</td>
+<td align="right">0.035</td>
+<td align="right">0.009</td>
+<td align="right">10000</td>
+<td align="right">100</td>
+</tr>
+
+<tr>
+<td align="left">runstats</td>
+<td align="right">10</td>
+<td align="right">0.577</td>
+<td align="right">1</td>
+<td align="right">0.499</td>
+<td align="right">0.063</td>
+<td align="right">100000</td>
+<td align="right">100</td>
+</tr>
+
+<tr>
+<td align="left">runstats</td>
+<td align="right">10</td>
+<td align="right">10.992</td>
+<td align="right">1</td>
+<td align="right">9.908</td>
+<td align="right">0.601</td>
+<td align="right">1000000</td>
+<td align="right">100</td>
+</tr>
+
+<tr>
+<td align="left">runstats</td>
+<td align="right">10</td>
+<td align="right">170.676</td>
+<td align="right">1</td>
+<td align="right">148.816</td>
+<td align="right">7.682</td>
+<td align="right">10000000</td>
+<td align="right">100</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="compare-runningcov-runstats-with-a-conventional-method">Compare  <code>RunningCov {runstats}</code> with a conventional method</h2>
+
+<p>To compare <code>runstats</code> performance with &ldquo;conventional&rdquo; loop-based way of computing running covariance in <code>R</code>, we use <code>rbenchmark</code> package to measure elapsed time of <code>runstats::RunningCov</code> and running covariance implemented with <code>sapply</code> loop, for different lengths of time-series <code>x</code> and fixed length of the shorter time-series <code>y</code>.</p>
+
+<pre><code class="language-r">## Conventional approach 
+RunningCov.sapply &lt;- function(x, y){
+  l_x &lt;- length(x)
+  l_y &lt;- length(y)
+  sapply(1:(l_x - l_y + 1), function(i){
+    cov(x[i:(i+l_y-1)], y)
+  })
+}
+
+out.df2 &lt;- data.frame()
+for (x.tmp in x.list[c(1:4)]){
+  out.df.tmp &lt;- benchmark(
+    &quot;conventional&quot; = RunningCov.sapply(x.tmp, y),
+    &quot;runstats&quot; = runstats::RunningCov(x.tmp, y),
+    replications = 10,
+    columns = c(&quot;test&quot;, &quot;replications&quot;, &quot;elapsed&quot;,
+                &quot;relative&quot;, &quot;user.self&quot;, &quot;sys.self&quot;))
+  out.df.tmp$x_length &lt;- length(x.tmp)
+  out.df2 &lt;- rbind(out.df2, out.df.tmp)
+}
+</code></pre>
+
+<p>Benchmark results</p>
+
+<pre><code class="language-r">plt1 &lt;- 
+  ggplot(out.df2, aes(x = x_length, y = elapsed, color = test)) + 
+  geom_line() + geom_point(size = 3) + scale_x_log10() + 
+  theme_minimal(base_size = 14) + 
+  labs(x = &quot;Vector length of x&quot;,
+       y = &quot;Elapsed [s]&quot;, color = &quot;Method&quot;, 
+       title = &quot;Running covariance (x,y) rbenchmark&quot;, 
+       subtitle = &quot;Vector length of y = 100&quot;) + 
+  theme(legend.position = &quot;bottom&quot;)
+plt2 &lt;- 
+  plt1 + 
+  scale_y_log10() + 
+  labs(y = &quot;Log of elapsed [s]&quot;, title = &quot;&quot;)
+
+cowplot::plot_grid(plt1, plt2, nrow = 1, labels = c('A', 'B'))
+</code></pre>
+
+<p><img src="../../img/2019-03-15-project-runstats/README-performance_rbenchmark_compare_conventional-1.png" alt="" /></p>
+
+<h2 id="compare-runningcov-runstats-with-sliding-cov-dvmisc-c-implementation">Compare <code>RunningCov {runstats}</code> with <code>sliding_cov {dvmisc}</code> c++ implementation</h2>
+
+<p><code>dvmisc</code> package (<a href="https://github.com/vandomed/dvmisc" target="_blank">GitHub</a>, <a href="https://cran.r-project.org/web/packages/dvmisc/index.html" target="_blank">CRAN</a>) is a package for <em>Convenience Functions, Moving Window Statistics, and Graphics</em>, and includes functions for calculating moving-window statistics efficiently via c++, written by <a href="https://vandomed.github.io/" target="_blank">Dane Van Domelen</a>. Here, we compare <code>RunningCov {runstats}</code> performance with c++ implementation from <code>sliding_cov {dvmisc}</code>. Dane contributed the code in its large part.</p>
+
+<pre><code class="language-r"># devtools::install_github(&quot;vandomed/dvmisc&quot;)
+library(dvmisc)
+
+set.seed(20100317)
+x.N.seq &lt;- 10^(3:6)
+x.list  &lt;- lapply(x.N.seq, function(N) runif(N))
+
+y &lt;- runif(10)
+out.df_y10 &lt;- data.frame()
+for (x.tmp in x.list){
+  out.df.tmp &lt;- benchmark(
+    &quot;runstats&quot; = runstats::RunningCov(x.tmp, y),
+    &quot;dvmisc&quot; = dvmisc::sliding_cov(y, x.tmp), 
+    replications = 10,
+    columns = c(&quot;test&quot;, &quot;replications&quot;, &quot;elapsed&quot;,
+                &quot;relative&quot;, &quot;user.self&quot;, &quot;sys.self&quot;))
+  out.df.tmp$x_length &lt;- length(x.tmp)
+  out.df_y10 &lt;- rbind(out.df_y10, out.df.tmp)
+}
+
+y &lt;- runif(100)
+out.df_y100 &lt;- data.frame()
+for (x.tmp in x.list){
+  out.df.tmp &lt;- benchmark(
+    &quot;runstats&quot; = runstats::RunningCov(x.tmp, y),
+    &quot;dvmisc&quot; = dvmisc::sliding_cov(y, x.tmp), 
+    replications = 10,
+    columns = c(&quot;test&quot;, &quot;replications&quot;, &quot;elapsed&quot;,
+                &quot;relative&quot;, &quot;user.self&quot;, &quot;sys.self&quot;))
+  out.df.tmp$x_length &lt;- length(x.tmp)
+  out.df_y100 &lt;- rbind(out.df_y100, out.df.tmp)
+}
+
+y &lt;- runif(1000)
+out.df_y1000 &lt;- data.frame()
+for (x.tmp in x.list){
+  out.df.tmp &lt;- benchmark(
+    &quot;runstats&quot; = runstats::RunningCov(x.tmp, y),
+    &quot;dvmisc&quot; = dvmisc::sliding_cov(y, x.tmp), 
+    replications = 10,
+    columns = c(&quot;test&quot;, &quot;replications&quot;, &quot;elapsed&quot;,
+                &quot;relative&quot;, &quot;user.self&quot;, &quot;sys.self&quot;))
+  out.df.tmp$x_length &lt;- length(x.tmp)
+  out.df_y1000 &lt;- rbind(out.df_y1000, out.df.tmp)
+}
+
+y &lt;- runif(10000)
+out.df_y10000 &lt;- data.frame()
+for (x.tmp in x.list){
+  out.df.tmp &lt;- benchmark(
+    &quot;runstats&quot; = runstats::RunningCov(x.tmp, y),
+    &quot;dvmisc&quot; = dvmisc::sliding_cov(y, x.tmp), 
+    replications = 10,
+    columns = c(&quot;test&quot;, &quot;replications&quot;, &quot;elapsed&quot;,
+                &quot;relative&quot;, &quot;user.self&quot;, &quot;sys.self&quot;))
+  out.df.tmp$x_length &lt;- length(x.tmp)
+  out.df_y10000 &lt;- rbind(out.df_y10000, out.df.tmp)
+}
+</code></pre>
+
+<p>Benchmark results</p>
+
+<pre><code class="language-r">get.plt &lt;- function(data, subtitle){
+  ggplot(data, aes(x = x_length, y = elapsed, color = test)) + 
+    geom_line() + geom_point(size = 3) + scale_x_log10() + 
+    theme_minimal(base_size = 14) +  scale_y_log10() + 
+    labs(x = &quot;Vector length of x&quot;,
+         y = &quot;Log of elapsed [s]&quot;, 
+         color = &quot;Method&quot;, 
+         subtitle = subtitle) + 
+    theme(legend.position = &quot;bottom&quot;)
+}
+
+plt1 &lt;- get.plt(out.df_y10, &quot;Vector length of y = 10&quot;) + 
+  labs(title = &quot;Running covariance (x,y) rbenchmark&quot;)
+plt2 &lt;- get.plt(out.df_y100,   &quot;Vector length of y = 100&quot;)
+plt3 &lt;- get.plt(out.df_y1000,  &quot;Vector length of y = 1,000&quot;)
+plt4 &lt;- get.plt(out.df_y10000, &quot;Vector length of y = 1,0000&quot;)
+
+cowplot::plot_grid(plt1, plt2, plt3, plt4, nrow = 2, labels = c('A', 'B', 'C', 'D'))
+</code></pre>
+
+<p><img src="../../img/2019-03-15-project-runstats/README-performance_rbenchmark_compare_dvmisc-1.png" alt="" /></p>
+
+<h2 id="platform-and-system-information">Platform and system information</h2>
+
+<pre><code class="language-r">sessioninfo::platform_info()
+#&gt;  setting  value                       
+#&gt;  version  R version 3.5.2 (2018-12-20)
+#&gt;  os       macOS Mojave 10.14.2        
+#&gt;  system   x86_64, darwin15.6.0        
+#&gt;  ui       X11                         
+#&gt;  language (EN)                        
+#&gt;  collate  en_US.UTF-8                 
+#&gt;  ctype    en_US.UTF-8                 
+#&gt;  tz       America/New_York            
+#&gt;  date     2019-03-15
+Sys.info()[c(&quot;sysname&quot;, &quot;release&quot;, &quot;version&quot;, &quot;machine&quot;)]
+#&gt;                                                                                            sysname 
+#&gt;                                                                                           &quot;Darwin&quot; 
+#&gt;                                                                                            release 
+#&gt;                                                                                           &quot;18.2.0&quot; 
+#&gt;                                                                                            version 
+#&gt; &quot;Darwin Kernel Version 18.2.0: Mon Nov 12 20:24:46 PST 2018; root:xnu-4903.231.4~2/RELEASE_X86_64&quot; 
+#&gt;                                                                                            machine 
+#&gt;                                                                                           &quot;x86_64&quot;
+</code></pre>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/rstats">rstats</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/signal-processing">signal-processing</a>
+  
+</div>
+
+
+
+
+    
+    
+    
+
+    
+      
+      
+      
+      
+
+      
+      
+      
+      
+    
+
+  </div>
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

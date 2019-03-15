@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>signal-processing on Home</title>
+    <link>/tags/signal-processing/</link>
+    <description>Recent content in signal-processing on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Fri, 15 Mar 2019 11:54:53 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/signal-processing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>runstats R package: Fast Computation of Running Statistics for Time Series</title>
+      <link>/project/project-runstats/</link>
+      <pubDate>Fri, 15 Mar 2019 11:54:53 -0400</pubDate>
+      
+      <guid>/project/project-runstats/</guid>
+      <description>Package runstats provides methods for fast computation of running sample statistics for time series. The methods utilize Convolution Theorem to compute convolutions via Fast Fourier Transform (FFT). Implemented running statistics include:
+ mean, standard deviation, variance, covariance, correlation, euclidean distance.  Table of Contents  Website Installation Usage Running statistics Performance  Compare RunningCov {runstats} with a conventional method Compare RunningCov {runstats} with sliding_cov {dvmisc} c++ implementation Platform and system information    Website Package website is located here.</description>
+    </item>
+    
+  </channel>
+</rss>

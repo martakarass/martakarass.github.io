@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/project/project-runstats/</loc>
+      <lastmod>2019-03-15T11:54:53-04:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/resources/computing-club/</loc>
       <lastmod>2019-01-26T19:17:23-04:00</lastmod>
     </url>
@@ -158,6 +167,16 @@
     
     <url>
     
+      <loc>/project/</loc>
+      <lastmod>2019-03-15T11:54:53-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/publication_types/</loc>
       <lastmod>2018-12-01T18:08:38-04:00</lastmod>
       <priority>0</priority>
@@ -179,6 +198,26 @@
     <url>
     
       <loc>/tags/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/rstats/</loc>
+      <lastmod>2019-03-15T11:54:53-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/signal-processing/</loc>
+      <lastmod>2019-03-15T11:54:53-04:00</lastmod>
       <priority>0</priority>
     </url>
     
