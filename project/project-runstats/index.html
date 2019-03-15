@@ -362,7 +362,7 @@
 <li><a href="#running-statistics">Running statistics</a></li>
 <li><a href="#performance">Performance</a>
 <ul>
-<li><a href="#compare-runningcov-runstats-with-a-conventional-method">Compare  <code>RunningCov {runstats}</code> with a conventional method</a></li>
+<li><a href="#compare-runningcov-runstats-with-a-conventional-method">Compare <code>RunningCov {runstats}</code> with a conventional method</a></li>
 <li><a href="#compare-runningcov-runstats-with-sliding-cov-dvmisc-c-implementation">Compare <code>RunningCov {runstats}</code> with <code>sliding_cov {dvmisc}</code> c++ implementation</a></li>
 <li><a href="#platform-and-system-information">Platform and system information</a></li>
 </ul></li>
@@ -522,7 +522,7 @@ for (x.tmp in x.list){
 </tbody>
 </table>
 
-<h2 id="compare-runningcov-runstats-with-a-conventional-method">Compare  <code>RunningCov {runstats}</code> with a conventional method</h2>
+<h2 id="compare-runningcov-runstats-with-a-conventional-method">Compare <code>RunningCov {runstats}</code> with a conventional method</h2>
 
 <p>To compare <code>runstats</code> performance with &ldquo;conventional&rdquo; loop-based way of computing running covariance in <code>R</code>, we use <code>rbenchmark</code> package to measure elapsed time of <code>runstats::RunningCov</code> and running covariance implemented with <code>sapply</code> loop, for different lengths of time-series <code>x</code> and fixed length of the shorter time-series <code>y</code>.</p>
 
@@ -567,7 +567,7 @@ plt2 &lt;-
 cowplot::plot_grid(plt1, plt2, nrow = 1, labels = c('A', 'B'))
 </code></pre>
 
-<p><img src="../../img/2019-03-15-project-runstats/README-performance_rbenchmark_compare_conventional-1.png" alt="" /></p>
+<p><img src="../../img/2019-03-15-project-runstats/README-performance_rbenchmark_compare_conventional.csv-1.png" alt="" /></p>
 
 <h2 id="compare-runningcov-runstats-with-sliding-cov-dvmisc-c-implementation">Compare <code>RunningCov {runstats}</code> with <code>sliding_cov {dvmisc}</code> c++ implementation</h2>
 
@@ -576,48 +576,35 @@ cowplot::plot_grid(plt1, plt2, nrow = 1, labels = c('A', 'B'))
 <pre><code class="language-r"># devtools::install_github(&quot;vandomed/dvmisc&quot;)
 library(dvmisc)
 
-set.seed(20100317)
+set.seed(20100315)
 x.N.seq &lt;- 10^(3:6)
 x.list  &lt;- lapply(x.N.seq, function(N) runif(N))
 
-y &lt;- runif(10)
-out.df_y10 &lt;- data.frame()
-for (x.tmp in x.list){
-  out.df.tmp &lt;- benchmark(
-    &quot;runstats&quot; = runstats::RunningCov(x.tmp, y),
-    &quot;dvmisc&quot; = dvmisc::sliding_cov(y, x.tmp), 
-    replications = 10,
-    columns = c(&quot;test&quot;, &quot;replications&quot;, &quot;elapsed&quot;,
-                &quot;relative&quot;, &quot;user.self&quot;, &quot;sys.self&quot;))
-  out.df.tmp$x_length &lt;- length(x.tmp)
-  out.df_y10 &lt;- rbind(out.df_y10, out.df.tmp)
+get.out.df &lt;- function(y){
+  out.df &lt;- data.frame()
+  for (x.tmp in x.list){
+    if (length(x.tmp) &lt; length(y)){
+      out.df.tmp &lt;- data.frame(
+        test = NA,  replications = NA, elapsed = NA, relative = NA,
+        user.self = NA, sys.self = NA)
+    } else {
+      out.df.tmp &lt;- benchmark(
+        &quot;runstats&quot; = runstats::RunningCov(x.tmp, y),
+        &quot;dvmisc&quot; = dvmisc::sliding_cov(y, x.tmp), 
+        replications = 10,
+        columns = c(&quot;test&quot;, &quot;replications&quot;, &quot;elapsed&quot;,
+                    &quot;relative&quot;, &quot;user.self&quot;, &quot;sys.self&quot;))
+    }
+    out.df.tmp$x_length &lt;- length(x.tmp)
+    out.df &lt;- rbind(out.df, out.df.tmp)
+  }
+  return(out.df)
 }
 
-y &lt;- runif(100)
-out.df_y100 &lt;- data.frame()
-for (x.tmp in x.list){
-  out.df.tmp &lt;- benchmark(
-    &quot;runstats&quot; = runstats::RunningCov(x.tmp, y),
-    &quot;dvmisc&quot; = dvmisc::sliding_cov(y, x.tmp), 
-    replications = 10,
-    columns = c(&quot;test&quot;, &quot;replications&quot;, &quot;elapsed&quot;,
-                &quot;relative&quot;, &quot;user.self&quot;, &quot;sys.self&quot;))
-  out.df.tmp$x_length &lt;- length(x.tmp)
-  out.df_y100 &lt;- rbind(out.df_y100, out.df.tmp)
-}
-
-y &lt;- runif(1000)
-out.df_y1000 &lt;- data.frame()
-for (x.tmp in x.list){
-  out.df.tmp &lt;- benchmark(
-    &quot;runstats&quot; = runstats::RunningCov(x.tmp, y),
-    &quot;dvmisc&quot; = dvmisc::sliding_cov(y, x.tmp), 
-    replications = 10,
-    columns = c(&quot;test&quot;, &quot;replications&quot;, &quot;elapsed&quot;,
-                &quot;relative&quot;, &quot;user.self&quot;, &quot;sys.self&quot;))
-  out.df.tmp$x_length &lt;- length(x.tmp)
-  out.df_y1000 &lt;- rbind(out.df_y1000, out.df.tmp)
-}
+out.df_y10    &lt;- get.out.df(runif(10^1))
+out.df_y100   &lt;- get.out.df(runif(10^2))
+out.df_y1000  &lt;- get.out.df(runif(10^3))
+out.df_y10000 &lt;- get.out.df(runif(10^4))
 
 y &lt;- runif(10000)
 out.df_y10000 &lt;- data.frame()
