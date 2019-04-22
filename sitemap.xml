@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/project/project-adeptdata/</loc>
+      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/project/project-runstats/</loc>
       <lastmod>2019-03-15T11:54:53-04:00</lastmod>
     </url>
@@ -177,7 +186,7 @@
     <url>
     
       <loc>/project/</loc>
-      <lastmod>2019-03-15T11:54:53-04:00</lastmod>
+      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -215,8 +224,38 @@
     
     <url>
     
+      <loc>/tags/accelerometry/</loc>
+      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/data/</loc>
+      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/data-set/</loc>
+      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/tags/rstats/</loc>
-      <lastmod>2019-03-15T11:54:53-04:00</lastmod>
+      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
       <priority>0</priority>
     </url>
     

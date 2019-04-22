@@ -7,13 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Fri, 15 Mar 2019 11:54:53 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 22 Apr 2019 11:54:53 -0400</lastBuildDate>
     
 	<atom:link href="/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>runstats R package: Fast Computation of Running Statistics for Time Series</title>
+      <title>&#39;adeptdata&#39; R package: Raw Accelerometry Data Sets and Their Derivatives</title>
+      <link>/project/project-adeptdata/</link>
+      <pubDate>Mon, 22 Apr 2019 11:54:53 -0400</pubDate>
+      
+      <guid>/project/project-adeptdata/</guid>
+      <description>Package adeptdata was created to host raw accelerometry data sets and their derivatives. Some of them are used in the corresponding adept package.
+Package CRAN index is located here. Package GitHub repo is located here.
+Table of Contents  Installation Data objects  Outdoor continuous walking raw accelerometry data acc_walking_IU Outdoor run raw accelerometry data acc_running Walking stride accelerometry data templates stride_template    Installation Install from CRAN.</description>
+    </item>
+    
+    <item>
+      <title>&#39;runstats&#39; R package: Fast Computation of Running Statistics for Time Series</title>
       <link>/project/project-runstats/</link>
       <pubDate>Fri, 15 Mar 2019 11:54:53 -0400</pubDate>
       

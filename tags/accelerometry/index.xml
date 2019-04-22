@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>accelerometry on Home</title>
+    <link>/tags/accelerometry/</link>
+    <description>Recent content in accelerometry on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 22 Apr 2019 11:54:53 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/accelerometry/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&#39;adeptdata&#39; R package: Raw Accelerometry Data Sets and Their Derivatives</title>
+      <link>/project/project-adeptdata/</link>
+      <pubDate>Mon, 22 Apr 2019 11:54:53 -0400</pubDate>
+      
+      <guid>/project/project-adeptdata/</guid>
+      <description>Package adeptdata was created to host raw accelerometry data sets and their derivatives. Some of them are used in the corresponding adept package.
+Package CRAN index is located here. Package GitHub repo is located here.
+Table of Contents  Installation Data objects  Outdoor continuous walking raw accelerometry data acc_walking_IU Outdoor run raw accelerometry data acc_running Walking stride accelerometry data templates stride_template    Installation Install from CRAN.</description>
+    </item>
+    
+  </channel>
+</rss>
