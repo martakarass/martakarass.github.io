@@ -11,6 +11,20 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Special Topics course 2018-19: Biostatistical Methods for Wearable Computing</title>
+      <link>/resources/specialtopics/</link>
+      <pubDate>Mon, 30 Sep 2019 19:17:23 -0400</pubDate>
+      
+      <guid>/resources/specialtopics/</guid>
+      <description>&lt;p&gt;Materials:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Oct 1, 2019: &lt;a href=&#34;../../resources/specialtopics_materials/intro&#34;&gt;Introduction to raw accelerometry data. Introduction to project raw accelerometry data set&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation</title>
       <link>/publication/adept/</link>
       <pubDate>Mon, 23 Sep 2019 18:08:38 -0400</pubDate>
@@ -954,16 +968,6 @@ Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019
       
       <guid>/talk/2019-02-computing_club/</guid>
       <description>&lt;p&gt;Ben&amp;rsquo;s tweet thread with some pics from the talk: &lt;a href=&#34;https://twitter.com/backerman150/status/1095373237641449473&#34; target=&#34;_blank&#34;&gt;[link]&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Stride segmentation and stride pattern estimation based on accelerometry data</title>
-      <link>/talk/2019-05-14-motion-lab-talk/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2019-05-14-motion-lab-talk/</guid>
-      <description>&lt;p&gt;Some picture from the talk was posted &lt;a href=&#34;https://twitter.com/jurbane2/status/1128290019217637376&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

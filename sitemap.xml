@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/resources/specialtopics/</loc>
+      <lastmod>2019-09-30T19:17:23-04:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/publication/adept/</loc>
       <lastmod>2019-09-23T18:08:38-04:00</lastmod>
     </url>
@@ -192,7 +201,7 @@
     
     <url>
     
-      <loc>/resources/special_topics_wearable_computing_materials/intro/</loc>
+      <loc>/resources/specialtopics_materials/intro/</loc>
     </url>
     
   
@@ -250,7 +259,7 @@
     <url>
     
       <loc>/resources/</loc>
-      <lastmod>2019-01-26T19:17:23-04:00</lastmod>
+      <lastmod>2019-09-30T19:17:23-04:00</lastmod>
       <priority>0</priority>
     </url>
     
