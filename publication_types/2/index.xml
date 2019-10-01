@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sat, 01 Dec 2018 18:08:38 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2019 18:08:38 -0400</lastBuildDate>
     
 	<atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation</title>
+      <link>/publication/adept/</link>
+      <pubDate>Mon, 23 Sep 2019 18:08:38 -0400</pubDate>
+      
+      <guid>/publication/adept/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Accelerometry Data in Health Research: Challenges and Opportunities. Review and Examples</title>

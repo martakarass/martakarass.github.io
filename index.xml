@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation</title>
+      <link>/publication/adept/</link>
+      <pubDate>Mon, 23 Sep 2019 18:08:38 -0400</pubDate>
+      
+      <guid>/publication/adept/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>&#39;adeptdata&#39; R package: Raw Accelerometry Data Sets and Their Derivatives</title>
       <link>/project/project-adeptdata/</link>
       <pubDate>Mon, 22 Apr 2019 11:54:53 -0400</pubDate>
@@ -956,15 +965,6 @@ Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019
       <guid>/talk/2019-05-14-motion-lab-talk/</guid>
       <description>&lt;p&gt;Some picture from the talk was posted &lt;a href=&#34;https://twitter.com/jurbane2/status/1128290019217637376&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>[ *upcoming* ] Automatic estimation of step asymmetry in a split-belt treadmill experiment using high-resolution accelerometry data</title>
-      <link>/talk/2019-06-26-icampam/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2019-06-26-icampam/</guid>
-      <description></description>
     </item>
     
   </channel>
