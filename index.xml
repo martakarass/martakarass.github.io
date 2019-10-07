@@ -686,6 +686,88 @@ Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019
     </item>
     
     <item>
+      <title>Teaching experience</title>
+      <link>/resources/teaching-all/</link>
+      <pubDate>Sat, 26 Jan 2019 19:17:23 -0400</pubDate>
+      
+      <guid>/resources/teaching-all/</guid>
+      <description>
+
+&lt;h2 id=&#34;academic-year-2019-20&#34;&gt;Academic year 2019-20&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Term&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Course Number&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Course title&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Teaching role&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2019-20 Term 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;140.651&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/25922/2018/140.651.01/methods-in-biostatistics-i&#34; target=&#34;_blank&#34;&gt;Methods in Biostatistics I&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Lead TA (lab, office hours)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2019-20 Term 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;140.850&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://martakarass.github.io/resources/specialtopics/&#34; target=&#34;_blank&#34;&gt;Special topics course: Biostatistical Methods for Wearable Computing&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Co-instructor&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;academic-year-2018-19&#34;&gt;Academic year 2018-19&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Term&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Course Number&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Course title&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Teaching role&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2018-19 Term 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;140.651&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/25922/2018/140.651.01/methods-in-biostatistics-i&#34; target=&#34;_blank&#34;&gt;Methods in Biostatistics I&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Lab TA&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2018-19 Term 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;140.652&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/17639/2013/140.652.01/methods-in-biostatistics-ii&#34; target=&#34;_blank&#34;&gt;Methods in Biostatistics II&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Lab TA&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2018-19 Term 3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;140.623&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/24892/2017/140.623.01/statistical-methods-in-public-health-iii&#34; target=&#34;_blank&#34;&gt;Statistical Methods in Public Health III&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;TA&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2018-19 Term 4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;140.624&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;http://biostat.jhsph.edu/courses/bio624/&#34; target=&#34;_blank&#34;&gt;Statistical Methods in Public Health IV&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;TA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Accelerometry Data in Health Research: Challenges and Opportunities. Review and Examples</title>
       <link>/publication/accelerometry-data-in-health-research/</link>
       <pubDate>Sat, 01 Dec 2018 18:08:38 -0400</pubDate>
@@ -959,15 +1041,6 @@ Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019
       <guid>/talk/2019-05-23-stwur-meeting-talk/</guid>
       <description>&lt;p&gt;Slides from the talk part about RStudio 2019 conference can be found &lt;a href=&#34;https://martakarass.github.io/resources/computing_club_materials/2019-02-12-seen-at-rstudio2019-conf/#/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Simulation experiment project for Seminar on Adaptive Clinical Trials</title>
-      <link>/talk/2019-04-16-adaptive-trials-semminar/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2019-04-16-adaptive-trials-semminar/</guid>
-      <description></description>
     </item>
     
   </channel>
