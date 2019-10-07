@@ -943,6 +943,15 @@ Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019
     </item>
     
     <item>
+      <title>Automatic estimation of step asymmetry in a split-belt treadmill experiment using high-resolution accelerometry data</title>
+      <link>/talk/2019-06-26-icampam/</link>
+      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
+      
+      <guid>/talk/2019-06-26-icampam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Physical activity monitoring with wearable accelerometers: strides segmentation, gait pattern estimation and walking detection from free-living data in R. Also: highlights from RStudio 2019 conference.</title>
       <link>/talk/2019-05-23-stwur-meeting-talk/</link>
       <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
@@ -959,16 +968,6 @@ Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019
       
       <guid>/talk/2019-04-16-adaptive-trials-semminar/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Some of the topics seen at RStudio conference 2019</title>
-      <link>/talk/2019-02-computing_club/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2019-02-computing_club/</guid>
-      <description>&lt;p&gt;Ben&amp;rsquo;s tweet thread with some pics from the talk: &lt;a href=&#34;https://twitter.com/backerman150/status/1095373237641449473&#34; target=&#34;_blank&#34;&gt;[link]&lt;/a&gt;&lt;/p&gt;
-</description>
     </item>
     
   </channel>

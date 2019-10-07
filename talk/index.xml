@@ -31,6 +31,15 @@
     </item>
     
     <item>
+      <title>Automatic estimation of step asymmetry in a split-belt treadmill experiment using high-resolution accelerometry data</title>
+      <link>/talk/2019-06-26-icampam/</link>
+      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
+      
+      <guid>/talk/2019-06-26-icampam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Physical activity monitoring with wearable accelerometers: strides segmentation, gait pattern estimation and walking detection from free-living data in R. Also: highlights from RStudio 2019 conference.</title>
       <link>/talk/2019-05-23-stwur-meeting-talk/</link>
       <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
@@ -67,11 +76,11 @@
     </item>
     
     <item>
-      <title>[ *upcoming* ] Automatic estimation of step asymmetry in a split-belt treadmill experiment using high-resolution accelerometry data</title>
-      <link>/talk/2019-06-26-icampam/</link>
+      <title>Walking measurements derived from free-living wrist-worn sensor as novel digital endpoints</title>
+      <link>/talk/2019-10-06-novartis-internal/</link>
       <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
       
-      <guid>/talk/2019-06-26-icampam/</guid>
+      <guid>/talk/2019-10-06-novartis-internal/</guid>
       <description></description>
     </item>
     
