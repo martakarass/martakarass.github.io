@@ -18,9 +18,9 @@
       <pubDate>Mon, 28 Oct 2019 17:19:28 -0400</pubDate>
       
       <guid>/post/2019-10-28-ttest-versus-ztest/</guid>
-      <description>&lt;p&gt;To construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I&amp;rsquo;d use quantiles of $t$-distribution versus quantiles of normal distribution for that purpose.&lt;/p&gt;
+      <description>&lt;p&gt;To construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I&amp;rsquo;d use quantiles of t-distribution versus quantiles of normal distribution for that purpose.&lt;/p&gt;
 
-&lt;p&gt;Note: the below text could be directly translated to answer when to use $t$-test versus $z$-test in testing hypothesis about the mean $\mu$ parameter, i.e. test for $H_0: \mu = \mu_0$ versus $H_1: \mu &amp;lt; \mu_0$, or $H_1: \mu \neq \mu_0$, or $H_1: \mu &amp;gt; \mu_0$.&lt;/p&gt;</description>
+&lt;p&gt;Note: the below text could be directly translated to answer when to use t-test versus z-test in testing hypothesis about the mean parameter.&lt;/p&gt;</description>
     </item>
     
     <item>
