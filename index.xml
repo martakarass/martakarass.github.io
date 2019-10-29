@@ -54,7 +54,7 @@
 \end{aligned}
 $$&lt;/p&gt;
 
-&lt;p&gt;or its version where an umbiased sample standard deviation $S_n$ is used to estimate $\sigma$, $\frac{\overline{X}_n - \mu}{S_n/\sqrt{n}}$; the latter is common in practice as we typically do not know $\sigma$ and must estimate it from the data. Knowing distribution of a standardized sample mean allows us to construct confidence interval for a mean $\mu$ parameter.&lt;/p&gt;
+&lt;p&gt;or its version where $S_n$ &amp;ndash; a consistent estimator of true standard deviation $\sigma$ &amp;ndash; is used, $\frac{\overline{X}_n - \mu}{S_n/\sqrt{n}}$; the latter is common in practice as we typically do not know $\sigma$ and must estimate it from the data. Knowing distribution of a standardized sample mean allows us to construct confidence interval for a mean $\mu$ parameter.&lt;/p&gt;
 
 &lt;h2 id=&#34;span-style-color-darkblue-example-1-constructing-confidence-interval-for-mu-with-z-quantiles-span&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Example 1: constructing confidence interval for $\mu$ with $z$-quantiles&lt;/span&gt;&lt;/h2&gt;
 
@@ -79,7 +79,7 @@ $$&lt;/p&gt;
 
 &lt;h2 id=&#34;span-style-color-darkblue-example-2-constructing-confidence-interval-for-mu-with-t-quantiles-span&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Example 2: constructing confidence interval for $\mu$ with $t$-quantiles&lt;/span&gt;&lt;/h2&gt;
 
-&lt;p&gt;Assume $X_1, \ldots, X_n$ are i.i.d. $\sim N(\mu,\sigma^2)$ and $\sigma$ is &lt;strong&gt;unknown&lt;/strong&gt;. We use $S_n$ &amp;ndash; an umbiased sample standard deviation estimator &amp;ndash; to approximate $\sigma$, and have an exact distributional result for a standardized sample mean,&lt;/p&gt;
+&lt;p&gt;Assume $X_1, \ldots, X_n$ are i.i.d. $\sim N(\mu,\sigma^2)$ and $\sigma$ is &lt;strong&gt;unknown&lt;/strong&gt;. We use $S_n$ &amp;ndash; a consistent sample estimator of true standard deviation &amp;ndash; to approximate $\sigma$, and have an exact distributional result for a standardized sample mean,&lt;/p&gt;
 
 &lt;p&gt;$$
 \begin{aligned}
@@ -138,7 +138,7 @@ $$&lt;/p&gt;
 &lt;li&gt;Moderate to large sample size ($n &amp;gt; 50$).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;$\Rightarrow$ We use $S_{n}$ to approximate $\sigma$. Because of $n$ large enough, Slutsky&amp;rsquo;s theorem asymptotic ``kicks in&amp;rdquo; and allows to replace $\sigma$ with $S_n$ and to write that $\frac{\bar{X}_{n}-\mu}{S_n / \sqrt{n}} \approx \sim N(0,1)$. Because of $n$ large enough, we assume $N(0,1)$ is approximated ($\approx$) well enough to use quantiles of normal distribution in constructing the CI.&lt;/p&gt;
+&lt;p&gt;$\Rightarrow$ We use $S_{n}$ to approximate $\sigma$. Because of $n$ large enough, Slutsky&amp;rsquo;s theorem asymptotic ``kicks in&amp;rdquo; and allows to replace $\sigma$ with $S_n$ &amp;ndash; a consistent estimator of true population standard deviation, and to write that $\frac{\bar{X}_{n}-\mu}{S_n / \sqrt{n}} \approx \sim N(0,1)$. Because of $n$ large enough, we assume $N(0,1)$ is approximated ($\approx$) well enough to use quantiles of normal distribution in constructing the CI.&lt;/p&gt;
 
 &lt;p&gt;$\Rightarrow$ Another way to think about this case is that, as in Case 2, we have an exact result that $\frac{\bar{X}_{n}-\mu}{S_{n} / \sqrt{n}} \sim t_{n-1}$, and with large $n$, quantiles of $t$-distribution with $n-1$ degrees of freedom are almost equvalent to quantiles of normal distribution.&lt;/p&gt;
 
@@ -174,7 +174,7 @@ $$&lt;/p&gt;
 &lt;li&gt;Small sample size ($n \leq 50$).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&amp;rsquo;s theorem to approximate $\sigma$ with $S_n$. We have $\frac{\bar{X}_{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since there is CLT and Slutsky&amp;rsquo;s theorem approximation and we have a small sample size, in practice, we typically use quantiles of $t$ distribution with $n-1$ degrees of freedom to get more conservative (wider) CI.&lt;/p&gt;
+&lt;p&gt;$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&amp;rsquo;s theorem to replace $\sigma$ with $S_n$ &amp;ndash; a consistent estimator of true population standard deviation. We have $\frac{\bar{X}_{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since there is CLT and Slutsky&amp;rsquo;s theorem approximation and we have a small sample size, in practice, we typically use quantiles of $t$ distribution with $n-1$ degrees of freedom to get more conservative (wider) CI.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: two approximations are happening here!&lt;/li&gt;
@@ -189,7 +189,7 @@ $$&lt;/p&gt;
 &lt;li&gt;Moderate to large sample size ($n &amp;gt; 50$).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&amp;rsquo;s theorem to approximate $\sigma$ with $S_n$. We have $\frac{\bar{X}_{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since we have a moderate to small sample size, we assume that CLT and Slutsky asymptotics ``kicks in&amp;rdquo; and the approximation ($\approx$) is good enough to use quantiles of normal distribution.&lt;/p&gt;
+&lt;p&gt;$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&amp;rsquo;s theorem to replace $\sigma$ with $S_n$ &amp;ndash; a consistent estimator of true population standard deviation. We have $\frac{\bar{X}_{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since we have a moderate to small sample size, we assume that both CLT and Slutsky asymptotics ``kicks in&amp;rdquo; and the approximation ($\approx$) is good enough to use quantiles of normal distribution.&lt;/p&gt;
 
 &lt;h1 id=&#34;disclaimer&#34;&gt;Disclaimer&lt;/h1&gt;
 
