@@ -11,6 +11,183 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>When to use z-test versus t-test in constructing confidence interval for the mean</title>
+      <link>/post/2019-10-28-ttest-versus-ztest/</link>
+      <pubDate>Mon, 28 Oct 2019 17:19:28 -0400</pubDate>
+      
+      <guid>/post/2019-10-28-ttest-versus-ztest/</guid>
+      <description>&lt;p&gt;To construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I&amp;rsquo;d go for $t$-distribution versus normal distribution quantiles.&lt;/p&gt;
+
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#standardized-sample-mean&#34;&gt;Standardized sample mean&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#example-1-constructing-confidence-interval-for-mu-with-z-quantiles&#34;&gt;Example 1: constructing confidence interval for $\mu$ with $z$-quantiles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#example-2-constructing-confidence-interval-for-mu-with-t-quantiles&#34;&gt;Example 2: constructing confidence interval for $\mu$ with $t$-quantiles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cases-quantiles-of-t-student-distribution-versus-standard-normal-distribution&#34;&gt;Cases: quantiles of $t$-student distribution versus standard normal distribution&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#case-1&#34;&gt;Case 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#case-2&#34;&gt;Case 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#case-3&#34;&gt;Case 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#case-4&#34;&gt;Case 4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#case-5&#34;&gt;Case 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#case-6&#34;&gt;Case 6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#disclaimer&#34;&gt;Disclaimer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+
+&lt;h1 id=&#34;standardized-sample-mean&#34;&gt;Standardized sample mean&lt;/h1&gt;
+
+&lt;p&gt;Consider $X_1, \ldots, X_n$ &amp;ndash; a sequence of i.i.d. random variables with mean $E(X_i) = \mu$ and  variance $\text{var}(X_i) = \sigma^2$. To construct confidence intervals for $\mu$ parameter, we often use a standardized sample mean,&lt;/p&gt;
+
+&lt;p&gt;$$
+\begin{aligned}
+\frac{\overline{X}_n - \mu}{\sigma/\sqrt{n}},
+\end{aligned}
+$$&lt;/p&gt;
+
+&lt;p&gt;or its version where an umbiased sample standard deviation $S_n$ is used to estimate $\sigma$, $\frac{\overline{X}_n - \mu}{S_n/\sqrt{n}}$; the latter is common in practice as we typically do not know $\sigma$ and must estimate it from the data. Knowing distribution of a standardized sample mean allows us to construct confidence interval for a mean $\mu$ parameter.&lt;/p&gt;
+
+&lt;h2 id=&#34;example-1-constructing-confidence-interval-for-mu-with-z-quantiles&#34;&gt;Example 1: constructing confidence interval for $\mu$ with $z$-quantiles&lt;/h2&gt;
+
+&lt;p&gt;Assume $X_1, \ldots, X_n$ are i.i.d. $\sim N(\mu,\sigma^2)$ and $\sigma$ is known. Then we have an exact distributional result for a standardized sample mean,&lt;/p&gt;
+
+&lt;p&gt;$$
+\begin{aligned}
+\frac{\overline{X}_n - \mu}{\sigma/\sqrt{n}} \sim N(0,1).
+\end{aligned}
+$$&lt;/p&gt;
+
+&lt;p&gt;Let us denote $z_ { 1-\frac{\alpha}{2}}$ to be $(1-\frac{\alpha}{2})$-th quantile of standard normal distribution $N(0,1)$. Since  $N(0,1)$ is symmetric around $0$, we have $z_ {\frac{\alpha}{2}} = -z_{1-\frac{\alpha}{2}}$ and we can write&lt;/p&gt;
+
+&lt;p&gt;$$
+\begin{aligned}
+1-\alpha
+&amp;amp; = P\left(-z_ {1-\frac{\alpha}{2}} \leq \frac{\overline{X}&lt;em&gt;n-\mu}{\sigma/n} \leq z&lt;/em&gt;{1-\frac{\alpha}{2}} \right) &lt;br /&gt;
+&amp;amp; = P\left(\bar{X}&lt;em&gt;n-z&lt;/em&gt;{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X}&lt;em&gt;n+z&lt;/em&gt;{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}} \right),
+\end{aligned}
+$$&lt;/p&gt;
+
+&lt;p&gt;which yields that $\left[ \bar{X}&lt;em&gt;n-z&lt;/em&gt;{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}, \; \bar{X}&lt;em&gt;n+z&lt;/em&gt;{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\right]$ is $(1-\alpha )$-confidence interval for a mean parameter $\mu$.&lt;/p&gt;
+
+&lt;h2 id=&#34;example-2-constructing-confidence-interval-for-mu-with-t-quantiles&#34;&gt;Example 2: constructing confidence interval for $\mu$ with $t$-quantiles&lt;/h2&gt;
+
+&lt;p&gt;Assume $X_1, \ldots, X_n$ are i.i.d. $\sim N(\mu,\sigma^2)$ and $\sigma$ is &lt;strong&gt;unknown&lt;/strong&gt;. We use $S_n$ &amp;ndash; an umbiased sample standard deviation estimator &amp;ndash; to approximate $\sigma$, and have an exact distributional result for a standardized sample mean,&lt;/p&gt;
+
+&lt;p&gt;$$
+\begin{aligned}
+\frac{\overline{X}_n - \mu}{S&lt;em&gt;n/\sqrt{n}} \sim t&lt;/em&gt;{n-1}.
+\end{aligned}
+$$&lt;/p&gt;
+
+&lt;p&gt;Let us denote $t_{n-1,1-\frac{\alpha}{2}}$ to be $(n-1,1-\frac{\alpha}{2})$-th quantile of $t$-distributuon with $n-1$ degrees of freedom. Since $t$ is symmetric around $0$, we have&lt;/p&gt;
+
+&lt;p&gt;$$
+\begin{aligned}
+1-\alpha
+&amp;amp; =P\left(-t&lt;em&gt;{n-1,1-\frac{\alpha}{2}} \leq \frac{\bar{X}&lt;/em&gt;{n}-\mu}{S&lt;em&gt;{n} / \sqrt{n}} \leq t&lt;/em&gt;{n-1,1-\frac{\alpha}{2}}\right) &lt;br /&gt;
+&amp;amp; = P\left(\bar{X}&lt;em&gt;n-t&lt;/em&gt;{n-1, 1-\frac{\alpha}{2}} \cdot \frac{S_n}{\sqrt{n}} \leq \mu \leq \bar{X}&lt;em&gt;n+t&lt;/em&gt;{n-1, 1-\frac{\alpha}{2}} \cdot \frac{S_n}{\sqrt{n}} \right),
+\end{aligned}
+$$&lt;/p&gt;
+
+&lt;p&gt;which yields that $\left[ \bar{X}&lt;em&gt;n-t&lt;/em&gt;{n-1, 1-\frac{\alpha}{2}} \cdot \frac{S_n}{\sqrt{n}}, \; \bar{X}&lt;em&gt;n+t&lt;/em&gt;{n-1, 1-\frac{\alpha}{2}} \cdot \frac{S_n}{\sqrt{n}}\right]$ is $(1-\alpha )$-confidence interval for a mean parameter $\mu$.&lt;/p&gt;
+
+&lt;h1 id=&#34;cases-quantiles-of-t-student-distribution-versus-standard-normal-distribution&#34;&gt;Cases: quantiles of $t$-student distribution versus standard normal distribution&lt;/h1&gt;
+
+&lt;p&gt;In many cases, whether to use quantiles of $t$-student distribution versus standard normal distribution is based on:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;distribution of $X_1, \ldots, X_n$ variables,&lt;/li&gt;
+&lt;li&gt;whether  $\sigma$ is known or not (and we need to estimate it i.e. with $S_n$),&lt;/li&gt;
+&lt;li&gt;what is sample size $n$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;case-1&#34;&gt;Case 1&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from normal $N(\mu, \sigma^2)$ distribution.&lt;/li&gt;
+&lt;li&gt;$\sigma$ known.&lt;/li&gt;
+&lt;li&gt;Any sample size $n$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$\Rightarrow$ We have exact result that  $\frac{\bar{X}_{n}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)$ and hence we use quantiles of normal distribution in constructing the CI.&lt;/p&gt;
+
+&lt;h2 id=&#34;case-2&#34;&gt;Case 2&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from normal $N(\mu, \sigma^2)$ distribution.&lt;/li&gt;
+&lt;li&gt;$\sigma$ unknown.&lt;/li&gt;
+&lt;li&gt;Small sample size ($n \leq 50$).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$\Rightarrow$ We use $S&lt;em&gt;{n}$ to approximate $\sigma$. We have exact result that  $\frac{\bar{X}&lt;/em&gt;{n}-\mu}{S&lt;em&gt;{n} / \sqrt{n}} \sim t&lt;/em&gt;{n-1}$ and hence we use quantiles of $t$ distribution with $n-1$ degrees of freedom in constructing the CI.&lt;/p&gt;
+
+&lt;h2 id=&#34;case-3&#34;&gt;Case 3&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from normal $N(\mu, \sigma^2)$ distribution.&lt;/li&gt;
+&lt;li&gt;$\sigma$ unknown.&lt;/li&gt;
+&lt;li&gt;Moderate to large sample size ($n &amp;gt; 50$).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$\Rightarrow$ We use $S_{n}$ to approximate $\sigma$. Because of $n$ large enough, Slutsky&amp;rsquo;s theorem asymptotic ``kicks in&amp;rdquo; and allows to replace $\sigma$ with $S&lt;em&gt;n$ and to write that $\frac{\bar{X}&lt;/em&gt;{n}-\mu}{S_n / \sqrt{n}} \approx \sim N(0,1)$. Because of $n$ large enough, we assume $N(0,1)$ is approximated ($\approx$) well enough to use quantiles of normal distribution in constructing the CI.&lt;/p&gt;
+
+&lt;p&gt;$\Rightarrow$ Another way to think about this case is that, as in Case 2, we have an exact result that $\frac{\bar{X}&lt;em&gt;{n}-\mu}{S&lt;/em&gt;{n} / \sqrt{n}} \sim t_{n-1}$, and with large $n$, quantiles of $t$-distribution with $n-1$ degrees of freedom are almost equvalent to quantiles of normal distribution.&lt;/p&gt;
+
+&lt;h2 id=&#34;case-4&#34;&gt;Case 4&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from (other than normal) distribution  distribution of mean $E(X_i) = \mu$ and variance $\text{var}(X_i) = \sigma^2$ (&lt;em&gt;for normally distributed $X_i$&amp;rsquo;s, see cases 1-3&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;$\sigma$ known.&lt;/li&gt;
+&lt;li&gt;Small sample size ($n \leq 50$).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$\Rightarrow$ Use CLT to get that standardized sample mean is approximately normal, $\frac{\bar{X}_{n}-\mu}{\sigma / \sqrt{n}} \approx \sim N(0,1)$. Since there is CLT approximation and we have a small sample size, in practice, we typically use quantiles of $t$ distribution with $n-1$ degrees of freedom to get more conservative (wider) CI.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: when $X_1, \ldots, X_n$ distribution of is very skewed (i.e. Poisson) it may be not plausible that CLT already ``kicks in&amp;rdquo; and other techniques may be needed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;case-5&#34;&gt;Case 5&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from (other than normal) distribution  distribution of mean $E(X_i) = \mu$ and variance $\text{var}(X_i) = \sigma^2$ (&lt;em&gt;for normally distributed $X_i$&amp;rsquo;s, see cases 1-3&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;$\sigma$ unknown.&lt;/li&gt;
+&lt;li&gt;Small sample size ($n \leq 50$).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&amp;rsquo;s theorem to approximate $\sigma$ with $S&lt;em&gt;n$. We have $\frac{\bar{X}&lt;/em&gt;{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since there is CLT and Slutsky&amp;rsquo;s theorem approximation and we have a small sample size, in practice, we typically use quantiles of $t$ distribution with $n-1$ degrees of freedom to get more conservative (wider) CI.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: two approximations are happening here!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: when $X_1, \ldots, X_n$ distribution of is very skewed (i.e. Poisson) it may be not plausible that CLT already ``kicks in&amp;rdquo; and other techniques may be needed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;case-6&#34;&gt;Case 6&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from (other than normal) distribution  distribution of mean $E(X_i) = \mu$ and variance $\text{var}(X_i) = \sigma^2$ (&lt;em&gt;for normally distributed $X_i$&amp;rsquo;s, see cases 1-3&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;$\sigma$ unknown.&lt;/li&gt;
+&lt;li&gt;Moderate to large sample size ($n &amp;gt; 50$).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&amp;rsquo;s theorem to approximate $\sigma$ with $S&lt;em&gt;n$. We have $\frac{\bar{X}&lt;/em&gt;{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since we have a moderate to small sample size, we assume that CLT and Slutsky asymptotics ``kicks in&amp;rdquo; and the approximation ($\approx$) is good enough to use quantiles of normal distribution.&lt;/p&gt;
+
+&lt;h1 id=&#34;disclaimer&#34;&gt;Disclaimer&lt;/h1&gt;
+
+&lt;p style=&#34;color:red&#34;&gt;The views, thoughts, and opinions expressed in the text belong solely to the author, and not necessarily to the author’s employer, organization, committee or other group or individual.&lt;/p&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;p&gt;[1]: Methods in Biostatistics with R. Ciprian Crainiceanu, Brian Caffo, John Muschelli (2019). Available online at &lt;a href=&#34;https://leanpub.com/biostatmethods&#34; target=&#34;_blank&#34;&gt;https://leanpub.com/biostatmethods&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Special Topics course 2018-19: Biostatistical Methods for Wearable Computing</title>
       <link>/resources/specialtopics/</link>
       <pubDate>Mon, 30 Sep 2019 19:17:23 -0400</pubDate>
@@ -1035,16 +1212,6 @@ Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019
       
       <guid>/talk/2019-06-26-icampam/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Overview of JHU Biostat Wearable and Implantable Technology (WIT) working group research</title>
-      <link>/talk/2019-10-15-journal-club-wit/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2019-10-15-journal-club-wit/</guid>
-      <description>&lt;p&gt;Slides &lt;a href=&#34;https://docs.google.com/presentation/d/1TAPuMzQmeB9GP06FNKmoXAcPDt9A9_h4NhJSRtoapMY/edit?usp=sharing&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
-</description>
     </item>
     
   </channel>

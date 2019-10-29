@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="author" content="Marta Karas">
+  <meta name="description" content="Ph.D. student in Biostatistics">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/2019-10-28-ttest-versus-ztest/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-111897145-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Home">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Home">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/2019-10-28-ttest-versus-ztest/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@https://twitter.com/martakarass">
+  <meta property="twitter:creator" content="@https://twitter.com/martakarass">
+  
+  <meta property="og:site_name" content="Home">
+  <meta property="og:url" content="/post/2019-10-28-ttest-versus-ztest/">
+  <meta property="og:title" content="When to use z-test versus t-test in constructing confidence interval for the mean | Home">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-10-28T17:19:28-04:00">
+  
+  <meta property="article:modified_time" content="2019-10-28T17:19:28-04:00">
+  
+
+  
+
+  <title>When to use z-test versus t-test in constructing confidence interval for the mean | Home</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#resources">
+            
+            <span>Resources</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/docs/mkaras-cv.pdf">
+            
+            <span>Resume</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">When to use z-test versus t-test in constructing confidence interval for the mean</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2019-10-28 17:19:28 -0400 EDT" itemprop="datePublished dateModified">
+      Oct 28, 2019
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Marta Karas">
+  </span>
+
+  
+
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=When%20to%20use%20z-test%20versus%20t-test%20in%20constructing%20confidence%20interval%20for%20the%20mean&amp;url=%2fpost%2f2019-10-28-ttest-versus-ztest%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2019-10-28-ttest-versus-ztest%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2019-10-28-ttest-versus-ztest%2f&amp;title=When%20to%20use%20z-test%20versus%20t-test%20in%20constructing%20confidence%20interval%20for%20the%20mean"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2019-10-28-ttest-versus-ztest%2f&amp;title=When%20to%20use%20z-test%20versus%20t-test%20in%20constructing%20confidence%20interval%20for%20the%20mean"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=When%20to%20use%20z-test%20versus%20t-test%20in%20constructing%20confidence%20interval%20for%20the%20mean&amp;body=%2fpost%2f2019-10-28-ttest-versus-ztest%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <p>To construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I&rsquo;d go for $t$-distribution versus normal distribution quantiles.</p>
+
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#standardized-sample-mean">Standardized sample mean</a>
+<ul>
+<li><a href="#example-1-constructing-confidence-interval-for-mu-with-z-quantiles">Example 1: constructing confidence interval for $\mu$ with $z$-quantiles</a></li>
+<li><a href="#example-2-constructing-confidence-interval-for-mu-with-t-quantiles">Example 2: constructing confidence interval for $\mu$ with $t$-quantiles</a></li>
+</ul></li>
+<li><a href="#cases-quantiles-of-t-student-distribution-versus-standard-normal-distribution">Cases: quantiles of $t$-student distribution versus standard normal distribution</a>
+<ul>
+<li><a href="#case-1">Case 1</a></li>
+<li><a href="#case-2">Case 2</a></li>
+<li><a href="#case-3">Case 3</a></li>
+<li><a href="#case-4">Case 4</a></li>
+<li><a href="#case-5">Case 5</a></li>
+<li><a href="#case-6">Case 6</a></li>
+</ul></li>
+<li><a href="#disclaimer">Disclaimer</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</nav>
+
+
+<h1 id="standardized-sample-mean">Standardized sample mean</h1>
+
+<p>Consider $X_1, \ldots, X_n$ &ndash; a sequence of i.i.d. random variables with mean $E(X_i) = \mu$ and  variance $\text{var}(X_i) = \sigma^2$. To construct confidence intervals for $\mu$ parameter, we often use a standardized sample mean,</p>
+
+<p>$$
+\begin{aligned}
+\frac{\overline{X}_n - \mu}{\sigma/\sqrt{n}},
+\end{aligned}
+$$</p>
+
+<p>or its version where an umbiased sample standard deviation $S_n$ is used to estimate $\sigma$, $\frac{\overline{X}_n - \mu}{S_n/\sqrt{n}}$; the latter is common in practice as we typically do not know $\sigma$ and must estimate it from the data. Knowing distribution of a standardized sample mean allows us to construct confidence interval for a mean $\mu$ parameter.</p>
+
+<h2 id="example-1-constructing-confidence-interval-for-mu-with-z-quantiles">Example 1: constructing confidence interval for $\mu$ with $z$-quantiles</h2>
+
+<p>Assume $X_1, \ldots, X_n$ are i.i.d. $\sim N(\mu,\sigma^2)$ and $\sigma$ is known. Then we have an exact distributional result for a standardized sample mean,</p>
+
+<p>$$
+\begin{aligned}
+\frac{\overline{X}_n - \mu}{\sigma/\sqrt{n}} \sim N(0,1).
+\end{aligned}
+$$</p>
+
+<p>Let us denote $z_ { 1-\frac{\alpha}{2}}$ to be $(1-\frac{\alpha}{2})$-th quantile of standard normal distribution $N(0,1)$. Since  $N(0,1)$ is symmetric around $0$, we have $z_ {\frac{\alpha}{2}} = -z_{1-\frac{\alpha}{2}}$ and we can write</p>
+
+<p>$$
+\begin{aligned}
+1-\alpha
+&amp; = P\left(-z_ {1-\frac{\alpha}{2}} \leq \frac{\overline{X}<em>n-\mu}{\sigma/n} \leq z</em>{1-\frac{\alpha}{2}} \right) <br />
+&amp; = P\left(\bar{X}<em>n-z</em>{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X}<em>n+z</em>{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}} \right),
+\end{aligned}
+$$</p>
+
+<p>which yields that $\left[ \bar{X}<em>n-z</em>{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}, \; \bar{X}<em>n+z</em>{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\right]$ is $(1-\alpha )$-confidence interval for a mean parameter $\mu$.</p>
+
+<h2 id="example-2-constructing-confidence-interval-for-mu-with-t-quantiles">Example 2: constructing confidence interval for $\mu$ with $t$-quantiles</h2>
+
+<p>Assume $X_1, \ldots, X_n$ are i.i.d. $\sim N(\mu,\sigma^2)$ and $\sigma$ is <strong>unknown</strong>. We use $S_n$ &ndash; an umbiased sample standard deviation estimator &ndash; to approximate $\sigma$, and have an exact distributional result for a standardized sample mean,</p>
+
+<p>$$
+\begin{aligned}
+\frac{\overline{X}_n - \mu}{S<em>n/\sqrt{n}} \sim t</em>{n-1}.
+\end{aligned}
+$$</p>
+
+<p>Let us denote $t_{n-1,1-\frac{\alpha}{2}}$ to be $(n-1,1-\frac{\alpha}{2})$-th quantile of $t$-distributuon with $n-1$ degrees of freedom. Since $t$ is symmetric around $0$, we have</p>
+
+<p>$$
+\begin{aligned}
+1-\alpha
+&amp; =P\left(-t<em>{n-1,1-\frac{\alpha}{2}} \leq \frac{\bar{X}</em>{n}-\mu}{S<em>{n} / \sqrt{n}} \leq t</em>{n-1,1-\frac{\alpha}{2}}\right) <br />
+&amp; = P\left(\bar{X}<em>n-t</em>{n-1, 1-\frac{\alpha}{2}} \cdot \frac{S_n}{\sqrt{n}} \leq \mu \leq \bar{X}<em>n+t</em>{n-1, 1-\frac{\alpha}{2}} \cdot \frac{S_n}{\sqrt{n}} \right),
+\end{aligned}
+$$</p>
+
+<p>which yields that $\left[ \bar{X}<em>n-t</em>{n-1, 1-\frac{\alpha}{2}} \cdot \frac{S_n}{\sqrt{n}}, \; \bar{X}<em>n+t</em>{n-1, 1-\frac{\alpha}{2}} \cdot \frac{S_n}{\sqrt{n}}\right]$ is $(1-\alpha )$-confidence interval for a mean parameter $\mu$.</p>
+
+<h1 id="cases-quantiles-of-t-student-distribution-versus-standard-normal-distribution">Cases: quantiles of $t$-student distribution versus standard normal distribution</h1>
+
+<p>In many cases, whether to use quantiles of $t$-student distribution versus standard normal distribution is based on:</p>
+
+<ul>
+<li>distribution of $X_1, \ldots, X_n$ variables,</li>
+<li>whether  $\sigma$ is known or not (and we need to estimate it i.e. with $S_n$),</li>
+<li>what is sample size $n$.</li>
+</ul>
+
+<h2 id="case-1">Case 1</h2>
+
+<ul>
+<li>Observations $X_1, \ldots, X_n$ are from normal $N(\mu, \sigma^2)$ distribution.</li>
+<li>$\sigma$ known.</li>
+<li>Any sample size $n$.</li>
+</ul>
+
+<p>$\Rightarrow$ We have exact result that  $\frac{\bar{X}_{n}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)$ and hence we use quantiles of normal distribution in constructing the CI.</p>
+
+<h2 id="case-2">Case 2</h2>
+
+<ul>
+<li>Observations $X_1, \ldots, X_n$ are from normal $N(\mu, \sigma^2)$ distribution.</li>
+<li>$\sigma$ unknown.</li>
+<li>Small sample size ($n \leq 50$).</li>
+</ul>
+
+<p>$\Rightarrow$ We use $S<em>{n}$ to approximate $\sigma$. We have exact result that  $\frac{\bar{X}</em>{n}-\mu}{S<em>{n} / \sqrt{n}} \sim t</em>{n-1}$ and hence we use quantiles of $t$ distribution with $n-1$ degrees of freedom in constructing the CI.</p>
+
+<h2 id="case-3">Case 3</h2>
+
+<ul>
+<li>Observations $X_1, \ldots, X_n$ are from normal $N(\mu, \sigma^2)$ distribution.</li>
+<li>$\sigma$ unknown.</li>
+<li>Moderate to large sample size ($n &gt; 50$).</li>
+</ul>
+
+<p>$\Rightarrow$ We use $S_{n}$ to approximate $\sigma$. Because of $n$ large enough, Slutsky&rsquo;s theorem asymptotic ``kicks in&rdquo; and allows to replace $\sigma$ with $S<em>n$ and to write that $\frac{\bar{X}</em>{n}-\mu}{S_n / \sqrt{n}} \approx \sim N(0,1)$. Because of $n$ large enough, we assume $N(0,1)$ is approximated ($\approx$) well enough to use quantiles of normal distribution in constructing the CI.</p>
+
+<p>$\Rightarrow$ Another way to think about this case is that, as in Case 2, we have an exact result that $\frac{\bar{X}<em>{n}-\mu}{S</em>{n} / \sqrt{n}} \sim t_{n-1}$, and with large $n$, quantiles of $t$-distribution with $n-1$ degrees of freedom are almost equvalent to quantiles of normal distribution.</p>
+
+<h2 id="case-4">Case 4</h2>
+
+<ul>
+<li>Observations $X_1, \ldots, X_n$ are from (other than normal) distribution  distribution of mean $E(X_i) = \mu$ and variance $\text{var}(X_i) = \sigma^2$ (<em>for normally distributed $X_i$&rsquo;s, see cases 1-3</em>).</li>
+<li>$\sigma$ known.</li>
+<li>Small sample size ($n \leq 50$).</li>
+</ul>
+
+<p>$\Rightarrow$ Use CLT to get that standardized sample mean is approximately normal, $\frac{\bar{X}_{n}-\mu}{\sigma / \sqrt{n}} \approx \sim N(0,1)$. Since there is CLT approximation and we have a small sample size, in practice, we typically use quantiles of $t$ distribution with $n-1$ degrees of freedom to get more conservative (wider) CI.</p>
+
+<ul>
+<li><strong>Note</strong>: when $X_1, \ldots, X_n$ distribution of is very skewed (i.e. Poisson) it may be not plausible that CLT already ``kicks in&rdquo; and other techniques may be needed.</li>
+</ul>
+
+<h2 id="case-5">Case 5</h2>
+
+<ul>
+<li>Observations $X_1, \ldots, X_n$ are from (other than normal) distribution  distribution of mean $E(X_i) = \mu$ and variance $\text{var}(X_i) = \sigma^2$ (<em>for normally distributed $X_i$&rsquo;s, see cases 1-3</em>).</li>
+<li>$\sigma$ unknown.</li>
+<li>Small sample size ($n \leq 50$).</li>
+</ul>
+
+<p>$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&rsquo;s theorem to approximate $\sigma$ with $S<em>n$. We have $\frac{\bar{X}</em>{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since there is CLT and Slutsky&rsquo;s theorem approximation and we have a small sample size, in practice, we typically use quantiles of $t$ distribution with $n-1$ degrees of freedom to get more conservative (wider) CI.</p>
+
+<ul>
+<li><strong>Note</strong>: two approximations are happening here!</li>
+<li><strong>Note</strong>: when $X_1, \ldots, X_n$ distribution of is very skewed (i.e. Poisson) it may be not plausible that CLT already ``kicks in&rdquo; and other techniques may be needed.</li>
+</ul>
+
+<h2 id="case-6">Case 6</h2>
+
+<ul>
+<li>Observations $X_1, \ldots, X_n$ are from (other than normal) distribution  distribution of mean $E(X_i) = \mu$ and variance $\text{var}(X_i) = \sigma^2$ (<em>for normally distributed $X_i$&rsquo;s, see cases 1-3</em>).</li>
+<li>$\sigma$ unknown.</li>
+<li>Moderate to large sample size ($n &gt; 50$).</li>
+</ul>
+
+<p>$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&rsquo;s theorem to approximate $\sigma$ with $S<em>n$. We have $\frac{\bar{X}</em>{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since we have a moderate to small sample size, we assume that CLT and Slutsky asymptotics ``kicks in&rdquo; and the approximation ($\approx$) is good enough to use quantiles of normal distribution.</p>
+
+<h1 id="disclaimer">Disclaimer</h1>
+
+<p style="color:red">The views, thoughts, and opinions expressed in the text belong solely to the author, and not necessarily to the author’s employer, organization, committee or other group or individual.</p>
+
+<h1 id="references">References</h1>
+
+<p>[1]: Methods in Biostatistics with R. Ciprian Crainiceanu, Brian Caffo, John Muschelli (2019). Available online at <a href="https://leanpub.com/biostatmethods" target="_blank">https://leanpub.com/biostatmethods</a>.</p>
+      </div>
+
+      
+
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+
+
+
+<div class="article-container">
+  <div id="disqus_thread"></div>
+<script>
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://my-website-19.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
