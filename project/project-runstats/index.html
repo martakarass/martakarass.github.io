@@ -362,7 +362,7 @@
 <ul>
 <li><a href="#compare-runningcov-runstats-with-a-conventional-method">Compare <code>RunningCov {runstats}</code> with a conventional method</a></li>
 <li><a href="#compare-runningcov-runstats-with-sliding-cov-dvmisc-c-implementation">Compare <code>RunningCov {runstats}</code> with <code>sliding_cov {dvmisc}</code> c++ implementation</a></li>
-<li><a href="#platform-and-system-information">Platform and system information</a></li>
+<li><a href="#session-info">Session info</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -379,7 +379,7 @@
 
 <h1 id="usage">Usage</h1>
 
-<pre><code>library(runstats)
+<pre><code class="language-r">library(runstats)
 
 ## Example: running correlation
 x0 &lt;- sin(seq(0, 2 * pi * 5, length.out = 1000))
@@ -450,72 +450,67 @@ for (x.tmp in x.list){
 
 <table>
 <thead>
-<tr>
-<th align="left">test</th>
-<th align="right">replications</th>
-<th align="right">elapsed</th>
-<th align="right">relative</th>
-<th align="right">user.self</th>
-<th align="right">sys.self</th>
-<th align="right">x_length</th>
-<th align="right">pattern_length</th>
+<tr class="header">
+<th style="text-align: left;">test</th>
+<th style="text-align: right;">replications</th>
+<th style="text-align: right;">elapsed</th>
+<th style="text-align: right;">relative</th>
+<th style="text-align: right;">user.self</th>
+<th style="text-align: right;">sys.self</th>
+<th style="text-align: right;">x_length</th>
+<th style="text-align: right;">pattern_length</th>
 </tr>
 </thead>
-
 <tbody>
-<tr>
-<td align="left">runstats</td>
-<td align="right">10</td>
-<td align="right">0.005</td>
-<td align="right">1</td>
-<td align="right">0.004</td>
-<td align="right">0.001</td>
-<td align="right">1000</td>
-<td align="right">100</td>
+<tr class="odd">
+<td style="text-align: left;">runstats</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">100</td>
 </tr>
-
-<tr>
-<td align="left">runstats</td>
-<td align="right">10</td>
-<td align="right">0.052</td>
-<td align="right">1</td>
-<td align="right">0.035</td>
-<td align="right">0.009</td>
-<td align="right">10000</td>
-<td align="right">100</td>
+<tr class="even">
+<td style="text-align: left;">runstats</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.019</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">10000</td>
+<td style="text-align: right;">100</td>
 </tr>
-
-<tr>
-<td align="left">runstats</td>
-<td align="right">10</td>
-<td align="right">0.577</td>
-<td align="right">1</td>
-<td align="right">0.499</td>
-<td align="right">0.063</td>
-<td align="right">100000</td>
-<td align="right">100</td>
+<tr class="odd">
+<td style="text-align: left;">runstats</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.183</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.148</td>
+<td style="text-align: right;">0.035</td>
+<td style="text-align: right;">100000</td>
+<td style="text-align: right;">100</td>
 </tr>
-
-<tr>
-<td align="left">runstats</td>
-<td align="right">10</td>
-<td align="right">10.992</td>
-<td align="right">1</td>
-<td align="right">9.908</td>
-<td align="right">0.601</td>
-<td align="right">1000000</td>
-<td align="right">100</td>
+<tr class="even">
+<td style="text-align: left;">runstats</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1.700</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.592</td>
+<td style="text-align: right;">0.107</td>
+<td style="text-align: right;">1000000</td>
+<td style="text-align: right;">100</td>
 </tr>
-
-<tr>
-<td align="left">runstats</td>
-<td align="right">10</td>
-<td align="right">170.676</td>
-<td align="right">1</td>
-<td align="right">148.816</td>
-<td align="right">7.682</td>
-<td align="right">10000000</td>
-<td align="right">100</td>
+<tr class="odd">
+<td style="text-align: left;">runstats</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">19.852</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">17.185</td>
+<td style="text-align: right;">2.576</td>
+<td style="text-align: right;">10000000</td>
+<td style="text-align: right;">100</td>
 </tr>
 </tbody>
 </table>
@@ -565,7 +560,7 @@ plt2 &lt;-
 cowplot::plot_grid(plt1, plt2, nrow = 1, labels = c('A', 'B'))
 </code></pre>
 
-<p><img src="../../img/2019-03-15-project-runstats/README-performance_rbenchmark_compare_conventional.csv-1.png" alt="" /></p>
+<p><img src="../../img/2019-03-15-project-runstats/benchmark_compare_conventional_plot_results-1.png" alt="" /></p>
 
 <h2 id="compare-runningcov-runstats-with-sliding-cov-dvmisc-c-implementation">Compare <code>RunningCov {runstats}</code> with <code>sliding_cov {dvmisc}</code> c++ implementation</h2>
 
@@ -603,19 +598,6 @@ out.df_y10    &lt;- get.out.df(runif(10^1))
 out.df_y100   &lt;- get.out.df(runif(10^2))
 out.df_y1000  &lt;- get.out.df(runif(10^3))
 out.df_y10000 &lt;- get.out.df(runif(10^4))
-
-y &lt;- runif(10000)
-out.df_y10000 &lt;- data.frame()
-for (x.tmp in x.list){
-  out.df.tmp &lt;- benchmark(
-    &quot;runstats&quot; = runstats::RunningCov(x.tmp, y),
-    &quot;dvmisc&quot; = dvmisc::sliding_cov(y, x.tmp), 
-    replications = 10,
-    columns = c(&quot;test&quot;, &quot;replications&quot;, &quot;elapsed&quot;,
-                &quot;relative&quot;, &quot;user.self&quot;, &quot;sys.self&quot;))
-  out.df.tmp$x_length &lt;- length(x.tmp)
-  out.df_y10000 &lt;- rbind(out.df_y10000, out.df.tmp)
-}
 </code></pre>
 
 <p>Benchmark results</p>
@@ -640,30 +622,65 @@ plt4 &lt;- get.plt(out.df_y10000, &quot;Vector length of y = 1,0000&quot;)
 cowplot::plot_grid(plt1, plt2, plt3, plt4, nrow = 2, labels = c('A', 'B', 'C', 'D'))
 </code></pre>
 
-<p><img src="../../img/2019-03-15-project-runstats/README-performance_rbenchmark_compare_dvmisc-1.png" alt="" /></p>
+<p><img src="../../img/2019-03-15-project-runstats/benchmark_compare_dvmisc_plot_results-1.png" alt="" /></p>
 
-<h2 id="platform-and-system-information">Platform and system information</h2>
+<h2 id="session-info">Session info</h2>
 
-<pre><code class="language-r">sessioninfo::platform_info()
-#&gt;  setting  value                       
-#&gt;  version  R version 3.5.2 (2018-12-20)
-#&gt;  os       macOS Mojave 10.14.2        
-#&gt;  system   x86_64, darwin15.6.0        
-#&gt;  ui       X11                         
-#&gt;  language (EN)                        
-#&gt;  collate  en_US.UTF-8                 
-#&gt;  ctype    en_US.UTF-8                 
-#&gt;  tz       America/New_York            
-#&gt;  date     2019-03-15
-Sys.info()[c(&quot;sysname&quot;, &quot;release&quot;, &quot;version&quot;, &quot;machine&quot;)]
-#&gt;                                                                                            sysname 
-#&gt;                                                                                           &quot;Darwin&quot; 
-#&gt;                                                                                            release 
-#&gt;                                                                                           &quot;18.2.0&quot; 
-#&gt;                                                                                            version 
-#&gt; &quot;Darwin Kernel Version 18.2.0: Mon Nov 12 20:24:46 PST 2018; root:xnu-4903.231.4~2/RELEASE_X86_64&quot; 
-#&gt;                                                                                            machine 
-#&gt;                                                                                           &quot;x86_64&quot;
+<pre><code class="language-r">sessioninfo::session_info()
+</code></pre>
+
+<pre><code>
+    ## ─ Session info ───────────────────────────────────────────────────────────────
+    ##  setting  value                       
+    ##  version  R version 3.5.2 (2018-12-20)
+    ##  os       macOS Mojave 10.14.2        
+    ##  system   x86_64, darwin15.6.0        
+    ##  ui       X11                         
+    ##  language (EN)                        
+    ##  collate  en_US.UTF-8                 
+    ##  ctype    en_US.UTF-8                 
+    ##  tz       America/New_York            
+    ##  date     2019-11-14                  
+    ## 
+    ## ─ Packages ───────────────────────────────────────────────────────────────────
+    ##  package     * version date       lib source        
+    ##  assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.2)
+    ##  cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.2)
+    ##  colorspace    1.4-1   2019-03-18 [1] CRAN (R 3.5.2)
+    ##  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)
+    ##  digest        0.6.22  2019-10-21 [1] CRAN (R 3.5.2)
+    ##  dplyr         0.8.3   2019-07-04 [1] CRAN (R 3.5.2)
+    ##  evaluate      0.14    2019-05-28 [1] CRAN (R 3.5.2)
+    ##  fftwtools     0.9-8   2017-03-25 [1] CRAN (R 3.5.0)
+    ##  ggplot2     * 3.2.1   2019-08-10 [1] CRAN (R 3.5.2)
+    ##  glue          1.3.1   2019-03-12 [1] CRAN (R 3.5.2)
+    ##  gtable        0.3.0   2019-03-25 [1] CRAN (R 3.5.2)
+    ##  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)
+    ##  knitr         1.26    2019-11-12 [1] CRAN (R 3.5.2)
+    ##  lazyeval      0.2.2   2019-03-15 [1] CRAN (R 3.5.2)
+    ##  magrittr      1.5     2014-11-22 [1] CRAN (R 3.5.0)
+    ##  munsell       0.5.0   2018-06-12 [1] CRAN (R 3.5.0)
+    ##  pillar        1.4.2   2019-06-29 [1] CRAN (R 3.5.2)
+    ##  pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 3.5.2)
+    ##  purrr         0.3.3   2019-10-18 [1] CRAN (R 3.5.2)
+    ##  R6            2.4.1   2019-11-12 [1] CRAN (R 3.5.2)
+    ##  rbenchmark  * 1.0.0   2012-08-30 [1] CRAN (R 3.5.0)
+    ##  Rcpp          1.0.3   2019-11-08 [1] CRAN (R 3.5.2)
+    ##  rlang         0.4.1   2019-10-24 [1] CRAN (R 3.5.2)
+    ##  rmarkdown     1.15    2019-08-21 [1] CRAN (R 3.5.2)
+    ##  rstudioapi    0.10    2019-03-19 [1] CRAN (R 3.5.2)
+    ##  runstats    * 1.1.0   2019-11-14 [1] CRAN (R 3.5.2)
+    ##  scales        1.0.0   2018-08-09 [1] CRAN (R 3.5.0)
+    ##  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.5.0)
+    ##  stringi       1.4.3   2019-03-12 [1] CRAN (R 3.5.2)
+    ##  stringr       1.4.0   2019-02-10 [1] CRAN (R 3.5.2)
+    ##  tibble        2.1.3   2019-06-06 [1] CRAN (R 3.5.2)
+    ##  tidyselect    0.2.5   2018-10-11 [1] CRAN (R 3.5.0)
+    ##  withr         2.1.2   2018-03-15 [1] CRAN (R 3.5.0)
+    ##  xfun          0.11    2019-11-12 [1] CRAN (R 3.5.2)
+    ##  yaml          2.2.0   2018-07-25 [1] CRAN (R 3.5.0)
+    ## 
+    ## [1] /Library/Frameworks/R.framework/Versions/3.5/Resources/library
 </code></pre>
 
     </div>
