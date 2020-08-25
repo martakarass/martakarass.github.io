@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 30 Sep 2019 19:17:23 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="/resources/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Teaching experience</title>
+      <link>/resources/teaching-all/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>/resources/teaching-all/</guid>
+      <description>Academic year 2020-21    Term Course Number Course title Teaching role     2020-21 Term 1 140.651 Methods in Biostatistics I Lead TA (lab)    Academic year 2019-20    Term Course Number Course title Teaching role     2019-20 Term 1 140.651 Methods in Biostatistics I Lead TA (lab, office hours)   2019-20 Term 2 140.652 Methods in Biostatistics II Lead TA (lab, office hours)   2019-20 Term 1 140.</description>
+    </item>
     
     <item>
       <title>Special Topics course 2018-19: Biostatistical Methods for Wearable Computing</title>
@@ -35,15 +44,6 @@
  Computing Club is one-hour session which gives students opportunities to share and develop computing skills useful for biostatisticians. It is held every other Tuesday 12:15-1:15 PM at JH SPH. Importantly, food 🍕🍌 is provided in every session!
  Past and upcoming topics and locations for 2018-19 academic year are listed below.
      Date (Location) Topic Presenter     Sep 18, 2018 (E9519) Data science project workflow (slides) Ben Ackerman   Oct 16, 2018 (W2029) The JHPCE Cluster: What does it do?</description>
-    </item>
-    
-    <item>
-      <title>Teaching experience</title>
-      <link>/resources/teaching-all/</link>
-      <pubDate>Sat, 26 Jan 2019 19:17:23 -0400</pubDate>
-      
-      <guid>/resources/teaching-all/</guid>
-      <description>Academic year 2019-20    Term Course Number Course title Teaching role     2019-20 Term 1 140.651 Methods in Biostatistics I Lead TA (lab, office hours)   2019-20 Term 1 140.850 Special topics course: Biostatistical Methods for Wearable Computing Co-instructor    Academic year 2018-19    Term Course Number Course title Teaching role     2018-19 Term 1 140.651 Methods in Biostatistics I Lab TA   2018-19 Term 2 140.</description>
     </item>
     
     <item>

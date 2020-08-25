@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/resources/teaching-all/</loc>
+      <lastmod>2020-08-25T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/post/2019-10-28-ttest-versus-ztest/</loc>
       <lastmod>2019-10-28T17:19:28-04:00</lastmod>
     </url>
@@ -60,15 +69,6 @@
     <url>
     
       <loc>/post/2019-01-26-favs-of-rstudio2019-conference/</loc>
-      <lastmod>2019-01-26T19:17:23-04:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/resources/teaching-all/</loc>
       <lastmod>2019-01-26T19:17:23-04:00</lastmod>
     </url>
     
@@ -151,6 +151,15 @@
     
       <loc>/talk/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/talk/2020-08-17-iscb_krakow/</loc>
+      <lastmod>2010-08-24T19:05:50-04:00</lastmod>
     </url>
     
   
@@ -290,6 +299,14 @@
     
     <url>
     
+      <loc>/talk/2020-08-17-iscb_krakow/</loc>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/publication_types/2/</loc>
       <lastmod>2019-09-23T18:08:38-04:00</lastmod>
       <priority>0</priority>
@@ -340,7 +357,7 @@
     <url>
     
       <loc>/resources/</loc>
-      <lastmod>2019-09-30T19:17:23-04:00</lastmod>
+      <lastmod>2020-08-25T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
