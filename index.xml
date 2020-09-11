@@ -11,6 +11,53 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>All past updates</title>
+      <link>/resources/recently-all/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>/resources/recently-all/</guid>
+      <description>
+
+&lt;h4 id=&#34;2020&#34;&gt;2020&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;This summer, I am working as a Data Science Intern in Digital Measures team @ &lt;a href=&#34;https://evidation.com/&#34; target=&#34;_blank&#34;&gt;Evidation Health&lt;/a&gt;. My main project aims at estimating medical procedure recovery trajectories and predicting recovery time from wearable patient-generated health data.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Why R? Foundation awards a &lt;a href=&#34;http://whyr.pl/foundation/supporting-grant/#scientific-committee&#34; target=&#34;_blank&#34;&gt;supporting grant for Women in Data Science&lt;/a&gt; to aid exceptional female data scientists in Poland. I serve as a member of Scientific committee for this initiative.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2019&#34;&gt;2019&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;I passed my preliminary schoolwide oral exam. My Committee consisted of three faculty from the Dept. of Biostatistics, one faculty from Dept. of Epidemiology, and one faculty from the Dept. of Medicine.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I received Leadership, Empowerment and Learning Culture &lt;a href=&#34;/docs/certificates/2019-10-09-Novartis_LELC_US_Bios_Award_Certificate_Marta_Karas.pdf&#34;&gt;Award&lt;/a&gt; during Novartis US Analytics Conference 2019. My conference talk presented the work done as a Sensor Data Analytics Intern with Novartis in Basel, Switzerland during summer 2019.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Our paper &amp;ldquo;&lt;em&gt;Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation&lt;/em&gt;&amp;rdquo; just got published in
+&lt;em&gt;Biostatistics&lt;/em&gt; with the journal&amp;rsquo;s highest reproducibility status! See &lt;a href=&#34;https://academic.oup.com/biostatistics/advance-article/doi/10.1093/biostatistics/kxz033/5572661?guestAccessKey=f3abdf65-a94d-4509-b7e9-cca2ff384528&#34; target=&#34;_blank&#34;&gt;ADEPT article&lt;/a&gt; online.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Our R package &lt;code&gt;adept&lt;/code&gt; that implements ADEPT pattern-segmentation method is out on CRAN (&lt;a href=&#34;https://cran.r-project.org/web/packages/adept/index.html&#34; target=&#34;_blank&#34;&gt;CRAN index&lt;/a&gt;. The vignette shows example of strides segmentation from raw accelerometry data of 25min outdoor run w/ walking and resting bouts. Listed May 2019 top 40 new CRAN packages.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I am working as Sensor Data Analytics Intern with Novartis pharmaceutical company in Basel, Switzerland this summer. I am also &lt;a href=&#34;https://martakarass.github.io/talk/2019-06-26-icampam/&#34; target=&#34;_blank&#34;&gt;presenting&lt;/a&gt; at ICAMPAM 2019 conference on Jun 26 in Maastricht, the Netherlands.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Our R package &lt;code&gt;runstats&lt;/code&gt; that provides methods for fast computation of running sample statistics for time series is out on CRAN (&lt;a href=&#34;https://cran.r-project.org/web/packages/runstats/index.html&#34; target=&#34;_blank&#34;&gt;CRAN index&lt;/a&gt;). Use &lt;code&gt;runstats&lt;/code&gt; to compute  (1) mean, (2) standard deviation, and (3) variance over a fixed-length window of time-series, (4) correlation, (5) covariance, and (6) Euclidean distance (L2 norm) between short-time pattern and time-series. Implemented methods utilize Convolution Theorem to compute convolutions via Fast Fourier Transform (FFT).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Our recent article &amp;ldquo;Accelerometry Data in Health Research: Challenges and Opportunities&amp;rdquo; is now published and &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6874221/&#34; target=&#34;_blank&#34;&gt;available online&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2018&#34;&gt;2018&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Interested in statistical methodology for singal processing in physical activity research? Come to JSM &lt;a href=&#34;https://ww2.amstat.org/meetings/jsm/2018/onlineprogram/ActivityDetails.cfm?SessionID=215216&#34; target=&#34;_blank&#34;&gt;session&lt;/a&gt; on Wednesday (8/1/2018), 2:00 PM - 3:50 PM.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://whyr2018.pl/&#34; target=&#34;_blank&#34;&gt;WhyR? 2018&lt;/a&gt; conference starts on July 2nd in Wroclaw, Poland. Both academia and industry professionals meet and discuss experiences in R software development and analysis applications.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I am working as a Research Assistant with Drs. &lt;a href=&#34;https://jacekurbanek.wordpress.com/about/&#34; target=&#34;_blank&#34;&gt;Jacek Urbanek&lt;/a&gt; and &lt;a href=&#34;http://www.ciprianstats.org/&#34; target=&#34;_blank&#34;&gt;Ciprian Crainiceanu&lt;/a&gt; this summer at a novel approach for identifying individual working strides from subsecond accelerometry data of walking.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Teaching experience</title>
       <link>/resources/teaching-all/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 -0400</pubDate>
@@ -1261,15 +1308,6 @@ Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019
       <pubDate>Thu, 23 Nov 2017 17:24:49 -0400</pubDate>
       
       <guid>/publication/brain-connectivity-informed-regularization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Novel approach for precise walking cadence estimation from high-density tri-axial accelerometry data collected at wrist in free-living</title>
-      <link>/talk/2020-08-17-iscb_krakow/</link>
-      <pubDate>Tue, 24 Aug 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2020-08-17-iscb_krakow/</guid>
       <description></description>
     </item>
     

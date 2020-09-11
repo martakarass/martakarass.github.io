@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>All past updates</title>
+      <link>/resources/recently-all/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>/resources/recently-all/</guid>
+      <description>2020  This summer, I am working as a Data Science Intern in Digital Measures team @ Evidation Health. My main project aims at estimating medical procedure recovery trajectories and predicting recovery time from wearable patient-generated health data.
+ Why R? Foundation awards a supporting grant for Women in Data Science to aid exceptional female data scientists in Poland. I serve as a member of Scientific committee for this initiative.</description>
+    </item>
+    
+    <item>
       <title>Teaching experience</title>
       <link>/resources/teaching-all/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 -0400</pubDate>
