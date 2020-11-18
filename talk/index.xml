@@ -5,12 +5,20 @@
     <link>/talk/</link>
       <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 30 Sep 2020 14:30:00 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Dec 2020 12:15:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Recent &amp; Upcoming Talks</title>
       <link>/talk/</link>
     </image>
+    
+    <item>
+      <title>[UPCOMING!] The most recent developments in R tidyverse</title>
+      <link>/talk/2020-10-14-computing_club/</link>
+      <pubDate>Tue, 01 Dec 2020 12:15:00 +0000</pubDate>
+      <guid>/talk/2020-10-14-computing_club/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Summer internship project: Predicting subjective recovery from lower limb surgery using consumer wearables</title>

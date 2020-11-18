@@ -18,13 +18,18 @@
   </url>
   
   <url>
+    <loc>/talk/2020-10-14-computing_club/</loc>
+    <lastmod>2020-12-01T12:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2020-09-30T14:30:00-04:00</lastmod>
+    <lastmod>2020-12-01T12:15:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/talk/</loc>
-    <lastmod>2020-09-30T14:30:00-04:00</lastmod>
+    <lastmod>2020-12-01T12:15:00+00:00</lastmod>
   </url>
   
   <url>
@@ -113,11 +118,6 @@
   </url>
   
   <url>
-    <loc>/publication/accelerometry-data-in-health-research/</loc>
-    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tag/actigraphy/</loc>
     <lastmod>2019-09-23T18:08:38-04:00</lastmod>
   </url>
@@ -129,11 +129,6 @@
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/bai/</loc>
     <lastmod>2019-09-23T18:08:38-04:00</lastmod>
   </url>
   
@@ -153,17 +148,7 @@
   </url>
   
   <url>
-    <loc>/author/glynn/</loc>
-    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/author/harezlak/</loc>
-    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/harris/</loc>
     <lastmod>2019-09-23T18:08:38-04:00</lastmod>
   </url>
   
@@ -219,11 +204,6 @@
   
   <url>
     <loc>/tag/wearable-accelerometers/</loc>
-    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/zipunnikov/</loc>
     <lastmod>2019-09-23T18:08:38-04:00</lastmod>
   </url>
   
@@ -310,6 +290,31 @@
   <url>
     <loc>/post/2019-01-26-favs-of-rstudio2019-conference/</loc>
     <lastmod>2019-01-26T19:17:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/accelerometry-data-in-health-research/</loc>
+    <lastmod>2019-01-12T18:08:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/bai/</loc>
+    <lastmod>2019-01-12T18:08:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/glynn/</loc>
+    <lastmod>2019-01-12T18:08:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/harris/</loc>
+    <lastmod>2019-01-12T18:08:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/zipunnikov/</loc>
+    <lastmod>2019-01-12T18:08:38+00:00</lastmod>
   </url>
   
   <url>
