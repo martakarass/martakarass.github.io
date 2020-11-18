@@ -1,0 +1,1417 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.0 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Marta Karas">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Package adeptdata was created to host raw accelerometry data sets and their derivatives. Some of them are used in the corresponding adept package.
+Package CRAN index is located here. Package GitHub repo is located here.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/project/project_adeptdata/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/project/project_adeptdata/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Home">
+  <meta property="og:url" content="/project/project_adeptdata/">
+  <meta property="og:title" content="&#39;adeptdata&#39; R package: Raw Accelerometry Data Sets and Their Derivatives | Home">
+  <meta property="og:description" content="Package adeptdata was created to host raw accelerometry data sets and their derivatives. Some of them are used in the corresponding adept package.
+Package CRAN index is located here. Package GitHub repo is located here."><meta property="og:image" content="/project/project_adeptdata/featured.jpg">
+  <meta property="twitter:image" content="/project/project_adeptdata/featured.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-04-22T11:54:53-04:00">
+    
+    <meta property="article:modified_time" content="2019-04-22T11:54:53-04:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/project/project_adeptdata/"
+  },
+  "headline": "'adeptdata' R package: Raw Accelerometry Data Sets and Their Derivatives",
+  
+  "image": [
+    "/project/project_adeptdata/featured.jpg"
+  ],
+  
+  "datePublished": "2019-04-22T11:54:53-04:00",
+  "dateModified": "2019-04-22T11:54:53-04:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Marta Karas"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Home",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Package adeptdata was created to host raw accelerometry data sets and their derivatives. Some of them are used in the corresponding adept package.\nPackage CRAN index is located here. Package GitHub repo is located here."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>&#39;adeptdata&#39; R package: Raw Accelerometry Data Sets and Their Derivatives | Home</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+    <script>window.wcDarkLightEnabled = true;</script>
+  
+  
+    <script>const isSiteThemeDark = false;</script>
+  
+  
+  <script src="/js/load-theme.js"></script>
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#resources"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/docs/mkaras_cv.pdf"><span>Resume</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>&#39;adeptdata&#39; R package: Raw Accelerometry Data Sets and Their Derivatives</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 22, 2019
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Package <code>adeptdata</code> was created to host raw accelerometry data sets and their derivatives. Some of them are used in the corresponding <code>adept</code> package.</p>
+<p>Package CRAN index is located <a href="https://cran.r-project.org/web/packages/adeptdata/index.html" target="_blank" rel="noopener">here</a>. Package GitHub repo is located <a href="https://github.com/martakarass/adeptdata" target="_blank" rel="noopener">here</a>.</p>
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#outdoor-continuous-walking-raw-accelerometry-data-acc_walking_iu">Outdoor continuous walking raw accelerometry data <code>acc_walking_IU</code></a></li>
+    <li><a href="#outdoor-run-raw-accelerometry-data-acc_running">Outdoor run raw accelerometry data <code>acc_running</code></a></li>
+    <li><a href="#walking-stride-accelerometry-data-templates-stride_template">Walking stride accelerometry data templates <code>stride_template</code></a></li>
+  </ul>
+</nav>
+<h1 id="installation">Installation</h1>
+<p>Install from CRAN.</p>
+<pre><code class="language-r">install.packages(&quot;adeptdata&quot;)
+</code></pre>
+<h1 id="data-objects">Data objects</h1>
+<h2 id="outdoor-continuous-walking-raw-accelerometry-data-acc_walking_iu">Outdoor continuous walking raw accelerometry data <code>acc_walking_IU</code></h2>
+<p><code>acc_walking_IU</code> is a sample of raw accelerometry data collected during outdoor continuous walking from 32 healthy participants between 23 and 52 years of age. Data were collected at frequency 100 Hz simultaneously with four wearable accelerometers located at left wrist, left hip and both ankles. See <code>?acc_walking_IU</code> for details.</p>
+<pre><code class="language-r">library(adeptdata)
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+library(lubridate)
+
+acc_walking_IU %&gt;%
+  filter(time_s &lt; 6, subj_id == acc_walking_IU$subj_id[1]) %&gt;%
+  mutate(loc_id = factor(
+    loc_id, 
+    levels = c(&quot;left_wrist&quot;, &quot;left_hip&quot;, &quot;left_ankle&quot;, &quot;right_ankle&quot;),
+    labels = c(&quot;Left wrist&quot;, &quot;Left hip&quot;, &quot;Left ankle&quot;, &quot;Right ankle&quot;))) %&gt;%
+  melt(id.vars = c(&quot;subj_id&quot;, &quot;loc_id&quot;, &quot;time_s&quot;)) %&gt;%
+  ggplot(aes(x = time_s, y = value, color = variable)) + 
+  geom_line() + 
+  facet_wrap(~ loc_id, ncol = 2) + 
+  theme_bw(base_size = 9) + 
+  labs(x = &quot;Exercise time [s]&quot;, 
+       y = &quot;Amplitude [g]&quot;, 
+       color = &quot;Sensor\naxis&quot;,
+       title = &quot;Raw accelerometry data of walking (100 Hz)&quot;) 
+</code></pre>
+<p><img src="plot_acc_walking_IU.jpeg" alt=""></p>
+<h2 id="outdoor-run-raw-accelerometry-data-acc_running">Outdoor run raw accelerometry data <code>acc_running</code></h2>
+<p><code>acc_running</code> is a sample raw accelerometry data collected during 25 minutes of an outdoor run. Data were collected at frequency 100 Hz with two ActiGraph GT9X Link sensors located at left hip and left ankle. See <code>?acc_running</code> for details.</p>
+<pre><code class="language-r">t1 &lt;- ymd_hms(&quot;2018-10-25 18:07:00&quot;, tz = &quot;UTC&quot;) 
+t2 &lt;- ymd_hms(&quot;2018-10-25 18:20:30&quot;, tz = &quot;UTC&quot;) 
+t3 &lt;- ymd_hms(&quot;2018-10-25 18:22:00&quot;, tz = &quot;UTC&quot;) 
+
+acc_running %&gt;%
+  filter((date_time &gt;= t1 &amp; date_time &lt; t1 + as.period(4, &quot;seconds&quot;)) | 
+           (date_time &gt;= t2 &amp; date_time &lt; t2 + as.period(4, &quot;seconds&quot;)) | 
+           (date_time &gt;= t3 &amp; date_time &lt; t3 + as.period(4, &quot;seconds&quot;)) ) %&gt;%
+  mutate(loc_id = factor(
+    loc_id, 
+    levels = c(&quot;left_hip&quot;, &quot;left_ankle&quot;),
+    labels = c(&quot;Left hip&quot;, &quot;Left ankle&quot;))) %&gt;%
+  melt(id.vars = c(&quot;date_time&quot;, &quot;loc_id&quot;)) %&gt;%
+  mutate(date_time_floor = paste0(
+    &quot;Minute start: &quot;, floor_date(date_time, unit = &quot;minutes&quot;))) %&gt;%
+  ggplot(aes(x = date_time, y = value, color = variable)) + 
+  geom_line(size = 0.5) + 
+  facet_grid(loc_id ~ date_time_floor, scales = &quot;free_x&quot;) + 
+  theme_bw(base_size = 9) + 
+  labs(x = &quot;Time [s]&quot;, 
+       y = &quot;Acceleration [g]&quot;, 
+       color = &quot;Sensor\naxis&quot;,
+       title = &quot;Raw accelerometry data (100 Hz)&quot;) 
+</code></pre>
+<p><img src="acc_running.jpeg" alt=""></p>
+<h2 id="walking-stride-accelerometry-data-templates-stride_template">Walking stride accelerometry data templates <code>stride_template</code></h2>
+<p><code>stride_template</code> is a list containing walking stride pattern templates derived from accelerometry data collected at four body locations: left wrist, left hip, left ankle, and right ankle. See <code>?stride_template</code> for details.</p>
+<pre><code class="language-r">data.frame(
+  x = rep(seq(0, 1, length.out = 200), 2),
+  y = c(stride_template$left_ankle[[2]][1, ],
+        stride_template$left_ankle[[2]][2, ]),
+  group = c(rep(1, 200), rep(2, 200))) %&gt;%
+  ggplot(aes(x = x, y = y, group = group)) + 
+  geom_line() +
+  facet_grid(group ~ .) + 
+  theme_bw(base_size = 9) + 
+  labs(x = &quot;Time [s]&quot;, 
+       y = &quot;Vector magnitude [g]&quot;, 
+       title = &quot;Walking stride templates (left ankle)&quot;) 
+</code></pre>
+<img src="stride_template.jpeg" width="50%">
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/rstats/">rstats</a>
+  
+  <a class="badge badge-light" href="/tag/data-set/">data set</a>
+  
+  <a class="badge badge-light" href="/tag/data/">data</a>
+  
+  <a class="badge badge-light" href="/tag/wearable-accelerometers/">wearable accelerometers</a>
+  
+  <a class="badge badge-light" href="/tag/actigraphy/">actigraphy</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/project/project_adeptdata/&amp;text=&amp;#39;adeptdata&amp;#39;%20R%20package:%20Raw%20Accelerometry%20Data%20Sets%20and%20Their%20Derivatives" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/project/project_adeptdata/&amp;t=&amp;#39;adeptdata&amp;#39;%20R%20package:%20Raw%20Accelerometry%20Data%20Sets%20and%20Their%20Derivatives" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=&amp;#39;adeptdata&amp;#39;%20R%20package:%20Raw%20Accelerometry%20Data%20Sets%20and%20Their%20Derivatives&amp;body=/project/project_adeptdata/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/project/project_adeptdata/&amp;title=&amp;#39;adeptdata&amp;#39;%20R%20package:%20Raw%20Accelerometry%20Data%20Sets%20and%20Their%20Derivatives" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=&amp;#39;adeptdata&amp;#39;%20R%20package:%20Raw%20Accelerometry%20Data%20Sets%20and%20Their%20Derivatives%20/project/project_adeptdata/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/project/project_adeptdata/&amp;title=&amp;#39;adeptdata&amp;#39;%20R%20package:%20Raw%20Accelerometry%20Data%20Sets%20and%20Their%20Derivatives" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="/"><img class="avatar mr-3 avatar-circle" src="/author/marta-karas/avatar_hud72ccb91bce59b1d73702ea67c67cfd3_241597_270x270_fill_q90_lanczos_center.jpeg" alt="Marta Karas"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Marta Karas</a></h5>
+      <h6 class="card-subtitle">PhD candidate in Biostatistics</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/martakarass" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=S27sttcAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/martakarass" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/martakaras/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/publication/accelerometry-data-in-health-research/">Accelerometry Data in Health Research - Challenges and Opportunities. Review and Examples</a></li>
+      
+      <li><a href="/publication/adept/">Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation</a></li>
+      
+      <li><a href="/project/project_runstats/">&#39;runstats&#39; R package: Fast Computation of Running Statistics for Time Series</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/wowchemy.min.d9d80f811e95b4b4f6df1eaaf297b05f.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

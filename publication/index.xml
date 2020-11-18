@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on Home</title>
+    <title>Publications | Home</title>
     <link>/publication/</link>
-    <description>Recent content in Publications on Home</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+      <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 23 Sep 2019 18:08:38 -0400</lastBuildDate>
+    <image>
+      <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
+      <title>Publications</title>
+      <link>/publication/</link>
+    </image>
     
-	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Accelerometry Data in Health Research - Challenges and Opportunities. Review and Examples</title>
+      <link>/publication/accelerometry-data-in-health-research/</link>
+      <pubDate>Mon, 23 Sep 2019 18:08:38 -0400</pubDate>
+      <guid>/publication/accelerometry-data-in-health-research/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation</title>
       <link>/publication/adept/</link>
       <pubDate>Mon, 23 Sep 2019 18:08:38 -0400</pubDate>
-      
       <guid>/publication/adept/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Accelerometry Data in Health Research: Challenges and Opportunities. Review and Examples</title>
-      <link>/publication/accelerometry-data-in-health-research/</link>
-      <pubDate>Sat, 01 Dec 2018 18:08:38 -0400</pubDate>
-      
-      <guid>/publication/accelerometry-data-in-health-research/</guid>
       <description></description>
     </item>
     
@@ -34,7 +32,6 @@
       <title>Connectivity-Informed Adaptive Regularization for Generalized Outcomes</title>
       <link>/publication/brain-connectivity-informed-regularization-generalized/</link>
       <pubDate>Tue, 01 May 2018 17:59:50 -0400</pubDate>
-      
       <guid>/publication/brain-connectivity-informed-regularization-generalized/</guid>
       <description></description>
     </item>
@@ -43,7 +40,6 @@
       <title>Brain Connectivity Informed Regularization Methods for Regression</title>
       <link>/publication/brain-connectivity-informed-regularization/</link>
       <pubDate>Thu, 23 Nov 2017 17:24:49 -0400</pubDate>
-      
       <guid>/publication/brain-connectivity-informed-regularization/</guid>
       <description></description>
     </item>

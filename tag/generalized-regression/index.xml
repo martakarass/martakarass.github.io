@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>generalized regression | Home</title>
+    <link>/tag/generalized-regression/</link>
+      <atom:link href="/tag/generalized-regression/index.xml" rel="self" type="application/rss+xml" />
+    <description>generalized regression</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 May 2018 17:59:50 -0400</lastBuildDate>
+    <image>
+      <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
+      <title>generalized regression</title>
+      <link>/tag/generalized-regression/</link>
+    </image>
+    
+    <item>
+      <title>Connectivity-Informed Adaptive Regularization for Generalized Outcomes</title>
+      <link>/publication/brain-connectivity-informed-regularization-generalized/</link>
+      <pubDate>Tue, 01 May 2018 17:59:50 -0400</pubDate>
+      <guid>/publication/brain-connectivity-informed-regularization-generalized/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,67 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Talks on Home</title>
+    <title>Recent &amp; Upcoming Talks | Home</title>
     <link>/talk/</link>
-    <description>Recent content in Recent &amp; Upcoming Talks on Home</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>ADaptive Empirical Pattern Transformation (ADEPT) with application to walking stride segmentation</title>
-      <link>/talk/2018-08-jsm/</link>
-      <pubDate>Wed, 01 Aug 2018 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2018-08-jsm/</guid>
-      <description></description>
-    </item>
+      <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent &amp; Upcoming Talks</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 30 Sep 2020 14:30:00 -0400</lastBuildDate>
+    <image>
+      <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>/talk/</link>
+    </image>
     
     <item>
-      <title>Wearable accelerometers, accelerometry data and automatic steps segmentation in R: strideter and convo R packages</title>
-      <link>/talk/2018-08-whyr/</link>
-      <pubDate>Mon, 02 Jul 2018 18:39:28 -0400</pubDate>
-      
-      <guid>/talk/2018-08-whyr/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Summer intenrnship project: Predicting subjective recovery from lower limb surgery using consumer wearables</title>
+      <title>Summer internship project: Predicting subjective recovery from lower limb surgery using consumer wearables</title>
       <link>/talk/2020-09-31-wit_summer_project_evidation/</link>
-      <pubDate>Wed, 29 Sep 2010 19:05:50 -0400</pubDate>
-      
+      <pubDate>Wed, 30 Sep 2020 14:30:00 -0400</pubDate>
       <guid>/talk/2020-09-31-wit_summer_project_evidation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>[UPCOMING!] The most recent developments in R tidyverse</title>
-      <link>/talk/2020-10-14-computing_club/</link>
-      <pubDate>Wed, 29 Sep 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2020-10-14-computing_club/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Novel approach for precise walking cadence estimation from high-density tri-axial accelerometry data collected at wrist in free-living</title>
       <link>/talk/2020-08-17-iscb_krakow/</link>
-      <pubDate>Tue, 24 Aug 2010 19:05:50 -0400</pubDate>
-      
+      <pubDate>Thu, 27 Aug 2020 15:50:50 -0400</pubDate>
       <guid>/talk/2020-08-17-iscb_krakow/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>arcstats: R software for computing summaries of minute-level physical activity data</title>
+      <title>arctools: R software for computing summaries of minute-level physical activity data</title>
       <link>/talk/2020-06-04-engage_arcstats/</link>
-      <pubDate>Fri, 04 Jun 2010 19:05:50 -0400</pubDate>
-      
+      <pubDate>Thu, 04 Jun 2020 11:00:00 -0400</pubDate>
       <guid>/talk/2020-06-04-engage_arcstats/</guid>
       <description></description>
     </item>
@@ -69,35 +39,24 @@
     <item>
       <title>Precise walking strides segmentation from raw accelerometry data: ADEPT method</title>
       <link>/talk/2020-03-11-kth-oss-webinar-adept/</link>
-      <pubDate>Wed, 10 Mar 2010 19:05:50 -0400</pubDate>
-      
+      <pubDate>Wed, 11 Mar 2020 14:00:50 -0400</pubDate>
       <guid>/talk/2020-03-11-kth-oss-webinar-adept/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Automatic estimation of step asymmetry in a split-belt treadmill experiment using high-resolution accelerometry data</title>
-      <link>/talk/2019-06-26-icampam/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2019-06-26-icampam/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Considerations in statistical modeling of walking features derived from wrist-worn sensor in free-living</title>
-      <link>/talk/2019-10-31-wit-novartis/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2019-10-31-wit-novartis/</guid>
-      <description>. .</description>
+      <title>Towards precise walking strides segmentation from accelerometry data in free-living: ADEPT method and further developments</title>
+      <link>/talk/2020-02-25-banff/</link>
+      <pubDate>Tue, 25 Feb 2020 02:15:00 -0500</pubDate>
+      <guid>/talk/2020-02-25-banff/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1NTzmMksT8yo0awtZseVjN4XufwVzOtLUn86SxTW1XWY/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;. .&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Functional registration of walking strides in high-density accelerometry data for estimation of gait asymmetry</title>
       <link>/talk/2019-12-03-cmstatistics-london/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
+      <pubDate>Mon, 16 Dec 2019 08:40:00 -0500</pubDate>
       <guid>/talk/2019-12-03-cmstatistics-london/</guid>
       <description></description>
     </item>
@@ -105,73 +64,95 @@
     <item>
       <title>Methods for fast processing of time-series: runstats R package</title>
       <link>/talk/2019-11-05-3rd-oss-webinar/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
+      <pubDate>Tue, 05 Nov 2019 15:00:50 -0500</pubDate>
       <guid>/talk/2019-11-05-3rd-oss-webinar/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Considerations in statistical modeling of walking features derived from wrist-worn sensor in free-living</title>
+      <link>/talk/2019-10-31-wit-novartis/</link>
+      <pubDate>Thu, 31 Oct 2019 14:30:00 -0400</pubDate>
+      <guid>/talk/2019-10-31-wit-novartis/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1o-2GPXTglKrAjRtp2SeHupr8hMykeHneJ12LZgxB6AY/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;. .&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Overview of JHU Biostat Wearable and Implantable Technology (WIT) working group research</title>
       <link>/talk/2019-10-15-journal-club-wit/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
+      <pubDate>Tue, 15 Oct 2019 12:15:00 -0400</pubDate>
       <guid>/talk/2019-10-15-journal-club-wit/</guid>
-      <description>Slides link.</description>
+      <description>&lt;p&gt;Slides &lt;a href=&#34;https://docs.google.com/presentation/d/1TAPuMzQmeB9GP06FNKmoXAcPDt9A9_h4NhJSRtoapMY/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Walking measurements derived from free-living wrist-worn sensor as novel digital endpoints</title>
+      <link>/talk/2019-10-06-novartis-internal/</link>
+      <pubDate>Tue, 08 Oct 2019 09:40:00 -0400</pubDate>
+      <guid>/talk/2019-10-06-novartis-internal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic estimation of step asymmetry in a split-belt treadmill experiment using high-resolution accelerometry data</title>
+      <link>/talk/2019-06-26-icampam/</link>
+      <pubDate>Wed, 26 Jun 2019 15:05:00 -0400</pubDate>
+      <guid>/talk/2019-06-26-icampam/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Physical activity monitoring with wearable accelerometers: strides segmentation, gait pattern estimation and walking detection from free-living data in R. Also: highlights from RStudio 2019 conference.</title>
       <link>/talk/2019-05-23-stwur-meeting-talk/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
+      <pubDate>Thu, 23 May 2019 18:00:00 -0400</pubDate>
       <guid>/talk/2019-05-23-stwur-meeting-talk/</guid>
-      <description>Slides from the talk part about RStudio 2019 conference can be found here.</description>
+      <description>&lt;p&gt;Slides from the talk part about RStudio 2019 conference can be found &lt;a href=&#34;https://martakarass.github.io/resources/computing_club_materials/2019-02-12-seen-at-rstudio2019-conf/#/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Stride segmentation and stride pattern estimation based on accelerometry data</title>
+      <link>/talk/2019-05-14-motion-lab-talk/</link>
+      <pubDate>Tue, 14 May 2019 09:00:00 -0400</pubDate>
+      <guid>/talk/2019-05-14-motion-lab-talk/</guid>
+      <description>&lt;p&gt;Some picture from the talk was posted &lt;a href=&#34;https://twitter.com/jurbane2/status/1128290019217637376&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Simulation experiment project for Seminar on Adaptive Clinical Trials</title>
       <link>/talk/2019-04-16-adaptive-trials-semminar/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
+      <pubDate>Wed, 17 Apr 2019 12:30:50 -0400</pubDate>
       <guid>/talk/2019-04-16-adaptive-trials-semminar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Some of the topics seen at RStudio conference 2019</title>
-      <link>/talk/2019-02-computing_club/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2019-02-computing_club/</guid>
-      <description>Ben&amp;rsquo;s tweet thread with some pics from the talk: [link]</description>
+      <link>/talk/2019-02-12-computing_club/</link>
+      <pubDate>Tue, 12 Feb 2019 12:15:50 -0500</pubDate>
+      <guid>/talk/2019-02-12-computing_club/</guid>
+      <description>&lt;p&gt;Ben&amp;rsquo;s tweet thread with some pics from the talk: &lt;a href=&#34;https://twitter.com/backerman150/status/1095373237641449473&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[link]&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>Stride segmentation and stride pattern estimation based on accelerometry data</title>
-      <link>/talk/2019-05-14-motion-lab-talk/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2019-05-14-motion-lab-talk/</guid>
-      <description>Some picture from the talk was posted here.</description>
-    </item>
-    
-    <item>
-      <title>Towards precise walking strides segmentation from accelerometry data in free-living: ADEPT method and further developments</title>
-      <link>/talk/2020-02-25-banff/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2020-02-25-banff/</guid>
-      <description>. .</description>
-    </item>
-    
-    <item>
-      <title>Walking measurements derived from free-living wrist-worn sensor as novel digital endpoints</title>
-      <link>/talk/2019-10-06-novartis-internal/</link>
-      <pubDate>Mon, 25 Jan 2010 19:05:50 -0400</pubDate>
-      
-      <guid>/talk/2019-10-06-novartis-internal/</guid>
+      <title>ADaptive Empirical Pattern Transformation (ADEPT) with application to walking stride segmentation</title>
+      <link>/talk/2018-08-01-jsm/</link>
+      <pubDate>Wed, 01 Aug 2018 15:05:50 -0400</pubDate>
+      <guid>/talk/2018-08-01-jsm/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Wearable accelerometers, accelerometry data and automatic steps segmentation in R: strideter and convo R packages</title>
+      <link>/talk/2018-07-03-whyr/</link>
+      <pubDate>Tue, 03 Jul 2018 10:30:00 -0400</pubDate>
+      <guid>/talk/2018-07-03-whyr/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;../../img/2018-07-whyr/pic12.jpg&#34; alt=&#34;pic1&#34;&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -1,452 +1,461 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-    
-    
-    <url>
-    
-      <loc>/resources/recently-all/</loc>
-      <lastmod>2020-08-25T00:00:00-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/example/example1/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/resources/teaching-all/</loc>
-      <lastmod>2020-08-25T00:00:00-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/example/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/post/2019-10-28-ttest-versus-ztest/</loc>
-      <lastmod>2019-10-28T17:19:28-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/example/example2/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/resources/specialtopics/</loc>
-      <lastmod>2019-09-30T19:17:23-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-09-30T14:30:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication/adept/</loc>
-      <lastmod>2019-09-23T18:08:38-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/</loc>
+    <lastmod>2020-09-30T14:30:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/project/project-adeptdata/</loc>
-      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/2020-09-31-wit_summer_project_evidation/</loc>
+    <lastmod>2020-09-30T14:30:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/project/project-runstats/</loc>
-      <lastmod>2019-03-15T11:54:53-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/2020-08-17-iscb_krakow/</loc>
+    <lastmod>2020-08-27T15:50:50-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/resources/computing-club/</loc>
-      <lastmod>2019-01-26T19:17:23-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/resources/recently-all/</loc>
+    <lastmod>2020-08-25T00:00:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/post/2019-01-26-favs-of-rstudio2019-conference/</loc>
-      <lastmod>2019-01-26T19:17:23-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/resources/</loc>
+    <lastmod>2020-08-25T00:00:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication/accelerometry-data-in-health-research/</loc>
-      <lastmod>2018-12-01T18:08:38-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/resources/teaching-all/</loc>
+    <lastmod>2020-08-25T00:00:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/post/2018-09-02-applying-for-phd-in-usa/</loc>
-      <lastmod>2018-09-02T19:17:23-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/2020-06-04-engage_arcstats/</loc>
+    <lastmod>2020-06-04T11:00:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2018-08-jsm/</loc>
-      <lastmod>2018-08-01T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/2020-03-11-kth-oss-webinar-adept/</loc>
+    <lastmod>2020-03-11T14:00:50-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2018-08-whyr/</loc>
-      <lastmod>2018-07-02T18:39:28-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/2020-02-25-banff/</loc>
+    <lastmod>2020-02-25T02:15:00-05:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication/brain-connectivity-informed-regularization-generalized/</loc>
-      <lastmod>2018-05-01T17:59:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/2019-12-03-cmstatistics-london/</loc>
+    <lastmod>2019-12-16T08:40:00-05:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication/brain-connectivity-informed-regularization/</loc>
-      <lastmod>2017-11-23T17:24:49-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/2019-11-05-3rd-oss-webinar/</loc>
+    <lastmod>2019-11-05T15:00:50-05:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/post/</loc>
-      <lastmod>2017-01-01T00:00:00-05:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/2019-10-31-wit-novartis/</loc>
+    <lastmod>2019-10-31T14:30:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2019-10-28T17:19:28-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/post/2019-10-28-ttest-versus-ztest/</loc>
+    <lastmod>2019-10-28T17:19:28-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2020-09-31-wit_summer_project_evidation/</loc>
-      <lastmod>2010-09-29T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/2019-10-15-journal-club-wit/</loc>
+    <lastmod>2019-10-15T12:15:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2020-10-14-computing_club/</loc>
-      <lastmod>2010-09-29T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/2019-10-06-novartis-internal/</loc>
+    <lastmod>2019-10-08T09:40:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2020-08-17-iscb_krakow/</loc>
-      <lastmod>2010-08-24T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/resources/specialtopics/</loc>
+    <lastmod>2019-09-30T19:17:23-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2020-06-04-engage_arcstats/</loc>
-      <lastmod>2010-06-04T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/publication-type/2/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2020-03-11-kth-oss-webinar-adept/</loc>
-      <lastmod>2010-03-10T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/publication/accelerometry-data-in-health-research/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2019-06-26-icampam/</loc>
-      <lastmod>2010-01-25T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tag/actigraphy/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2019-10-31-wit-novartis/</loc>
-      <lastmod>2010-01-25T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/publication/adept/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2019-12-03-cmstatistics-london/</loc>
-      <lastmod>2010-01-25T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2019-11-05-3rd-oss-webinar/</loc>
-      <lastmod>2010-01-25T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/bai/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2019-10-15-journal-club-wit/</loc>
-      <lastmod>2010-01-25T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/crainiceanu/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2019-05-23-stwur-meeting-talk/</loc>
-      <lastmod>2010-01-25T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/fadel/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2019-04-16-adaptive-trials-semminar/</loc>
-      <lastmod>2010-01-25T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tag/gait/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2019-02-computing_club/</loc>
-      <lastmod>2010-01-25T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/glynn/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2019-05-14-motion-lab-talk/</loc>
-      <lastmod>2010-01-25T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/harezlak/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2020-02-25-banff/</loc>
-      <lastmod>2010-01-25T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/harris/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/talk/2019-10-06-novartis-internal/</loc>
-      <lastmod>2010-01-25T19:05:50-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/karas/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/resources/computing_club_materials/2019-01-29-deep-learning/</loc>
-    </url>
-    
+  <url>
+    <loc>/tag/methods/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/resources/computing_club_materials/2019-02-12-seen-at-rstudio2019-conf/</loc>
-    </url>
-    
+  <url>
+    <loc>/tag/pattern-segmentation/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/resources/specialtopics_materials/intro/</loc>
-    </url>
-    
+  <url>
+    <loc>/tag/physical-activity/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication_types/2/</loc>
-      <lastmod>2019-09-23T18:08:38-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/categories/</loc>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/</loc>
-      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/author/straczkiewicz/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/project/</loc>
-      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/publication_types/</loc>
-      <lastmod>2019-09-23T18:08:38-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/author/urbanek/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/resources/</loc>
-      <lastmod>2020-08-25T00:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/tag/walking/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/tags/</loc>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/tag/wearable-accelerometers/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/tags/accelerometry/</loc>
-      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/author/zipunnikov/</loc>
+    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/tags/data/</loc>
-      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/talk/2019-06-26-icampam/</loc>
+    <lastmod>2019-06-26T15:05:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/tags/data-set/</loc>
-      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/talk/2019-05-23-stwur-meeting-talk/</loc>
+    <lastmod>2019-05-23T18:00:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/tags/rstats/</loc>
-      <lastmod>2019-04-22T11:54:53-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/talk/2019-05-14-motion-lab-talk/</loc>
+    <lastmod>2019-05-14T09:00:00-04:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>/tags/signal-processing/</loc>
-      <lastmod>2019-03-15T11:54:53-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/courses/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/project_adeptdata/</loc>
+    <lastmod>2019-04-22T11:54:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/data/</loc>
+    <lastmod>2019-04-22T11:54:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/data-set/</loc>
+    <lastmod>2019-04-22T11:54:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2019-04-22T11:54:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/rstats/</loc>
+    <lastmod>2019-04-22T11:54:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/2019-04-16-adaptive-trials-semminar/</loc>
+    <lastmod>2019-04-17T12:30:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/project_runstats/</loc>
+    <lastmod>2019-03-15T11:54:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/signal-processing/</loc>
+    <lastmod>2019-03-15T11:54:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/2019-02-12-computing_club/</loc>
+    <lastmod>2019-02-12T12:15:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/resources/computing-club/</loc>
+    <lastmod>2019-01-26T19:17:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2019-01-26-favs-of-rstudio2019-conference/</loc>
+    <lastmod>2019-01-26T19:17:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018-09-02-applying-for-phd-in-usa/</loc>
+    <lastmod>2018-09-02T19:17:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/2018-08-01-jsm/</loc>
+    <lastmod>2018-08-01T15:05:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/2018-07-03-whyr/</loc>
+    <lastmod>2018-07-03T10:30:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication-type/3/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/ances/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/brain-imaging/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/brzyski/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/brain-connectivity-informed-regularization-generalized/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/dzemidzic/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/generalized-regression/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/goni/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/j./</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/randolph/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/regression/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/regularization/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/statistical-methods/</loc>
+    <lastmod>2018-05-01T17:59:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/brain-connectivity-informed-regularization/</loc>
+    <lastmod>2017-11-23T17:24:49-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/karaken/</loc>
+    <lastmod>2017-11-23T17:24:49-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/b./</loc>
+  </url>
+  
+  <url>
+    <loc>/author/c./</loc>
+  </url>
+  
+  <url>
+    <loc>/author/c.m./</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/author/d./</loc>
+  </url>
+  
+  <url>
+    <loc>/author/d.a./</loc>
+  </url>
+  
+  <url>
+    <loc>/author/j.k./</loc>
+  </url>
+  
+  <url>
+    <loc>/author/m./</loc>
+  </url>
+  
+  <url>
+    <loc>/author/marta-karas/</loc>
+  </url>
+  
+  <url>
+    <loc>/author/n.w./</loc>
+  </url>
+  
+  <url>
+    <loc>/author/t./</loc>
+  </url>
+  
+  <url>
+    <loc>/author/t.w./</loc>
+  </url>
+  
+  <url>
+    <loc>/author/v./</loc>
+  </url>
+  
+  <url>
+    <loc>/author/w./</loc>
+  </url>
   
 </urlset>

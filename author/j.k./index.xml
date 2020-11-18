@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>J.K. | Home</title>
+    <link>/author/j.k./</link>
+      <atom:link href="/author/j.k./index.xml" rel="self" type="application/rss+xml" />
+    <description>J.K.</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
+      <title>J.K.</title>
+      <link>/author/j.k./</link>
+    </image>
+    
+    <item>
+      <title>Accelerometry Data in Health Research - Challenges and Opportunities. Review and Examples</title>
+      <link>/publication/accelerometry-data-in-health-research/</link>
+      <pubDate>Mon, 23 Sep 2019 18:08:38 -0400</pubDate>
+      <guid>/publication/accelerometry-data-in-health-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation</title>
+      <link>/publication/adept/</link>
+      <pubDate>Mon, 23 Sep 2019 18:08:38 -0400</pubDate>
+      <guid>/publication/adept/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,46 +1,424 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Home</title>
+    <title>Posts | Home</title>
     <link>/post/</link>
-    <description>Recent content in Posts on Home</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
-    
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 28 Oct 2019 17:19:28 -0400</lastBuildDate>
+    <image>
+      <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
+      <title>Posts</title>
+      <link>/post/</link>
+    </image>
     
     <item>
       <title>When to use t distribution versus normal distribution quantiles in constructing confidence interval for the mean</title>
       <link>/post/2019-10-28-ttest-versus-ztest/</link>
       <pubDate>Mon, 28 Oct 2019 17:19:28 -0400</pubDate>
-      
       <guid>/post/2019-10-28-ttest-versus-ztest/</guid>
       <description>&lt;p&gt;To construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I&amp;rsquo;d use quantiles of t-distribution versus quantiles of normal distribution for that purpose.&lt;/p&gt;
+&lt;p&gt;Note: the below text could be directly translated to answer when to use t-test versus z-test in testing hypothesis about the mean parameter.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#span-stylecolordarkblueexample-1-constructing-confidence-interval-for-mu-with-z-quantilesspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Example 1: constructing confidence interval for $\mu$ with $z$-quantiles&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#span-stylecolordarkblueexample-2-constructing-confidence-interval-for-mu-with-t-quantilesspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Example 2: constructing confidence interval for $\mu$ with $t$-quantiles&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 
-&lt;p&gt;Note: the below text could be directly translated to answer when to use t-test versus z-test in testing hypothesis about the mean parameter.&lt;/p&gt;</description>
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#span-stylecolordarkbluecase-1-observations-from-normal-distribution-sigma-known-any-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 1: observations from normal distribution, $\sigma$ known, any $n$&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#span-stylecolordarkbluecase-2-observations-from-normal-distribution-sigma-unknown-small-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 2: observations from normal distribution, $\sigma$ unknown, small $n$&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#span-stylecolordarkbluecase-3-observations-from-normal-distribution-sigma-unknown-large-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 3: observations from normal distribution, $\sigma$ unknown, large $n$&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#span-stylecolordarkbluecase-4-observations-from-any-distribution-sigma-known-small-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 4: observations from any distribution, $\sigma$ known, small $n$&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#span-stylecolordarkbluecase-5-observations-from-any-distribution-sigma-known-large-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 5: observations from any distribution, $\sigma$ known, large $n$&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#span-stylecolordarkbluecase-6-observations-from-any-distribution-sigma-unknown-small-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 6: observations from any distribution, $\sigma$ unknown, small $n$&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#span-stylecolordarkbluecase-7-observations-from-any-distribution-sigma-unknown-large-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 7: observations from any distribution, $\sigma$ unknown, large $n$&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h1 id=&#34;standardized-sample-mean&#34;&gt;Standardized sample mean&lt;/h1&gt;
+&lt;p&gt;Consider $X_1, \ldots, X_n$ &amp;ndash; a sequence of i.i.d. random variables with mean $E(X_i) = \mu$ and  variance $\text{var}(X_i) = \sigma^2$. To construct confidence intervals for $\mu$ parameter, we often use a standardized sample mean,&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\frac{\overline{X}_n - \mu}{\sigma/\sqrt{n}},
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;or its version where $S_n$ &amp;ndash; a consistent estimator of true standard deviation $\sigma$ &amp;ndash; is used, $\frac{\overline{X}_n - \mu}{S_n/\sqrt{n}}$; the latter is common in practice as we typically do not know $\sigma$ and must estimate it from the data. Knowing distribution of a standardized sample mean allows us to construct confidence interval for a mean $\mu$ parameter.&lt;/p&gt;
+&lt;h2 id=&#34;span-stylecolordarkblueexample-1-constructing-confidence-interval-for-mu-with-z-quantilesspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Example 1: constructing confidence interval for $\mu$ with $z$-quantiles&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Assume $X_1, \ldots, X_n$ are i.i.d. $\sim N(\mu,\sigma^2)$ and $\sigma$ is known. Then we have an exact distributional result for a standardized sample mean,&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\frac{\overline{X}_n - \mu}{\sigma/\sqrt{n}} \sim N(0,1).
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Let us denote $z_{ 1-\frac{\alpha}{2}}$ to be $(1-\frac{\alpha}{2})$-th quantile of standard normal distribution $N(0,1)$. Since  $N(0,1)$ is symmetric around $0$, we have $z_{\frac{\alpha}{2}} = -z_{1-\frac{\alpha}{2}}$ and we can write&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+1-\alpha = P\left(-z_{1-\frac{\alpha}{2}} \leq \frac{\overline{X}_n-\mu}{\sigma/\sqrt{n}} \leq z_{1-\frac{\alpha}{2}} \right)
+=  P\left(\bar{X}_n-z_{1-\frac{\alpha}{2}}  \frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X}_n+z_{1-\frac{\alpha}{2}}  \frac{\sigma}{\sqrt{n}} \right),
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;which yields that $\left[ \bar{X}_n-z_{1-\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}, ; \bar{X}_n+z_{1-\frac{\alpha}{2}}  \frac{\sigma}{\sqrt{n}}\right]$ is a $(1-\alpha )$-confidence interval for a mean parameter $\mu$.&lt;/p&gt;
+&lt;h2 id=&#34;span-stylecolordarkblueexample-2-constructing-confidence-interval-for-mu-with-t-quantilesspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Example 2: constructing confidence interval for $\mu$ with $t$-quantiles&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Assume $X_1, \ldots, X_n$ are i.i.d. $\sim N(\mu,\sigma^2)$ and $\sigma$ is &lt;strong&gt;unknown&lt;/strong&gt;. We use $S_n$ &amp;ndash; a consistent sample estimator of true standard deviation &amp;ndash; to approximate $\sigma$, and have an exact distributional result for a standardized sample mean,&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\frac{\overline{X}_n - \mu}{S_n/\sqrt{n}} \sim t_{n-1}.
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Let us denote $t_{n-1,1-\frac{\alpha}{2}}$ to be a $(n-1,1-\frac{\alpha}{2})$-th quantile of $t$-distributuon with $n-1$ degrees of freedom. Since $t$ is symmetric around $0$, we have&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+1-\alpha =P\left(-t_{n-1,1-\frac{\alpha}{2}} \leq \frac{\bar{X}_{n}-\mu}{S_{n} / \sqrt{n}} \leq t_{n-1,1-\frac{\alpha}{2}}\right)
+= P\left(\bar{X}_n-t_{n-1, 1-\frac{\alpha}{2}}\frac{S_n}{\sqrt{n}} \leq \mu \leq \bar{X}_n+t_{n-1, 1-\frac{\alpha}{2}} \frac{S_n}{\sqrt{n}} \right),
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;which yields that $\left[ \bar{X}_n-t_{n-1, 1-\frac{\alpha}{2}} \frac{S_n}{\sqrt{n}}, ; \bar{X}_n+t_{n-1, 1-\frac{\alpha}{2}} \frac{S_n}{\sqrt{n}}\right]$ is a $(1-\alpha )$-confidence interval for a mean parameter $\mu$.&lt;/p&gt;
+&lt;h1 id=&#34;cases&#34;&gt;Cases&lt;/h1&gt;
+&lt;p&gt;In many cases, whether to use quantiles of $t$-student distribution versus standard normal distribution is based on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;distribution of $X_1, \ldots, X_n$ variables,&lt;/li&gt;
+&lt;li&gt;whether  $\sigma$ is known or not (and we need to estimate it i.e. with $S_n$),&lt;/li&gt;
+&lt;li&gt;what is sample size $n$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: the below cases could be directly translated to answer when to use $t$-test versus $z$-test in testing hypothesis about the mean $\mu$ parameter, i.e. test for $H_0: \mu = \mu_0$ versus $H_1: \mu &amp;lt; \mu_0$, or $H_1: \mu \neq \mu_0$, or $H_1: \mu &amp;gt; \mu_0$.&lt;/p&gt;
+&lt;h2 id=&#34;span-stylecolordarkbluecase-1-observations-from-normal-distribution-sigma-known-any-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 1: observations from normal distribution, $\sigma$ known, any $n$&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from normal $N(\mu, \sigma^2)$ distribution.&lt;/li&gt;
+&lt;li&gt;$\sigma$ known.&lt;/li&gt;
+&lt;li&gt;Any sample size $n$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$\Rightarrow$ We have exact result that  $\frac{\bar{X}_{n}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)$ and hence we use quantiles of normal distribution in constructing the CI.&lt;/p&gt;
+&lt;h2 id=&#34;span-stylecolordarkbluecase-2-observations-from-normal-distribution-sigma-unknown-small-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 2: observations from normal distribution, $\sigma$ unknown, small $n$&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from normal $N(\mu, \sigma^2)$ distribution.&lt;/li&gt;
+&lt;li&gt;$\sigma$ unknown.&lt;/li&gt;
+&lt;li&gt;Small sample size ($n \leq 50$).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$\Rightarrow$ We use $S_{n}$ to approximate $\sigma$. We have exact result that  $\frac{\bar{X}_{n}-\mu}{S_{n} / \sqrt{n}} \sim t_{n-1}$ and hence we use quantiles of $t$ distribution with $n-1$ degrees of freedom in constructing the CI.&lt;/p&gt;
+&lt;h2 id=&#34;span-stylecolordarkbluecase-3-observations-from-normal-distribution-sigma-unknown-large-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 3: observations from normal distribution, $\sigma$ unknown, large $n$&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from normal $N(\mu, \sigma^2)$ distribution.&lt;/li&gt;
+&lt;li&gt;$\sigma$ unknown.&lt;/li&gt;
+&lt;li&gt;Moderate to large sample size ($n &amp;gt; 50$).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$\Rightarrow$ We use $S_{n}$ to approximate $\sigma$. Because of $n$ large enough, Slutsky&amp;rsquo;s theorem asymptotic ``kicks in&#39;&#39; and allows to replace $\sigma$ with $S_n$ &amp;ndash; a consistent estimator of true population standard deviation, and to write that $\frac{\bar{X}_{n}-\mu}{S_n / \sqrt{n}} \approx \sim N(0,1)$. Because of $n$ large enough, we assume $N(0,1)$ is approximated ($\approx$) well enough to use quantiles of normal distribution in constructing the CI.&lt;/p&gt;
+&lt;p&gt;$\Rightarrow$ Another way to think about this case is that, as in Case 2, we have an exact result that $\frac{\bar{X}_{n}-\mu}{S_{n} / \sqrt{n}} \sim t_{n-1}$, and with large $n$, quantiles of $t$-distribution with $n-1$ degrees of freedom are almost equvalent to quantiles of normal distribution.&lt;/p&gt;
+&lt;h2 id=&#34;span-stylecolordarkbluecase-4-observations-from-any-distribution-sigma-known-small-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 4: observations from any distribution, $\sigma$ known, small $n$&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from (other than normal) distribution  of mean $E(X_i) = \mu$ and variance $\text{var}(X_i) = \sigma^2$ (&lt;em&gt;for normally distributed $X_i$&amp;rsquo;s, see cases 1-3&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;$\sigma$ known.&lt;/li&gt;
+&lt;li&gt;Small sample size ($n \leq 50$).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$\Rightarrow$ Use CLT to get that standardized sample mean is approximately normal, $\frac{\bar{X}_{n}-\mu}{\sigma / \sqrt{n}} \approx \sim N(0,1)$. Since there is CLT approximation and we have a small sample size, in practice, we typically use quantiles of $t$ distribution with $n-1$ degrees of freedom to get more conservative (wider) CI.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: when $X_1, \ldots, X_n$ distribution of is very skewed (i.e. Poisson) it may be not plausible that CLT already ``kicks in&#39;&#39; and other techniques may be needed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;span-stylecolordarkbluecase-5-observations-from-any-distribution-sigma-known-large-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 5: observations from any distribution, $\sigma$ known, large $n$&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from (other than normal) distribution  of mean $E(X_i) = \mu$ and variance $\text{var}(X_i) = \sigma^2$ (&lt;em&gt;for normally distributed $X_i$&amp;rsquo;s, see cases 1-3&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;$\sigma$ known.&lt;/li&gt;
+&lt;li&gt;Moderate to large sample size ($n &amp;gt; 50$).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal. We have $\frac{\bar{X}_{n}-\mu}{\sigma/ \sqrt{n}} \approx \sim N(0,1)$. Since we have a moderate to small sample size, we assume that CLT ``kicks in&#39;&#39; and the approximation ($\approx$) is good enough to use quantiles of normal distribution.&lt;/p&gt;
+&lt;h2 id=&#34;span-stylecolordarkbluecase-6-observations-from-any-distribution-sigma-unknown-small-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 6: observations from any distribution, $\sigma$ unknown, small $n$&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from (other than normal) distribution  of mean $E(X_i) = \mu$ and variance $\text{var}(X_i) = \sigma^2$ (&lt;em&gt;for normally distributed $X_i$&amp;rsquo;s, see cases 1-3&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;$\sigma$ unknown.&lt;/li&gt;
+&lt;li&gt;Small sample size ($n \leq 50$).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&amp;rsquo;s theorem to replace $\sigma$ with $S_n$ &amp;ndash; a consistent estimator of true population standard deviation. We have $\frac{\bar{X}_{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since there is CLT and Slutsky&amp;rsquo;s theorem approximation and we have a small sample size, in practice, we typically use quantiles of $t$ distribution with $n-1$ degrees of freedom to get more conservative (wider) CI.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: two approximations are happening here!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: when $X_1, \ldots, X_n$ distribution of is very skewed (i.e. Poisson) it may be not plausible that CLT already ``kicks in&#39;&#39; and other techniques may be needed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;span-stylecolordarkbluecase-7-observations-from-any-distribution-sigma-unknown-large-nspan&#34;&gt;&lt;span style=&#34;color:darkblue&#34;&gt;Case 7: observations from any distribution, $\sigma$ unknown, large $n$&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Observations $X_1, \ldots, X_n$ are from (other than normal) distribution  of mean $E(X_i) = \mu$ and variance $\text{var}(X_i) = \sigma^2$ (&lt;em&gt;for normally distributed $X_i$&amp;rsquo;s, see cases 1-3&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;$\sigma$ unknown.&lt;/li&gt;
+&lt;li&gt;Moderate to large sample size ($n &amp;gt; 50$).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&amp;rsquo;s theorem to replace $\sigma$ with $S_n$ &amp;ndash; a consistent estimator of true population standard deviation. We have $\frac{\bar{X}_{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since we have a moderate to small sample size, we assume that both CLT and Slutsky asymptotics ``kicks in&#39;&#39; and the approximation ($\approx$) is good enough to use quantiles of normal distribution.&lt;/p&gt;
+&lt;h1 id=&#34;disclaimer&#34;&gt;Disclaimer&lt;/h1&gt;
+&lt;p&gt;&lt;span style=&#34;color:red&#34;&gt;The views, thoughts, and opinions expressed in the text belong solely to the author, and not necessarily to the author’s employer, organization, committee or other group or individual.&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;p&gt;[1]: Methods in Biostatistics with R. Ciprian Crainiceanu, Brian Caffo, John Muschelli (2019). Available online at &lt;a href=&#34;https://leanpub.com/biostatmethods&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://leanpub.com/biostatmethods&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Some of the topics seen at RStudio conference 2019</title>
       <link>/post/2019-01-26-favs-of-rstudio2019-conference/</link>
       <pubDate>Sat, 26 Jan 2019 19:17:23 -0400</pubDate>
-      
       <guid>/post/2019-01-26-favs-of-rstudio2019-conference/</guid>
-      <description>I spent the last days of 2018-19 winter break in Austin, TX where I traveled for RStudio 2019 conference. I attended e-poster session and two days of the conference: Jan 17-18. Below I list some of the topics from the talks that I particularly liked and I think I am likely to benefit from in the future.
-Also:
- The official repo with abstracts for every session, workshop (together with workshop files free to download for most if not all of them), and e-poster can be accessed here.</description>
+      <description>&lt;p&gt;I spent the last days of 2018-19 winter break in Austin, TX where I traveled for RStudio 2019 conference. I attended e-poster session and two days of the conference: Jan 17-18. Below I list some of the topics from the talks that I particularly liked and I think I am likely to benefit from in the future.&lt;/p&gt;
+&lt;p&gt;Also:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The official repo with abstracts for every session, workshop (together with &lt;strong&gt;workshop files free to download&lt;/strong&gt; for most if not all of them), and e-poster can be accessed &lt;a href=&#34;https://github.com/rstudio/rstudio-conf/tree/master/2019&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;&lt;/nav&gt;
+&lt;h1 id=&#34;data-visualization&#34;&gt;Data visualization&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Tyler Morgan-Wall (&lt;a href=&#34;http://www.tylermw.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/tylermorganwall&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;twitter&lt;/a&gt;) showing stunning gifs and pics while presenting &amp;ldquo;&lt;em&gt;3D mapping, plotting, and printing with rayshader&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Features showed include shadowing, rotating, water transparency, visualization of a simulation of different water levels. The talk had possibly the most exciting &amp;ldquo;future work&amp;rdquo; announced - because who doesn&amp;rsquo;t get excited about the idea of &amp;ldquo;rotating 3D ggplots&amp;rdquo;? 💘 The &lt;code&gt;rayshader&lt;/code&gt; package is available on GitHub (&lt;a href=&#34;https://github.com/tylermorganwall/rayshader&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;).&lt;/p&gt;
+  &lt;table style=&#34;table-layout:fixed&#34;&gt;
+  &lt;col style=&#34;width:100%&#34; span=&#34;2&#34; /&gt;
+  &lt;tr&gt;
+  &lt;td&gt; &lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/tyler.gif&#34; alt=&#34;Drawing&#34; style=&#34;width: 100%;&#34;/&gt; &lt;/td&gt;
+  &lt;td&gt; &lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/tyler2.png&#34;  alt=&#34;Drawing&#34; style=&#34;weight: 100%;&#34;/&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;p&gt;&lt;sub&gt;&lt;sup&gt;(The gif on the left and the image on the right are both sourced from &amp;lsquo;rayshader&amp;rsquo; package GitHub website (&lt;a href=&#34;https://github.com/tylermorganwall/rayshader&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;), as accessed on Jan 26, 2019.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Thomas Lin Pedersen (&lt;a href=&#34;https://www.data-imaginist.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/thomasp85&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;twitter&lt;/a&gt;) giving a &amp;ldquo;&lt;em&gt;gganimate live cookbook&lt;/em&gt;&amp;rdquo; speech (and joining Tyler&amp;rsquo;s talk on the podium of most fun presentations, I guess 😂)&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;gganimate&lt;/code&gt; package was introduced per &amp;ldquo;&lt;em&gt;extension to ggplot2&lt;/em&gt;&amp;rdquo; providing &amp;ldquo;&lt;em&gt;implementation of the grammar of animated graphics&lt;/em&gt;&amp;rdquo;. Presentation slides are available online  &lt;a href=&#34;https://www.data-imaginist.com/slides/rstudioconf2019/assets/player/keynotedhtmlplayer#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;; IMHO worth checking out for inspiring ways of presenting data over time! Besides, &lt;a href=&#34;https://gganimate.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://gganimate.com&lt;/a&gt; comes with a bunch of examples, like the one below.&lt;/p&gt;
+  &lt;table style=&#34;table-layout:fixed&#34;&gt;
+  &lt;col style=&#34;width:100%&#34;  /&gt;
+  &lt;tr&gt; 
+   &lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/thomas.gif&#34;  alt=&#34;Drawing&#34; style=&#34;weight: 100%;&#34;/&gt; 
+  &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;p&gt;&lt;sub&gt;&lt;sup&gt;(The gif sourced from &amp;lsquo;gganimate&amp;rsquo; package website (&lt;a href=&#34;https://gganimate.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;), as accessed on Jan 26, 2019.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;documents-building&#34;&gt;Documents building&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Yihui Xie (&lt;a href=&#34;https://yihui.name/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/xieyihui&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;twitter&lt;/a&gt;) leaving the audience very enthusiastic (or maybe more like: blown away) with all the recent development in document building.&lt;/p&gt;
+&lt;p&gt;The presentation starts with &amp;ldquo;In HTML and the Web I trust&amp;rdquo; (😍 I share like 99% of my work summaries with advisors and colleagues in a form HTML). With &lt;code&gt;pagedown&lt;/code&gt; we can now go ahead and get &lt;em&gt;&lt;strong&gt;paged&lt;/strong&gt;&lt;/em&gt; HTML documents, e.g. business card, resume, poster. Fairly 👶 development (&amp;quot;&lt;em&gt;status: experimental&lt;/em&gt;&amp;quot;).
+Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019-rstudio-conf-pagedown.html#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/yihui.jpg&#34; alt=&#34;&#34;&gt;
+&lt;sub&gt;&lt;sup&gt;(Slides 10, 11, 15, 17 from RStudio 2019 conference talk &amp;ldquo;pagedown: Creating Beautiful PDFs with R Markdown + CSS + Your Web Browser&amp;rdquo; by Yihui Xie and Romain Lesur on Jan 18, 2019 in Austin, TX.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rich Iannone (&lt;a href=&#34;http://rich-iannone.github.io/DiagrammeR/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/riannone&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;twitter&lt;/a&gt;) introducing the &lt;code&gt;gt&lt;/code&gt; package.&lt;/p&gt;
+&lt;p&gt;With &lt;code&gt;gt&lt;/code&gt; package (&lt;a href=&#34;https://github.com/rstudio/gt&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;), one can turn a data table into &amp;ldquo;&lt;em&gt;information-rich, publication-quality&lt;/em&gt;&amp;rdquo; 🎯 table outputs. The table outputs can be in HTML, LaTeX, and RTF. The &amp;ldquo;modular&amp;rdquo; way of building these reminds me of ggplot2 plots construction. Presentation slides are available &lt;a href=&#34;https://github.com/rich-iannone/presentations/tree/master/2019_01-19-rstudio_conf_gt&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/rich2.png&#34; alt=&#34;&#34;&gt;
+&lt;sub&gt;&lt;sup&gt;(Slide 5. from RStudio 2019 conference talk &amp;ldquo;Introducing the &amp;lsquo;gt&amp;rsquo; package&amp;rdquo; by Rich Iannone on Jan 18, 2019 in Austin, TX.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;community-and-personal-development&#34;&gt;Community and personal development&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;David Robinson (&lt;a href=&#34;http://varianceexplained.org/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/drob&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;twitter&lt;/a&gt;) delivering a keynote talk &amp;ldquo;The unreasonable effectiveness of public work&amp;rdquo; (&lt;a href=&#34;https://bit.ly/drob-rstudio-2019&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;IMHO a phenomenal speech: a kind and resonating talk after which one not only wants to stand up and change the world right now 🔥 but also maintains the same feeling a week after 💪. Review the slides to: (a) learn Author&amp;rsquo;s points on why it so worth it to spend time on public work, (b) for a pack of actual how-to examples and guidelines on building a public portfolio, (c) for a bunch of interesting points made about a value of work (Author&amp;rsquo;s work, but fairly generalizable IMHO); my favorite is copy-pasted below! I particularly appreciated that all stages of advancement in building online portfolio were addressed, 👶-steps including!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/david1.png&#34; alt=&#34;&#34;&gt;
+&lt;sub&gt;&lt;sup&gt;(Slide 63. from RStudio 2019 conference keynote talk &amp;ldquo;The unreasonable effectiveness of public work&amp;rdquo; by David Robinson on Jan 18, 2019 in Austin, TX.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Jesse Mostipak (&lt;a href=&#34;https://www.jessemaegan.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;website&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/kierisi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;twitter&lt;/a&gt;) talking about the experience of building R4DS online learning community.&lt;/p&gt;
+&lt;p&gt;Some empowering messages came in the lines of this talk - just look at the slides pics below to get the flavor 🙌. My take-home ones include a description of a data scientist: &amp;ldquo;&lt;em&gt;constantly learning, constantly making mistakes, constantly learning from them&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../img/2019-01-26-favs-of-rstudio2019-conference/jesse_b.jpg&#34; alt=&#34;&#34;&gt;
+&lt;sub&gt;&lt;sup&gt;(Pictures I took during RStudio 2019 conference talk &amp;ldquo;R4DS online learning community&amp;rdquo; by Jesse Mostipak on Jan 17, 2019 in Austin, TX.)&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>[in Polish] Aplikacja na studia doktoranckie (Biostatystyka) w USA: notatki nt. procesu rekrutacji</title>
       <link>/post/2018-09-02-applying-for-phd-in-usa/</link>
       <pubDate>Sun, 02 Sep 2018 19:17:23 -0400</pubDate>
-      
       <guid>/post/2018-09-02-applying-for-phd-in-usa/</guid>
-      <description>W 2015 roku zdobylam tytul Magister na kierunku Matematyka na Politechnice Wroclawskiej. W sierpniu 2016 rozpoczelam aplikacje na programy doktoranckie na kierunku Biostatystyka w Stanach Zjednoczonych rozpoczynajace sie jesienia 2017. Dostalam i zaakeptowalam oferte z Departamentu Biostatystyki na Johns Hopkins Bloomberg School of Public Health w Baltimore (stan Maryland), oferujacego jeden z 3 najlepszych (ex aequo) programow na kierunku Biostatystyka w USA wg rankingu usnews.com z 2018 roku. W notatce opisuje etapy rekrutacji i podaje swoje obserwacje i wskazowki.</description>
+      <description>&lt;p&gt;W 2015 roku zdobylam tytul Magister na kierunku Matematyka na Politechnice Wroclawskiej. W sierpniu 2016 rozpoczelam aplikacje na programy doktoranckie na kierunku Biostatystyka w Stanach Zjednoczonych rozpoczynajace sie jesienia 2017. Dostalam i zaakeptowalam oferte z &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Departamentu Biostatystyki&lt;/a&gt; na &lt;a href=&#34;https://www.jhsph.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt; w Baltimore (stan Maryland), oferujacego jeden z 3 najlepszych (ex aequo) programow na kierunku Biostatystyka w USA wg &lt;a href=&#34;https://www.usnews.com/best-graduate-schools/top-science-schools/statistics-rankings&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rankingu usnews.com&lt;/a&gt; z 2018 roku. W notatce opisuje etapy rekrutacji i podaje swoje obserwacje i wskazowki.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;&lt;/nav&gt;
+&lt;h1 id=&#34;uwagi-wstepne&#34;&gt;Uwagi wstepne&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ponizszy opis jest napisany w kontekscie aplikacji na kierunek Biostatystyka.&lt;/strong&gt; &lt;em&gt;Spodziewam sie&lt;/em&gt;, ze aplikacje na inne (w szczegolnosci: zblizone tematycznie) programy moga przebiegac &lt;em&gt;podobnie&lt;/em&gt;, jednoczesnie nigdy nie zrobilam porownania. Przykladowa roznica o ktorej wiem, ze istnieje: na programy PhD na kierunku Biostatystyka &lt;em&gt;aplikuje sie ogolnie&lt;/em&gt; na program i po 0-2 latach &lt;em&gt;okresla lub zaweza&lt;/em&gt; obszar badawczy i jednoczesnie decyduje na konkretnych opiekunow naukowych (w tym: promotora/promotorow); typowe dla niektorych innych kierunkow STEM jest z kolei &lt;em&gt;aplikowanie do konkretnego laboratorium (czesto: pod opieke naukowa konkretnego profesora)&lt;/em&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ponizszy opis jest napisany w oparciu o tylko i wylacznie moje doswiadczenia&lt;/strong&gt; (za wyjatkiem miejsc, gdzie zaznaczam explicite, ze wiem cos ze slyszenia od innych studentow).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ponizszy opis jest napisany w kontekscie aplikacji na programy rozpoczynajace sie jesienia 2017&lt;/strong&gt;, wypelnianymi zgodnie z wymaganiami i terminami, ktorych pilnowalam aplikujac w 2016. Nie sprawdzilam, czy i co zmienilo sie od tego czasu.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wyodrebniam nastepujace glowne komponenty procesu aplikacji:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Wstepny wybor uczelni i zbudowanie planu czasowego procesu aplikacji&lt;/li&gt;
+&lt;li&gt;Przygotowanie do egzaminow: GRE + TOEFL&lt;/li&gt;
+&lt;li&gt;Przygotowanie Personal Statement&lt;/li&gt;
+&lt;li&gt;Zorganizowanie listow rekomendacyjnych&lt;/li&gt;
+&lt;li&gt;Networking&lt;/li&gt;
+&lt;li&gt;Aplikowanie: wykonanie i nadzorowanie post-procesu&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;1-wstepny-wybor-uczelni-i-zbudowanie-planu-czasowego-timeline-aplikacji&#34;&gt;1. Wstepny wybor uczelni i zbudowanie planu czasowego timeline aplikacji&lt;/h1&gt;
+&lt;p&gt;Generalne ramy czasowe.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Uczelnie roznia sie datami ostatecznego terminu aplikacji, jednoczesnie daty te  zjezdzaja sie na przestrzeni ok. 1,5 miesiaca: od 1. grudnia roku N do polowy stycznia roku (N+1) na programy rozpoczynajace sie jesienia roku (N+1). 60% terminow to wlasnie 1. grudnia. 📣&lt;/li&gt;
+&lt;li&gt;Stad &lt;strong&gt;prace nad aplikacjami zaczynamy &lt;em&gt;najpozniej&lt;/em&gt; 12-14 miesiecy przed&lt;/strong&gt; faktycznym rozpoczeciem studiow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wstepny wybor uczelni.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Wybieralam uczelnie na podstawie: a) rankingow programu Biostatystyka (podzbior &amp;ldquo;Biostatystyka&amp;rdquo;  z &lt;a href=&#34;https://www.usnews.com/best-graduate-schools/top-science-schools/statistics-rankings&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;usnews.com&lt;/a&gt;; w 2016 korzystalam glownie z &lt;a href=&#34;http://www.amstat.org/asa/files/pdfs/OGRP-USNews_BioStatisticsRankings.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tego&lt;/a&gt; dokumentu); b) rozmow z profesorami i studentami w USA w czasie pracy jako Research Assistant na Indiana University w pierwszej polowie 2016; c) przegladania grup naukowych i zainteresowan profesorow na stronach uczelni; d) lokalizacji; tu: zarowno ogolny obszar USA jak i konkretne miasto (przyklad: nie chcialam studiowac w NYC).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bylo mi ciezko ocenic a priori, w jaki sposob moja aplikacja bedzie ewaluowana przez komitety rekrutacyjne na uczelniach w USA.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Aplikacja studenta z Polski na Biostatystyke u USA to wciaz egzotyczna sprawa. Komisje rekrutacyjne sa najczesniej niezaznajomione z polskim systemem szkolnictwa wyzszego (gdzie sa np. z chinskimi i hinduskimi), stad ocena &amp;ldquo;5.0&amp;rdquo; z Analizy matematycznej I na Politechnice Wroclawskiej  nie mowi im bardzo duzo na temat tego, co w zwiazku z tym powinnam umiec. (Przyklad: w czasie etapu rekrutacji &amp;ldquo;on site&amp;rdquo; na jednej z uczelni Ivy League, dziekan departamentu Biostatystyki, z ktorym mialam 20-minutowe spotkanie, poprosil mnie o chocby ogolny opis tego &amp;ldquo;jak wygladaly moje studia w Polsce&amp;rdquo; 👽).  &lt;br/&gt;&lt;br/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Aplikowalam do 16 uczelni&lt;/strong&gt; (relatywnie wielu), &lt;strong&gt;wg nastepujacego schematu&lt;/strong&gt;:  1/3 uczelni na liscie to &amp;ldquo;dream schools&amp;rdquo; - uczelnie z czolowki rankingow programu Biostatystyka; 1/3 to uczelnie &amp;ldquo;safe&amp;rdquo; - spodziewam sie, ze mam spore szanse sie tam dostac; 1/3 to uczelnie &amp;ldquo;po srodku&amp;rdquo;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Dostalam sie / dostalam zaproszenie do 2. etapu rekrutacji od nieco &lt;strong&gt;ponad 50% z uczelni&lt;/strong&gt;, do ktorych aplikowalam (2. etap to zaproszenie na rozmowe &amp;ldquo;on site&amp;rdquo; lub jego odpowiednik dla studentow przebywajacych poza USA: rozmowa telefoniczna z czlonkami komitetu rekrutacyjnego; w kilku przypadkach nie kontynuowalam procesu do 2. etapu wiedzac, ze dostalam sie juz do miejsca wyzej na liscie moich preferencji).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Co interesujace, uczelnie, ktore byly mna zainteresowanie, to niemal dokladnie: polowa uczelni z grupy &amp;ldquo;dream schools&amp;rdquo; + polowa z &amp;ldquo;safe&amp;rdquo; + polowa z &amp;ldquo;po srodku&amp;rdquo; 👏👍&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plan czasowy procesu aplikacji powinien zawierac:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Daty &lt;strong&gt;ostatecznego terminu aplikacji&lt;/strong&gt; (&amp;ldquo;deadline&amp;rdquo;) do wybranych uczelni, tzn. daty, po ktorych zamykaja sie systemy online umozliwiajace wykonanie aplikacji.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Liste &lt;strong&gt;wymaganych egzaminow&lt;/strong&gt; i najdalszy termin ich realizacji (np. w Polsce), ktory zapewnia bezpieczne okno czasowe na przeslanie wynikow do uczelni. Najczesciej beda to dwa egzaminy: TOEFL i GRE General.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wyniki TOEFL i GRE General wysylane sa automatycznie do uczelni, ktorych liste zadeklarujemy przy zapisie na egzamin lub ktore dodamy kiedykolwiek pozniej przy uzyciu systemow online do zarzadzania wynikami. Zwyczajnie trzeba przypilnowac, czy dni robocze, ktore organizator daje sobie na a) sprawdzenie egzaminu + b) wyslanie wynikow do uczelni, dodaja nam sie z ostatecznymi terminami aplikacji. &lt;br/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Okno czasowe na &lt;strong&gt;tlumaczenie przysiegle&lt;/strong&gt; oraz &lt;strong&gt;przeewaluowanie i/lub wyslanie poczta transkryptow ocen&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Przyklady tego, co moze nas &amp;ldquo;zaskoczyc&amp;rdquo;. a) ~5 uczelni wymagalo wyslania tlumaczonych (tl. przysiegly) transkryptow ocen fizycznie na adres uczelni w USA (w kilku przypadkach: w terminie wczesniejszym, niz generalny ostateczny termin aplikacji podany na stronie uczelni). b) ~7 uczelni realizowalo aplikacje przez system &lt;a href=&#34;https://sophas.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SOPHAS&lt;/a&gt; - jednolity system aplikacji na wydzialy Zdrowia Publicznego (&amp;ldquo;School of Public Health&amp;rdquo;) w USA, z ktorych korzysta czesc uczelni.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SOPHAS jest dla aplikanta wygodny o tyle, ze duza czesc dokumentow ladujemy do systemu tylko raz, niezaleznie od liczby uczelni na ktore aplikujemy via SOPHAS. Z drugiej strony, SOPHAS akceptuje zagraniczne transkrypty ocen tylko i wylacznie po przeewaluowaniu ich na system amerykanski przez World Education Services (&lt;a href=&#34;https://www.wes.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WES&lt;/a&gt;). Musimy wiec wyslac do WES komplet swoich przetlumaczonych (tl. przysiegly 👼) transkryptow, a WES je ewaluuje i wysyla wyniki do SOPHAS. (To byl dla mnie najbardziej stresujacy element tego etapu rekrutacji: WES nie zrealizowal ewaluacji moich ocen w oknie czasowym, ktore deklaruje od momentu zmiany statusu mojej sprawy na &amp;ldquo;otrzymalismy twoje transkrypty&amp;rdquo;; pomimo moich prosb, &amp;ldquo;grozb&amp;rdquo; i placzu, dokumenty zostaly wyslane dopiero na kilka dobrych dni po deklarowanym terminie 🐢, szczesliwie dokladnie &amp;ldquo;na styk&amp;rdquo; z ostatecznymi terminami aplikacji do kilku uczelni. 🎣)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wybor uczelni i organizowanie planu czasowy procesu aplikacji sa ze soba powiazane: specyficzne wymagania i terminy poszczegolnych uczelni wymuszaja plan czasowy, natomiast wymagania czasowe modyfikowaly moje wybory uczelni (przyklad: widzialam, ze nie dam rady czasowo przygotowac sie do egzaminu GRE Mathematics; z drugiej strony, jako ze duza czesc moich dokumentow typowo potrzebnych do aplikacji byla juz w SOPHAS, zaaplikowalam do kilku dodatkowych uczelni via SOPHAS).&lt;/p&gt;
+&lt;h1 id=&#34;2-przygotowanie-do-egzaminow-gre-general--toefl&#34;&gt;2. Przygotowanie do egzaminow: GRE General + TOEFL&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;GRE General jest niezbedny&lt;/strong&gt; do aplikowania na studia &amp;ldquo;graduate&amp;rdquo; (Masters / PhD) w USA. W nielicznych przypadkach &lt;em&gt;wymagany&lt;/em&gt; jest rowniez GRE specjalistyczny (Stanford: GRE Mathematics Subject Test). &lt;strong&gt;Egzamin jezykowy&lt;/strong&gt; jest wymagany dla absolwentow uczelni, na ktorych jezyk angielski nie jest podstawowym jezykiem wykladowym. W USA wymaganym standardowo egzaminem jezykowym jest TOEFL (w niektorych szkolach zamienny z IELTS, w niektorych nie).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zdawalam GRE General i TOEFL. Oba egzaminy zdawalam w Polsce (najpierw GRE General w Krakowie, tydzien pozniej: TOEFL w Poznaniu).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Przejscie przez przewodnik po typach zadan&lt;/strong&gt; na obu egzaminach &lt;strong&gt;to absolutne minimum&lt;/strong&gt; w przygotowaniach.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Sugeruje przeznaczyc 90-95% czasu przygotowan do obu egzaminow na GRE General.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GRE General sklada sie z ~5 komponentow testujacych dwa obszary: j. angielski i matematyke. Czesc matematyczna jest prosta (poziom matury podstawowej z matematyki), jednoczesnie nalezy zalozyc duzo czasu na przygotowanie sie pod bardzo konkretna forme tego egzaminu. Jest &lt;em&gt;bardzo&lt;/em&gt; malo miejsca na jakiekolwiek pomylki, w szczegolnosci: bledy przy pierwszych zadaniach (poziom trudnosci zadan rosnie z biegiem czasu egzaminu), stad trzeba wyklepac do stanu &amp;ldquo;rozwiazuje z automatu&amp;rdquo; problemy pojawiajace sie na czesci matematycznej. Wlasnosci katow w trojkacie wpisanym i opisanym na okregu 💘, zadania &amp;ldquo;z dwoma pociagami&amp;rdquo;, te sprawy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GRE General cz. jezykowa sklada sie zadan testujacych umiejetnosc krytycznego myslenia i argumentowania w formie pisemnej oraz z zadan testujacych slownictwo. Czesc testujaca slownictwo jest moim zdaniem zwyczajnie nierobialna i ze swojej perspektywy oceniam, ze nie ma duzej roznicy, czy przeznaczy sie na nauke slowek 10h czy 300h przed egzaminem, tu trzeba isc do kosciola i pomodlic sie o celnosc strzalow w odpowiedziach. Na serio: przygotowanie do GRE General cz. jezykowa jest  czasochlonne. 😐 Pomocne: w internecie sa dostepne roznej dlugosci listy &amp;ldquo;slownictwa na GRE&amp;rdquo; oraz dedykowane aplikacje do nauki &amp;ldquo;slowek na GRE&amp;rdquo;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Po napisaniu GRE General cz. jezykowa, poziom TOEFL wydaje sie latwy, a sam egzamin - przyjemny 😌.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sugeruje nie zdawac obu egzaminow w jeden weekend; w szczegolnosci GRE jest bardzo wyczerpujacy (mysle, ze to byl najbardziej wyczerpujacy egzamin w moim zyciu; po wyjsciu z sali przez kilka minut zbieralam mysli o tym co to sie robilo zeby zamowic Ubera) 🚀.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;3-przygotowanie-personal-statement&#34;&gt;3. Przygotowanie Personal Statement&lt;/h1&gt;
+&lt;p&gt;&lt;span style=&#34;color:red&#34;&gt;Nota bene: transkrypty ocen i wyniki z egzaminow sluza glownie do wyznaczenia punktu odciecia, ponizej ktorego &amp;ldquo;uczelnia generalnie nie rozmawia z potencjalnym studentem&amp;rdquo;.&lt;/span&gt; Latwo wyobrazic sobie, ze punkt odciecia przekracza wielu bardzo dobrych studentow (podpowiadam przypomniec sobie populacje np. Chin i Indii). &lt;span style=&#34;color:red&#34;&gt;To, czym &amp;ldquo;kupujemy&amp;rdquo; sobie przychylnosc komisji rekrutacyjnej i zdobywamy oferte programu, to &lt;strong&gt;kombinacja zawartosci CV, Personal Statement, listow rekomendacyjnych i naszego networkingu&lt;/strong&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Personal Statement (zamiennie: Statement of Purpose) to wazny dokument, ktorego szablon - wersje beta tworzylam przez kilka dni z rzedu.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Szablon mojego Personal Statement mial 2 pelne strony A4 i skladal sie z  nastepujacych paragrafow:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;chwytliwe otwarcie, w ktorym wzbudzam zainteresowanie swoja motywacja i indywidualna historia,&lt;/li&gt;
+&lt;li&gt;notka biograficzna, skupiajaca sie na doswiadczeniu w badaniach naukowych (poparte konkretnymi przykladami),&lt;/li&gt;
+&lt;li&gt;notka biograficzna, skupiajaca sie na cechach osobowosciowych, ktore predestynuja mnie do bycia odnoszacym sukcesy studentem (poparte konkretnymi przykladami),&lt;/li&gt;
+&lt;li&gt;motywacja do studiowania kierunku Biostatystyka,&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;big-picture&amp;rdquo; tego, co chce osiagnac dzieki studiom PhD - na przestrzeni studiow i calego zycia,&lt;/li&gt;
+&lt;li&gt;motywacja do studiowania kierunku Biostatystyka na tej konkretnej uczelni,&lt;/li&gt;
+&lt;li&gt;zgrabne zakonczenie.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sugestie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;W Personal Statement nie ma miejsca na &amp;ldquo;chcialem byc marynarzem chcialem miec tatuaze podrozowac&amp;rdquo;. Wszystko, co tam wrzucamy tytulem osiagniec i aktywnosci, powinno byc poparte/umotywowane konkretnymi wydarzeniami z zycia akademickiego/poza-akademickiego.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;W Personal Statement nie ma miejsca na bycie skromnym. Inni aplikanci nie beda skromni.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Warto zgooglowac, jakie elementy &lt;em&gt;powinny zawsze&lt;/em&gt; znalezc sie w tym dokumencie - czesto uczelnie zamieszczaja te infromacje na swoich podstronach dot. rekrutacji. Jednoczesnie sugeruje NIE szukac i NIE &amp;ldquo;inspirowac sie&amp;rdquo; gotowymi dokumentami instniejacymi w sieci; im bardziej &amp;ldquo;twoj&amp;rdquo; jest Personal Statement, tym lepiej.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sugeruje szablon &lt;strong&gt;dac do sprawdzenia 3-5 znajomym&lt;/strong&gt; 🙏 pod katem tresci; wyszlifowana tresciowo wersje sugeruje dac do sprawdzenia pod wzgledem jezykowym dobremu tlumaczowi. Do sprawdzenia (i do tlumaczenia transkryptow) polecam Panie z &lt;a href=&#34;http://www.btcentrum.pl/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BT Centrum we Wroclawiu&lt;/a&gt; - absolutnie profesjonale i elastyczne, de facto &amp;ldquo;uratowaly&amp;rdquo; moje aplikacje (a mogly wysmiac mnie w progu za termin, w ktorym potrzebowalam miec gotowe tlumaczenia: &amp;ldquo;na jutro&amp;rdquo; 🐩).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;4-listy-rekomendacyjne&#34;&gt;4. Listy rekomendacyjne&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Potrzebowalam &lt;strong&gt;3 listy rekomendacyjne&lt;/strong&gt;. Szczegolny przypadek: SOPHAS (wspomniany wyzej) &lt;em&gt;bardzo mocno&lt;/em&gt; sugerowal zadbanie o co najmniej jeden list pochodzacy od osoby spoza akademickiego srodowiska; w tym przypadku zalaczylam 4 listy rekomendacyjne.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Uwagi:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;W dobrym guscie jest zwrocenie sie z prosba o &lt;em&gt;rozwazenie mozliwosci wystosowania takiego listu&lt;/em&gt; na min. 1 miesiac przed data, na kiedy list ma byc gotowy. Warto w takim pierwszym mejlu zaznaczyc wyraznie, na kiedy list bedziemy potrzebowac.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Listy rekomendacyjne pisane przez profesorow w USA sa zawsze pelne &amp;ldquo;ochow&amp;rdquo; i &amp;ldquo;achow&amp;rdquo;. Choc ciezko mi wyobrazic sobie poproszenie explicite o &amp;ldquo;pelen pochwal list&amp;rdquo;, warto sprobowac zaznaczyc, ze np. ze wzgledu na wysoka konkurencyjnosc uczelni, potrzebujemy &amp;ldquo;silnego&amp;rdquo; listu rekomendacyjnego. (Z tego co rozumiem, wylistowanie aktywnosci aplikanta i jednozdaniowe wyrazenie przekonania, ze to dobry kandydat, to - generalnie rzecz biarac - tresc na slaby list.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;5-networking&#34;&gt;5. Networking&lt;/h1&gt;
+&lt;p&gt;Ciezko mi podkreslic wystarczajaco mocno, jak &lt;strong&gt;istotnym elementem aplikacji jest networking&lt;/strong&gt;, tzn. nawiazanie kontaktu z profesorami na wybranych przez nas uczelniach.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Faktycznie, &lt;em&gt;dostalam&lt;/em&gt; sie na niektore uczelnie (ze swoich kategorii &amp;ldquo;safe&amp;rdquo; i &amp;ldquo;po srodku&amp;rdquo;), z ktorymi nie nawiazalam wczesniej zadnego bezposredniego kontaktu.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Twierdze, ze bardzo trudne byloby dostanie sie do &amp;ldquo;dream school&amp;rdquo; bez nawiazania wczesniej bezposredniego kontaktu. Tu, aplikacja bardzo potrzebuje &amp;ldquo;wsparcia od srodka&amp;rdquo; departamentu, do ktorego chcemy sie dostac.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Przyklady tego, &lt;strong&gt;jak mozna budowac potrzebny networking&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Wyjechanie do USA na kilka miesiecy do tymczasowej pracy / na staz na wybrana uczelnie.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pierwszym krokiem do zaproszenia na taki wyjazd moze byc krotki mejl do wybranego profesora, mowiacy: &amp;ldquo;Czesc, jestem bardzo zainteresowany twoja praca o X, sam od dawna czytam i pracuje nad rzeczami zwiazanymi z Y, czy znalazlbys 10 minut na rozmowe na Skajpie? Dostosuje sie do terminu, ktory zaproponujesz.&amp;rdquo;  &lt;br/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wyjechanie do USA na konferencje / szkole wakacyjna / warsztaty, gdzie beda profesorowie z interesujacej nas uczelni.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nawiazanie kontaktu telefonicznego / mejlowego z profesorami z interesujacej nas uczelni. (Por. wskazowka w podpunkcie wyzej).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;6-aplikowanie&#34;&gt;6. Aplikowanie&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Wypelnianie aplikacji jest czasochlonne&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nalezy wziac margines na specjalne przypadki nawet w ramach wykonywania aplikacji w formularzu online. Przyklady: a) z ostatniej strony formularza aplikacyjnego: nie przechodzi platnosc polska karta platnicza; b) z ktorejkolwiek / wielu stron formularza aplikacyjnego: nie jest jasne, co oznacza to pole - musze wyslac mejla z pytaniem do dzialu rekrutacji tej uczelni 😎.  &lt;br/&gt;  &lt;br/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Aplikacje sa drogie&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Niektore koszty sa jednorazowe i prawie niezalezne od liczby aplikacji (wyjazd na egzamin TOEFL / GRE). Aplikacja do kazdej kolejnej szkoly generuje  koszt (bezzwrotna oplata aplikacyjna: 30-130 USD, przeslanie wyniku GRE: 20 USD, przeslanie wyniku TOEFL: 20 USD).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mysle, ze calkowity koszt moich aplikacji (w tym: tlumacz przysiegly, dojazdy i noclegi na egzaminy w innych miastach Polski, wyslanie paczek UPS z dokumentami do kilku szkol w USA) to lacznie 7.000-10.000 PLN ☂️.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

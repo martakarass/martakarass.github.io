@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gait | Home</title>
+    <link>/tag/gait/</link>
+      <atom:link href="/tag/gait/index.xml" rel="self" type="application/rss+xml" />
+    <description>gait</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 23 Sep 2019 18:08:38 -0400</lastBuildDate>
+    <image>
+      <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
+      <title>gait</title>
+      <link>/tag/gait/</link>
+    </image>
+    
+    <item>
+      <title>Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation</title>
+      <link>/publication/adept/</link>
+      <pubDate>Mon, 23 Sep 2019 18:08:38 -0400</pubDate>
+      <guid>/publication/adept/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
