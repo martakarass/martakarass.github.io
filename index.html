@@ -248,6 +248,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111897145-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-111897145-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -1966,80 +2004,19 @@
 
 
 
-
-
   
 
 
-<div class="media stream-item">
-  <div class="media-body">
+<div class="view-list-item">
+  <i class="far fa-newspaper pub-icon" aria-hidden="true"></i>
+  <a href="/post/2019-10-28-ttest-versus-ztest/" >When to use t distribution versus normal distribution quantiles in constructing confidence interval for the mean</a>
 
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/2019-10-28-ttest-versus-ztest/" >When to use t distribution versus normal distribution quantiles in constructing confidence interval for the mean</a>
-    </h3>
-
-    
-    <a href="/post/2019-10-28-ttest-versus-ztest/"  class="summary-link">
-      <div class="article-style">
-        <p>To construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I&rsquo;d use quantiles of t-distribution versus quantiles of normal distribution for that purpose.</p>
-<p>Note: the below text could be directly translated to answer when to use t-test versus z-test in testing hypothesis about the mean parameter.</p>
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Oct 28, 2019
-  </span>
   
 
   
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    7 min read
-  </span>
-  
 
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
 </div>
 
     
@@ -2056,79 +2033,19 @@
 
 
 
-
-
   
 
 
-<div class="media stream-item">
-  <div class="media-body">
+<div class="view-list-item">
+  <i class="far fa-newspaper pub-icon" aria-hidden="true"></i>
+  <a href="/post/2019-01-26-favs-of-rstudio2019-conference/" >Some of the topics seen at RStudio conference 2019</a>
 
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/2019-01-26-favs-of-rstudio2019-conference/" >Some of the topics seen at RStudio conference 2019</a>
-    </h3>
-
-    
-    <a href="/post/2019-01-26-favs-of-rstudio2019-conference/"  class="summary-link">
-      <div class="article-style">
-        I spent the last days of 2018-19 winter break in Austin, TX where I traveled for RStudio 2019 conference. I attended e-poster session and two days of the conference: Jan 17-18.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Jan 26, 2019
-  </span>
   
 
   
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    4 min read
-  </span>
-  
 
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
 </div>
 
     
@@ -2145,79 +2062,19 @@
 
 
 
-
-
   
 
 
-<div class="media stream-item">
-  <div class="media-body">
+<div class="view-list-item">
+  <i class="far fa-newspaper pub-icon" aria-hidden="true"></i>
+  <a href="/post/2018-09-02-applying-for-phd-in-usa/" >[in Polish] Aplikacja na studia doktoranckie (Biostatystyka) w USA: notatki nt. procesu rekrutacji</a>
 
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/2018-09-02-applying-for-phd-in-usa/" >[in Polish] Aplikacja na studia doktoranckie (Biostatystyka) w USA: notatki nt. procesu rekrutacji</a>
-    </h3>
-
-    
-    <a href="/post/2018-09-02-applying-for-phd-in-usa/"  class="summary-link">
-      <div class="article-style">
-        W 2015 roku zdobylam tytul Magister na kierunku Matematyka na Politechnice Wroclawskiej. W sierpniu 2016 rozpoczelam aplikacje na programy doktoranckie na kierunku Biostatystyka w Stanach Zjednoczonych rozpoczynajace sie jesienia 2017. Dostalam i zaakeptowalam oferte z Departamentu Biostatystyki na Johns Hopkins Bloomberg School of Public Health w Baltimore (stan Maryland), oferujacego jeden z 3 najlepszych (ex aequo) programow na kierunku Biostatystyka w USA wg rankingu usnews.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Sep 2, 2018
-  </span>
   
 
   
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    11 min read
-  </span>
-  
 
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
 </div>
 
     
