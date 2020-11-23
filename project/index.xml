@@ -410,5 +410,112 @@ cowplot::plot_grid(plt1, plt2, plt3, plt4, nrow = 2, labels = c(&#39;A&#39;, &#3
 </description>
     </item>
     
+    <item>
+      <title>Brain connectivity-informed regularization methods for regression</title>
+      <link>/project/project_mdpeer/</link>
+      <pubDate>Wed, 06 Dec 2017 11:54:53 -0400</pubDate>
+      <guid>/project/project_mdpeer/</guid>
+      <description>&lt;p&gt;We proposed a method to estimate association between the brain structure features and a scalar outcome in a regression model &amp;ndash; while utilizing additional information about structural connectivity between the brain regions.&lt;/p&gt;
+&lt;p&gt;Specifically, we propose a novel regularization method that defines a regularization penalty term based on the structural connectivity-derived Laplacian matrix.&lt;/p&gt;
+&lt;!---
+&lt;span style=&#34;color:purple&#34;&gt;**See images citation and/or credit information** [below](#custom)&lt;/span&gt;.
+--&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#scientific-problem&#34;&gt;Scientific problem&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#challenges&#34;&gt;Challenges&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#proposed-solution&#34;&gt;Proposed solution&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#published-work&#34;&gt;Published work&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#software&#34;&gt;Software&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#custom&#34;&gt;&lt;span style=&#34;color:purple&#34;&gt;&lt;strong&gt;Images used in the post &amp;ndash; credit/references&lt;/strong&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h3 id=&#34;scientific-problem&#34;&gt;Scientific problem&lt;/h3&gt;
+&lt;p&gt;The motivation for the work was to quantify the association between alcohol abuse phenotypes (outcome) and cortical thickness of the brain (covariates) in a study sample of young social-to-heavy drinking males. The data included measurements of average cortical thickness estimated for 68 brain regions.&lt;/p&gt;
+&lt;p&gt;The excellent image (see images credit &lt;a href=&#34;#custom&#34;&gt;below&lt;/a&gt;) visualizes process of obtaining cortical thickness measurements from structural MRI images.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;MRI_sequence.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;challenges&#34;&gt;Challenges&lt;/h3&gt;
+&lt;p&gt;Commonly shared issues in such settings are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;high dimensionality of the data - we typically parcel the brain into tens, or hundreds of units from which we take measurements, and each unit may then correspond to a covariate in the data set,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;correlation of the covariates - measurements from spatially neighbouring or otherwise connected brain regions are likely to be correlated,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;small sample size - brain imaging studies often recruit a few tens of participants only.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;proposed-solution&#34;&gt;Proposed solution&lt;/h3&gt;
+&lt;p&gt;We propose penalized regression method riPEER to estimate a linear model: $$y =  Zb + X\beta + \varepsilon$$ where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$y$ - response (&lt;em&gt;here: alcohol abuse phenotypes&lt;/em&gt;),&lt;/li&gt;
+&lt;li&gt;$Z$ - input data matrix (&lt;em&gt;here: cortical thickness measurements&lt;/em&gt;),&lt;/li&gt;
+&lt;li&gt;$X$ - input data matrix (&lt;em&gt;here: demographics data&lt;/em&gt;),&lt;/li&gt;
+&lt;li&gt;$\beta$ - regression coefficients, not penalized in estimation process&lt;/li&gt;
+&lt;li&gt;$b$ - regression coefficients, penalized in estimation process and for whom there is a prior graph of similarity / graph of connections. available.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The riPEER estimation method uses a penalty being a linear combination of a graph-based and ridge penalty terms:
+$$
+\hat{\beta}, \hat{b}
+= \underset{\beta,b}{\text{arg min}} \left[ (y - X\beta - Zb)^T(y - X\beta - Zb)  + \lambda_Qb^TQb +  \lambda_Rb^Tb  \right ]
+$$&lt;/p&gt;
+&lt;p&gt;where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$Q$ - a graph-originated penalty matrix; typically: a graph Laplacian matrix (&lt;em&gt;here: a graph Laplacian derived from structural connectivity of brain regions&lt;/em&gt;),&lt;/li&gt;
+&lt;li&gt;$\lambda_Q$ - regularization parameter for a graph-based penalty term,&lt;/li&gt;
+&lt;li&gt;$\lambda_R$ - regularization parameter for ridge penalty term.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;ripeer-penalty-term&#34;&gt;riPEER penalty term&lt;/h5&gt;
+&lt;p&gt;In the riPEER penalty term  $(\lambda_Qb^TQb +  \lambda_Rb^Tb)$,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A graph-originated penalty matrix $Q$ allows imposing similarity between coefficients of variables which are &lt;em&gt;connected&lt;/em&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A ridge penalty term, $\lambda_Rb^Tb$, even with very small $\lambda_R$, eliminates computational issues arising from singularity of $Q$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Regularization parameters $\lambda_R$, $\lambda_Q$ are estimated automatically as ML estimators of equivalent Linear Mixed Models optimization problem.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;published-work&#34;&gt;Published work&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We published the proposed riPEER method in work &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6583926/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Brain connectivity-informed regularization methods for regression&lt;/a&gt; (Karas, M., Brzyski, D., Dzemidzic, M., Goni, J., Kareken, D.A., Randolph, T., Harezlak (2017)). &lt;/br&gt; &lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The riPEER extension to generalized linear regression, addressing both theoretical and computational issues, is available in preprint &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/322420v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Connectivity-informed adaptive regularization for generalized outcomes&lt;/a&gt; (Brzyski, D., Karas, M., Ances, B., Dzemidzic, M., Goni, J., Randolph, T.W., Harezlak, J. (2018)).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;software&#34;&gt;Software&lt;/h3&gt;
+&lt;p&gt;We provided open-source implementation of the proposed riPEER estimation method in R package mdpeer (&lt;a href=&#34;https://cran.r-project.org/web/packages/mdpeer/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRAN index&lt;/a&gt;). The package provides functions for graph-constrained regression methods in which regularization parameters are selected automatically via estimation of equivalent Linear Mixed Model formulation.&lt;/p&gt;
+&lt;p&gt;The R package is accompanied by &lt;a href=&#34;https://cran.r-project.org/web/packages/mdpeer/vignettes/Intro_and_usage_examples.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Intro and usage examples&lt;/a&gt; vignette.&lt;/p&gt;
+&lt;h3 id=&#34;custom&#34;&gt;&lt;span style=&#34;color:purple&#34;&gt;&lt;strong&gt;Images used in the post &amp;ndash; credit/references&lt;/strong&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Featured image - top left component. Cortical thickness. Resources of Neurorecovery Laboratory at MGH/MIT/HMS Athinoula A. Martinos Center for Biomedical Imaging. Accessed at: &lt;a href=&#34;https://www.nmr.mgh.harvard.edu/neurorecovery/technology.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
+(last accessed on Nov 20, 2020).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Featured image - top middle component. Diffusion MRI Tractography in the brain white matter. Xavier Gigandet et. al. - Gigandet X, Hagmann P, Kurant M, Cammoun L, Meuli R, et al. (2008) Estimating the Confidence Level of White Matter Connections Obtained with MRI Tractography. PLoS ONE 3(12): e4006. doi:10.1371/journal.pone.0004006. Accessed at: &lt;a href=&#34;https://en.wikipedia.org/wiki/Connectome#/media/File:White_Matter_Connections_Obtained_with_MRI_Tractography.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
+(last accessed on Nov 20, 2020).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Featured image - top right component. Databases of Statistical Information. Resources of Berkeley Advanced Media Institute
+Graduate School of Journalism. Accessed at: &lt;a href=&#34;https://multimedia.journalism.berkeley.edu/tutorials/databases-of-statistical-information/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;
+(last accessed on Nov 20, 2020).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
