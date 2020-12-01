@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  
+  
+
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic ">
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/slides/2020-12-01-computing_club/">
+
+  <title>Recent developments in R tidyverse | Home</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/theme/black.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous">
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/reveal_custom.min.css">
+
+  
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/css/print/pdf.css' : 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+</head>
+<body>
+
+  
+<div class="reveal">
+  <div class="slides">
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    <section>
+    
+      
+<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="index_files/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="tidyverse" class="section level2">
+<h2>tidyverse</h2>
+<p>The tidyverse is an ecosystem of packages designed with a shared underlying design philosophy, grammar, and data structures.</p>
+<p>The tidyverse v1.3.0 loads 8 packages via <code>library(tidyverse)</code>: ggplot2, dplyr, tidyr, purrr, tibble, stringr, forcats, readr.</p>
+<p>It also includes (installs) but does not automatically load some other (i.e. lubridate).</p>
+<p><img src="img/tidyverse-logo.png" style="width:80.0%" /></p>
+</div>
+<div id="presentation-motivation" class="section level2">
+<h2>Presentation motivation</h2>
+<div style="float: left; width: 45%;">
+<h4 id="me-using-tidyverse-packages-in-2015">Me using tidyverse packages in <strong>2015</strong>:</h4>
+<p></br>
+Typically do stuff like</p>
+<pre class="r"><code>dat %&gt;%
+  filter(age &gt;= 50) %&gt;%
+  group_by(var1, var2) %&gt;%
+  summarize(y_mean = mean(y),
+            y_median = median(y))</code></pre>
+<p>and google “r ggplot2 rotate x axis labels”</p>
+</div>
+<div style="float: right; width: 45%;">
+<h4 id="me-using-tidyverse-packages-in-2020">Me using tidyverse packages in <strong>2020</strong>:</h4>
+<p></br>
+Typically do stuff like</p>
+<pre class="r"><code>dat %&gt;%
+  filter(age &gt;= 50) %&gt;%
+  group_by(var1, var2) %&gt;%
+  summarize(y_mean = mean(y),
+            y_median = median(y))</code></pre>
+<p>and google “r ggplot2 rotate x axis labels”</p>
+</div>
+</div>
+<div id="presentation-content-credits" class="section level2">
+<h2>Presentation content credits</h2>
+<div style="float: left; width: 50%;">
+<p><img src="img/twitter_q_long.png" style="width:90.0%" /></p>
+</div>
+<div style="float: right; width: 50%;">
+<p><img src="img/twitter_a2.png" style="width:90.0%" /></p>
+<p>(<a href="https://towardsdatascience.com/ten-up-to-date-ways-to-do-common-data-tasks-in-r-4f15e56c92d">Post link here.</a>) These slides from now on are like 80-90% of this post content, with small alterations from my side.</p>
+</div>
+</div>
+<div id="outline" class="section level2">
+<h2>Outline</h2>
+<p>Palmer Penguins dataset</p>
+<ol style="list-style-type: decimal">
+<li>Selecting columns in data</li>
+<li>Reordering columns in data</li>
+<li>Controlling mutated column location</li>
+<li>Transforming from wide to long</li>
+<li>Transforming from long to wide</li>
+<li>Running group statistics across multiple columns</li>
+<li>Control how output columns are named when summarising across multiple columns</li>
+<li>Running models across subsets of data</li>
+<li>Nesting data</li>
+<li>Graphing across subsets</li>
+</ol>
+</div>
+<div id="palmer-penguins-dataset" class="section level2">
+<h2>Palmer Penguins dataset</h2>
+<div style="float: left; width: 75%;">
+<p>“The goal of <code>palmerpenguins</code> is to provide a great dataset for data exploration &amp; visualization, as an alternative to <code>iris</code>.”</p>
+<p>Data set contains size measurements for three penguin species (Adelie, Chinstrap, Gentoo) observed on three islands in the Palmer Archipelago, Antarctica (Biscoe, Dream, Torgersen).</p>
+<pre class="r"><code>library(tidyverse)
+library(palmerpenguins)
+str(penguins)</code></pre>
+<pre><code>## tibble [344 × 8] (S3: tbl_df/tbl/data.frame)
+##  $ species          : Factor w/ 3 levels &quot;Adelie&quot;,&quot;Chinstrap&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ island           : Factor w/ 3 levels &quot;Biscoe&quot;,&quot;Dream&quot;,..: 3 3 3 3 3 3 3 3 3 3 ...
+##  $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
+##  $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
+##  $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
+##  $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
+##  $ sex              : Factor w/ 2 levels &quot;female&quot;,&quot;male&quot;: 2 1 1 NA 1 2 1 2 NA NA ...
+##  $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...</code></pre>
+</div>
+<div style="float: right; width: 25%;">
+<p><img src="img/penguin.jpeg" style="width:99.0%" /></p>
+</div>
+</div>
+<div id="selecting-columns-in-data" class="section level2">
+<h2>1. Selecting columns in data</h2>
+<p>To select columns using <code>dplyr::select()</code> or <code>tidyr::pivot_longer()</code> based on common conditions, use helper functions.</p>
+<ul>
+<li>To select variables contained in a character vector: <code>all_of()</code>, <code>any_of()</code></li>
+<li>To select all (i.e. remaining) or last column: <code>everything()</code>, <code>last_col()</code></li>
+<li>To select variables by matching patterns in their names: <code>starts_with()</code>, <code>ends_with()</code>, <code>contains()</code>, <code>matches()</code>, <code>num_range()</code></li>
+<li>To apply a custom function and select those for which the function returns TRUE: <code>where()</code></li>
+</ul>
+<pre class="r"><code>penguins %&gt;% 
+  dplyr::select(!contains(&quot;_&quot;), starts_with(&quot;bill&quot;)) %&gt;% head(n = 3)</code></pre>
+<pre><code>## # A tibble: 3 x 6
+##   species island    sex     year bill_length_mm bill_depth_mm
+##   &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt;          &lt;dbl&gt;         &lt;dbl&gt;
+## 1 Adelie  Torgersen male    2007           39.1          18.7
+## 2 Adelie  Torgersen female  2007           39.5          17.4
+## 3 Adelie  Torgersen female  2007           40.3          18</code></pre>
+</div>
+<div id="section" class="section level2">
+<h2></h2>
+<pre class="r"><code>my_select_func &lt;- function(var_name){
+  return(is.factor(var_name))
+}
+
+penguins %&gt;% 
+  dplyr::select(where(my_select_func)) </code></pre>
+<pre><code>## # A tibble: 344 x 3
+##    species island    sex   
+##    &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt; 
+##  1 Adelie  Torgersen male  
+##  2 Adelie  Torgersen female
+##  3 Adelie  Torgersen female
+##  4 Adelie  Torgersen &lt;NA&gt;  
+##  5 Adelie  Torgersen female
+##  6 Adelie  Torgersen male  
+##  7 Adelie  Torgersen female
+##  8 Adelie  Torgersen male  
+##  9 Adelie  Torgersen &lt;NA&gt;  
+## 10 Adelie  Torgersen &lt;NA&gt;  
+## # … with 334 more rows</code></pre>
+</div>
+<div id="reordering-columns-in-data" class="section level2">
+<h2>2. Reordering columns in data</h2>
+<p>To reorder specific columns or sets of columns, use <code>dplyr::relocate()</code> with <code>.before</code> or <code>.after</code></p>
+<pre class="r"><code>penguins %&gt;% 
+  dplyr::relocate(contains(&quot;_&quot;), .after = year) %&gt;% head(n = 3)</code></pre>
+<pre><code>## # A tibble: 3 x 8
+##   species island sex    year bill_length_mm bill_depth_mm flipper_length_…
+##   &lt;fct&gt;   &lt;fct&gt;  &lt;fct&gt; &lt;int&gt;          &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;
+## 1 Adelie  Torge… male   2007           39.1          18.7              181
+## 2 Adelie  Torge… fema…  2007           39.5          17.4              186
+## 3 Adelie  Torge… fema…  2007           40.3          18                195
+## # … with 1 more variable: body_mass_g &lt;int&gt;</code></pre>
+<pre class="r"><code>penguins %&gt;% 
+  dplyr::relocate(species, .after = last_col()) %&gt;% head(n = 3)</code></pre>
+<pre><code>## # A tibble: 3 x 8
+##   island bill_length_mm bill_depth_mm flipper_length_… body_mass_g sex    year
+##   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt; &lt;fct&gt; &lt;int&gt;
+## 1 Torge…           39.1          18.7              181        3750 male   2007
+## 2 Torge…           39.5          17.4              186        3800 fema…  2007
+## 3 Torge…           40.3          18                195        3250 fema…  2007
+## # … with 1 more variable: species &lt;fct&gt;</code></pre>
+</div>
+<div id="controlling-mutated-column-location" class="section level2">
+<h2>3. Controlling mutated column location</h2>
+<p>To control the location of the newly added column, use <code>dplyr::mutate()</code>’s option (similar to above’s <code>dplyr::relocate()</code>)</p>
+<pre class="r"><code>penguins &lt;- penguins %&gt;% 
+  dplyr::mutate(penguinid = row_number(), .before = everything()) 
+
+penguins </code></pre>
+<pre><code>## # A tibble: 344 x 9
+##    penguinid species island bill_length_mm bill_depth_mm flipper_length_…
+##        &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;
+##  1         1 Adelie  Torge…           39.1          18.7              181
+##  2         2 Adelie  Torge…           39.5          17.4              186
+##  3         3 Adelie  Torge…           40.3          18                195
+##  4         4 Adelie  Torge…           NA            NA                 NA
+##  5         5 Adelie  Torge…           36.7          19.3              193
+##  6         6 Adelie  Torge…           39.3          20.6              190
+##  7         7 Adelie  Torge…           38.9          17.8              181
+##  8         8 Adelie  Torge…           39.2          19.6              195
+##  9         9 Adelie  Torge…           34.1          18.1              193
+## 10        10 Adelie  Torge…           42            20.2              190
+## # … with 334 more rows, and 3 more variables: body_mass_g &lt;int&gt;, sex &lt;fct&gt;,
+## #   year &lt;int&gt;</code></pre>
+</div>
+<div id="transforming-from-wide-to-long" class="section level2">
+<h2>4. Transforming from wide to long</h2>
+<p>To transform data set from wide(r) to long(er) form, use <code>tidyr::pivot_longer()</code> which is an updated approach to an older <code>tidyr::gather()</code>.</p>
+<pre class="r"><code>penguins %&gt;% 
+  tidyr::pivot_longer(cols = contains(&quot;_&quot;),  # pivot these columns
+                      names_to = &quot;variable_name&quot;, # name of column containing &quot;old columns&quot; names
+                      values_to = &quot;variable_value&quot;)  # name of column containing &quot;old columns&quot; values</code></pre>
+<pre><code>## # A tibble: 1,376 x 7
+##    penguinid species island    sex     year variable_name     variable_value
+##        &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt; &lt;chr&gt;                      &lt;dbl&gt;
+##  1         1 Adelie  Torgersen male    2007 bill_length_mm              39.1
+##  2         1 Adelie  Torgersen male    2007 bill_depth_mm               18.7
+##  3         1 Adelie  Torgersen male    2007 flipper_length_mm          181  
+##  4         1 Adelie  Torgersen male    2007 body_mass_g               3750  
+##  5         2 Adelie  Torgersen female  2007 bill_length_mm              39.5
+##  6         2 Adelie  Torgersen female  2007 bill_depth_mm               17.4
+##  7         2 Adelie  Torgersen female  2007 flipper_length_mm          186  
+##  8         2 Adelie  Torgersen female  2007 body_mass_g               3800  
+##  9         3 Adelie  Torgersen female  2007 bill_length_mm              40.3
+## 10         3 Adelie  Torgersen female  2007 bill_depth_mm               18  
+## # … with 1,366 more rows</code></pre>
+</div>
+<div id="section-1" class="section level2">
+<h2></h2>
+<pre class="r"><code># as previous example, but simultaneously split the names of columns 
+# which we pivot into longer format by &quot;_&quot; separator 
+penguins_longer &lt;- penguins %&gt;% 
+  tidyr::pivot_longer(cols = contains(&quot;_&quot;), # pivot these columns
+                      names_sep = &quot;_&quot;, 
+                      names_to = c(&quot;part&quot;, &quot;measure&quot;, &quot;unit&quot;), # name of column(s) containing &quot;old columns&quot; names
+                      values_to = &quot;measure_value&quot; ) # name of column containing &quot;old columns&quot; values
+
+penguins_longer </code></pre>
+<pre><code>## # A tibble: 1,376 x 9
+##    penguinid species island    sex     year part    measure unit  measure_value
+##        &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;         &lt;dbl&gt;
+##  1         1 Adelie  Torgersen male    2007 bill    length  mm             39.1
+##  2         1 Adelie  Torgersen male    2007 bill    depth   mm             18.7
+##  3         1 Adelie  Torgersen male    2007 flipper length  mm            181  
+##  4         1 Adelie  Torgersen male    2007 body    mass    g            3750  
+##  5         2 Adelie  Torgersen female  2007 bill    length  mm             39.5
+##  6         2 Adelie  Torgersen female  2007 bill    depth   mm             17.4
+##  7         2 Adelie  Torgersen female  2007 flipper length  mm            186  
+##  8         2 Adelie  Torgersen female  2007 body    mass    g            3800  
+##  9         3 Adelie  Torgersen female  2007 bill    length  mm             40.3
+## 10         3 Adelie  Torgersen female  2007 bill    depth   mm             18  
+## # … with 1,366 more rows</code></pre>
+</div>
+<div id="transforming-from-long-to-wide" class="section level2">
+<h2>5. Transforming from long to wide</h2>
+<p>To transform data set from long(er) to wide(r) form, use <code>tidyr::pivot_wider()</code> which is an updated approach to an older <code>tidyr::spread()</code>.</p>
+<pre class="r"><code># revert from long form from previous example 
+penguins_wider &lt;- penguins_longer %&gt;% 
+  tidyr::pivot_wider(names_from = c(&quot;part&quot;, &quot;measure&quot;, &quot;unit&quot;), # pivot these columns
+                     values_from = &quot;measure_value&quot;, # take the values from here
+                     names_sep = &quot;_&quot;) # combine col names using an underscore
+
+penguins_wider</code></pre>
+<pre><code>## # A tibble: 344 x 9
+##    penguinid species island sex    year bill_length_mm bill_depth_mm
+##        &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;  &lt;fct&gt; &lt;int&gt;          &lt;dbl&gt;         &lt;dbl&gt;
+##  1         1 Adelie  Torge… male   2007           39.1          18.7
+##  2         2 Adelie  Torge… fema…  2007           39.5          17.4
+##  3         3 Adelie  Torge… fema…  2007           40.3          18  
+##  4         4 Adelie  Torge… &lt;NA&gt;   2007           NA            NA  
+##  5         5 Adelie  Torge… fema…  2007           36.7          19.3
+##  6         6 Adelie  Torge… male   2007           39.3          20.6
+##  7         7 Adelie  Torge… fema…  2007           38.9          17.8
+##  8         8 Adelie  Torge… male   2007           39.2          19.6
+##  9         9 Adelie  Torge… &lt;NA&gt;   2007           34.1          18.1
+## 10        10 Adelie  Torge… &lt;NA&gt;   2007           42            20.2
+## # … with 334 more rows, and 2 more variables: flipper_length_mm &lt;dbl&gt;,
+## #   body_mass_g &lt;dbl&gt;</code></pre>
+</div>
+<div id="running-group-statistics-across-multiple-columns" class="section level2">
+<h2>6. Running group statistics across multiple columns</h2>
+<p>To apply multiple summary statistics simultaneously in an efficient way, use <code>across()</code> verb.</p>
+<pre class="r"><code># calculate mean and sd for each variable  ending in mm, across three species 
+penguin_stats &lt;- penguins %&gt;% 
+  dplyr::group_by(species) %&gt;% 
+  dplyr::summarise(across(.cols = ends_with(&quot;mm&quot;), 
+                          .fns = list(~mean(.x, na.rm = TRUE), 
+                                      ~sd(.x, na.rm = TRUE))))
+
+penguin_stats</code></pre>
+<pre><code>## # A tibble: 3 x 7
+##   species bill_length_mm_1 bill_length_mm_2 bill_depth_mm_1 bill_depth_mm_2
+##   &lt;fct&gt;              &lt;dbl&gt;            &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;
+## 1 Adelie              38.8             2.66            18.3           1.22 
+## 2 Chinst…             48.8             3.34            18.4           1.14 
+## 3 Gentoo              47.5             3.08            15.0           0.981
+## # … with 2 more variables: flipper_length_mm_1 &lt;dbl&gt;, flipper_length_mm_2 &lt;dbl&gt;</code></pre>
+</div>
+<div id="control-how-output-columns-are-named-when-summarising-across-multiple-columns" class="section level2">
+<h2>7. Control how output columns are named when summarising across multiple columns</h2>
+<p>To apply multiple summary statistics simultaneously in an efficient way with <code>across()</code> verb and to use other than default column names of summary variables, use the <code>.names</code> argument.</p>
+<pre class="r"><code>penguins_stats &lt;- penguins %&gt;% 
+  dplyr::group_by(species) %&gt;% 
+  dplyr::summarise(across(.cols = ends_with(&quot;mm&quot;), 
+                          .fns = list(mean = ~mean(.x, na.rm = TRUE), 
+                                      sd = ~sd(.x, na.rm = TRUE)),
+                          .names = &quot;{gsub(&#39;_|_mm&#39;, &#39;&#39;, col)}_{.fn}&quot;))
+penguins_stats</code></pre>
+<pre><code>## # A tibble: 3 x 7
+##   species billlength_mean billlength_sd billdepth_mean billdepth_sd
+##   &lt;fct&gt;             &lt;dbl&gt;         &lt;dbl&gt;          &lt;dbl&gt;        &lt;dbl&gt;
+## 1 Adelie             38.8          2.66           18.3        1.22 
+## 2 Chinst…            48.8          3.34           18.4        1.14 
+## 3 Gentoo             47.5          3.08           15.0        0.981
+## # … with 2 more variables: flipperlength_mean &lt;dbl&gt;, flipperlength_sd &lt;dbl&gt;</code></pre>
+</div>
+<div id="running-models-across-subsets-of-data" class="section level2">
+<h2>8. Running models across subsets of data</h2>
+<p>Use <code>dplyr::summarise()</code> to compute different <em>types</em> of outcomes stored in a list, for example, summary vectors, data frames or other objects like models or graphs.</p>
+<pre class="r"><code>penguin_models &lt;- penguins %&gt;% 
+  dplyr::group_by(species) %&gt;% 
+  dplyr::summarise(model = list(lm(body_mass_g ~ flipper_length_mm + bill_length_mm + bill_depth_mm)))  
+penguin_models</code></pre>
+<pre><code>## # A tibble: 3 x 2
+##   species   model 
+##   &lt;fct&gt;     &lt;list&gt;
+## 1 Adelie    &lt;lm&gt;  
+## 2 Chinstrap &lt;lm&gt;  
+## 3 Gentoo    &lt;lm&gt;</code></pre>
+<pre class="r"><code>model_tmp &lt;- penguin_models[1, 2][[1]][[1]]
+# summary(model_tmp)</code></pre>
+</div>
+<div id="section-2" class="section level2">
+<h2></h2>
+<pre class="r"><code>library(broom)
+
+penguin_models &lt;- penguins %&gt;% 
+  dplyr::group_by(species) %&gt;% 
+  dplyr::summarise(broom::glance(lm(body_mass_g ~ flipper_length_mm + bill_length_mm + bill_depth_mm))) 
+
+penguin_models</code></pre>
+<pre><code>## # A tibble: 3 x 13
+##   species r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC
+##   &lt;fct&gt;       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 Adelie      0.508         0.498  325.      50.6 1.55e-22     3 -1086. 2181.
+## 2 Chinst…     0.504         0.481  277.      21.7 8.48e-10     3  -477.  964.
+## 3 Gentoo      0.625         0.615  313.      66.0 3.39e-25     3  -879. 1768.
+## # … with 4 more variables: BIC &lt;dbl&gt;, deviance &lt;dbl&gt;, df.residual &lt;int&gt;,
+## #   nobs &lt;int&gt;</code></pre>
+</div>
+<div id="nesting-data" class="section level2">
+<h2>9. Nesting data</h2>
+<p>To partition data into subsets so that we can apply a common function or operation across all subsets of the data, use <code>dplyr::nest_by()</code>.</p>
+<pre class="r"><code>penguins %&gt;% 
+  nest_by(species)  %&gt;%
+  mutate(data_model = list(lm(body_mass_g ~ flipper_length_mm + bill_length_mm + bill_depth_mm, data = data)))</code></pre>
+<pre><code>## # A tibble: 3 x 3
+## # Rowwise:  species
+##   species                 data data_model
+##   &lt;fct&gt;     &lt;list&lt;tbl_df[,8]&gt;&gt; &lt;list&gt;    
+## 1 Adelie             [152 × 8] &lt;lm&gt;      
+## 2 Chinstrap           [68 × 8] &lt;lm&gt;      
+## 3 Gentoo             [124 × 8] &lt;lm&gt;</code></pre>
+</div>
+<div id="graphing-across-subsets" class="section level2">
+<h2>10. Graphing across subsets</h2>
+<p>To generate plots across data subsets and store them for further usage, use <code>dplyr::nest_by()</code> combined with plotting.</p>
+<pre class="r"><code># generic function for generating a simple scatter plot in ggplot2
+scatter_fn &lt;- function(df, col1, col2, title) {
+  df %&gt;% 
+    ggplot2::ggplot(aes(x = {{col1}}, y = {{col2}})) +
+    ggplot2::geom_point() +
+    ggplot2::geom_smooth() +
+    ggplot2::labs(title = title)
+}
+
+# run function across species and store plots in a list column
+penguin_scatters &lt;- penguins %&gt;% 
+  dplyr::nest_by(species) %&gt;% 
+  dplyr::mutate(plot = list(scatter_fn(data, bill_length_mm, bill_depth_mm, species))) </code></pre>
+</div>
+<div id="section-3" class="section level2">
+<h2></h2>
+<pre class="r"><code>penguin_scatters</code></pre>
+<pre><code>## # A tibble: 3 x 3
+## # Rowwise:  species
+##   species                 data plot  
+##   &lt;fct&gt;     &lt;list&lt;tbl_df[,8]&gt;&gt; &lt;list&gt;
+## 1 Adelie             [152 × 8] &lt;gg&gt;  
+## 2 Chinstrap           [68 × 8] &lt;gg&gt;  
+## 3 Gentoo             [124 × 8] &lt;gg&gt;</code></pre>
+</div>
+<div id="section-4" class="section level2">
+<h2></h2>
+<pre class="r"><code>p_all &lt;- scatter_fn(penguins, bill_length_mm, bill_depth_mm, &quot;All Species&quot;) 
+# get species scatters from penguin_scatters dataframe
+for (i in 1:3) {
+ assign(paste(&quot;p&quot;, i, sep = &quot;_&quot;),
+        penguin_scatters$plot[i][[1]]) 
+}
+
+# display nicely using patchwork in R Markdown
+library(patchwork)
+p_all /
+(p_1 | p_2 | p_3)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-18-1.png" width="480" /></p>
+</div>
+<div id="thank-you" class="section level2">
+<h2>Thank you!</h2>
+<p>Credit:</p>
+<ul>
+<li>Slides in this presentation are <strong><em>very heavily</em></strong> based on <a href="https://towardsdatascience.com/ten-up-to-date-ways-to-do-common-data-tasks-in-r-4f15e56c92d">“Ten Up-To-Date Ways to do Common Data Tasks in R” post</a> by Keith McNulty.</li>
+</ul>
+<p>Resources:</p>
+<ul>
+<li><p><a href="https://vita.had.co.nz/papers/tidy-data.pdf">Tidy data</a> paper by Wickham, Hadley (2013). Journal of Statistical Software.</p></li>
+<li><p><a href="https://joss.theoj.org/papers/10.21105/joss.01686">Welcome to the Tidyverse</a> paper by Wickham, Hadley et al. (2019). Journal of Open Source Software.</p></li>
+<li><p><a href="https://www.tidyverse.org/blog/">Tidyverse blog</a> with updates (in a form of a blog post)</p></li>
+</ul>
+</div>
+
+    </section>
+    
+
+    
+    
+  </div>
+</div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script>
+
+  <script>
+    window.revealPlugins = { dependencies: [
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/zoom-js/zoom.js', async: true },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/math/math.js', async: true },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/print-pdf/print-pdf.js', async: true },
+      
+      { src: '\/js\/vendor\/reveal.js\/plugin\/notes\/notes.js', async: true }
+    ]};
+
+    let revealDefaults = { center: true, controls: true, history: true, progress: true, transition: 'slide', mouseWheel: true };
+    let revealOptions = Object.assign({}, revealDefaults, revealPlugins);
+    Reveal.initialize(revealOptions);
+  </script>
+
+</body>
+</html>

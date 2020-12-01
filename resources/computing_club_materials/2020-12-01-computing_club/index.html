@@ -1,0 +1,1676 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.0 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Marta Karas">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="tidyverse The tidyverse is an ecosystem of packages designed with a shared underlying design philosophy, grammar, and data structures.
+The tidyverse v1.3.0 loads 8 packages via library(tidyverse): ggplot2, dplyr, tidyr, purrr, tibble, stringr, forcats, readr.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/resources/computing_club_materials/2020-12-01-computing_club/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111897145-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-111897145-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/resources/computing_club_materials/2020-12-01-computing_club/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Home">
+  <meta property="og:url" content="/resources/computing_club_materials/2020-12-01-computing_club/">
+  <meta property="og:title" content="Recent developments in R tidyverse | Home">
+  <meta property="og:description" content="tidyverse The tidyverse is an ecosystem of packages designed with a shared underlying design philosophy, grammar, and data structures.
+The tidyverse v1.3.0 loads 8 packages via library(tidyverse): ggplot2, dplyr, tidyr, purrr, tibble, stringr, forcats, readr."><meta property="og:image" content="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Recent developments in R tidyverse | Home</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+    <script>window.wcDarkLightEnabled = true;</script>
+  
+  
+    <script>const isSiteThemeDark = false;</script>
+  
+  
+  <script src="/js/load-theme.js"></script>
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#resources"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/docs/mkaras_cv.pdf"><span>Resume</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Recent developments in R tidyverse</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 1, 0001
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="tidyverse" class="section level2">
+<h2>tidyverse</h2>
+<p>The tidyverse is an ecosystem of packages designed with a shared underlying design philosophy, grammar, and data structures.</p>
+<p>The tidyverse v1.3.0 loads 8 packages via <code>library(tidyverse)</code>: ggplot2, dplyr, tidyr, purrr, tibble, stringr, forcats, readr.</p>
+<p>It also includes (installs) but does not automatically load some other (i.e. lubridate).</p>
+<p><img src="img/tidyverse-logo.png" style="width:80.0%" /></p>
+</div>
+<div id="presentation-motivation" class="section level2">
+<h2>Presentation motivation</h2>
+<div style="float: left; width: 45%;">
+<h4 id="me-using-tidyverse-packages-in-2015">Me using tidyverse packages in <strong>2015</strong>:</h4>
+<p></br>
+Typically do stuff like</p>
+<pre class="r"><code>dat %&gt;%
+  filter(age &gt;= 50) %&gt;%
+  group_by(var1, var2) %&gt;%
+  summarize(y_mean = mean(y),
+            y_median = median(y))</code></pre>
+<p>and google “r ggplot2 rotate x axis labels”</p>
+</div>
+<div style="float: right; width: 45%;">
+<h4 id="me-using-tidyverse-packages-in-2020">Me using tidyverse packages in <strong>2020</strong>:</h4>
+<p></br>
+Typically do stuff like</p>
+<pre class="r"><code>dat %&gt;%
+  filter(age &gt;= 50) %&gt;%
+  group_by(var1, var2) %&gt;%
+  summarize(y_mean = mean(y),
+            y_median = median(y))</code></pre>
+<p>and google “r ggplot2 rotate x axis labels”</p>
+</div>
+</div>
+<div id="presentation-content-credits" class="section level2">
+<h2>Presentation content credits</h2>
+<div style="float: left; width: 50%;">
+<p><img src="img/twitter_q_long.png" style="width:90.0%" /></p>
+</div>
+<div style="float: right; width: 50%;">
+<p><img src="img/twitter_a2.png" style="width:90.0%" /></p>
+<p>(<a href="https://towardsdatascience.com/ten-up-to-date-ways-to-do-common-data-tasks-in-r-4f15e56c92d">Post link here.</a>) These slides from now on are like 80-90% of this post content, with small alterations from my side.</p>
+</div>
+</div>
+<div id="outline" class="section level2">
+<h2>Outline</h2>
+<p>Palmer Penguins dataset</p>
+<ol style="list-style-type: decimal">
+<li>Selecting columns in data</li>
+<li>Reordering columns in data</li>
+<li>Controlling mutated column location</li>
+<li>Transforming from wide to long</li>
+<li>Transforming from long to wide</li>
+<li>Running group statistics across multiple columns</li>
+<li>Control how output columns are named when summarising across multiple columns</li>
+<li>Running models across subsets of data</li>
+<li>Nesting data</li>
+<li>Graphing across subsets</li>
+</ol>
+</div>
+<div id="palmer-penguins-dataset" class="section level2">
+<h2>Palmer Penguins dataset</h2>
+<div style="float: left; width: 75%;">
+<p>“The goal of <code>palmerpenguins</code> is to provide a great dataset for data exploration &amp; visualization, as an alternative to <code>iris</code>.”</p>
+<p>Data set contains size measurements for three penguin species (Adelie, Chinstrap, Gentoo) observed on three islands in the Palmer Archipelago, Antarctica (Biscoe, Dream, Torgersen).</p>
+<pre class="r"><code>library(tidyverse)
+library(palmerpenguins)
+str(penguins)</code></pre>
+<pre><code>## tibble [344 × 8] (S3: tbl_df/tbl/data.frame)
+##  $ species          : Factor w/ 3 levels &quot;Adelie&quot;,&quot;Chinstrap&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ island           : Factor w/ 3 levels &quot;Biscoe&quot;,&quot;Dream&quot;,..: 3 3 3 3 3 3 3 3 3 3 ...
+##  $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
+##  $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
+##  $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
+##  $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
+##  $ sex              : Factor w/ 2 levels &quot;female&quot;,&quot;male&quot;: 2 1 1 NA 1 2 1 2 NA NA ...
+##  $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...</code></pre>
+</div>
+<div style="float: right; width: 25%;">
+<p><img src="img/penguin.jpeg" style="width:99.0%" /></p>
+</div>
+</div>
+<div id="selecting-columns-in-data" class="section level2">
+<h2>1. Selecting columns in data</h2>
+<p>To select columns using <code>dplyr::select()</code> or <code>tidyr::pivot_longer()</code> based on common conditions, use helper functions.</p>
+<ul>
+<li>To select variables contained in a character vector: <code>all_of()</code>, <code>any_of()</code></li>
+<li>To select all (i.e. remaining) or last column: <code>everything()</code>, <code>last_col()</code></li>
+<li>To select variables by matching patterns in their names: <code>starts_with()</code>, <code>ends_with()</code>, <code>contains()</code>, <code>matches()</code>, <code>num_range()</code></li>
+<li>To apply a custom function and select those for which the function returns TRUE: <code>where()</code></li>
+</ul>
+<pre class="r"><code>penguins %&gt;% 
+  dplyr::select(!contains(&quot;_&quot;), starts_with(&quot;bill&quot;)) %&gt;% head(n = 3)</code></pre>
+<pre><code>## # A tibble: 3 x 6
+##   species island    sex     year bill_length_mm bill_depth_mm
+##   &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt;          &lt;dbl&gt;         &lt;dbl&gt;
+## 1 Adelie  Torgersen male    2007           39.1          18.7
+## 2 Adelie  Torgersen female  2007           39.5          17.4
+## 3 Adelie  Torgersen female  2007           40.3          18</code></pre>
+</div>
+<div id="section" class="section level2">
+<h2></h2>
+<pre class="r"><code>my_select_func &lt;- function(var_name){
+  return(is.factor(var_name))
+}
+
+penguins %&gt;% 
+  dplyr::select(where(my_select_func)) </code></pre>
+<pre><code>## # A tibble: 344 x 3
+##    species island    sex   
+##    &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt; 
+##  1 Adelie  Torgersen male  
+##  2 Adelie  Torgersen female
+##  3 Adelie  Torgersen female
+##  4 Adelie  Torgersen &lt;NA&gt;  
+##  5 Adelie  Torgersen female
+##  6 Adelie  Torgersen male  
+##  7 Adelie  Torgersen female
+##  8 Adelie  Torgersen male  
+##  9 Adelie  Torgersen &lt;NA&gt;  
+## 10 Adelie  Torgersen &lt;NA&gt;  
+## # … with 334 more rows</code></pre>
+</div>
+<div id="reordering-columns-in-data" class="section level2">
+<h2>2. Reordering columns in data</h2>
+<p>To reorder specific columns or sets of columns, use <code>dplyr::relocate()</code> with <code>.before</code> or <code>.after</code></p>
+<pre class="r"><code>penguins %&gt;% 
+  dplyr::relocate(contains(&quot;_&quot;), .after = year) %&gt;% head(n = 3)</code></pre>
+<pre><code>## # A tibble: 3 x 8
+##   species island sex    year bill_length_mm bill_depth_mm flipper_length_…
+##   &lt;fct&gt;   &lt;fct&gt;  &lt;fct&gt; &lt;int&gt;          &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;
+## 1 Adelie  Torge… male   2007           39.1          18.7              181
+## 2 Adelie  Torge… fema…  2007           39.5          17.4              186
+## 3 Adelie  Torge… fema…  2007           40.3          18                195
+## # … with 1 more variable: body_mass_g &lt;int&gt;</code></pre>
+<pre class="r"><code>penguins %&gt;% 
+  dplyr::relocate(species, .after = last_col()) %&gt;% head(n = 3)</code></pre>
+<pre><code>## # A tibble: 3 x 8
+##   island bill_length_mm bill_depth_mm flipper_length_… body_mass_g sex    year
+##   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt; &lt;fct&gt; &lt;int&gt;
+## 1 Torge…           39.1          18.7              181        3750 male   2007
+## 2 Torge…           39.5          17.4              186        3800 fema…  2007
+## 3 Torge…           40.3          18                195        3250 fema…  2007
+## # … with 1 more variable: species &lt;fct&gt;</code></pre>
+</div>
+<div id="controlling-mutated-column-location" class="section level2">
+<h2>3. Controlling mutated column location</h2>
+<p>To control the location of the newly added column, use <code>dplyr::mutate()</code>’s option (similar to above’s <code>dplyr::relocate()</code>)</p>
+<pre class="r"><code>penguins &lt;- penguins %&gt;% 
+  dplyr::mutate(penguinid = row_number(), .before = everything()) 
+
+penguins </code></pre>
+<pre><code>## # A tibble: 344 x 9
+##    penguinid species island bill_length_mm bill_depth_mm flipper_length_…
+##        &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;
+##  1         1 Adelie  Torge…           39.1          18.7              181
+##  2         2 Adelie  Torge…           39.5          17.4              186
+##  3         3 Adelie  Torge…           40.3          18                195
+##  4         4 Adelie  Torge…           NA            NA                 NA
+##  5         5 Adelie  Torge…           36.7          19.3              193
+##  6         6 Adelie  Torge…           39.3          20.6              190
+##  7         7 Adelie  Torge…           38.9          17.8              181
+##  8         8 Adelie  Torge…           39.2          19.6              195
+##  9         9 Adelie  Torge…           34.1          18.1              193
+## 10        10 Adelie  Torge…           42            20.2              190
+## # … with 334 more rows, and 3 more variables: body_mass_g &lt;int&gt;, sex &lt;fct&gt;,
+## #   year &lt;int&gt;</code></pre>
+</div>
+<div id="transforming-from-wide-to-long" class="section level2">
+<h2>4. Transforming from wide to long</h2>
+<p>To transform data set from wide(r) to long(er) form, use <code>tidyr::pivot_longer()</code> which is an updated approach to an older <code>tidyr::gather()</code>.</p>
+<pre class="r"><code>penguins %&gt;% 
+  tidyr::pivot_longer(cols = contains(&quot;_&quot;),  # pivot these columns
+                      names_to = &quot;variable_name&quot;, # name of column containing &quot;old columns&quot; names
+                      values_to = &quot;variable_value&quot;)  # name of column containing &quot;old columns&quot; values</code></pre>
+<pre><code>## # A tibble: 1,376 x 7
+##    penguinid species island    sex     year variable_name     variable_value
+##        &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt; &lt;chr&gt;                      &lt;dbl&gt;
+##  1         1 Adelie  Torgersen male    2007 bill_length_mm              39.1
+##  2         1 Adelie  Torgersen male    2007 bill_depth_mm               18.7
+##  3         1 Adelie  Torgersen male    2007 flipper_length_mm          181  
+##  4         1 Adelie  Torgersen male    2007 body_mass_g               3750  
+##  5         2 Adelie  Torgersen female  2007 bill_length_mm              39.5
+##  6         2 Adelie  Torgersen female  2007 bill_depth_mm               17.4
+##  7         2 Adelie  Torgersen female  2007 flipper_length_mm          186  
+##  8         2 Adelie  Torgersen female  2007 body_mass_g               3800  
+##  9         3 Adelie  Torgersen female  2007 bill_length_mm              40.3
+## 10         3 Adelie  Torgersen female  2007 bill_depth_mm               18  
+## # … with 1,366 more rows</code></pre>
+</div>
+<div id="section-1" class="section level2">
+<h2></h2>
+<pre class="r"><code># as previous example, but simultaneously split the names of columns 
+# which we pivot into longer format by &quot;_&quot; separator 
+penguins_longer &lt;- penguins %&gt;% 
+  tidyr::pivot_longer(cols = contains(&quot;_&quot;), # pivot these columns
+                      names_sep = &quot;_&quot;, 
+                      names_to = c(&quot;part&quot;, &quot;measure&quot;, &quot;unit&quot;), # name of column(s) containing &quot;old columns&quot; names
+                      values_to = &quot;measure_value&quot; ) # name of column containing &quot;old columns&quot; values
+
+penguins_longer </code></pre>
+<pre><code>## # A tibble: 1,376 x 9
+##    penguinid species island    sex     year part    measure unit  measure_value
+##        &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt;  &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;         &lt;dbl&gt;
+##  1         1 Adelie  Torgersen male    2007 bill    length  mm             39.1
+##  2         1 Adelie  Torgersen male    2007 bill    depth   mm             18.7
+##  3         1 Adelie  Torgersen male    2007 flipper length  mm            181  
+##  4         1 Adelie  Torgersen male    2007 body    mass    g            3750  
+##  5         2 Adelie  Torgersen female  2007 bill    length  mm             39.5
+##  6         2 Adelie  Torgersen female  2007 bill    depth   mm             17.4
+##  7         2 Adelie  Torgersen female  2007 flipper length  mm            186  
+##  8         2 Adelie  Torgersen female  2007 body    mass    g            3800  
+##  9         3 Adelie  Torgersen female  2007 bill    length  mm             40.3
+## 10         3 Adelie  Torgersen female  2007 bill    depth   mm             18  
+## # … with 1,366 more rows</code></pre>
+</div>
+<div id="transforming-from-long-to-wide" class="section level2">
+<h2>5. Transforming from long to wide</h2>
+<p>To transform data set from long(er) to wide(r) form, use <code>tidyr::pivot_wider()</code> which is an updated approach to an older <code>tidyr::spread()</code>.</p>
+<pre class="r"><code># revert from long form from previous example 
+penguins_wider &lt;- penguins_longer %&gt;% 
+  tidyr::pivot_wider(names_from = c(&quot;part&quot;, &quot;measure&quot;, &quot;unit&quot;), # pivot these columns
+                     values_from = &quot;measure_value&quot;, # take the values from here
+                     names_sep = &quot;_&quot;) # combine col names using an underscore
+
+penguins_wider</code></pre>
+<pre><code>## # A tibble: 344 x 9
+##    penguinid species island sex    year bill_length_mm bill_depth_mm
+##        &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;  &lt;fct&gt; &lt;int&gt;          &lt;dbl&gt;         &lt;dbl&gt;
+##  1         1 Adelie  Torge… male   2007           39.1          18.7
+##  2         2 Adelie  Torge… fema…  2007           39.5          17.4
+##  3         3 Adelie  Torge… fema…  2007           40.3          18  
+##  4         4 Adelie  Torge… &lt;NA&gt;   2007           NA            NA  
+##  5         5 Adelie  Torge… fema…  2007           36.7          19.3
+##  6         6 Adelie  Torge… male   2007           39.3          20.6
+##  7         7 Adelie  Torge… fema…  2007           38.9          17.8
+##  8         8 Adelie  Torge… male   2007           39.2          19.6
+##  9         9 Adelie  Torge… &lt;NA&gt;   2007           34.1          18.1
+## 10        10 Adelie  Torge… &lt;NA&gt;   2007           42            20.2
+## # … with 334 more rows, and 2 more variables: flipper_length_mm &lt;dbl&gt;,
+## #   body_mass_g &lt;dbl&gt;</code></pre>
+</div>
+<div id="running-group-statistics-across-multiple-columns" class="section level2">
+<h2>6. Running group statistics across multiple columns</h2>
+<p>To apply multiple summary statistics simultaneously in an efficient way, use <code>across()</code> verb.</p>
+<pre class="r"><code># calculate mean and sd for each variable  ending in mm, across three species 
+penguin_stats &lt;- penguins %&gt;% 
+  dplyr::group_by(species) %&gt;% 
+  dplyr::summarise(across(.cols = ends_with(&quot;mm&quot;), 
+                          .fns = list(~mean(.x, na.rm = TRUE), 
+                                      ~sd(.x, na.rm = TRUE))))
+
+penguin_stats</code></pre>
+<pre><code>## # A tibble: 3 x 7
+##   species bill_length_mm_1 bill_length_mm_2 bill_depth_mm_1 bill_depth_mm_2
+##   &lt;fct&gt;              &lt;dbl&gt;            &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;
+## 1 Adelie              38.8             2.66            18.3           1.22 
+## 2 Chinst…             48.8             3.34            18.4           1.14 
+## 3 Gentoo              47.5             3.08            15.0           0.981
+## # … with 2 more variables: flipper_length_mm_1 &lt;dbl&gt;, flipper_length_mm_2 &lt;dbl&gt;</code></pre>
+</div>
+<div id="control-how-output-columns-are-named-when-summarising-across-multiple-columns" class="section level2">
+<h2>7. Control how output columns are named when summarising across multiple columns</h2>
+<p>To apply multiple summary statistics simultaneously in an efficient way with <code>across()</code> verb and to use other than default column names of summary variables, use the <code>.names</code> argument.</p>
+<pre class="r"><code>penguins_stats &lt;- penguins %&gt;% 
+  dplyr::group_by(species) %&gt;% 
+  dplyr::summarise(across(.cols = ends_with(&quot;mm&quot;), 
+                          .fns = list(mean = ~mean(.x, na.rm = TRUE), 
+                                      sd = ~sd(.x, na.rm = TRUE)),
+                          .names = &quot;{gsub(&#39;_|_mm&#39;, &#39;&#39;, col)}_{.fn}&quot;))
+penguins_stats</code></pre>
+<pre><code>## # A tibble: 3 x 7
+##   species billlength_mean billlength_sd billdepth_mean billdepth_sd
+##   &lt;fct&gt;             &lt;dbl&gt;         &lt;dbl&gt;          &lt;dbl&gt;        &lt;dbl&gt;
+## 1 Adelie             38.8          2.66           18.3        1.22 
+## 2 Chinst…            48.8          3.34           18.4        1.14 
+## 3 Gentoo             47.5          3.08           15.0        0.981
+## # … with 2 more variables: flipperlength_mean &lt;dbl&gt;, flipperlength_sd &lt;dbl&gt;</code></pre>
+</div>
+<div id="running-models-across-subsets-of-data" class="section level2">
+<h2>8. Running models across subsets of data</h2>
+<p>Use <code>dplyr::summarise()</code> to compute different <em>types</em> of outcomes stored in a list, for example, summary vectors, data frames or other objects like models or graphs.</p>
+<pre class="r"><code>penguin_models &lt;- penguins %&gt;% 
+  dplyr::group_by(species) %&gt;% 
+  dplyr::summarise(model = list(lm(body_mass_g ~ flipper_length_mm + bill_length_mm + bill_depth_mm)))  
+penguin_models</code></pre>
+<pre><code>## # A tibble: 3 x 2
+##   species   model 
+##   &lt;fct&gt;     &lt;list&gt;
+## 1 Adelie    &lt;lm&gt;  
+## 2 Chinstrap &lt;lm&gt;  
+## 3 Gentoo    &lt;lm&gt;</code></pre>
+<pre class="r"><code>model_tmp &lt;- penguin_models[1, 2][[1]][[1]]
+# summary(model_tmp)</code></pre>
+</div>
+<div id="section-2" class="section level2">
+<h2></h2>
+<pre class="r"><code>library(broom)
+
+penguin_models &lt;- penguins %&gt;% 
+  dplyr::group_by(species) %&gt;% 
+  dplyr::summarise(broom::glance(lm(body_mass_g ~ flipper_length_mm + bill_length_mm + bill_depth_mm))) 
+
+penguin_models</code></pre>
+<pre><code>## # A tibble: 3 x 13
+##   species r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC
+##   &lt;fct&gt;       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 Adelie      0.508         0.498  325.      50.6 1.55e-22     3 -1086. 2181.
+## 2 Chinst…     0.504         0.481  277.      21.7 8.48e-10     3  -477.  964.
+## 3 Gentoo      0.625         0.615  313.      66.0 3.39e-25     3  -879. 1768.
+## # … with 4 more variables: BIC &lt;dbl&gt;, deviance &lt;dbl&gt;, df.residual &lt;int&gt;,
+## #   nobs &lt;int&gt;</code></pre>
+</div>
+<div id="nesting-data" class="section level2">
+<h2>9. Nesting data</h2>
+<p>To partition data into subsets so that we can apply a common function or operation across all subsets of the data, use <code>dplyr::nest_by()</code>.</p>
+<pre class="r"><code>penguins %&gt;% 
+  nest_by(species)  %&gt;%
+  mutate(data_model = list(lm(body_mass_g ~ flipper_length_mm + bill_length_mm + bill_depth_mm, data = data)))</code></pre>
+<pre><code>## # A tibble: 3 x 3
+## # Rowwise:  species
+##   species                 data data_model
+##   &lt;fct&gt;     &lt;list&lt;tbl_df[,8]&gt;&gt; &lt;list&gt;    
+## 1 Adelie             [152 × 8] &lt;lm&gt;      
+## 2 Chinstrap           [68 × 8] &lt;lm&gt;      
+## 3 Gentoo             [124 × 8] &lt;lm&gt;</code></pre>
+</div>
+<div id="graphing-across-subsets" class="section level2">
+<h2>10. Graphing across subsets</h2>
+<p>To generate plots across data subsets and store them for further usage, use <code>dplyr::nest_by()</code> combined with plotting.</p>
+<pre class="r"><code># generic function for generating a simple scatter plot in ggplot2
+scatter_fn &lt;- function(df, col1, col2, title) {
+  df %&gt;% 
+    ggplot2::ggplot(aes(x = {{col1}}, y = {{col2}})) +
+    ggplot2::geom_point() +
+    ggplot2::geom_smooth() +
+    ggplot2::labs(title = title)
+}
+
+# run function across species and store plots in a list column
+penguin_scatters &lt;- penguins %&gt;% 
+  dplyr::nest_by(species) %&gt;% 
+  dplyr::mutate(plot = list(scatter_fn(data, bill_length_mm, bill_depth_mm, species))) </code></pre>
+</div>
+<div id="section-3" class="section level2">
+<h2></h2>
+<pre class="r"><code>penguin_scatters</code></pre>
+<pre><code>## # A tibble: 3 x 3
+## # Rowwise:  species
+##   species                 data plot  
+##   &lt;fct&gt;     &lt;list&lt;tbl_df[,8]&gt;&gt; &lt;list&gt;
+## 1 Adelie             [152 × 8] &lt;gg&gt;  
+## 2 Chinstrap           [68 × 8] &lt;gg&gt;  
+## 3 Gentoo             [124 × 8] &lt;gg&gt;</code></pre>
+</div>
+<div id="section-4" class="section level2">
+<h2></h2>
+<pre class="r"><code>p_all &lt;- scatter_fn(penguins, bill_length_mm, bill_depth_mm, &quot;All Species&quot;) 
+# get species scatters from penguin_scatters dataframe
+for (i in 1:3) {
+ assign(paste(&quot;p&quot;, i, sep = &quot;_&quot;),
+        penguin_scatters$plot[i][[1]]) 
+}
+
+# display nicely using patchwork in R Markdown
+library(patchwork)
+p_all /
+(p_1 | p_2 | p_3)</code></pre>
+<p><img src="/talk/2020-12-01-computing_club/slides_files/figure-html/unnamed-chunk-18-1.png" width="480" /></p>
+</div>
+<div id="thank-you" class="section level2">
+<h2>Thank you!</h2>
+<p>Credit:</p>
+<ul>
+<li>Slides in this presentation are <strong><em>very heavily</em></strong> based on <a href="https://towardsdatascience.com/ten-up-to-date-ways-to-do-common-data-tasks-in-r-4f15e56c92d">“Ten Up-To-Date Ways to do Common Data Tasks in R” post</a> by Keith McNulty.</li>
+</ul>
+<p>Resources:</p>
+<ul>
+<li><p><a href="https://vita.had.co.nz/papers/tidy-data.pdf">Tidy data</a> paper by Wickham, Hadley (2013). Journal of Statistical Software.</p></li>
+<li><p><a href="https://joss.theoj.org/papers/10.21105/joss.01686">Welcome to the Tidyverse</a> paper by Wickham, Hadley et al. (2019). Journal of Open Source Software.</p></li>
+<li><p><a href="https://www.tidyverse.org/blog/">Tidyverse blog</a> with updates (in a form of a blog post)</p></li>
+</ul>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/resources/computing_club_materials/2020-12-01-computing_club/&amp;text=Recent%20developments%20in%20R%20tidyverse" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/resources/computing_club_materials/2020-12-01-computing_club/&amp;t=Recent%20developments%20in%20R%20tidyverse" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Recent%20developments%20in%20R%20tidyverse&amp;body=/resources/computing_club_materials/2020-12-01-computing_club/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/resources/computing_club_materials/2020-12-01-computing_club/&amp;title=Recent%20developments%20in%20R%20tidyverse" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Recent%20developments%20in%20R%20tidyverse%20/resources/computing_club_materials/2020-12-01-computing_club/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/resources/computing_club_materials/2020-12-01-computing_club/&amp;title=Recent%20developments%20in%20R%20tidyverse" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="/"><img class="avatar mr-3 avatar-circle" src="/author/marta-karas/avatar_hud72ccb91bce59b1d73702ea67c67cfd3_241597_270x270_fill_q90_lanczos_center.jpeg" alt="Marta Karas"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Marta Karas</a></h5>
+      <h6 class="card-subtitle">PhD candidate in Biostatistics</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/martakarass" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=S27sttcAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/martakarass" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/martakaras/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/wowchemy.min.d9d80f811e95b4b4f6df1eaaf297b05f.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
