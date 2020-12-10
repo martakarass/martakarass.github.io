@@ -5,12 +5,20 @@
     <link>/author/karas/</link>
       <atom:link href="/author/karas/index.xml" rel="self" type="application/rss+xml" />
     <description>Karas</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 23 Sep 2019 18:08:38 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 09 Dec 2020 18:08:38 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Karas</title>
       <link>/author/karas/</link>
     </image>
+    
+    <item>
+      <title>Predicting Subjective Recovery from Lower Limb Surgery Using Consumer Wearables</title>
+      <link>/publication/predicting-subjective-recovery/</link>
+      <pubDate>Wed, 09 Dec 2020 18:08:38 -0400</pubDate>
+      <guid>/publication/predicting-subjective-recovery/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation</title>

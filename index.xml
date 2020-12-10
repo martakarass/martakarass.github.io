@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Home</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Dec 2020 12:15:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 09 Dec 2020 18:08:38 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Home</title>
@@ -55,7 +55,23 @@
     </item>
     
     <item>
-      <title>[UPCOMING!] The most recent developments in R tidyverse</title>
+      <title>Predicting Subjective Recovery from Lower Limb Surgery Using Consumer Wearables</title>
+      <link>/publication/predicting-subjective-recovery/</link>
+      <pubDate>Wed, 09 Dec 2020 18:08:38 -0400</pubDate>
+      <guid>/publication/predicting-subjective-recovery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Predicting subjective recovery from lower limb surgery using consumer wearables</title>
+      <link>/talk/2020-12-08-krager_workshop/</link>
+      <pubDate>Tue, 08 Dec 2020 11:00:00 +0000</pubDate>
+      <guid>/talk/2020-12-08-krager_workshop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent developments in R tidyverse</title>
       <link>/talk/2020-12-01-computing_club/</link>
       <pubDate>Tue, 01 Dec 2020 12:15:00 +0000</pubDate>
       <guid>/talk/2020-12-01-computing_club/</guid>
@@ -86,7 +102,10 @@
       <description>&lt;h4 id=&#34;2020&#34;&gt;2020&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;During the upcoming workshop &amp;ldquo;The Future of Digital Health&amp;rdquo;, I will give a talk highlighting &amp;ldquo;Predicting subjective recovery from lower limb surgery using consumer wearables&amp;rdquo; paper I co-authored. This workshop will highlight key papers from the newly released Special Issue of Digital Biomarkers, sponsored by &lt;a href=&#34;https://evidation.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evidation Health&lt;/a&gt; and &lt;a href=&#34;https://www.linkedin.com/company/dime-society/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DiMe&lt;/a&gt;. Register for the workshop &lt;a href=&#34;https://us02web.zoom.us/webinar/register/WN_ugdWjno7S5ummYWYPX_s3w&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Our paper &lt;a href=&#34;https://www.karger.com/Article/FullText/511531&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Predicting Subjective Recovery from Lower Limb Surgery Using Consumer Wearables&amp;rdquo;&lt;/a&gt; is published. We showed that passively collected wearable PGHD can capture post-surgery physical activity changes relative to individual&amp;rsquo;s baseline, and baseline data can improve prediction of self-reported recovery time at 4 weeks post surgery.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;During the upcoming workshop &amp;ldquo;The Future of Digital Health&amp;rdquo;, I will give a talk highlighting &amp;ldquo;Predicting subjective recovery from lower limb surgery using consumer wearables&amp;rdquo; paper I co-authored. This workshop will highlight key papers from the newly released &lt;a href=&#34;https://pages.evidation.com/karger-special-issue&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Special Issue of Digital Biomarkers&lt;/a&gt;, sponsored by &lt;a href=&#34;https://evidation.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evidation Health&lt;/a&gt; and &lt;a href=&#34;https://www.linkedin.com/company/dime-society/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DiMe&lt;/a&gt;. Register for the workshop &lt;a href=&#34;https://us02web.zoom.us/webinar/register/WN_ugdWjno7S5ummYWYPX_s3w&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;This summer, I am working as a Data Science Intern in Digital Measures team @ &lt;a href=&#34;https://evidation.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evidation Health&lt;/a&gt;. My main project aims at estimating medical procedure recovery trajectories and predicting recovery time from wearable patient-generated health data.&lt;/p&gt;
