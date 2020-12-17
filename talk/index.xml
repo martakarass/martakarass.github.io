@@ -5,12 +5,20 @@
     <link>/talk/</link>
       <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 08 Dec 2020 11:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 17 Dec 2020 14:30:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Recent &amp; Upcoming Talks</title>
       <link>/talk/</link>
     </image>
+    
+    <item>
+      <title>arctools R package: Processing and physical activity summaries of minute level activity data</title>
+      <link>/talk/2020-12-17-wit_arctools/</link>
+      <pubDate>Thu, 17 Dec 2020 14:30:00 +0000</pubDate>
+      <guid>/talk/2020-12-17-wit_arctools/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Predicting subjective recovery from lower limb surgery using consumer wearables</title>
