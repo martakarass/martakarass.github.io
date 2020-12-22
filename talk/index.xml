@@ -5,12 +5,20 @@
     <link>/talk/</link>
       <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 17 Dec 2020 14:30:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 20 Dec 2020 11:30:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Recent &amp; Upcoming Talks</title>
       <link>/talk/</link>
     </image>
+    
+    <item>
+      <title>Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores</title>
+      <link>/talk/2020-12-20-cmsstatistics/</link>
+      <pubDate>Sun, 20 Dec 2020 11:30:00 +0000</pubDate>
+      <guid>/talk/2020-12-20-cmsstatistics/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>arctools R package: Processing and physical activity summaries of minute level activity data</title>
