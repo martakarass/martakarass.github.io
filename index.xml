@@ -126,13 +126,16 @@
       <description>&lt;h4 id=&#34;2020&#34;&gt;2020&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
+&lt;p&gt;Our paper &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/10.1002/cjs.11606&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Connectivity‐informed adaptive regularization for generalized outcomes&amp;rdquo;&lt;/a&gt; is published. We proposed riPEER (ridgified Partially Empirical Eigenvectors for Regression) extension to generalized linear regression, addressing both theoretical and computational issues. See the relevant &lt;a href=&#34;https://martakarass.github.io/project/project_mdpeer/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project page&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;Our paper &lt;a href=&#34;https://www.karger.com/Article/FullText/511531&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Predicting Subjective Recovery from Lower Limb Surgery Using Consumer Wearables&amp;rdquo;&lt;/a&gt; is published. We showed that passively collected wearable PGHD can capture post-surgery physical activity changes relative to individual&amp;rsquo;s baseline, and baseline data can improve prediction of self-reported recovery time at 4 weeks post surgery.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;During the upcoming workshop &amp;ldquo;The Future of Digital Health&amp;rdquo;, I will give a talk highlighting &amp;ldquo;Predicting subjective recovery from lower limb surgery using consumer wearables&amp;rdquo; paper I co-authored. This workshop will highlight key papers from the newly released &lt;a href=&#34;https://pages.evidation.com/karger-special-issue&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Special Issue of Digital Biomarkers&lt;/a&gt;, sponsored by &lt;a href=&#34;https://evidation.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evidation Health&lt;/a&gt; and &lt;a href=&#34;https://www.linkedin.com/company/dime-society/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DiMe&lt;/a&gt;. Register for the workshop &lt;a href=&#34;https://us02web.zoom.us/webinar/register/WN_ugdWjno7S5ummYWYPX_s3w&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;This summer, I am working as a Data Science Intern in Digital Measures team @ &lt;a href=&#34;https://evidation.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evidation Health&lt;/a&gt;. My main project aims at estimating medical procedure recovery trajectories and predicting recovery time from wearable patient-generated health data.&lt;/p&gt;
+&lt;p&gt;During summer of 2020, I am working as a Data Science Intern in Digital Measures team @ &lt;a href=&#34;https://evidation.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evidation Health&lt;/a&gt;. My main project aims at estimating medical procedure recovery trajectories and predicting recovery time from wearable patient-generated health data.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Why R? Foundation awards a &lt;a href=&#34;http://whyr.pl/foundation/supporting-grant/#scientific-committee&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;supporting grant for Women in Data Science&lt;/a&gt; to aid exceptional female data scientists in Poland. I serve as a member of Scientific committee for this initiative.&lt;/p&gt;
