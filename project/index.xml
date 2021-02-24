@@ -437,7 +437,7 @@ cowplot::plot_grid(plt1, plt2, plt3, plt4, nrow = 2, labels = c(&#39;A&#39;, &#3
 &lt;/nav&gt;
 &lt;h3 id=&#34;scientific-problem&#34;&gt;Scientific problem&lt;/h3&gt;
 &lt;p&gt;The motivation for the work was to quantify the association between alcohol abuse phenotypes (outcome) and cortical thickness of the brain (covariates) in a study sample of young social-to-heavy drinking males. The data included measurements of average cortical thickness estimated for 68 brain regions.&lt;/p&gt;
-&lt;p&gt;The image (see images credit &lt;a href=&#34;#custom&#34;&gt;below&lt;/a&gt;) visualizes process of obtaining cortical thickness measurements from structural MRI images.&lt;/p&gt;
+&lt;p&gt;This image (see images credit &lt;a href=&#34;#custom&#34;&gt;below&lt;/a&gt;) visualizes process of obtaining cortical thickness measurements from structural MRI images.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;MRI_sequence.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;challenges&#34;&gt;Challenges&lt;/h3&gt;
 &lt;p&gt;Commonly shared issues in such settings are:&lt;/p&gt;
