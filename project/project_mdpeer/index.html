@@ -34,7 +34,8 @@
   
     
   
-  <meta name="description" content="We proposed a method to estimate association between the brain structure features and a scalar outcome in a regression model &ndash; while utilizing additional information about structural connectivity between the brain regions.">
+  <meta name="description" content="We propose to estimate association between the brain structure features and a scalar outcome in a regression model while utilizing additional information about structural connectivity between the brain regions.
+Specifically, we propose a novel regularization method &ndash; riPEER (ridgified Partially Empirical Eigenvectors for Regression) &ndash; that defines a regularization penalty term based on the structural connectivity-derived Laplacian matrix.">
 
   
   <link rel="alternate" hreflang="en-us" href="/project/project_mdpeer/">
@@ -317,7 +318,8 @@
   <meta property="og:site_name" content="Home">
   <meta property="og:url" content="/project/project_mdpeer/">
   <meta property="og:title" content="Brain connectivity-informed regularization methods for regression | Home">
-  <meta property="og:description" content="We proposed a method to estimate association between the brain structure features and a scalar outcome in a regression model &ndash; while utilizing additional information about structural connectivity between the brain regions."><meta property="og:image" content="/project/project_mdpeer/featured.png">
+  <meta property="og:description" content="We propose to estimate association between the brain structure features and a scalar outcome in a regression model while utilizing additional information about structural connectivity between the brain regions.
+Specifically, we propose a novel regularization method &ndash; riPEER (ridgified Partially Empirical Eigenvectors for Regression) &ndash; that defines a regularization penalty term based on the structural connectivity-derived Laplacian matrix."><meta property="og:image" content="/project/project_mdpeer/featured.png">
   <meta property="twitter:image" content="/project/project_mdpeer/featured.png"><meta property="og:locale" content="en-us">
   
     
@@ -369,7 +371,7 @@
       "url": "/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "We proposed a method to estimate association between the brain structure features and a scalar outcome in a regression model \u0026ndash; while utilizing additional information about structural connectivity between the brain regions."
+  "description": "We propose to estimate association between the brain structure features and a scalar outcome in a regression model while utilizing additional information about structural connectivity between the brain regions.\nSpecifically, we propose a novel regularization method \u0026ndash; riPEER (ridgified Partially Empirical Eigenvectors for Regression) \u0026ndash; that defines a regularization penalty term based on the structural connectivity-derived Laplacian matrix."
 }
 </script>
 
@@ -897,8 +899,8 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>We proposed a method to estimate association between the brain structure features and a scalar outcome in a regression model &ndash; while utilizing additional information about structural connectivity between the brain regions.</p>
-<p>Specifically, we propose a novel regularization method that defines a regularization penalty term based on the structural connectivity-derived Laplacian matrix.</p>
+      <p>We propose to estimate association between the brain structure features and a scalar outcome in a regression model while utilizing additional information about structural connectivity between the brain regions.</p>
+<p>Specifically, we propose a novel regularization method &ndash; riPEER (ridgified Partially Empirical Eigenvectors for Regression) &ndash; that defines a regularization penalty term based on the structural connectivity-derived Laplacian matrix.</p>
 <!---
 <span style="color:purple">**See images citation and/or credit information** [below](#custom)</span>.
 -->
@@ -919,7 +921,7 @@
 </nav>
 <h3 id="scientific-problem">Scientific problem</h3>
 <p>The motivation for the work was to quantify the association between alcohol abuse phenotypes (outcome) and cortical thickness of the brain (covariates) in a study sample of young social-to-heavy drinking males. The data included measurements of average cortical thickness estimated for 68 brain regions.</p>
-<p>The excellent image (see images credit <a href="#custom">below</a>) visualizes process of obtaining cortical thickness measurements from structural MRI images.</p>
+<p>The image (see images credit <a href="#custom">below</a>) visualizes process of obtaining cortical thickness measurements from structural MRI images.</p>
 <p><img src="MRI_sequence.png" alt=""></p>
 <h3 id="challenges">Challenges</h3>
 <p>Commonly shared issues in such settings are:</p>
@@ -962,7 +964,7 @@ $$</p>
 <p>A graph-originated penalty matrix $Q$ allows imposing similarity between coefficients of variables which are <em>connected</em>.</p>
 </li>
 <li>
-<p>A ridge penalty term, $\lambda_Rb^Tb$, even with very small $\lambda_R$, eliminates computational issues arising from singularity of $Q$.</p>
+<p>A ridge penalty term, $\lambda_Rb^Tb$, allows for L2 regularization component; in addition, even with very small $\lambda_R$, eliminates computational issues arising from singularity of $Q$.</p>
 </li>
 <li>
 <p>Regularization parameters $\lambda_R$, $\lambda_Q$ are estimated automatically as ML estimators of equivalent Linear Mixed Models optimization problem.</p>
@@ -971,10 +973,10 @@ $$</p>
 <h3 id="published-work">Published work</h3>
 <ul>
 <li>
-<p>We published the proposed riPEER method in work <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6583926/" target="_blank" rel="noopener">Brain connectivity-informed regularization methods for regression</a> (Karas, M., Brzyski, D., Dzemidzic, M., Goni, J., Kareken, D.A., Randolph, T., Harezlak (2017)). </br> </br></p>
+<p>We published the proposed riPEER method in work <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6583926/" target="_blank" rel="noopener">Brain connectivity-informed regularization methods for regression</a> (Karas, M., Brzyski, D., Dzemidzic, M., Goni, J., Kareken, D.A., Randolph, T., Harezlak J. (2017)).</p>
 </li>
 <li>
-<p>The riPEER extension to generalized linear regression, addressing both theoretical and computational issues, is available in preprint <a href="https://www.biorxiv.org/content/10.1101/322420v1" target="_blank" rel="noopener">Connectivity-informed adaptive regularization for generalized outcomes</a> (Brzyski, D., Karas, M., Ances, B., Dzemidzic, M., Goni, J., Randolph, T.W., Harezlak, J. (2018)).</p>
+<p>We published the riPEER extension to generalized linear regression, addressing both theoretical and computational issues, in work <a href="https://onlinelibrary.wiley.com/doi/10.1002/cjs.11606" target="_blank" rel="noopener">Connectivity‐informed adaptive regularization for generalized outcomes</a> (Brzyski, D., Karas, M., Ances, B.M., Dzemidzic, M., Goni, J., Randolph, T., Harezlak J. (2021)).</p>
 </li>
 </ul>
 <h3 id="software">Software</h3>

@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Home</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 20 Dec 2020 11:30:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Feb 2021 17:59:50 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Home</title>
@@ -52,6 +52,14 @@
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Connectivity-Informed Adaptive Regularization for Generalized Outcomes</title>
+      <link>/publication/brain-connectivity-informed-regularization-generalized/</link>
+      <pubDate>Mon, 15 Feb 2021 17:59:50 -0400</pubDate>
+      <guid>/publication/brain-connectivity-informed-regularization-generalized/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -1482,20 +1490,12 @@ Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019
     </item>
     
     <item>
-      <title>Connectivity-Informed Adaptive Regularization for Generalized Outcomes</title>
-      <link>/publication/brain-connectivity-informed-regularization-generalized/</link>
-      <pubDate>Tue, 01 May 2018 17:59:50 -0400</pubDate>
-      <guid>/publication/brain-connectivity-informed-regularization-generalized/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Brain connectivity-informed regularization methods for regression</title>
       <link>/project/project_mdpeer/</link>
       <pubDate>Wed, 06 Dec 2017 11:54:53 -0400</pubDate>
       <guid>/project/project_mdpeer/</guid>
-      <description>&lt;p&gt;We proposed a method to estimate association between the brain structure features and a scalar outcome in a regression model &amp;ndash; while utilizing additional information about structural connectivity between the brain regions.&lt;/p&gt;
-&lt;p&gt;Specifically, we propose a novel regularization method that defines a regularization penalty term based on the structural connectivity-derived Laplacian matrix.&lt;/p&gt;
+      <description>&lt;p&gt;We propose to estimate association between the brain structure features and a scalar outcome in a regression model while utilizing additional information about structural connectivity between the brain regions.&lt;/p&gt;
+&lt;p&gt;Specifically, we propose a novel regularization method &amp;ndash; riPEER (ridgified Partially Empirical Eigenvectors for Regression) &amp;ndash; that defines a regularization penalty term based on the structural connectivity-derived Laplacian matrix.&lt;/p&gt;
 &lt;!---
 &lt;span style=&#34;color:purple&#34;&gt;**See images citation and/or credit information** [below](#custom)&lt;/span&gt;.
 --&gt;
@@ -1516,7 +1516,7 @@ Presentation slides are available &lt;a href=&#34;https://slides.yihui.name/2019
 &lt;/nav&gt;
 &lt;h3 id=&#34;scientific-problem&#34;&gt;Scientific problem&lt;/h3&gt;
 &lt;p&gt;The motivation for the work was to quantify the association between alcohol abuse phenotypes (outcome) and cortical thickness of the brain (covariates) in a study sample of young social-to-heavy drinking males. The data included measurements of average cortical thickness estimated for 68 brain regions.&lt;/p&gt;
-&lt;p&gt;The excellent image (see images credit &lt;a href=&#34;#custom&#34;&gt;below&lt;/a&gt;) visualizes process of obtaining cortical thickness measurements from structural MRI images.&lt;/p&gt;
+&lt;p&gt;The image (see images credit &lt;a href=&#34;#custom&#34;&gt;below&lt;/a&gt;) visualizes process of obtaining cortical thickness measurements from structural MRI images.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;MRI_sequence.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;challenges&#34;&gt;Challenges&lt;/h3&gt;
 &lt;p&gt;Commonly shared issues in such settings are:&lt;/p&gt;
@@ -1559,7 +1559,7 @@ $$&lt;/p&gt;
 &lt;p&gt;A graph-originated penalty matrix $Q$ allows imposing similarity between coefficients of variables which are &lt;em&gt;connected&lt;/em&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;A ridge penalty term, $\lambda_Rb^Tb$, even with very small $\lambda_R$, eliminates computational issues arising from singularity of $Q$.&lt;/p&gt;
+&lt;p&gt;A ridge penalty term, $\lambda_Rb^Tb$, allows for L2 regularization component; in addition, even with very small $\lambda_R$, eliminates computational issues arising from singularity of $Q$.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Regularization parameters $\lambda_R$, $\lambda_Q$ are estimated automatically as ML estimators of equivalent Linear Mixed Models optimization problem.&lt;/p&gt;
@@ -1568,10 +1568,10 @@ $$&lt;/p&gt;
 &lt;h3 id=&#34;published-work&#34;&gt;Published work&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;We published the proposed riPEER method in work &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6583926/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Brain connectivity-informed regularization methods for regression&lt;/a&gt; (Karas, M., Brzyski, D., Dzemidzic, M., Goni, J., Kareken, D.A., Randolph, T., Harezlak (2017)). &lt;/br&gt; &lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;We published the proposed riPEER method in work &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6583926/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Brain connectivity-informed regularization methods for regression&lt;/a&gt; (Karas, M., Brzyski, D., Dzemidzic, M., Goni, J., Kareken, D.A., Randolph, T., Harezlak J. (2017)).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The riPEER extension to generalized linear regression, addressing both theoretical and computational issues, is available in preprint &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/322420v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Connectivity-informed adaptive regularization for generalized outcomes&lt;/a&gt; (Brzyski, D., Karas, M., Ances, B., Dzemidzic, M., Goni, J., Randolph, T.W., Harezlak, J. (2018)).&lt;/p&gt;
+&lt;p&gt;We published the riPEER extension to generalized linear regression, addressing both theoretical and computational issues, in work &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/10.1002/cjs.11606&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Connectivity‐informed adaptive regularization for generalized outcomes&lt;/a&gt; (Brzyski, D., Karas, M., Ances, B.M., Dzemidzic, M., Goni, J., Randolph, T., Harezlak J. (2021)).&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;software&#34;&gt;Software&lt;/h3&gt;
