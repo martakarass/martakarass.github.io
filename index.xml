@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Home</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Feb 2021 17:59:50 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 13 May 2021 14:30:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Home</title>
@@ -52,6 +52,30 @@
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Accelerometry-based physical activity measures across NHANES waves. Comparison of five minute-level measures: AC, MIMS, ENMO, MAD, AI</title>
+      <link>/talk/2021-05-13-wit_lab_meeting-copy/</link>
+      <pubDate>Thu, 13 May 2021 14:30:00 +0000</pubDate>
+      <guid>/talk/2021-05-13-wit_lab_meeting-copy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>National Health and Nutrition Examination Survey (NHANES) and comparability of accelerometry-derived physical activity measures across NHANES waves</title>
+      <link>/talk/2021-05-06-engage_lab_meeting/</link>
+      <pubDate>Thu, 06 May 2021 12:30:00 +0000</pubDate>
+      <guid>/talk/2021-05-06-engage_lab_meeting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparison of accelerometry-derived physical activity summary measures by age, sex, and BMI</title>
+      <link>/talk/2021-04-27-eba_training_program/</link>
+      <pubDate>Tue, 27 Apr 2021 14:00:00 +0000</pubDate>
+      <guid>/talk/2021-04-27-eba_training_program/</guid>
+      <description></description>
     </item>
     
     <item>

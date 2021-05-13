@@ -5,12 +5,36 @@
     <link>/talk/</link>
       <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 20 Dec 2020 11:30:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 13 May 2021 14:30:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Recent &amp; Upcoming Talks</title>
       <link>/talk/</link>
     </image>
+    
+    <item>
+      <title>Accelerometry-based physical activity measures across NHANES waves. Comparison of five minute-level measures: AC, MIMS, ENMO, MAD, AI</title>
+      <link>/talk/2021-05-13-wit_lab_meeting-copy/</link>
+      <pubDate>Thu, 13 May 2021 14:30:00 +0000</pubDate>
+      <guid>/talk/2021-05-13-wit_lab_meeting-copy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>National Health and Nutrition Examination Survey (NHANES) and comparability of accelerometry-derived physical activity measures across NHANES waves</title>
+      <link>/talk/2021-05-06-engage_lab_meeting/</link>
+      <pubDate>Thu, 06 May 2021 12:30:00 +0000</pubDate>
+      <guid>/talk/2021-05-06-engage_lab_meeting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparison of accelerometry-derived physical activity summary measures by age, sex, and BMI</title>
+      <link>/talk/2021-04-27-eba_training_program/</link>
+      <pubDate>Tue, 27 Apr 2021 14:00:00 +0000</pubDate>
+      <guid>/talk/2021-04-27-eba_training_program/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores</title>
