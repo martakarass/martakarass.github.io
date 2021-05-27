@@ -5,12 +5,96 @@
     <link>/project/</link>
       <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 22 Apr 2019 11:54:53 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 06 Dec 2019 11:54:53 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Projects</title>
       <link>/project/</link>
     </image>
+    
+    <item>
+      <title>Adaptive empirical pattern transformation (ADEPT)</title>
+      <link>/project/project_adept/</link>
+      <pubDate>Fri, 06 Dec 2019 11:54:53 -0400</pubDate>
+      <guid>/project/project_adept/</guid>
+      <description>&lt;p&gt;We propose adaptive empirical pattern transformation (ADEPT), a fast, scalable, and accurate method for pattern segmentation in time-series.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#scientific-problem&#34;&gt;Scientific problem&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#challenges&#34;&gt;Challenges&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#proposed-solution&#34;&gt;Proposed solution&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#published-work&#34;&gt;Published work&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#software&#34;&gt;Software&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#custom&#34;&gt;&lt;span style=&#34;color:purple&#34;&gt;&lt;strong&gt;Images used in the post &amp;ndash; credit/references&lt;/strong&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h3 id=&#34;scientific-problem&#34;&gt;Scientific problem&lt;/h3&gt;
+&lt;p&gt;The motivation for the work was to provide fast and accurate open-source method for pattern segmentation from raw accelerometry data.&lt;/p&gt;
+&lt;p&gt;The methods were needed for automated walking strides segmentation from accelerometry recordings collected during continuous walking that we had across a number of health studies.&lt;/p&gt;
+&lt;h3 id=&#34;challenges&#34;&gt;Challenges&lt;/h3&gt;
+&lt;p&gt;The plot below shows an example of raw accelerometry data &amp;ndash; three-dimensional time-series of acceleration [&lt;em&gt;g&lt;/em&gt;] measurements. Data showed were collected 5 s of walking for two different individuals, with 4 wearable sensors worn simultaneously at wrist, hip, left, and right ankle.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;intro_3d_acc.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;While the repetitive patterns of walking are relatively clear to a human observer, there are a few challenges in segmenting them accurately with an algorithm:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;There are variations in shape, magnitude and duration of a pattern within individual&amp;rsquo;s data. These might be e.g. due to terrain elevation changes, or temporal changes of step length and cadence (think about slowing down when approaching the turn of the corridor, or basically walking slower during an evening stroll versus morning rush to work). &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;There is variability of walking data between individuals (e.g. see the plot above).  &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A sensor can move, or be worn on different hands by the same person on different days.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;proposed-solution&#34;&gt;Proposed solution&lt;/h3&gt;
+&lt;p&gt;We propose adaptive empirical pattern transformation (ADEPT) to segment walking stride patterns in vector magnitude of raw accelerometry data.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The ADEPT algorithm uses a predefined template and detects its repetitions by maximizing the local distance (i.e. correlation) between (a) collection of scale-transformed templates and (b) the observed data signal. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The scale-transformation adjusts the duration of the dictionary template, allowing for the detection of patterns that are shorter or longer than the original dictionary template. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Multiple distinct baseline templates can be used simultaneously to account for various shape patterns occurring in the data.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The GIF below demonstrates the big picture of the algorithm.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;adept_concept3.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The underlying template&amp;rsquo;s scaling and translating along the observed data signal is closely related to the Continuous Wavelet Transform (CWT), $$W_{\Psi}(s, \tau)  =
+\int_{-\infty}^{\infty} x(t) \frac{1}{\sqrt{s}}\Psi \left(\frac{t - \tau}{s} \right)dt.$$
+Conversely to CWT&amp;rsquo;s mother wavelet $\Psi(\cdot)$, ADEPT  uses a data-based pattern function (not required to satisfy the wavelet admissibility condition) and comes with a number of other algorithm features tailored for its target application.&lt;/p&gt;
+&lt;h3 id=&#34;published-work&#34;&gt;Published work&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;We published the proposed ADEPT method in work &lt;a href=&#34;https://academic.oup.com/biostatistics/article/22/2/331/5572661&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation&lt;/a&gt; Karas, M., Straczkiewicz, M., Fadel, W., Harezlak, J., Crainiceanu, C.M., Urbanek, J.K. (2018). &lt;em&gt;Biostatistics&lt;/em&gt;, Volume 22, Issue 2, April 2021, Pages 331–347.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;software&#34;&gt;Software&lt;/h3&gt;
+&lt;p&gt;We provided open-source implementation of the proposed ADEPT  method in R package adept (&lt;a href=&#34;https://cran.r-project.org/web/packages/adept/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRAN index&lt;/a&gt;). The R package is accompanied by two vignettes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/adept/vignettes/adept-intro.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction to adept package&lt;/a&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/adept/vignettes/adept-strides-segmentation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Walking strides segmentation with adept&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🎉 The adept R package was selected in Top 40 new CRAN packages in May 2019 (&lt;a href=&#34;https://rviews.rstudio.com/2019/06/25/may-2019-top-40-new-cran-packages/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;list link&lt;/a&gt;).&lt;/p&gt;
+&lt;h3 id=&#34;custom&#34;&gt;&lt;span style=&#34;color:purple&#34;&gt;&lt;strong&gt;Images used in the post &amp;ndash; credit/references&lt;/strong&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Featured image. Figure 2 in the manuscript: Karas, M., Straczkiewicz, M., Fadel, W., Harezlak, J., Crainiceanu, C.M., Urbanek, J.K. Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation (2018). &lt;em&gt;Biostatistics&lt;/em&gt;, Volume 22, Issue 2, April 2021, Pages 331–347. &lt;a href=&#34;https://academic.oup.com/biostatistics/article/22/2/331/557266&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link&lt;/a&gt; (last accessed on May 26, 2021).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Three-dimensional time-series image. Figure 1 in the manuscript: Karas, M., Straczkiewicz, M., Fadel, W., Harezlak, J., Crainiceanu, C.M., Urbanek, J.K. Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation (2018). &lt;em&gt;Biostatistics&lt;/em&gt;, Volume 22, Issue 2, April 2021, Pages 331–347. &lt;a href=&#34;https://academic.oup.com/biostatistics/article/22/2/331/557266&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link&lt;/a&gt; (last accessed on May 26, 2021).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>&#39;adeptdata&#39; R package: Raw Accelerometry Data Sets and Their Derivatives</title>

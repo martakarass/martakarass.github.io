@@ -152,6 +152,21 @@
     <loc>/talk/2019-12-03-cmstatistics-london/</loc>
     <lastmod>2019-12-16T08:40:00-05:00</lastmod>
   </url><url>
+    <loc>/project/project_adept/</loc>
+    <lastmod>2019-12-06T11:54:53-04:00</lastmod>
+  </url><url>
+    <loc>/tag/cadence/</loc>
+    <lastmod>2019-12-06T11:54:53-04:00</lastmod>
+  </url><url>
+    <loc>/tag/pattern-segmentation/</loc>
+    <lastmod>2019-12-06T11:54:53-04:00</lastmod>
+  </url><url>
+    <loc>/project/</loc>
+    <lastmod>2019-12-06T11:54:53-04:00</lastmod>
+  </url><url>
+    <loc>/tag/walking/</loc>
+    <lastmod>2019-12-06T11:54:53-04:00</lastmod>
+  </url><url>
     <loc>/talk/2019-11-05-3rd-oss-webinar/</loc>
     <lastmod>2019-11-05T15:00:50-05:00</lastmod>
   </url><url>
@@ -188,16 +203,10 @@
     <loc>/tag/methods/</loc>
     <lastmod>2019-09-23T18:08:38-04:00</lastmod>
   </url><url>
-    <loc>/tag/pattern-segmentation/</loc>
-    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
-  </url><url>
     <loc>/author/straczkiewicz/</loc>
     <lastmod>2019-09-23T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/author/urbanek/</loc>
-    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/tag/walking/</loc>
     <lastmod>2019-09-23T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/talk/2019-06-26-icampam/</loc>
@@ -219,9 +228,6 @@
     <lastmod>2019-04-22T11:54:53-04:00</lastmod>
   </url><url>
     <loc>/tag/data-set/</loc>
-    <lastmod>2019-04-22T11:54:53-04:00</lastmod>
-  </url><url>
-    <loc>/project/</loc>
     <lastmod>2019-04-22T11:54:53-04:00</lastmod>
   </url><url>
     <loc>/tag/rstats/</loc>

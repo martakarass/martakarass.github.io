@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pattern segmentation | Home</title>
-    <link>/tag/pattern-segmentation/</link>
-      <atom:link href="/tag/pattern-segmentation/index.xml" rel="self" type="application/rss+xml" />
-    <description>pattern segmentation</description>
+    <title>cadence | Home</title>
+    <link>/tag/cadence/</link>
+      <atom:link href="/tag/cadence/index.xml" rel="self" type="application/rss+xml" />
+    <description>cadence</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 06 Dec 2019 11:54:53 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
-      <title>pattern segmentation</title>
-      <link>/tag/pattern-segmentation/</link>
+      <title>cadence</title>
+      <link>/tag/cadence/</link>
     </image>
     
     <item>
@@ -94,14 +94,6 @@ Conversely to CWT&amp;rsquo;s mother wavelet $\Psi(\cdot)$, ADEPT  uses a data-b
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation</title>
-      <link>/publication/adept/</link>
-      <pubDate>Mon, 23 Sep 2019 18:08:38 -0400</pubDate>
-      <guid>/publication/adept/</guid>
-      <description></description>
     </item>
     
   </channel>
