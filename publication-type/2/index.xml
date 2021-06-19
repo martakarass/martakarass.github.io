@@ -5,12 +5,20 @@
     <link>/publication-type/2/</link>
       <atom:link href="/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Feb 2021 17:59:50 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 28 May 2021 18:08:38 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>2</title>
       <link>/publication-type/2/</link>
     </image>
+    
+    <item>
+      <title>Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores</title>
+      <link>/publication/estimating_free_living_walking_cadence/</link>
+      <pubDate>Fri, 28 May 2021 18:08:38 -0400</pubDate>
+      <guid>/publication/estimating_free_living_walking_cadence/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Connectivity-Informed Adaptive Regularization for Generalized Outcomes</title>

@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Home</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 13 May 2021 14:30:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 28 May 2021 18:08:38 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Home</title>
@@ -52,6 +52,14 @@
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores</title>
+      <link>/publication/estimating_free_living_walking_cadence/</link>
+      <pubDate>Fri, 28 May 2021 18:08:38 -0400</pubDate>
+      <guid>/publication/estimating_free_living_walking_cadence/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -149,6 +157,12 @@
       <guid>/resources/recently-all/</guid>
       <description>&lt;h4 id=&#34;2021&#34;&gt;2021&lt;/h4&gt;
 &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;I am a co-instructor for &lt;a href=&#34;http://jhudatascience.org//intro_to_r/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction to R for Public Health Researchers&lt;/a&gt; Summer Institute week-long course. All class materials are available online!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Our paper &lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/34049292/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores&amp;rdquo;&lt;/a&gt; is published. Check out the &lt;a href=&#34;https://github.com/martakarass/walking-segmentation-free-living-wrist&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub repo&lt;/a&gt; showing examples of using our method for automatic walking strides segmentation from wrist-worn sensor accelerometry data collected in the free-living environment.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;I received the &lt;a href=&#34;http://www.jhsph.edu/departments/biostatistics/about-us/honors-and-awards/#dublin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Louis I. and Thomas D. Dublin Award&lt;/a&gt; for the Advancement of Epidemiology and Biostatistics for work on open-source physical activity measurements.&lt;/p&gt;
 &lt;/li&gt;
