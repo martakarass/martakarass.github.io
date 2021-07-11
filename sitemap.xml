@@ -11,6 +11,15 @@
     <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>/post/2021-06-29-pa_measures_and_summarizedactigraphy/</loc>
+    <lastmod>2021-07-10T17:19:28-04:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-07-10T17:19:28-04:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2021-07-10T17:19:28-04:00</lastmod>
+  </url><url>
     <loc>/publication-type/2/</loc>
     <lastmod>2021-05-28T18:08:38-04:00</lastmod>
   </url><url>
@@ -33,9 +42,6 @@
     <lastmod>2021-05-28T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/publication/estimating_free_living_walking_cadence/</loc>
-    <lastmod>2021-05-28T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/</loc>
     <lastmod>2021-05-28T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/author/illiano/</loc>
@@ -190,9 +196,6 @@
   </url><url>
     <loc>/talk/2019-10-31-wit-novartis/</loc>
     <lastmod>2019-10-31T14:30:00-04:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
-    <lastmod>2019-10-28T17:19:28-04:00</lastmod>
   </url><url>
     <loc>/post/2019-10-28-ttest-versus-ztest/</loc>
     <lastmod>2019-10-28T17:19:28-04:00</lastmod>

@@ -34,7 +34,7 @@
   
     
   
-  <meta name="description" content="In this post, we
+  <meta name="description" content="In this post, we:
 
 
 use dataset “Labeled raw accelerometry data captured during walking,
@@ -333,7 +333,7 @@ activities.
   <meta property="og:site_name" content="Home">
   <meta property="og:url" content="/post/2021-06-29-pa_measures_and_summarizedactigraphy/">
   <meta property="og:title" content="Computing minute-level summary measures of physical activity from raw accelerometry data in R: AC, MIMS, MAD, and AI | Home">
-  <meta property="og:description" content="In this post, we
+  <meta property="og:description" content="In this post, we:
 
 
 use dataset “Labeled raw accelerometry data captured during walking,
@@ -352,9 +352,9 @@ activities.
   <meta property="twitter:image" content="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-07-05T17:19:28-04:00">
+      <meta property="article:published_time" content="2021-07-10T17:19:28-04:00">
     
-    <meta property="article:modified_time" content="2021-07-05T17:19:28-04:00">
+    <meta property="article:modified_time" content="2021-07-10T17:19:28-04:00">
   
 
   
@@ -382,8 +382,8 @@ activities.
   },
   "headline": "Computing minute-level summary measures of physical activity from raw accelerometry data in R: AC, MIMS, MAD, and AI",
   
-  "datePublished": "2021-07-05T17:19:28-04:00",
-  "dateModified": "2021-07-05T17:19:28-04:00",
+  "datePublished": "2021-07-10T17:19:28-04:00",
+  "dateModified": "2021-07-10T17:19:28-04:00",
   
   "author": {
     "@type": "Person",
@@ -398,7 +398,7 @@ activities.
       "url": "/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "\u003cp\u003eIn this post, we\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003euse dataset “Labeled raw accelerometry data captured during walking,\nstair climbing and driving” that is freely available on PhysioNet;\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003ederive four minute-level summary measures of physical activity – AC,\nMIMS, MAD, AI – from raw accelerometry data using\n\u003ccode\u003eSummarizedActigraphy\u003c/code\u003e R package;\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003esummarize minute-level summary measures across walking and driving\nactivities.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e"
+  "description": "\u003cp\u003eIn this post, we:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003euse dataset “Labeled raw accelerometry data captured during walking,\nstair climbing and driving” that is freely available on PhysioNet;\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003ederive four minute-level summary measures of physical activity – AC,\nMIMS, MAD, AI – from raw accelerometry data using\n\u003ccode\u003eSummarizedActigraphy\u003c/code\u003e R package;\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003esummarize minute-level summary measures across walking and driving\nactivities.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e"
 }
 </script>
 
@@ -884,7 +884,7 @@ activities.
     
       
     
-    Jul 5, 2021
+    Jul 10, 2021
   </span>
   
 
@@ -893,7 +893,7 @@ activities.
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    10 min read
+    12 min read
   </span>
   
 
@@ -931,7 +931,7 @@ activities.
   <div class="article-container">
 
     <div class="article-style">
-      <p>In this post, we</p>
+      <p>In this post, we:</p>
 <ul>
 <li>
 <p>use dataset “Labeled raw accelerometry data captured during walking,
@@ -961,10 +961,12 @@ activities.</p>
     </li>
     <li><a href="#minute-level-physical-activity-measures-during-walking-and-driving-activities">Minute-level physical activity measures during walking and driving activities</a>
       <ul>
-        <li><a href="#merging-data-sets">Merging data sets</a></li>
-        <li><a href="#visualizing">Visualizing</a></li>
+        <li><a href="#merging-physical-activity-measures-with-physical-activity-labels">Merging physical activity measures with physical activity labels</a></li>
+        <li><a href="#visualizing-physical-activity-measures-across-activity-types">Visualizing physical activity measures across activity types</a></li>
       </ul>
     </li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#span-stylecolorredcitation-infospan"><span style="color:red">Citation info</span></a></li>
   </ul>
 </nav>
 <h2 id="dataset-labeled-raw-accelerometry-data">Dataset “Labeled raw accelerometry data”</h2>
@@ -983,8 +985,27 @@ sampling frequency of 100 Hz.</li>
 point of data collection (1=walking; 2=descending stairs;
 3=ascending stairs; 4=driving; 77=clapping; 99=non-study activity).</li>
 </ul>
-<p>We downloaded the data zip from PhysioNet and unpacked. First, let’s
-look at raw accelerometry data of a single subject.</p>
+<p>We downloaded the data zip from PhysioNet and unpacked. This can be done
+manually from the website, or using download the data programmatically.</p>
+<details>
+<summary>
+(Click to see the code to download the data.)
+</summary>
+<pre><code>url &lt;- paste0(
+  &quot;https://physionet.org/static/published-projects&quot;,
+  &quot;/accelerometry-walk-climb-drive&quot;,
+  &quot;/labeled-raw-accelerometry-data-captured-during-walking-stair-climbing-and-driving-1.0.0.zip&quot;)
+destfile &lt;- paste0(
+  &quot;/Users/martakaras/Downloads&quot;,
+  &quot;/labeled-raw-accelerometry-data-captured-during-walking-stair-climbing-and-driving-1.0.0.zip&quot;)
+# download zip
+result &lt;- curl::curl_download(url, destfile = destfile, quiet = FALSE)
+# unzip zip 
+unzip(zipfile = destfile, exdir = dirname(destfile))
+</code></pre>
+</details>
+</br>
+<p>First, let’s look at raw accelerometry data of a single subject.</p>
 <details>
 <summary>
 (Click to see the code.)
@@ -1002,7 +1023,7 @@ options(scipen=999)
 
 # define path to raw data files directory
 raw_files_dir &lt;- paste0(
-  &quot;/Users/martakaras/Downloads&quot;,  
+  &quot;/Users/martakaras/Downloads&quot;,
   &quot;/labeled-raw-accelerometry-data-captured-during-walking-stair-climbing-and-driving-1.0.0&quot;,
   &quot;/raw_accelerometry_data&quot;)
 
@@ -1014,20 +1035,71 @@ dat_i &lt;- read_csv(dat_fpaths[1])
 <pre><code>dat_i
 
 # A tibble: 303,300 x 14
-   activity time_s   lw_x   lw_y   lw_z   lh_x   lh_y   lh_z   la_x  la_y   la_z   ra_x
-      &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
- 1       99   0.01  0.039  1.02  -0.02  -0.18   1.23   0.023  0.156 0.855 -0.582  0.887
- 2       99   0.02 -0.629 -0.461  0.973 -0.246  0.137  0.969 -0.707 0.559  0.449 -0.027
- 3       99   0.03 -0.926 -1.26   0.691  0.238 -0.328  1.22  -1.44  1.37   0.367 -0.164
- 4       99   0.04 -0.871 -1.50  -0.246  0.711 -0.484  0.414 -1.66  1.64  -0.543 -0.141
- 5       99   0.05 -0.727 -1.62  -0.559  1.03  -0.297  0.145 -1.76  1.68  -0.918 -0.121
- 6       99   0.06 -0.543 -1.66  -0.629  1.12  -0.246  0.137 -1.80  1.65  -0.988 -0.051
- 7       99   0.07 -0.348 -1.64  -0.609  1.24  -0.426  0.047 -1.76  1.57  -0.992  0.09 
- 8       99   0.08 -0.16  -1.60  -0.566  1.18  -0.539 -0.008 -1.63  1.53  -1.02   0.25 
- 9       99   0.09 -0.012 -1.53  -0.523  1.03  -0.633 -0.043 -1.13  1.87  -0.738  0.363
-10       99   0.1   0.117 -1.43  -0.484  0.922 -0.766 -0.047  0.285 1.37  -0.156  0.473
-# … with 303,290 more rows, and 2 more variables: ra_y &lt;dbl&gt;, ra_z &lt;dbl&gt;
+   activity time_s   lw_x   lw_y   lw_z   lh_x   lh_y   lh_z   la_x  la_y   la_z   ra_x  ra_y  ra_z
+      &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1       99   0.01  0.039  1.02  -0.02  -0.18   1.23   0.023  0.156 0.855 -0.582  0.887 0.449 0.074
+ 2       99   0.02 -0.629 -0.461  0.973 -0.246  0.137  0.969 -0.707 0.559  0.449 -0.027 0.141 0.934
+ 3       99   0.03 -0.926 -1.26   0.691  0.238 -0.328  1.22  -1.44  1.37   0.367 -0.164 0.66  1.34 
+ 4       99   0.04 -0.871 -1.50  -0.246  0.711 -0.484  0.414 -1.66  1.64  -0.543 -0.141 1.03  0.707
+ 5       99   0.05 -0.727 -1.62  -0.559  1.03  -0.297  0.145 -1.76  1.68  -0.918 -0.121 1.23  0.438
+ 6       99   0.06 -0.543 -1.66  -0.629  1.12  -0.246  0.137 -1.80  1.65  -0.988 -0.051 1.42  0.371
+ 7       99   0.07 -0.348 -1.64  -0.609  1.24  -0.426  0.047 -1.76  1.57  -0.992  0.09  1.63  0.383
+ 8       99   0.08 -0.16  -1.60  -0.566  1.18  -0.539 -0.008 -1.63  1.53  -1.02   0.25  1.83  0.387
+ 9       99   0.09 -0.012 -1.53  -0.523  1.03  -0.633 -0.043 -1.13  1.87  -0.738  0.363 2     0.328
+10       99   0.1   0.117 -1.43  -0.484  0.922 -0.766 -0.047  0.285 1.37  -0.156  0.473 2.13  0.203
+# … with 303,290 more rows
 </code></pre>
+<p>Each file contains 14 variables:</p>
+<ul>
+<li><code>activity</code> – type of activity (1=walking; 2=descending stairs;
+3=ascending stairs; 4=driving; 77=clapping; 99=non-study activity);</li>
+<li><code>time_s</code> – time from device initiation (seconds [s]);</li>
+<li><code>lw_x</code>, <code>lw_y</code>, <code>lw_z</code> – acceleration [<em>g</em>] measured by a left
+wrist-worn sensor at axis x, y, z;</li>
+<li><code>lh_x</code>, <code>lh_y</code>, <code>lh_z</code> – acceleration [<em>g</em>] measured by a left
+hip-worn sensor at axis x, y, z;</li>
+<li><code>la_x</code>, <code>la_y</code>, <code>la_z</code> – acceleration [<em>g</em>] measured by a left
+ankle-worn sensor at axis x, y, z;</li>
+<li><code>ra_x</code>, <code>ra_y</code>, <code>ra_z</code> – acceleration [<em>g</em>] measured by a right
+ankle-worn sensor at axis x, y, z.</li>
+</ul>
+<p>An exemplary few seconds of raw data from of walking and driving
+activities, collected by sensors at four different locations:</p>
+<details>
+<summary>
+(Click to see the code.)
+</summary>
+<pre><code>loc_id_levels &lt;- c(&quot;lw&quot;, &quot;lh&quot;, &quot;la&quot;, &quot;ra&quot;)
+loc_id_labels &lt;- c(&quot;left wrist&quot;, &quot;left hip&quot;, &quot;left ankle&quot;, &quot;right ankle&quot;)
+activity_levels &lt;- c(&quot;walking&quot;, &quot;driving&quot;)
+plt_df &lt;- 
+  dat_i %&gt;%
+  filter(activity %in% c(1,4)) %&gt;%
+  group_by(activity) %&gt;%
+  mutate(time_s = time_s - min(time_s)) %&gt;%
+  ungroup() %&gt;%
+  filter(time_s &gt;= (5 + 5), time_s &lt; (5 + 10)) %&gt;%
+  mutate(activity = recode(activity, '1' = 'walking', '4' = 'driving')) %&gt;%
+  pivot_longer(cols = -c(activity, time_s)) %&gt;%
+  separate(name, c(&quot;loc_id&quot;, &quot;axis_id&quot;), sep = &quot;_&quot;) %&gt;%
+  mutate(activity = factor(activity, levels = activity_levels)) %&gt;%
+  mutate(loc_id = factor(loc_id, levels = loc_id_levels, labels = loc_id_labels)) 
+plt_raw_data &lt;- 
+  ggplot(plt_df, aes(x = time_s, y = value, color = axis_id)) + 
+  geom_line() + 
+  facet_grid(loc_id ~ activity) + 
+  scale_y_continuous(limits = c(-1, 1) * max(abs(plt_df$value))) + 
+  labs(y = &quot;Acceleration [g]&quot;,
+       x = &quot;Time since activity started [s]&quot;,
+       color = &quot;Sensor axis: &quot;) + 
+  theme_gray(base_size = 14) + 
+  theme(legend.position=&quot;bottom&quot;) + 
+  scale_color_manual(values = c(&quot;red&quot;, &quot;darkgreen&quot;, &quot;blue&quot;))
+</code></pre>
+</details>
+<pre><code>plt_raw_data
+</code></pre>
+<p><img src="plt_raw_data.png" alt=""></p>
 <h2 id="computing-minute-level-summary-measures-of-raw-accelerometry-data">Computing minute-level summary measures of raw accelerometry data</h2>
 <h3 id="summary-measures">Summary measures</h3>
 <p>A number of open-source measures have been proposed to aggregate
@@ -1053,7 +1125,8 @@ developed based on the study done by <a href="https://pubmed.ncbi.nlm.nih.gov/28
 </ul>
 <h3 id="summarizedactigraphy-r-package">SummarizedActigraphy R package</h3>
 <p>We derive the measures using <code>SummarizedActigraphy</code> R package. The
-package is available on GitHub
+package was authored by <a href="https://github.com/muschellij2" target="_blank" rel="noopener">John Muschelli</a>
+and is available on GitHub
 (<a href="https://github.com/muschellij2/SummarizedActigraphy" target="_blank" rel="noopener">link</a>).</p>
 <p>It uses some of the existing R software under the hood to compute some
 part of the measures:</p>
@@ -1118,14 +1191,14 @@ determined correctly (should be 100 Hz).</p>
 output shows values of the measures per each minute.</p>
 <pre><code>out_i = SummarizedActigraphy::calculate_measures(
   df = dat_input_i, 
-  dynamic_range = c(-6, 6),  # dynamic range for ActiGraph GT3X+ device (learned from its documentation)
+  dynamic_range = c(-8, 8),  # dynamic range
   fix_zeros = FALSE,         # fixes zeros from idle sleep mode -- not needed in our case 
   calculate_mims = TRUE,     # uses algorithm from MIMSunit package
   calculate_ac = TRUE,       # uses algorithm from activityCounts package 
   flag_data = FALSE,         # runs raw data quality control flags algorithm -- not used in our case  
   verbose = FALSE)
 
-===========================================================================================
+=================================================================================================================
 
 out_i &lt;- out_i %&gt;% select(HEADER_TIME_STAMP = time, AC, MIMS = MIMS_UNIT, MAD, AI)
 out_i
@@ -1165,7 +1238,7 @@ for (dat_fpath_i in dat_fpaths){ #  dat_fpath_i &lt;- dat_fpaths[1]
   # compute the measures 
   out_i = SummarizedActigraphy::calculate_measures(
     df = dat_input_i, 
-    dynamic_range = c(-6, 6),  # dynamic range for ActiGraph GT3X+ device (learned from its documentation)
+    dynamic_range = c(-8, 8),  # dynamic range
     fix_zeros = FALSE,         # fixes zeros from idle sleep mode -- not needed in our case 
     calculate_mims = TRUE,     # uses algorithm from MIMSunit package
     calculate_ac = TRUE,       # uses algorithm from activityCounts package 
@@ -1179,7 +1252,7 @@ for (dat_fpath_i in dat_fpaths){ #  dat_fpath_i &lt;- dat_fpaths[1]
 </code></pre>
 </details>
 <h2 id="minute-level-physical-activity-measures-during-walking-and-driving-activities">Minute-level physical activity measures during walking and driving activities</h2>
-<h3 id="merging-data-sets">Merging data sets</h3>
+<h3 id="merging-physical-activity-measures-with-physical-activity-labels">Merging physical activity measures with physical activity labels</h3>
 <p>Next, we merge the minute-level physical-activity measures with the
 activity labels. We only keep the minutes for which all the measurements
 were labelled with no more than one type of activity.</p>
@@ -1246,7 +1319,7 @@ table(out_all_merged$activity)
 driving walking 
     569     117 
 </code></pre>
-<h3 id="visualizing">Visualizing</h3>
+<h3 id="visualizing-physical-activity-measures-across-activity-types">Visualizing physical activity measures across activity types</h3>
 <p>We visualize values of minute-level physical activity measures. Note
 these only used data collected with a sensor located at left wrist.</p>
 <details>
@@ -1296,18 +1369,22 @@ subj_id_levels &lt;-
 # mutate data frames used on the plot to have factors at certain levels order
 measure_mean_df &lt;- 
   measure_mean_df %&gt;%
-  mutate(activity_fact = factor(activity, levels = activity_levels))
+  mutate(activity = factor(activity, levels = activity_levels)) %&gt;%
+  mutate(name = factor(name, levels = name_levels))
 out_all_l &lt;- 
   out_all_l %&gt;%
-  mutate(subj_id_fact = factor(subj_id, levels = subj_id_levels),
-         activity_fact = factor(activity, levels = activity_levels))
+  mutate(subj_id = factor(subj_id, levels = subj_id_levels),
+         activity = factor(activity, levels = activity_levels)) %&gt;%
+  mutate(name = factor(name, levels = name_levels))
 out_all_l_agg &lt;-
   out_all_l_agg %&gt;%
-   mutate(subj_id_fact = factor(subj_id, levels = subj_id_levels),
-         activity_fact = factor(activity, levels = activity_levels))
+   mutate(subj_id = factor(subj_id, levels = subj_id_levels),
+         activity = factor(activity, levels = activity_levels)) %&gt;%
+  mutate(name = factor(name, levels = name_levels))
 </code></pre>
 </details>
-<p>Sample population mean for each measure, estimated via LMM</p>
+<p>First, we estimated sample population mean for each minute-level measure
+via linear mixed model (LMM).</p>
 <pre><code>kable(measure_mean_df_w)
 </code></pre>
 <table>
@@ -1341,36 +1418,52 @@ out_all_l_agg &lt;-
 </tr>
 </tbody>
 </table>
-<p>Subject-specific values (black) and subject-specific values mean (red)
-of minute-level physical activity measures.</p>
-<p>Subject IDs (x-axis) are sorted by average AC during walking. Dashed
-horizontal line represents sample population mean for each measure,
-estimated via LMM.</p>
+<p>Next, we plot minute-level physical activity measures:</p>
+<ul>
+<li>individual measure values (red) for each subject,</li>
+<li>mean measure value (black) for each subject,</li>
+<li>sample population mean for each measure (dashed horizontal line)
+estimated via LMM.</li>
+</ul>
+<p>On each plot panel, subject IDs (x-axis) are sorted by average AC during
+walking (left-top plot panel).</p>
 <details>
 <summary>
 (Click to see the code.)
 </summary>
-<pre><code>plt &lt;- 
+<pre><code>plt_measures &lt;- 
   ggplot(out_all_l, 
-         aes(x = subj_id_fact, y = value)) + 
+         aes(x = subj_id, y = value)) + 
   geom_hline(data = measure_mean_df,
              aes(yintercept = value), 
-             linetype = 2, size = 0.3) + 
-  geom_point(size = 0.5, alpha = 0.5) + 
+             linetype = 2, size = 0.2) + 
+  geom_point(size = 0.5, alpha = 0.3, color = &quot;red&quot;) + 
   geom_point(data = out_all_l_agg, 
-             aes(x = subj_id_fact, y = value),
-             size = 0.5, color = &quot;red&quot;) + 
-  facet_grid(name ~ activity_fact, scales = &quot;free&quot;) + 
-  labs(x = &quot;Subject&quot;, y = &quot;&quot;) + 
-  theme_minimal(base_size = 14) +    
+             aes(x = subj_id, y = value),
+             size = 0.5, color = &quot;black&quot;) + 
+  facet_grid(name ~ activity, scales = &quot;free&quot;) + 
+  labs(x = &quot;Subject ID&quot;, y = &quot;&quot;) + 
+  theme_gray(base_size = 14) +    
   theme(panel.grid.major = element_line(size = 0.3),  
         panel.grid.minor = element_blank(),
-        axis.text.x = element_blank()) 
+        axis.text.x = element_text(size = 6, angle = 90, vjust = 0.5, hjust = 1)) 
 </code></pre>
 </details>
-<pre><code>plt
+<pre><code>plt_measures
 </code></pre>
-<p><img src="plt.png" alt="Drag Racing"></p>
+<p><img src="plt_measures.png" alt=""></p>
+<p>The above plot highlights what are minute-level summary measures of
+physical activity from raw accelerometry data: AC, MIMS, MAD, and AI,
+across two different activities (walking, driving) in the study sample
+of n=32 healthy individuals.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>I’d like to thank <a href="https://github.com/muschellij2" target="_blank" rel="noopener">John Muschelli</a> for
+feedback on this tutorial.</p>
+<h2 id="span-stylecolorredcitation-infospan"><span style="color:red">Citation info</span></h2>
+<p>Please cite <code>SummarizedActigraphy</code> R package, if applicable.</p>
+<p>Please cite raw accelerometry dataset DOI, if applicable (go to see
+<a href="https://physionet.org/content/accelerometry-walk-climb-drive/1.0.0/" target="_blank" rel="noopener">this dataset citation
+options</a>).</p>
     </div>
 
     

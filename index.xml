@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Home</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 28 May 2021 18:08:38 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 10 Jul 2021 17:19:28 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Home</title>
@@ -52,6 +52,546 @@
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Computing minute-level summary measures of physical activity from raw accelerometry data in R: AC, MIMS, MAD, and AI</title>
+      <link>/post/2021-06-29-pa_measures_and_summarizedactigraphy/</link>
+      <pubDate>Sat, 10 Jul 2021 17:19:28 -0400</pubDate>
+      <guid>/post/2021-06-29-pa_measures_and_summarizedactigraphy/</guid>
+      <description>&lt;p&gt;In this post, we:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;use dataset “Labeled raw accelerometry data captured during walking,
+stair climbing and driving” that is freely available on PhysioNet;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;derive four minute-level summary measures of physical activity – AC,
+MIMS, MAD, AI – from raw accelerometry data using
+&lt;code&gt;SummarizedActigraphy&lt;/code&gt; R package;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;summarize minute-level summary measures across walking and driving
+activities.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#dataset-labeled-raw-accelerometry-data&#34;&gt;Dataset “Labeled raw accelerometry data”&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#computing-minute-level-summary-measures-of-raw-accelerometry-data&#34;&gt;Computing minute-level summary measures of raw accelerometry data&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#summary-measures&#34;&gt;Summary measures&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#summarizedactigraphy-r-package&#34;&gt;SummarizedActigraphy R package&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#preparing-the-data-input&#34;&gt;Preparing the data input&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#computing-the-measures&#34;&gt;Computing the measures&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#minute-level-physical-activity-measures-during-walking-and-driving-activities&#34;&gt;Minute-level physical activity measures during walking and driving activities&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#merging-physical-activity-measures-with-physical-activity-labels&#34;&gt;Merging physical activity measures with physical activity labels&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#visualizing-physical-activity-measures-across-activity-types&#34;&gt;Visualizing physical activity measures across activity types&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#acknowledgements&#34;&gt;Acknowledgements&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#span-stylecolorredcitation-infospan&#34;&gt;&lt;span style=&#34;color:red&#34;&gt;Citation info&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;dataset-labeled-raw-accelerometry-data&#34;&gt;Dataset “Labeled raw accelerometry data”&lt;/h2&gt;
+&lt;p&gt;The dataset contains raw accelerometry data collected during outdoor
+walking, stair climbing, and driving for n=32 healthy adults. It is
+freely is available to download on PhysioNet at:
+&lt;a href=&#34;https://doi.org/10.13026/51h0-a262&#34;&gt;https://doi.org/10.13026/51h0-a262&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The study was led by Dr. Jaroslaw Harezlak, assisted by Drs. William
+Fadel and Jacek Urbanek.&lt;/li&gt;
+&lt;li&gt;Accelerometry data were collected simultaneously at four body
+locations: left wrist, left hip, left ankle, and right ankle, at a
+sampling frequency of 100 Hz.&lt;/li&gt;
+&lt;li&gt;The 3-axial ActiGraph GT3X+ devices were used to collect the data.&lt;/li&gt;
+&lt;li&gt;The data include labels of activity type performed for each time
+point of data collection (1=walking; 2=descending stairs;
+3=ascending stairs; 4=driving; 77=clapping; 99=non-study activity).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We downloaded the data zip from PhysioNet and unpacked. This can be done
+manually from the website, or using download the data programmatically.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code to download the data.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;url &amp;lt;- paste0(
+  &amp;quot;https://physionet.org/static/published-projects&amp;quot;,
+  &amp;quot;/accelerometry-walk-climb-drive&amp;quot;,
+  &amp;quot;/labeled-raw-accelerometry-data-captured-during-walking-stair-climbing-and-driving-1.0.0.zip&amp;quot;)
+destfile &amp;lt;- paste0(
+  &amp;quot;/Users/martakaras/Downloads&amp;quot;,
+  &amp;quot;/labeled-raw-accelerometry-data-captured-during-walking-stair-climbing-and-driving-1.0.0.zip&amp;quot;)
+# download zip
+result &amp;lt;- curl::curl_download(url, destfile = destfile, quiet = FALSE)
+# unzip zip 
+unzip(zipfile = destfile, exdir = dirname(destfile))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/br&gt;
+&lt;p&gt;First, let’s look at raw accelerometry data of a single subject.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;library(tidyverse)
+library(lubridate)
+library(lme4)
+library(knitr)
+# remotes::install_github(&amp;quot;muschellij2/SummarizedActigraphy&amp;quot;)
+library(SummarizedActigraphy)
+library(MIMSunit)
+library(activityCounts)
+options(digits.secs = 3)
+options(scipen=999)
+
+# define path to raw data files directory
+raw_files_dir &amp;lt;- paste0(
+  &amp;quot;/Users/martakaras/Downloads&amp;quot;,
+  &amp;quot;/labeled-raw-accelerometry-data-captured-during-walking-stair-climbing-and-driving-1.0.0&amp;quot;,
+  &amp;quot;/raw_accelerometry_data&amp;quot;)
+
+# single participant&#39;s raw accelerometry data
+dat_fpaths &amp;lt;- list.files(raw_files_dir, full.names = TRUE)
+dat_i &amp;lt;- read_csv(dat_fpaths[1])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code&gt;dat_i
+
+# A tibble: 303,300 x 14
+   activity time_s   lw_x   lw_y   lw_z   lh_x   lh_y   lh_z   la_x  la_y   la_z   ra_x  ra_y  ra_z
+      &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+ 1       99   0.01  0.039  1.02  -0.02  -0.18   1.23   0.023  0.156 0.855 -0.582  0.887 0.449 0.074
+ 2       99   0.02 -0.629 -0.461  0.973 -0.246  0.137  0.969 -0.707 0.559  0.449 -0.027 0.141 0.934
+ 3       99   0.03 -0.926 -1.26   0.691  0.238 -0.328  1.22  -1.44  1.37   0.367 -0.164 0.66  1.34 
+ 4       99   0.04 -0.871 -1.50  -0.246  0.711 -0.484  0.414 -1.66  1.64  -0.543 -0.141 1.03  0.707
+ 5       99   0.05 -0.727 -1.62  -0.559  1.03  -0.297  0.145 -1.76  1.68  -0.918 -0.121 1.23  0.438
+ 6       99   0.06 -0.543 -1.66  -0.629  1.12  -0.246  0.137 -1.80  1.65  -0.988 -0.051 1.42  0.371
+ 7       99   0.07 -0.348 -1.64  -0.609  1.24  -0.426  0.047 -1.76  1.57  -0.992  0.09  1.63  0.383
+ 8       99   0.08 -0.16  -1.60  -0.566  1.18  -0.539 -0.008 -1.63  1.53  -1.02   0.25  1.83  0.387
+ 9       99   0.09 -0.012 -1.53  -0.523  1.03  -0.633 -0.043 -1.13  1.87  -0.738  0.363 2     0.328
+10       99   0.1   0.117 -1.43  -0.484  0.922 -0.766 -0.047  0.285 1.37  -0.156  0.473 2.13  0.203
+# … with 303,290 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Each file contains 14 variables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;activity&lt;/code&gt; – type of activity (1=walking; 2=descending stairs;
+3=ascending stairs; 4=driving; 77=clapping; 99=non-study activity);&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;time_s&lt;/code&gt; – time from device initiation (seconds [s]);&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lw_x&lt;/code&gt;, &lt;code&gt;lw_y&lt;/code&gt;, &lt;code&gt;lw_z&lt;/code&gt; – acceleration [&lt;em&gt;g&lt;/em&gt;] measured by a left
+wrist-worn sensor at axis x, y, z;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lh_x&lt;/code&gt;, &lt;code&gt;lh_y&lt;/code&gt;, &lt;code&gt;lh_z&lt;/code&gt; – acceleration [&lt;em&gt;g&lt;/em&gt;] measured by a left
+hip-worn sensor at axis x, y, z;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;la_x&lt;/code&gt;, &lt;code&gt;la_y&lt;/code&gt;, &lt;code&gt;la_z&lt;/code&gt; – acceleration [&lt;em&gt;g&lt;/em&gt;] measured by a left
+ankle-worn sensor at axis x, y, z;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ra_x&lt;/code&gt;, &lt;code&gt;ra_y&lt;/code&gt;, &lt;code&gt;ra_z&lt;/code&gt; – acceleration [&lt;em&gt;g&lt;/em&gt;] measured by a right
+ankle-worn sensor at axis x, y, z.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;An exemplary few seconds of raw data from of walking and driving
+activities, collected by sensors at four different locations:&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;loc_id_levels &amp;lt;- c(&amp;quot;lw&amp;quot;, &amp;quot;lh&amp;quot;, &amp;quot;la&amp;quot;, &amp;quot;ra&amp;quot;)
+loc_id_labels &amp;lt;- c(&amp;quot;left wrist&amp;quot;, &amp;quot;left hip&amp;quot;, &amp;quot;left ankle&amp;quot;, &amp;quot;right ankle&amp;quot;)
+activity_levels &amp;lt;- c(&amp;quot;walking&amp;quot;, &amp;quot;driving&amp;quot;)
+plt_df &amp;lt;- 
+  dat_i %&amp;gt;%
+  filter(activity %in% c(1,4)) %&amp;gt;%
+  group_by(activity) %&amp;gt;%
+  mutate(time_s = time_s - min(time_s)) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  filter(time_s &amp;gt;= (5 + 5), time_s &amp;lt; (5 + 10)) %&amp;gt;%
+  mutate(activity = recode(activity, &#39;1&#39; = &#39;walking&#39;, &#39;4&#39; = &#39;driving&#39;)) %&amp;gt;%
+  pivot_longer(cols = -c(activity, time_s)) %&amp;gt;%
+  separate(name, c(&amp;quot;loc_id&amp;quot;, &amp;quot;axis_id&amp;quot;), sep = &amp;quot;_&amp;quot;) %&amp;gt;%
+  mutate(activity = factor(activity, levels = activity_levels)) %&amp;gt;%
+  mutate(loc_id = factor(loc_id, levels = loc_id_levels, labels = loc_id_labels)) 
+plt_raw_data &amp;lt;- 
+  ggplot(plt_df, aes(x = time_s, y = value, color = axis_id)) + 
+  geom_line() + 
+  facet_grid(loc_id ~ activity) + 
+  scale_y_continuous(limits = c(-1, 1) * max(abs(plt_df$value))) + 
+  labs(y = &amp;quot;Acceleration [g]&amp;quot;,
+       x = &amp;quot;Time since activity started [s]&amp;quot;,
+       color = &amp;quot;Sensor axis: &amp;quot;) + 
+  theme_gray(base_size = 14) + 
+  theme(legend.position=&amp;quot;bottom&amp;quot;) + 
+  scale_color_manual(values = c(&amp;quot;red&amp;quot;, &amp;quot;darkgreen&amp;quot;, &amp;quot;blue&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code&gt;plt_raw_data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;plt_raw_data.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;computing-minute-level-summary-measures-of-raw-accelerometry-data&#34;&gt;Computing minute-level summary measures of raw accelerometry data&lt;/h2&gt;
+&lt;h3 id=&#34;summary-measures&#34;&gt;Summary measures&lt;/h3&gt;
+&lt;p&gt;A number of open-source measures have been proposed to aggregate
+subsecond-level accelerometry data. These include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Monitor Independent Movement Summary (MIMS) (&lt;a href=&#34;https://journals.humankinetics.com/view/journals/jmpb/2/4/article-p268.xml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;John et al.,
+2019&lt;/a&gt;),
+&lt;!-- - Euclidean Norm Minus One (ENMO) ([van Hees et al., 2013](https://pubmed.ncbi.nlm.nih.gov/25103964/)),  --&gt;
+&lt;/li&gt;
+&lt;li&gt;Mean Amplitude Deviation (MAD) (&lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/24393233/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vähä-Ypyä et al.,
+2015&lt;/a&gt;),&lt;/li&gt;
+&lt;li&gt;Activity Index (AI) (&lt;a href=&#34;https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0160644&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bai et al.,
+2016&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition, attempts have been made to reverse-engineer proprietary
+activity counts (AC) generated by ActiLife software from data collected
+by ActiGraph accelerometers. These include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;activityCounts&lt;/code&gt; R package – allows generating “ActiLife counts from
+raw acceleration data for different accelerometer brands and it is
+developed based on the study done by &lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/28604558/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Brond et al.,
+2017&lt;/a&gt;”.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;summarizedactigraphy-r-package&#34;&gt;SummarizedActigraphy R package&lt;/h3&gt;
+&lt;p&gt;We derive the measures using &lt;code&gt;SummarizedActigraphy&lt;/code&gt; R package. The
+package was authored by &lt;a href=&#34;https://github.com/muschellij2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;John Muschelli&lt;/a&gt;
+and is available on GitHub
+(&lt;a href=&#34;https://github.com/muschellij2/SummarizedActigraphy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;It uses some of the existing R software under the hood to compute some
+part of the measures:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;MIMSunit&lt;/code&gt; R package to compute MIMS,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;activityCounts&lt;/code&gt; R package to compute AC.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It computes some other measures straightfoward from their definition,
+e.g.: MAD, AI.&lt;/p&gt;
+&lt;h3 id=&#34;preparing-the-data-input&#34;&gt;Preparing the data input&lt;/h3&gt;
+&lt;p&gt;We use raw accelerometry data from a wrist-worn sensor.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see notes and code.)
+&lt;/summary&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SummarizedActigraphy&lt;/code&gt; R package needs data with observation
+timestamp in the form of &lt;code&gt;POSIXct&lt;/code&gt; class. This timestamp column must
+be named &lt;code&gt;HEADER_TIME_STAMP&lt;/code&gt;; the specific column naming is needed
+due to &lt;a href=&#34;https://github.com/mHealthGroup/MIMSunit/issues/29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;some
+issue&lt;/a&gt; reported
+for &lt;code&gt;MIMSunit&lt;/code&gt; R package.&lt;/li&gt;
+&lt;li&gt;We hence create a “fake” &lt;code&gt;POSIXct&lt;/code&gt; column named
+&lt;code&gt;HEADER_TIME_STAMP&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The option &lt;code&gt;options(digits.secs = 3)&lt;/code&gt; was used on the top of this R
+script to allow displaying decimal time part.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We first demonstrate the code for one participant.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dat_input_i &amp;lt;- 
+  dat_i %&amp;gt;% 
+  mutate(HEADER_TIME_STAMP = seq(from = ymd_hms(&amp;quot;2021-01-01 00:00:00&amp;quot;), by = 0.01, length.out = nrow(dat_i))) %&amp;gt;%
+  select(HEADER_TIME_STAMP, X = lw_x, Y = lw_y, Z = lw_z)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code&gt;dat_input_i
+
+# A tibble: 303,300 x 4
+   HEADER_TIME_STAMP            X      Y      Z
+   &amp;lt;dttm&amp;gt;                   &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+ 1 2021-01-01 00:00:00.000  0.039  1.02  -0.02 
+ 2 2021-01-01 00:00:00.009 -0.629 -0.461  0.973
+ 3 2021-01-01 00:00:00.019 -0.926 -1.26   0.691
+ 4 2021-01-01 00:00:00.029 -0.871 -1.50  -0.246
+ 5 2021-01-01 00:00:00.039 -0.727 -1.62  -0.559
+ 6 2021-01-01 00:00:00.049 -0.543 -1.66  -0.629
+ 7 2021-01-01 00:00:00.059 -0.348 -1.64  -0.609
+ 8 2021-01-01 00:00:00.069 -0.16  -1.60  -0.566
+ 9 2021-01-01 00:00:00.079 -0.012 -1.53  -0.523
+10 2021-01-01 00:00:00.089  0.117 -1.43  -0.484
+# … with 303,290 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We use package’s helper function to check if sample rate is being
+determined correctly (should be 100 Hz).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;get_sample_rate(dat_input_i)
+
+[1] 100
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;computing-the-measures&#34;&gt;Computing the measures&lt;/h3&gt;
+&lt;p&gt;We calculate minute-level summary measures: AC, MIMS, MAD, AI. The
+output shows values of the measures per each minute.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;out_i = SummarizedActigraphy::calculate_measures(
+  df = dat_input_i, 
+  dynamic_range = c(-8, 8),  # dynamic range
+  fix_zeros = FALSE,         # fixes zeros from idle sleep mode -- not needed in our case 
+  calculate_mims = TRUE,     # uses algorithm from MIMSunit package
+  calculate_ac = TRUE,       # uses algorithm from activityCounts package 
+  flag_data = FALSE,         # runs raw data quality control flags algorithm -- not used in our case  
+  verbose = FALSE)
+
+=================================================================================================================
+
+out_i &amp;lt;- out_i %&amp;gt;% select(HEADER_TIME_STAMP = time, AC, MIMS = MIMS_UNIT, MAD, AI)
+out_i
+
+# A tibble: 51 x 5
+   HEADER_TIME_STAMP            AC  MIMS     MAD    AI
+   &amp;lt;dttm&amp;gt;                    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+ 1 2021-01-01 00:00:00.000  3623.  19.3  0.140    7.62
+ 2 2021-01-01 00:01:00.000  2460.  14.8  0.0971   5.84
+ 3 2021-01-01 00:02:00.000   648.   6.52 0.0192   2.44
+ 4 2021-01-01 00:03:00.000    36.2  1.86 0.00862  1.03
+ 5 2021-01-01 00:04:00.000  8084.  34.8  0.316   15.1 
+ 6 2021-01-01 00:05:00.000 13845.  60.1  0.358   25.3 
+ 7 2021-01-01 00:06:00.000 10549.  44.1  0.248   18.7 
+ 8 2021-01-01 00:07:00.000 11219.  45.8  0.244   19.6 
+ 9 2021-01-01 00:08:00.000 11624.  51.6  0.338   22.1 
+10 2021-01-01 00:09:00.000 11049.  45.8  0.288   20.0 
+# … with 41 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, we calculate the measures for all n=32 subjects.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;out_all &amp;lt;- data.frame()
+for (dat_fpath_i in dat_fpaths){ #  dat_fpath_i &amp;lt;- dat_fpaths[1]
+  message(basename(dat_fpath_i))
+  # read data 
+  basename_i &amp;lt;- gsub(&amp;quot;.csv&amp;quot;, &amp;quot;&amp;quot;, basename(dat_fpath_i))
+  dat_i &amp;lt;- read.csv(dat_fpath_i) 
+  # prepare data input
+  ts_i &amp;lt;- seq(from = ymd_hms(&amp;quot;2021-01-01 00:00:00&amp;quot;), by = 0.01, length.out = nrow(dat_i))
+  dat_input_i &amp;lt;- 
+    dat_i %&amp;gt;% 
+    mutate(HEADER_TIME_STAMP = ts_i) %&amp;gt;%
+    select(HEADER_TIME_STAMP, X = lw_x, Y = lw_y, Z = lw_z)
+  # compute the measures 
+  out_i = SummarizedActigraphy::calculate_measures(
+    df = dat_input_i, 
+    dynamic_range = c(-8, 8),  # dynamic range
+    fix_zeros = FALSE,         # fixes zeros from idle sleep mode -- not needed in our case 
+    calculate_mims = TRUE,     # uses algorithm from MIMSunit package
+    calculate_ac = TRUE,       # uses algorithm from activityCounts package 
+    flag_data = FALSE,         # runs raw data quality control flags algorithm -- not used in our case  
+    verbose = FALSE)
+  out_i &amp;lt;- out_i %&amp;gt;% select(HEADER_TIME_STAMP = time, AC, MIMS = MIMS_UNIT, MAD, AI)
+  out_i &amp;lt;- mutate(out_i, subj_id = basename_i, .before = everything())
+  # append subject-specific measures to all subjects file 
+  out_all &amp;lt;- rbind(out_all, out_i)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;h2 id=&#34;minute-level-physical-activity-measures-during-walking-and-driving-activities&#34;&gt;Minute-level physical activity measures during walking and driving activities&lt;/h2&gt;
+&lt;h3 id=&#34;merging-physical-activity-measures-with-physical-activity-labels&#34;&gt;Merging physical activity measures with physical activity labels&lt;/h3&gt;
+&lt;p&gt;Next, we merge the minute-level physical-activity measures with the
+activity labels. We only keep the minutes for which all the measurements
+were labelled with no more than one type of activity.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;labels_df_all &amp;lt;- data.frame()
+for (dat_fpath_i in dat_fpaths){ #  dat_fpath_i &amp;lt;- dat_fpaths[1]
+  message(basename(dat_fpath_i))
+  # read data 
+  basename_i &amp;lt;- gsub(&amp;quot;.csv&amp;quot;, &amp;quot;&amp;quot;, basename(dat_fpath_i))
+  dat_i &amp;lt;- read.csv(dat_fpath_i) 
+  # aggregate activity labels
+  ts_i &amp;lt;- seq(from = ymd_hms(&amp;quot;2021-01-01 00:00:00&amp;quot;), by = 0.01, length.out = nrow(dat_i))
+  labels_df_i &amp;lt;- 
+    dat_i %&amp;gt;% 
+    mutate(HEADER_TIME_STAMP = ts_i) %&amp;gt;%
+    mutate(HEADER_TIME_STAMP = lubridate::floor_date(HEADER_TIME_STAMP, &amp;quot;1 min&amp;quot;)) %&amp;gt;%
+    group_by(HEADER_TIME_STAMP) %&amp;gt;%
+    filter(n_distinct(activity) == 1) %&amp;gt;%
+    filter(row_number() == 1) %&amp;gt;%
+    # 1=walking; 2=descending stairs; 3=ascending stairs; 4=driving
+    filter(activity %in% c(1,2,3,4)) %&amp;gt;%
+    ungroup() %&amp;gt;%
+    select(HEADER_TIME_STAMP, activity) 
+  labels_df_i &amp;lt;- mutate(labels_df_i, subj_id = basename_i, .before = everything())
+  # append subject-specific measures to all subjects file 
+  labels_df_all &amp;lt;- rbind(labels_df_all, labels_df_i)
+}
+# recode activity label
+labels_df_all &amp;lt;- labels_df_all %&amp;gt;%
+  mutate(activity = recode(activity, &#39;1&#39; = &#39;walking&#39;, &#39;2&#39; = &#39;descending_stairs&#39;, 
+                           &#39;3&#39; = &#39;ascending_stairs&#39;, &#39;4&#39; = &#39;driving&#39;))
+
+# merge: 
+# (1) physical activity minute-level measures, 
+# (2) physical activity minute-level activity labels
+out_all_merged &amp;lt;- 
+  out_all %&amp;gt;% 
+  inner_join(labels_df_all, by = c(&amp;quot;subj_id&amp;quot;, &amp;quot;HEADER_TIME_STAMP&amp;quot;)) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code&gt;out_all_merged
+
+# A tibble: 686 x 7
+   subj_id    HEADER_TIME_STAMP           AC  MIMS    MAD    AI activity
+   &amp;lt;chr&amp;gt;      &amp;lt;dttm&amp;gt;                   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   
+ 1 id00b70b13 2021-01-01 00:06:00.000 10549. 44.1  0.248  18.7  walking 
+ 2 id00b70b13 2021-01-01 00:07:00.000 11219. 45.8  0.244  19.6  walking 
+ 3 id00b70b13 2021-01-01 00:11:00.000 11026. 42.3  0.215  18.9  walking 
+ 4 id00b70b13 2021-01-01 00:12:00.000 10561. 42.1  0.231  19.1  walking 
+ 5 id00b70b13 2021-01-01 00:13:00.000 13297. 53.9  0.325  23.1  walking 
+ 6 id00b70b13 2021-01-01 00:21:00.000  2603. 14.5  0.0413  4.80 driving 
+ 7 id00b70b13 2021-01-01 00:23:00.000   499.  6.65 0.0537  3.59 driving 
+ 8 id00b70b13 2021-01-01 00:24:00.000   398.  6.06 0.0496  3.49 driving 
+ 9 id00b70b13 2021-01-01 00:25:00.000   130.  5.92 0.0560  3.67 driving 
+10 id00b70b13 2021-01-01 00:26:00.000   414.  7.00 0.0561  3.55 driving 
+# … with 676 more rows
+
+table(out_all_merged$activity)
+
+
+driving walking 
+    569     117 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;visualizing-physical-activity-measures-across-activity-types&#34;&gt;Visualizing physical activity measures across activity types&lt;/h3&gt;
+&lt;p&gt;We visualize values of minute-level physical activity measures. Note
+these only used data collected with a sensor located at left wrist.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;name_levels &amp;lt;- c(&amp;quot;AC&amp;quot;, &amp;quot;MIMS&amp;quot;, &amp;quot;MAD&amp;quot;, &amp;quot;AI&amp;quot;)
+activity_levels &amp;lt;- c(&amp;quot;walking&amp;quot;, &amp;quot;driving&amp;quot;)
+# define data subsets with one activity type only 
+df_walk &amp;lt;- out_all_merged %&amp;gt;% filter(activity == &amp;quot;walking&amp;quot;) 
+df_driv &amp;lt;- out_all_merged %&amp;gt;% filter(activity == &amp;quot;driving&amp;quot;)
+# estimate sample population mean for each measure via LMM
+measure_mean_vals &amp;lt;- c(
+  # walking 
+  fixef(lmer(AC ~ (1 | subj_id), data = df_walk))[1],
+  fixef(lmer(MIMS ~ (1 | subj_id), data = df_walk))[1],
+  fixef(lmer(MAD ~ (1 | subj_id), data = df_walk))[1],
+  fixef(lmer(AI ~ (1 | subj_id), data = df_walk))[1],
+   # driving 
+  fixef(lmer(AC ~ (1 | subj_id), data = df_driv))[1],
+  fixef(lmer(MIMS ~ (1 | subj_id), data = df_driv))[1],
+  fixef(lmer(MAD ~ (1 | subj_id), data = df_driv))[1],
+  fixef(lmer(AI ~ (1 | subj_id), data = df_driv))[1]
+)
+measure_mean_df &amp;lt;- data.frame(
+  value = measure_mean_vals,
+  name = rep(name_levels, times = 2),
+  activity = rep(activity_levels, each = 4)
+)
+measure_mean_df_w &amp;lt;- 
+  measure_mean_df %&amp;gt;%
+  mutate(value = round(value, 2)) %&amp;gt;% 
+  pivot_wider(names_from = activity)
+# define subject-specific means 
+out_all_l &amp;lt;- 
+  out_all_merged %&amp;gt;%
+  pivot_longer(cols = all_of(name_levels)) 
+out_all_l_agg &amp;lt;- 
+  out_all_l %&amp;gt;%
+  group_by(subj_id, name, activity) %&amp;gt;%
+  summarise(value = mean(value))
+subj_id_levels &amp;lt;- 
+  out_all_l_agg %&amp;gt;%
+  filter(name == &amp;quot;AC&amp;quot;, activity == &amp;quot;walking&amp;quot;) %&amp;gt;%
+  arrange(desc(value)) %&amp;gt;%
+  pull(subj_id)
+# mutate data frames used on the plot to have factors at certain levels order
+measure_mean_df &amp;lt;- 
+  measure_mean_df %&amp;gt;%
+  mutate(activity = factor(activity, levels = activity_levels)) %&amp;gt;%
+  mutate(name = factor(name, levels = name_levels))
+out_all_l &amp;lt;- 
+  out_all_l %&amp;gt;%
+  mutate(subj_id = factor(subj_id, levels = subj_id_levels),
+         activity = factor(activity, levels = activity_levels)) %&amp;gt;%
+  mutate(name = factor(name, levels = name_levels))
+out_all_l_agg &amp;lt;-
+  out_all_l_agg %&amp;gt;%
+   mutate(subj_id = factor(subj_id, levels = subj_id_levels),
+         activity = factor(activity, levels = activity_levels)) %&amp;gt;%
+  mutate(name = factor(name, levels = name_levels))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;First, we estimated sample population mean for each minute-level measure
+via linear mixed model (LMM).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kable(measure_mean_df_w)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;name&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;walking&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;driving&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;AC&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;7616.48&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;801.15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;MIMS&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;34.86&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;7.10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;MAD&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0.26&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;AI&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;15.01&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;3.31&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Next, we plot minute-level physical activity measures:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;individual measure values (red) for each subject,&lt;/li&gt;
+&lt;li&gt;mean measure value (black) for each subject,&lt;/li&gt;
+&lt;li&gt;sample population mean for each measure (dashed horizontal line)
+estimated via LMM.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On each plot panel, subject IDs (x-axis) are sorted by average AC during
+walking (left-top plot panel).&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;plt_measures &amp;lt;- 
+  ggplot(out_all_l, 
+         aes(x = subj_id, y = value)) + 
+  geom_hline(data = measure_mean_df,
+             aes(yintercept = value), 
+             linetype = 2, size = 0.2) + 
+  geom_point(size = 0.5, alpha = 0.3, color = &amp;quot;red&amp;quot;) + 
+  geom_point(data = out_all_l_agg, 
+             aes(x = subj_id, y = value),
+             size = 0.5, color = &amp;quot;black&amp;quot;) + 
+  facet_grid(name ~ activity, scales = &amp;quot;free&amp;quot;) + 
+  labs(x = &amp;quot;Subject ID&amp;quot;, y = &amp;quot;&amp;quot;) + 
+  theme_gray(base_size = 14) +    
+  theme(panel.grid.major = element_line(size = 0.3),  
+        panel.grid.minor = element_blank(),
+        axis.text.x = element_text(size = 6, angle = 90, vjust = 0.5, hjust = 1)) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code&gt;plt_measures
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;plt_measures.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The above plot highlights what are minute-level summary measures of
+physical activity from raw accelerometry data: AC, MIMS, MAD, and AI,
+across two different activities (walking, driving) in the study sample
+of n=32 healthy individuals.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;I’d like to thank &lt;a href=&#34;https://github.com/muschellij2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;John Muschelli&lt;/a&gt; for
+feedback on this tutorial.&lt;/p&gt;
+&lt;h2 id=&#34;span-stylecolorredcitation-infospan&#34;&gt;&lt;span style=&#34;color:red&#34;&gt;Citation info&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Please cite &lt;code&gt;SummarizedActigraphy&lt;/code&gt; R package, if applicable.&lt;/p&gt;
+&lt;p&gt;Please cite raw accelerometry dataset DOI, if applicable (go to see
+&lt;a href=&#34;https://physionet.org/content/accelerometry-walk-climb-drive/1.0.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this dataset citation
+options&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
     
     <item>
