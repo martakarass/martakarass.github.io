@@ -265,7 +265,7 @@ part of the measures:&lt;/p&gt;
 &lt;p&gt;It computes some other measures straightfoward from their definition,
 e.g.: MAD, AI.&lt;/p&gt;
 &lt;h3 id=&#34;preparing-the-data-input&#34;&gt;Preparing the data input&lt;/h3&gt;
-&lt;p&gt;We use raw accelerometry data from a wrist-worn sensor.&lt;/p&gt;
+&lt;p&gt;From now on, we use raw accelerometry data from a wrist-worn sensor only.&lt;/p&gt;
 &lt;details&gt;
 &lt;summary&gt;
 (Click to see notes and code.)
@@ -583,7 +583,7 @@ walking (left-top plot panel).&lt;/p&gt;
 &lt;p&gt;The above plot highlights what are minute-level summary measures of
 physical activity from raw accelerometry data: AC, MIMS, MAD, and AI,
 across two different activities (walking, driving) in the study sample
-of n=32 healthy individuals.&lt;/p&gt;
+of n=32 healthy individuals. Data were collected with a left wrist-worn sensor.&lt;/p&gt;
 &lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h2&gt;
 &lt;p&gt;I’d like to thank &lt;a href=&#34;https://github.com/muschellij2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;John Muschelli&lt;/a&gt; for
 feedback on this tutorial.&lt;/p&gt;
