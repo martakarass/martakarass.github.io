@@ -1106,9 +1106,9 @@ plt_raw_data &lt;-
 subsecond-level accelerometry data. These include:</p>
 <ul>
 <li>Monitor Independent Movement Summary (MIMS) (<a href="https://journals.humankinetics.com/view/journals/jmpb/2/4/article-p268.xml" target="_blank" rel="noopener">John et al.,
-2019</a>),
-<!-- - Euclidean Norm Minus One (ENMO) ([van Hees et al., 2013](https://pubmed.ncbi.nlm.nih.gov/25103964/)),  -->
-</li>
+2019</a>),</li>
+<li>Euclidean Norm Minus One (ENMO) (<a href="https://pubmed.ncbi.nlm.nih.gov/25103964/" target="_blank" rel="noopener">van Hees et al.,
+2013</a>),</li>
 <li>Mean Amplitude Deviation (MAD) (<a href="https://pubmed.ncbi.nlm.nih.gov/24393233/" target="_blank" rel="noopener">Vähä-Ypyä et al.,
 2015</a>),</li>
 <li>Activity Index (AI) (<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0160644" target="_blank" rel="noopener">Bai et al.,
@@ -1136,8 +1136,14 @@ part of the measures:</p>
 </ul>
 <p>It computes some other measures straightfoward from their definition,
 e.g.: MAD, AI.</p>
+<p>Note: for now, while this feature is available, we omit the computation
+of ENMO. This is because the recommendations in the ENMO paper state
+data calibration, and I observed an
+<a href="https://github.com/muschellij2/SummarizedActigraphy/issues/2" target="_blank" rel="noopener">issue</a>
+while attempting to run the calibration via the most recent version of
+<code>SummarizedActigraphy</code> R package.</p>
 <h3 id="preparing-the-data-input">Preparing the data input</h3>
-<p>From now on, we use raw accelerometry data from a wrist-worn sensor only.</p>
+<p>We use raw accelerometry data from a wrist-worn sensor.</p>
 <details>
 <summary>
 (Click to see notes and code.)
@@ -1198,7 +1204,7 @@ output shows values of the measures per each minute.</p>
   flag_data = FALSE,         # runs raw data quality control flags algorithm -- not used in our case  
   verbose = FALSE)
 
-=================================================================================================================
+====================================================================================================================
 
 out_i &lt;- out_i %&gt;% select(HEADER_TIME_STAMP = time, AC, MIMS = MIMS_UNIT, MAD, AI)
 out_i
@@ -1455,7 +1461,7 @@ walking (left-top plot panel).</p>
 <p>The above plot highlights what are minute-level summary measures of
 physical activity from raw accelerometry data: AC, MIMS, MAD, and AI,
 across two different activities (walking, driving) in the study sample
-of n=32 healthy individuals. Data were collected with a left wrist-worn sensor.</p>
+of n=32 healthy individuals.</p>
 <h2 id="acknowledgements">Acknowledgements</h2>
 <p>I’d like to thank <a href="https://github.com/muschellij2" target="_blank" rel="noopener">John Muschelli</a> for
 feedback on this tutorial.</p>
