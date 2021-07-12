@@ -121,19 +121,20 @@ dat_i &amp;lt;- read_csv(dat_fpaths[1])
 &lt;pre&gt;&lt;code&gt;dat_i
 
 # A tibble: 303,300 x 14
-   activity time_s   lw_x   lw_y   lw_z   lh_x   lh_y   lh_z   la_x  la_y   la_z   ra_x  ra_y  ra_z
-      &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
- 1       99   0.01  0.039  1.02  -0.02  -0.18   1.23   0.023  0.156 0.855 -0.582  0.887 0.449 0.074
- 2       99   0.02 -0.629 -0.461  0.973 -0.246  0.137  0.969 -0.707 0.559  0.449 -0.027 0.141 0.934
- 3       99   0.03 -0.926 -1.26   0.691  0.238 -0.328  1.22  -1.44  1.37   0.367 -0.164 0.66  1.34 
- 4       99   0.04 -0.871 -1.50  -0.246  0.711 -0.484  0.414 -1.66  1.64  -0.543 -0.141 1.03  0.707
- 5       99   0.05 -0.727 -1.62  -0.559  1.03  -0.297  0.145 -1.76  1.68  -0.918 -0.121 1.23  0.438
- 6       99   0.06 -0.543 -1.66  -0.629  1.12  -0.246  0.137 -1.80  1.65  -0.988 -0.051 1.42  0.371
- 7       99   0.07 -0.348 -1.64  -0.609  1.24  -0.426  0.047 -1.76  1.57  -0.992  0.09  1.63  0.383
- 8       99   0.08 -0.16  -1.60  -0.566  1.18  -0.539 -0.008 -1.63  1.53  -1.02   0.25  1.83  0.387
- 9       99   0.09 -0.012 -1.53  -0.523  1.03  -0.633 -0.043 -1.13  1.87  -0.738  0.363 2     0.328
-10       99   0.1   0.117 -1.43  -0.484  0.922 -0.766 -0.047  0.285 1.37  -0.156  0.473 2.13  0.203
-# … with 303,290 more rows
+   activity time_s   lw_x   lw_y   lw_z   lh_x   lh_y   lh_z   la_x  la_y   la_z
+      &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+ 1       99   0.01  0.039  1.02  -0.02  -0.18   1.23   0.023  0.156 0.855 -0.582
+ 2       99   0.02 -0.629 -0.461  0.973 -0.246  0.137  0.969 -0.707 0.559  0.449
+ 3       99   0.03 -0.926 -1.26   0.691  0.238 -0.328  1.22  -1.44  1.37   0.367
+ 4       99   0.04 -0.871 -1.50  -0.246  0.711 -0.484  0.414 -1.66  1.64  -0.543
+ 5       99   0.05 -0.727 -1.62  -0.559  1.03  -0.297  0.145 -1.76  1.68  -0.918
+ 6       99   0.06 -0.543 -1.66  -0.629  1.12  -0.246  0.137 -1.80  1.65  -0.988
+ 7       99   0.07 -0.348 -1.64  -0.609  1.24  -0.426  0.047 -1.76  1.57  -0.992
+ 8       99   0.08 -0.16  -1.60  -0.566  1.18  -0.539 -0.008 -1.63  1.53  -1.02 
+ 9       99   0.09 -0.012 -1.53  -0.523  1.03  -0.633 -0.043 -1.13  1.87  -0.738
+10       99   0.1   0.117 -1.43  -0.484  0.922 -0.766 -0.047  0.285 1.37  -0.156
+# … with 303,290 more rows, and 3 more variables: ra_x &amp;lt;dbl&amp;gt;, ra_y &amp;lt;dbl&amp;gt;,
+#   ra_z &amp;lt;dbl&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Each file contains 14 variables:&lt;/p&gt;
 &lt;ul&gt;
@@ -227,7 +228,8 @@ of ENMO. This is because the recommendations in the ENMO paper state
 data calibration, and I observed an
 &lt;a href=&#34;https://github.com/muschellij2/SummarizedActigraphy/issues/2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;issue&lt;/a&gt;
 while attempting to run the calibration via the most recent version of
-&lt;code&gt;SummarizedActigraphy&lt;/code&gt; R package.&lt;/p&gt;
+&lt;code&gt;SummarizedActigraphy&lt;/code&gt; R package. I plan to update the post for
+including ENMO once the issue is resolved.&lt;/p&gt;
 &lt;h3 id=&#34;preparing-the-data-input&#34;&gt;Preparing the data input&lt;/h3&gt;
 &lt;p&gt;We use raw accelerometry data from a wrist-worn sensor.&lt;/p&gt;
 &lt;details&gt;
@@ -290,7 +292,7 @@ output shows values of the measures per each minute.&lt;/p&gt;
   flag_data = FALSE,         # runs raw data quality control flags algorithm -- not used in our case  
   verbose = FALSE)
 
-====================================================================================================================
+===================================================================================
 
 out_i &amp;lt;- out_i %&amp;gt;% select(HEADER_TIME_STAMP = time, AC, MIMS = MIMS_UNIT, MAD, AI)
 out_i
