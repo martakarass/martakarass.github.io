@@ -11,10 +11,64 @@
     <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>/post/2021-06-29-pa_measures_and_summarizedactigraphy/</loc>
-    <lastmod>2021-07-10T17:19:28-04:00</lastmod>
+    <loc>/talk/2021-11-05-adds/</loc>
+    <lastmod>2021-11-05T09:00:00+00:00</lastmod>
   </url><url>
     <loc>/</loc>
+    <lastmod>2021-11-05T09:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/talk/</loc>
+    <lastmod>2021-11-05T09:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication-type/3/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/authors/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/bootstrap/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/crainiceanu/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/karas/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/power-estimation/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/publication_types/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/publication/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/sample-size-calculation/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/sampling/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/upstrap/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/publication/upstrap_for_estimating_power/</loc>
+    <lastmod>2021-09-01T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/project/</loc>
+    <lastmod>2021-09-01T11:54:53-04:00</lastmod>
+  </url><url>
+    <loc>/project/project_upstrap/</loc>
+    <lastmod>2021-09-01T11:54:53-04:00</lastmod>
+  </url><url>
+    <loc>/talk/2021-07-28-onnela_lab_meeting/</loc>
+    <lastmod>2021-07-28T09:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/2021-06-29-pa_measures_and_summarizedactigraphy/</loc>
     <lastmod>2021-07-10T17:19:28-04:00</lastmod>
   </url><url>
     <loc>/post/</loc>
@@ -26,16 +80,10 @@
     <loc>/tag/actigraphy/</loc>
     <lastmod>2021-05-28T18:08:38-04:00</lastmod>
   </url><url>
-    <loc>/authors/</loc>
-    <lastmod>2021-05-28T18:08:38-04:00</lastmod>
-  </url><url>
     <loc>/author/bogaarts/</loc>
     <lastmod>2021-05-28T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/tag/consumer-grade-devices/</loc>
-    <lastmod>2021-05-28T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/author/crainiceanu/</loc>
     <lastmod>2021-05-28T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/author/dorn/</loc>
@@ -47,22 +95,10 @@
     <loc>/author/illiano/</loc>
     <lastmod>2021-05-28T18:08:38-04:00</lastmod>
   </url><url>
-    <loc>/author/karas/</loc>
-    <lastmod>2021-05-28T18:08:38-04:00</lastmod>
-  </url><url>
     <loc>/tag/physical-activity/</loc>
     <lastmod>2021-05-28T18:08:38-04:00</lastmod>
   </url><url>
-    <loc>/publication_types/</loc>
-    <lastmod>2021-05-28T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/publication/</loc>
-    <lastmod>2021-05-28T18:08:38-04:00</lastmod>
-  </url><url>
     <loc>/tag/rehabilitation-monitoring/</loc>
-    <lastmod>2021-05-28T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2021-05-28T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/author/urbanek/</loc>
@@ -71,10 +107,7 @@
     <loc>/tag/wearable-accelerometers/</loc>
     <lastmod>2021-05-28T18:08:38-04:00</lastmod>
   </url><url>
-    <loc>/talk/2021-05-13-wit_lab_meeting-copy/</loc>
-    <lastmod>2021-05-13T14:30:00+00:00</lastmod>
-  </url><url>
-    <loc>/talk/</loc>
+    <loc>/talk/2021-05-13-wit_lab_meeting/</loc>
     <lastmod>2021-05-13T14:30:00+00:00</lastmod>
   </url><url>
     <loc>/talk/2021-05-06-engage_lab_meeting/</loc>
@@ -183,9 +216,6 @@
     <lastmod>2019-12-06T11:54:53-04:00</lastmod>
   </url><url>
     <loc>/tag/pattern-segmentation/</loc>
-    <lastmod>2019-12-06T11:54:53-04:00</lastmod>
-  </url><url>
-    <loc>/project/</loc>
     <lastmod>2019-12-06T11:54:53-04:00</lastmod>
   </url><url>
     <loc>/tag/walking/</loc>

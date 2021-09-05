@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Home</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 10 Jul 2021 17:19:28 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 05 Nov 2021 09:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Home</title>
@@ -52,6 +52,197 @@
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>[UPCOMING] Harmonization of open-source and proprietary accelerometry-based physical activity measures</title>
+      <link>/talk/2021-11-05-adds/</link>
+      <pubDate>Fri, 05 Nov 2021 09:00:00 +0000</pubDate>
+      <guid>/talk/2021-11-05-adds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Upstrap for estimating power and sample size in complex models</title>
+      <link>/publication/upstrap_for_estimating_power/</link>
+      <pubDate>Wed, 01 Sep 2021 18:08:38 -0400</pubDate>
+      <guid>/publication/upstrap_for_estimating_power/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Upstrap for estimating power and sample size in complex models</title>
+      <link>/project/project_upstrap/</link>
+      <pubDate>Wed, 01 Sep 2021 11:54:53 -0400</pubDate>
+      <guid>/project/project_upstrap/</guid>
+      <description>&lt;p&gt;Power and sample size calculation are major components of statistical analyses. The upstrap resampling method was proposed as a general solution to this problem.&lt;/p&gt;
+&lt;p&gt;We evaluate power estimation properties of the upstrap and provide a series of &amp;ldquo;read, adapt and use&amp;rdquo; R code examples for power estimation in simple and complex settings (&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2021.08.21.457220v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bioRxiv preprint&lt;/a&gt;).&lt;/p&gt;
+&lt;!---
+&lt;span style=&#34;color:purple&#34;&gt;**See images citation and/or credit information** [below](#custom)&lt;/span&gt;.
+--&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#scientific-problem&#34;&gt;Scientific problem&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#challenges&#34;&gt;Challenges&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#proposed-solution&#34;&gt;Proposed solution&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#code-example-testing-for-significance-of-lm-coefficient&#34;&gt;Code example: testing for significance of LM coefficient&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#contributions&#34;&gt;Contributions&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h3 id=&#34;scientific-problem&#34;&gt;Scientific problem&lt;/h3&gt;
+&lt;p&gt;We consider the following problem: given an observed data sample $\mathbf{x}$ of sample size $N$, given specific null and alternative hypothesis, and a test statistic, assuming significance level $\alpha$, estimate sample size $M$ required to achieve power $1 -\beta$ (i.e., to achieve probability $1 -\beta$ of rejecting the null hypothesis when the null is true).&lt;/p&gt;
+&lt;p&gt;Here, we consider the tasks to estimate the power to detect:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;an effect size observed in the data;&lt;/li&gt;
+&lt;li&gt;an effect size chosen by a researcher.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We aim to ddress complex settings, including testing significance of model coefficients in: LM, GLM, LMM, GLMM, GEE, and others.&lt;/p&gt;
+&lt;h3 id=&#34;challenges&#34;&gt;Challenges&lt;/h3&gt;
+&lt;p&gt;For multilevel data settings, the existing approaches tend to fall into two categories.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;First are theoretical results for estimating power in specific multilevel data setups; these often use assumptions about the intra-class correlation coefficient, and/or assume a particular study design (e.g., that
+the data are balanced). &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Another class is based on simulations. Such may require specifying a population model for the data, simulating data from the assumed model, and estimating the power via Monte Carlo simulations.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The former arguably lacks flexibility; in addition, finding and then determining applicability of a theoretical result may be difficult. The latter is flexible but involves potentially complex programming task.&lt;/p&gt;
+&lt;h3 id=&#34;proposed-solution&#34;&gt;Proposed solution&lt;/h3&gt;
+&lt;h4 id=&#34;upstrap&#34;&gt;Upstrap&lt;/h4&gt;
+&lt;p&gt;The upstrap resampling method (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7868048/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Crainiceanu, C.M., Crainiceanu, A. (2020)&lt;/a&gt;) was proposed as a general
+solution to this problem.&lt;/p&gt;
+&lt;p&gt;Upstrap starts with a sample (observed data) and resamples with replacement either fewer or more samples than in the original data set. The below example shows difference between bootstrap and upstrap resample.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# simulate data 
+x &amp;lt;- rnorm(n = 10)
+
+# bootstrap resample
+x_b &amp;lt;- sample(x, size = 10, replace = TRUE)
+
+# upstrap resample (case: more samples than in original x) 
+x_u &amp;lt;- sample(x, size = 20, replace = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;upstrap-for-estimating-power&#34;&gt;Upstrap for estimating power&lt;/h4&gt;
+&lt;p&gt;Given observed data sample $\mathbf{x}$, to estimate power for a target sample size, we propose:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Generate $B$ resamples of target sample size by sampling with replacement from $\mathbf{x}$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Perform  hypothesis test on each resample.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Estimate power as the proportion of $B$ resamples where the null hypothesis was rejected.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The above procedure estimates power corresponding to the effect size &lt;em&gt;observed&lt;/em&gt; in the sample $\mathbf{x}$. For example, for one-sample t-test, the above procedure estimates:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;power.t.test(delta = , sd = sd(x), ...)$power
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;upstrap-for-estimating-power-specific-effect-size&#34;&gt;Upstrap for estimating power: specific effect size&lt;/h4&gt;
+&lt;p&gt;In practice, one is often is interested in estimating power for a &lt;em&gt;specific&lt;/em&gt; effect size. For example, for one-sample t-test, a specific effect size could be set to 0.3:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;power.t.test(delta = 0.3, sd = sd(x), ...)$power
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To address such cases, we propose to update  response variable values in the observed sample $\mathbf{x}$ to ensure the effect size in this updated data is our target effect size. Details are provided in the &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2021.08.21.457220v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;preprint&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;code-example-testing-for-significance-of-lm-coefficient&#34;&gt;Code example: testing for significance of LM coefficient&lt;/h3&gt;
+&lt;p&gt;Below, we demonstrate the upstrap power estimation method for testing for significance of LM coefficient. In the &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2021.08.21.457220v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;preprint&lt;/a&gt;, we provide more R code examples, including testing for significance of coefficient in LM, GLM, LMM, GLMM.&lt;/p&gt;
+&lt;p&gt;We define simulation parameters and simulate a sample of size $N = 50$.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see setup definition and R code.)
+&lt;/summary&gt;
+&lt;h4 id=&#34;setup&#34;&gt;Setup&lt;/h4&gt;
+&lt;p&gt;Consider a random sample with $N = 50$ independent observations (e.g., 50 subjects, 1 observation per subject). Assume a continuous response variable $Y$ and two covariates: dichotomous $X_1$, continuous $X_2$. We are interested in estimating power of test for significance of the coefficient $\beta_{1}$ in linear model $Y_{i}=\beta_{0}+\beta_{1} X_{1 i}+\beta_{2} X_{2 i}+\varepsilon_{i}$, where $i=1, \ldots, N$ and $\varepsilon_{i} \sim_{\text {iid }} N\left(0, \sigma^{2}\right)$.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# simulation parameters
+N &amp;lt;- 50
+coef_x0 &amp;lt;- 0
+coef_x1 &amp;lt;- 0.2
+coef_x2 &amp;lt;- 0.1
+sigma2  &amp;lt;- 1
+
+# simulate sample
+set.seed(1)
+subjid_i &amp;lt;- 1 : N # subject ID unique in data set
+x1_i  &amp;lt;- rbinom(n = N, size = 1, prob = 0.5)
+x2_i  &amp;lt;- rbinom(n = N, size = 1, prob = 0.5)
+eps_i &amp;lt;- rnorm(N, sd = sqrt(sigma2))
+y_i   &amp;lt;- coef_x0 + (coef_x1 * x1_i) + (coef_x2 * x2_i)  + eps_i
+dat   &amp;lt;- data.frame(y = y_i, x1 = x1_i, x2 = x2_i, subjid = subjid_i)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(dat)
+# &#39;data.frame&#39;:	50 obs. of  4 variables:
+#  $ y     : num  0.398 -0.512 0.541 -0.929 1.433 ...
+#  $ x1    : int  0 0 1 1 0 1 1 1 1 0 ...
+#  $ x2    : int  0 1 0 0 0 0 0 1 1 0 ...
+#  $ subjid: int  1 2 3 4 5 6 7 8 9 10 ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We get the observed effect size.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fit &amp;lt;- lm(y ~ x1 + x2, data = dat)
+coef(fit)[&amp;quot;x1&amp;quot;]
+# 0.5585879 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We estimate the test power via the upstrap.&lt;/p&gt;
+&lt;h4 id=&#34;case-target-sample-size-m--n--50-target-effect-size-as-observed-in-the-sample&#34;&gt;Case: target sample size M = N = 50, target effect size as observed in the sample&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# number of upstrap resamples
+B_boot &amp;lt;- 1000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;out &amp;lt;- rep(NA, B_boot)
+for (rr in 1 : B_boot){
+  dat_rr_idx &amp;lt;- sample(1 : nrow(dat), replace = TRUE)
+  dat_rr &amp;lt;- dat[dat_rr_idx, ]
+  fit_rr &amp;lt;- lm(y ~ x1 + x2, data = dat_rr)
+  pval_rr &amp;lt;- summary(fit_rr)$coef[&amp;quot;x1&amp;quot;, 4]
+  out[rr] &amp;lt;- (pval_rr &amp;lt; 0.05)
+}
+mean(out)
+# [1] 0.493
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;case-target-sample-size-m--100-target-effect-size-as-observed-in-the-sample&#34;&gt;Case: target sample size M = 100, target effect size as observed in the sample&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;out &amp;lt;- rep(NA, B_boot)
+for (rr in 1 : B_boot){
+  dat_rr_idx &amp;lt;- sample(1 : nrow(dat), size = 100, replace = TRUE)
+  dat_rr &amp;lt;- dat[dat_rr_idx, ]
+  fit_rr &amp;lt;- lm(y ~ x1 + x2, data = dat_rr)
+  pval_rr &amp;lt;- summary(fit_rr)$coef[&amp;quot;x1&amp;quot;, 4]
+  out[rr] &amp;lt;- (pval_rr &amp;lt; 0.05)
+}
+mean(out)
+# [1] 0.773
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;case-target-sample-size-m--100-target-effect-size-set-to-08&#34;&gt;Case: target sample size M = 100, target effect size set to 0.8&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# update the outcome in the sample to represent the target effect size
+dat_upd &amp;lt;- dat
+dat_upd$y &amp;lt;- dat_upd$y + (0.8 - coef(fit)[&amp;quot;x1&amp;quot;]) * dat_upd$x1
+out &amp;lt;- rep(NA, B_boot)
+for (rr in 1 : B_boot){
+  dat_rr_idx &amp;lt;- sample(1 : nrow(dat_upd), size = 80, replace = TRUE)
+  dat_rr &amp;lt;- dat_upd[dat_rr_idx, ]
+  fit_rr &amp;lt;- lm(y ~ x1 + x2, data = dat_rr)
+  pval_rr &amp;lt;- summary(fit_rr)$coef[&amp;quot;x1&amp;quot;, 4]
+  out[rr] &amp;lt;- (pval_rr &amp;lt; 0.05)
+}
+mean(out)
+# [1] 0.92
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;contributions&#34;&gt;Contributions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Our preprint: Karas, M., Crainiceanu, C.M. (2021) &lt;em&gt;Upstrap for estimating power and sample size in complex models&lt;/em&gt; &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2021.08.21.457220v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;is available on bioRxiv&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Statistical methods and modeling of person-generated health data from wearable and mobile devices</title>
+      <link>/talk/2021-07-28-onnela_lab_meeting/</link>
+      <pubDate>Wed, 28 Jul 2021 09:00:00 +0000</pubDate>
+      <guid>/talk/2021-07-28-onnela_lab_meeting/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -612,9 +803,9 @@ options&lt;/a&gt;).&lt;/p&gt;</description>
     
     <item>
       <title>Accelerometry-based physical activity measures across NHANES waves. Comparison of five minute-level measures: AC, MIMS, ENMO, MAD, AI</title>
-      <link>/talk/2021-05-13-wit_lab_meeting-copy/</link>
+      <link>/talk/2021-05-13-wit_lab_meeting/</link>
       <pubDate>Thu, 13 May 2021 14:30:00 +0000</pubDate>
-      <guid>/talk/2021-05-13-wit_lab_meeting-copy/</guid>
+      <guid>/talk/2021-05-13-wit_lab_meeting/</guid>
       <description></description>
     </item>
     
@@ -706,68 +897,74 @@ options&lt;/a&gt;).&lt;/p&gt;</description>
       <description>&lt;h4 id=&#34;2021&#34;&gt;2021&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;I am a co-instructor for &lt;a href=&#34;http://jhudatascience.org//intro_to_r/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction to R for Public Health Researchers&lt;/a&gt; Summer Institute week-long course. All class materials are available online!&lt;/p&gt;
+&lt;p&gt;Our preprint &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2021.08.21.457220v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Upstrap for estimating power and sample size in complex models&amp;rdquo;&lt;/a&gt; is available on bioRxiv. We evaluate power estimation properties of the upstrap and provide a series of &amp;ldquo;read, adapt and use&amp;rdquo; R code examples for simple and complex settings, including GLMM. See the relevant &lt;a href=&#34;https://martakarass.github.io/project/project_upstrap/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project page&lt;/a&gt;.&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Our paper &lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/34049292/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores&amp;rdquo;&lt;/a&gt; is published. Check out the &lt;a href=&#34;https://github.com/martakarass/walking-segmentation-free-living-wrist&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub repo&lt;/a&gt; showing examples of using our method for automatic walking strides segmentation from wrist-worn sensor accelerometry data collected in the free-living environment.&lt;/p&gt;
+&lt;p&gt;I &lt;a href=&#34;https://twitter.com/actigraph/status/1433438451635048451&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;received Student Poster Sponsorship&lt;/a&gt; and will present our work on harmonization of open-source and proprietary accelerometry-based physical activity measures during the &lt;a href=&#34;https://adds.actigraphcorp.com/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ActiGraph Digital Data Summit&lt;/a&gt; in Nov 2021. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;I received the &lt;a href=&#34;http://www.jhsph.edu/departments/biostatistics/about-us/honors-and-awards/#dublin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Louis I. and Thomas D. Dublin Award&lt;/a&gt; for the Advancement of Epidemiology and Biostatistics for work on open-source physical activity measurements.&lt;/p&gt;
+&lt;p&gt;I am a co-instructor for &lt;a href=&#34;http://jhudatascience.org//intro_to_r/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction to R for Public Health Researchers&lt;/a&gt; Summer Institute week-long course. All class materials are available online! &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;I received the &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/about-us/honors-and-awards/#helen-abbey&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Helen Abbey Award&lt;/a&gt; for excellence in teaching.&lt;/p&gt;
+&lt;p&gt;Our paper &lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/34049292/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores&amp;rdquo;&lt;/a&gt; is published. Check out the &lt;a href=&#34;https://github.com/martakarass/walking-segmentation-free-living-wrist&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub repo&lt;/a&gt; showing examples of using our method for automatic walking strides segmentation from wrist-worn sensor accelerometry data collected in the free-living environment. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Our paper &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/10.1002/cjs.11606&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Connectivity‐informed adaptive regularization for generalized outcomes&amp;rdquo;&lt;/a&gt; is published. We proposed riPEER (ridgified Partially Empirical Eigenvectors for Regression) extension to generalized linear regression, addressing both theoretical and computational issues. See the relevant &lt;a href=&#34;https://martakarass.github.io/project/project_mdpeer/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I received the &lt;a href=&#34;http://www.jhsph.edu/departments/biostatistics/about-us/honors-and-awards/#dublin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Louis I. and Thomas D. Dublin Award&lt;/a&gt; for the Advancement of Epidemiology and Biostatistics for work on open-source physical activity measurements. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I received the &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/about-us/honors-and-awards/#helen-abbey&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Helen Abbey Award&lt;/a&gt; for excellence in teaching. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Our paper &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/10.1002/cjs.11606&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Connectivity‐informed adaptive regularization for generalized outcomes&amp;rdquo;&lt;/a&gt; is published. We proposed riPEER (ridgified Partially Empirical Eigenvectors for Regression) extension to generalized linear regression, addressing both theoretical and computational issues. See the relevant &lt;a href=&#34;https://martakarass.github.io/project/project_mdpeer/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project page&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;2020&#34;&gt;2020&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Our paper &lt;a href=&#34;https://www.karger.com/Article/FullText/511531&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Predicting Subjective Recovery from Lower Limb Surgery Using Consumer Wearables&amp;rdquo;&lt;/a&gt; is published. We showed that passively collected wearable PGHD can capture post-surgery physical activity changes relative to individual&amp;rsquo;s baseline, and baseline data can improve prediction of self-reported recovery time at 4 weeks post surgery.&lt;/p&gt;
+&lt;p&gt;Our paper &lt;a href=&#34;https://www.karger.com/Article/FullText/511531&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Predicting Subjective Recovery from Lower Limb Surgery Using Consumer Wearables&amp;rdquo;&lt;/a&gt; is published. We showed that passively collected wearable PGHD can capture post-surgery physical activity changes relative to individual&amp;rsquo;s baseline, and baseline data can improve prediction of self-reported recovery time at 4 weeks post surgery. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;During the upcoming workshop &amp;ldquo;The Future of Digital Health&amp;rdquo;, I will give a talk highlighting &amp;ldquo;Predicting subjective recovery from lower limb surgery using consumer wearables&amp;rdquo; paper I co-authored. This workshop will highlight key papers from the newly released &lt;a href=&#34;https://pages.evidation.com/karger-special-issue&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Special Issue of Digital Biomarkers&lt;/a&gt;, sponsored by &lt;a href=&#34;https://evidation.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evidation Health&lt;/a&gt; and &lt;a href=&#34;https://www.linkedin.com/company/dime-society/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DiMe&lt;/a&gt;. Register for the workshop &lt;a href=&#34;https://us02web.zoom.us/webinar/register/WN_ugdWjno7S5ummYWYPX_s3w&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;During the upcoming workshop &amp;ldquo;The Future of Digital Health&amp;rdquo;, I will give a talk highlighting &amp;ldquo;Predicting subjective recovery from lower limb surgery using consumer wearables&amp;rdquo; paper I co-authored. This workshop will highlight key papers from the newly released &lt;a href=&#34;https://pages.evidation.com/karger-special-issue&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Special Issue of Digital Biomarkers&lt;/a&gt;, sponsored by &lt;a href=&#34;https://evidation.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evidation Health&lt;/a&gt; and &lt;a href=&#34;https://www.linkedin.com/company/dime-society/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DiMe&lt;/a&gt;. Register for the workshop &lt;a href=&#34;https://us02web.zoom.us/webinar/register/WN_ugdWjno7S5ummYWYPX_s3w&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;During summer of 2020, I am working as a Data Science Intern in Digital Measures team @ &lt;a href=&#34;https://evidation.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evidation Health&lt;/a&gt;. My main project aims at estimating medical procedure recovery trajectories and predicting recovery time from wearable patient-generated health data.&lt;/p&gt;
+&lt;p&gt;During summer of 2020, I am working as a Data Science Intern in Digital Measures team @ &lt;a href=&#34;https://evidation.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evidation Health&lt;/a&gt;. My main project aims at estimating medical procedure recovery trajectories and predicting recovery time from wearable patient-generated health data. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Why R? Foundation awards a &lt;a href=&#34;http://whyr.pl/foundation/supporting-grant/#scientific-committee&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;supporting grant for Women in Data Science&lt;/a&gt; to aid exceptional female data scientists in Poland. I serve as a member of Scientific committee for this initiative.&lt;/p&gt;
+&lt;p&gt;Why R? Foundation awards a &lt;a href=&#34;http://whyr.pl/foundation/supporting-grant/#scientific-committee&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;supporting grant for Women in Data Science&lt;/a&gt; to aid exceptional female data scientists in Poland. I serve as a member of Scientific committee for this initiative. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;2019&#34;&gt;2019&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;I passed my preliminary schoolwide oral exam. My Committee consisted of three faculty from the Dept. of Biostatistics, one faculty from Dept. of Epidemiology, and one faculty from the Dept. of Medicine.&lt;/p&gt;
+&lt;p&gt;I passed my preliminary schoolwide oral exam. My Committee consisted of three faculty from the Dept. of Biostatistics, one faculty from Dept. of Epidemiology, and one faculty from the Dept. of Medicine. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;I received Leadership, Empowerment and Learning Culture &lt;a href=&#34;/docs/certificates/2019-10-09-Novartis_LELC_US_Bios_Award_Certificate_Marta_Karas.pdf&#34;&gt;Award&lt;/a&gt; during Novartis US Analytics Conference 2019. My conference talk presented the work done as a Sensor Data Analytics Intern with Novartis in Basel, Switzerland during summer 2019.&lt;/p&gt;
+&lt;p&gt;I received Leadership, Empowerment and Learning Culture &lt;a href=&#34;/docs/certificates/2019-10-09-Novartis_LELC_US_Bios_Award_Certificate_Marta_Karas.pdf&#34;&gt;Award&lt;/a&gt; during Novartis US Analytics Conference 2019. My conference talk presented the work done as a Sensor Data Analytics Intern with Novartis in Basel, Switzerland during summer 2019. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Our paper &amp;ldquo;&lt;em&gt;Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation&lt;/em&gt;&amp;rdquo; just got published in
-&lt;em&gt;Biostatistics&lt;/em&gt; with the journal&amp;rsquo;s highest reproducibility status! See &lt;a href=&#34;https://academic.oup.com/biostatistics/advance-article/doi/10.1093/biostatistics/kxz033/5572661?guestAccessKey=f3abdf65-a94d-4509-b7e9-cca2ff384528&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADEPT article&lt;/a&gt; online.&lt;/p&gt;
+&lt;em&gt;Biostatistics&lt;/em&gt; with the journal&amp;rsquo;s highest reproducibility status! See &lt;a href=&#34;https://academic.oup.com/biostatistics/advance-article/doi/10.1093/biostatistics/kxz033/5572661?guestAccessKey=f3abdf65-a94d-4509-b7e9-cca2ff384528&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADEPT article&lt;/a&gt; online. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Our R package &lt;code&gt;adept&lt;/code&gt; that implements ADEPT pattern-segmentation method is out on CRAN (&lt;a href=&#34;https://cran.r-project.org/web/packages/adept/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRAN index&lt;/a&gt;. The vignette shows example of strides segmentation from raw accelerometry data of 25min outdoor run w/ walking and resting bouts. Listed May 2019 top 40 new CRAN packages.&lt;/p&gt;
+&lt;p&gt;Our R package &lt;code&gt;adept&lt;/code&gt; that implements ADEPT pattern-segmentation method is out on CRAN (&lt;a href=&#34;https://cran.r-project.org/web/packages/adept/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRAN index&lt;/a&gt;. The vignette shows example of strides segmentation from raw accelerometry data of 25min outdoor run w/ walking and resting bouts. Listed May 2019 top 40 new CRAN packages. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;I am working as Sensor Data Analytics Intern with Novartis pharmaceutical company in Basel, Switzerland this summer. I am also &lt;a href=&#34;https://martakarass.github.io/talk/2019-06-26-icampam/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;presenting&lt;/a&gt; at ICAMPAM 2019 conference on Jun 26 in Maastricht, the Netherlands.&lt;/p&gt;
+&lt;p&gt;I am working as Sensor Data Analytics Intern with Novartis pharmaceutical company in Basel, Switzerland this summer. I am also &lt;a href=&#34;https://martakarass.github.io/talk/2019-06-26-icampam/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;presenting&lt;/a&gt; at ICAMPAM 2019 conference on Jun 26 in Maastricht, the Netherlands. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Our R package &lt;code&gt;runstats&lt;/code&gt; that provides methods for fast computation of running sample statistics for time series is out on CRAN (&lt;a href=&#34;https://cran.r-project.org/web/packages/runstats/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRAN index&lt;/a&gt;). Use &lt;code&gt;runstats&lt;/code&gt; to compute  (1) mean, (2) standard deviation, and (3) variance over a fixed-length window of time-series, (4) correlation, (5) covariance, and (6) Euclidean distance (L2 norm) between short-time pattern and time-series. Implemented methods utilize Convolution Theorem to compute convolutions via Fast Fourier Transform (FFT).&lt;/p&gt;
+&lt;p&gt;Our R package &lt;code&gt;runstats&lt;/code&gt; that provides methods for fast computation of running sample statistics for time series is out on CRAN (&lt;a href=&#34;https://cran.r-project.org/web/packages/runstats/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRAN index&lt;/a&gt;). Use &lt;code&gt;runstats&lt;/code&gt; to compute  (1) mean, (2) standard deviation, and (3) variance over a fixed-length window of time-series, (4) correlation, (5) covariance, and (6) Euclidean distance (L2 norm) between short-time pattern and time-series. Implemented methods utilize Convolution Theorem to compute convolutions via Fast Fourier Transform (FFT). &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Our recent article &amp;ldquo;Accelerometry Data in Health Research: Challenges and Opportunities&amp;rdquo; is now published and &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6874221/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;available online&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Our recent article &amp;ldquo;Accelerometry Data in Health Research: Challenges and Opportunities&amp;rdquo; is now published and &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6874221/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;available online&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;2018&#34;&gt;2018&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Interested in statistical methodology for singal processing in physical activity research? Come to JSM &lt;a href=&#34;https://ww2.amstat.org/meetings/jsm/2018/onlineprogram/ActivityDetails.cfm?SessionID=215216&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;session&lt;/a&gt; on Wednesday (8/1/2018), 2:00 PM - 3:50 PM.&lt;/p&gt;
+&lt;p&gt;Interested in statistical methodology for singal processing in physical activity research? Come to JSM &lt;a href=&#34;https://ww2.amstat.org/meetings/jsm/2018/onlineprogram/ActivityDetails.cfm?SessionID=215216&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;session&lt;/a&gt; on Wednesday (8/1/2018), 2:00 PM - 3:50 PM. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;http://whyr2018.pl/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WhyR? 2018&lt;/a&gt; conference starts on July 2nd in Wroclaw, Poland. Both academia and industry professionals meet and discuss experiences in R software development and analysis applications.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://whyr2018.pl/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WhyR? 2018&lt;/a&gt; conference starts on July 2nd in Wroclaw, Poland. Both academia and industry professionals meet and discuss experiences in R software development and analysis applications. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;I am working as a Research Assistant with Drs. &lt;a href=&#34;https://jacekurbanek.wordpress.com/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jacek Urbanek&lt;/a&gt; and &lt;a href=&#34;http://www.ciprianstats.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ciprian Crainiceanu&lt;/a&gt; this summer at a novel approach for identifying individual working strides from subsecond accelerometry data of walking.&lt;/p&gt;
@@ -792,6 +989,12 @@ options&lt;/a&gt;).&lt;/p&gt;</description>
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2021-22 Term 1&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;600.710&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/32051/2021/600.710.86/statistical-concepts-in-public-health-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistical Concepts in Public Health 2&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;TA&lt;/td&gt;
+&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;2021-22 Summer Institute&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;140.604&lt;/td&gt;

@@ -5,12 +5,20 @@
     <link>/author/crainiceanu/</link>
       <atom:link href="/author/crainiceanu/index.xml" rel="self" type="application/rss+xml" />
     <description>Crainiceanu</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 28 May 2021 18:08:38 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Sep 2021 18:08:38 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Crainiceanu</title>
       <link>/author/crainiceanu/</link>
     </image>
+    
+    <item>
+      <title>Upstrap for estimating power and sample size in complex models</title>
+      <link>/publication/upstrap_for_estimating_power/</link>
+      <pubDate>Wed, 01 Sep 2021 18:08:38 -0400</pubDate>
+      <guid>/publication/upstrap_for_estimating_power/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores</title>
