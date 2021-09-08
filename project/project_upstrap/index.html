@@ -1011,7 +1011,7 @@ x_u &lt;- sample(x, size = 20, replace = TRUE)
 </li>
 </ol>
 <p>The above procedure estimates power corresponding to the effect size <em>observed</em> in the sample $\mathbf{x}$. For example, for one-sample t-test, the above procedure estimates:</p>
-<pre><code class="language-r">power.t.test(delta = , sd = sd(x), ...)$power
+<pre><code class="language-r">power.t.test(delta = mean(x), sd = sd(x), ...)$power
 </code></pre>
 <h4 id="upstrap-for-estimating-power-specific-effect-size">Upstrap for estimating power: specific effect size</h4>
 <p>In practice, one is often is interested in estimating power for a <em>specific</em> effect size. For example, for one-sample t-test, a specific effect size could be set to 0.3:</p>

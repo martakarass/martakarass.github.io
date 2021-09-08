@@ -92,7 +92,7 @@ x_u &amp;lt;- sample(x, size = 20, replace = TRUE)
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The above procedure estimates power corresponding to the effect size &lt;em&gt;observed&lt;/em&gt; in the sample $\mathbf{x}$. For example, for one-sample t-test, the above procedure estimates:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;power.t.test(delta = , sd = sd(x), ...)$power
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;power.t.test(delta = mean(x), sd = sd(x), ...)$power
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;upstrap-for-estimating-power-specific-effect-size&#34;&gt;Upstrap for estimating power: specific effect size&lt;/h4&gt;
 &lt;p&gt;In practice, one is often is interested in estimating power for a &lt;em&gt;specific&lt;/em&gt; effect size. For example, for one-sample t-test, a specific effect size could be set to 0.3:&lt;/p&gt;
