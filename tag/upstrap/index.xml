@@ -171,7 +171,7 @@ dat_upd &amp;lt;- dat
 dat_upd$y &amp;lt;- dat_upd$y + (0.8 - coef(fit)[&amp;quot;x1&amp;quot;]) * dat_upd$x1
 out &amp;lt;- rep(NA, B_boot)
 for (rr in 1 : B_boot){
-  dat_rr_idx &amp;lt;- sample(1 : nrow(dat_upd), size = 80, replace = TRUE)
+  dat_rr_idx &amp;lt;- sample(1 : nrow(dat_upd), size = 100, replace = TRUE)
   dat_rr &amp;lt;- dat_upd[dat_rr_idx, ]
   fit_rr &amp;lt;- lm(y ~ x1 + x2, data = dat_rr)
   pval_rr &amp;lt;- summary(fit_rr)$coef[&amp;quot;x1&amp;quot;, 4]
