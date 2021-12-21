@@ -20,7 +20,13 @@
       <description>&lt;h4 id=&#34;2021&#34;&gt;2021&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://martakarass.github.io/docs/karas_flyer_draft.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;I am defending!&lt;/a&gt; My PhD final thesis defense will be held on November 17, 2021 at 1-2 pm EST (= 7-8 pm CET = 19:00-20:00 Polish time) virtually via Zoom. DM me if interested in attending. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;For my first post-grad role, I accepted a postdoctoral researcher position at the &lt;a href=&#34;https://www.hsph.harvard.edu/onnela-lab/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Onnela Lab&lt;/a&gt; at Harvard University. I will be working at methods for digital phenotyping and its applications.&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I defended my PhD thesis &amp;ldquo;Statistical Methods for Wearable Device Data and Sample Size Calculation in Complex Models&amp;rdquo;! My &lt;a href=&#34;https://martakarass.github.io/docs/PhD_defense_slides.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;defense slides&lt;/a&gt;, with video recording linked, are available. I published the &lt;a href=&#34;https://martakarass.github.io/docs/PhD_thesis_acknowledgements.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Acknowledgements and Dedication&lt;/a&gt; parts of the thesis.&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I received Travel Reimbursement Award to &lt;a href=&#34;https://projects.iq.harvard.edu/cnoc-symposium/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;3rd Annual Health Data Science Symposium&lt;/a&gt; at Harvard to present our work on harmonization of open-source and proprietary accelerometry-based physical activity measures in Nov 2021. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Our preprint &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2021.08.21.457220v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Upstrap for estimating power and sample size in complex models&amp;rdquo;&lt;/a&gt; is available on bioRxiv. We evaluate power estimation properties of the upstrap and provide a series of &amp;ldquo;read, adapt and use&amp;rdquo; R code examples for simple and complex settings, including GLMM. See the relevant &lt;a href=&#34;https://martakarass.github.io/project/project_upstrap/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project page&lt;/a&gt;.&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
