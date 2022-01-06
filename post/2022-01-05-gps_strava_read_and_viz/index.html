@@ -1122,7 +1122,9 @@ dat_df_dist_marks &lt;-
 plt_path_fancy &lt;- 
   ggmap(dat_df_map) + 
   geom_point(data = dat_df, aes(lon, lat, col = elev),
-             size = 1, alpha = 0.7) +
+             size = 1, alpha = 0.5) +
+  geom_path(data = dat_df, aes(lon, lat),
+             size = 0.3) +
   geom_label(data = dat_df_dist_marks, aes(lon, lat, label = dist_m_cumsum_km_floor),
              size = 3) +
   labs(x = &quot;Longitude&quot;, y = &quot;Latitude&quot;, color = &quot;Elev. [m]&quot;,
