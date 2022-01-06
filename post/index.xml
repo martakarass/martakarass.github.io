@@ -252,7 +252,6 @@ contributions are:&lt;/p&gt;
 &lt;li&gt;identifying (TTBOMK) an error in their shared code for computing
 of subsequent locations distance, and using an alternative way,&lt;/li&gt;
 &lt;li&gt;parsing GPX timestamp with &lt;code&gt;lubridate&lt;/code&gt; function,&lt;/li&gt;
-&lt;li&gt;ggplots, including Google maps-based ggplot of the run path,&lt;/li&gt;
 &lt;li&gt;providing my run data as open source GPS data set.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
