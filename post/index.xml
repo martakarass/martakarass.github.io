@@ -166,7 +166,8 @@ head(dat_df) %&amp;gt;% as.data.frame()
 &lt;/summary&gt;
 &lt;pre&gt;&lt;code&gt;plt_elev &amp;lt;- 
   ggplot(dat_df, aes(x = ts_POSIXct, y = elev)) + 
-  geom_line() + labs(x = &amp;quot;Time&amp;quot;, y = &amp;quot;Elevation [m]&amp;quot;) + 
+  geom_line() + 
+  labs(x = &amp;quot;Time&amp;quot;, y = &amp;quot;Elevation [m]&amp;quot;) + 
   theme_grey(base_size = 14)
 plt_elev
 &lt;/code&gt;&lt;/pre&gt;
@@ -179,24 +180,24 @@ plt_elev
 &lt;/summary&gt;
 &lt;pre&gt;&lt;code&gt;plt_speed_km_per_h &amp;lt;- 
   ggplot(dat_df, aes(x = ts_POSIXct, y = speed_km_per_h)) + 
-  geom_line() + labs(x = &amp;quot;Time&amp;quot;, y = &amp;quot;Speed [km/h]&amp;quot;) + 
+  geom_line() + 
+  labs(x = &amp;quot;Time&amp;quot;, y = &amp;quot;Speed [km/h]&amp;quot;) + 
   theme_grey(base_size = 14)
 plt_speed_km_per_h
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;img src=&#34;plt_speed_km_per_h.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The above plot is very wiggly due to small time increment over which the
-speed statistic was computed. It could be made more smooth by computing
-speed using e.g. 10 seconds intervals or using data smother such LOWESS.&lt;/p&gt;
+speed statistic was computed. It could be made smoother by aggregating distance and time elapsed to compute temporal speed (e.g. in 10 seconds intervals), or by using data smoothing (e.g. LOWESS).&lt;/p&gt;
 &lt;h2 id=&#34;plot-run-path&#34;&gt;Plot run path&lt;/h2&gt;
 &lt;p&gt;The simple, &lt;code&gt;graphics&lt;/code&gt;-based version of the trajectory plot:&lt;/p&gt;
 &lt;details&gt;
 &lt;summary&gt;
 (Click to see the code.)
 &lt;/summary&gt;
-&lt;pre&gt;&lt;code&gt;plot(rev(dat_df$lon), rev(dat_df$lat), 
-     type = &amp;quot;l&amp;quot;, col = &amp;quot;blue&amp;quot;, lwd = 3, bty = &amp;quot;n&amp;quot;, 
-     ylab = &amp;quot;Latitude&amp;quot;, xlab = &amp;quot;Longitude&amp;quot;)
+&lt;pre&gt;&lt;code&gt;plot(x = dat_df$lon, y = dat_df$lat, 
+     type = &amp;quot;l&amp;quot;, col = &amp;quot;blue&amp;quot;, lwd = 3, 
+     xlab = &amp;quot;Longitude&amp;quot;, ylab = &amp;quot;Latitude&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;img src=&#34;plt_path_simple.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
@@ -233,8 +234,10 @@ plt_path_fancy &amp;lt;-
              size = 0.3) +
   geom_label(data = dat_df_dist_marks, aes(lon, lat, label = dist_m_cumsum_km_floor),
              size = 3) +
-  labs(x = &amp;quot;Longitude&amp;quot;, y = &amp;quot;Latitude&amp;quot;, color = &amp;quot;Elev. [m]&amp;quot;,
-       title=&amp;quot;Track of one Marta&#39;s run on 2022-01-01&amp;quot;)
+  labs(x = &amp;quot;Longitude&amp;quot;, 
+       y = &amp;quot;Latitude&amp;quot;, 
+       color = &amp;quot;Elev. [m]&amp;quot;,
+       title = &amp;quot;Track of one Marta&#39;s run on 2022-01-01&amp;quot;)
 plt_path_fancy
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/details&gt;

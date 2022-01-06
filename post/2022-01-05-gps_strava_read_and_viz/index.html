@@ -1060,7 +1060,8 @@ head(dat_df) %&gt;% as.data.frame()
 </summary>
 <pre><code>plt_elev &lt;- 
   ggplot(dat_df, aes(x = ts_POSIXct, y = elev)) + 
-  geom_line() + labs(x = &quot;Time&quot;, y = &quot;Elevation [m]&quot;) + 
+  geom_line() + 
+  labs(x = &quot;Time&quot;, y = &quot;Elevation [m]&quot;) + 
   theme_grey(base_size = 14)
 plt_elev
 </code></pre>
@@ -1073,24 +1074,24 @@ plt_elev
 </summary>
 <pre><code>plt_speed_km_per_h &lt;- 
   ggplot(dat_df, aes(x = ts_POSIXct, y = speed_km_per_h)) + 
-  geom_line() + labs(x = &quot;Time&quot;, y = &quot;Speed [km/h]&quot;) + 
+  geom_line() + 
+  labs(x = &quot;Time&quot;, y = &quot;Speed [km/h]&quot;) + 
   theme_grey(base_size = 14)
 plt_speed_km_per_h
 </code></pre>
 </details>
 <p><img src="plt_speed_km_per_h.png" alt=""></p>
 <p>The above plot is very wiggly due to small time increment over which the
-speed statistic was computed. It could be made more smooth by computing
-speed using e.g. 10 seconds intervals or using data smother such LOWESS.</p>
+speed statistic was computed. It could be made smoother by aggregating distance and time elapsed to compute temporal speed (e.g. in 10 seconds intervals), or by using data smoothing (e.g. LOWESS).</p>
 <h2 id="plot-run-path">Plot run path</h2>
 <p>The simple, <code>graphics</code>-based version of the trajectory plot:</p>
 <details>
 <summary>
 (Click to see the code.)
 </summary>
-<pre><code>plot(rev(dat_df$lon), rev(dat_df$lat), 
-     type = &quot;l&quot;, col = &quot;blue&quot;, lwd = 3, bty = &quot;n&quot;, 
-     ylab = &quot;Latitude&quot;, xlab = &quot;Longitude&quot;)
+<pre><code>plot(x = dat_df$lon, y = dat_df$lat, 
+     type = &quot;l&quot;, col = &quot;blue&quot;, lwd = 3, 
+     xlab = &quot;Longitude&quot;, ylab = &quot;Latitude&quot;)
 </code></pre>
 </details>
 <p><img src="plt_path_simple.png" alt=""></p>
@@ -1127,8 +1128,10 @@ plt_path_fancy &lt;-
              size = 0.3) +
   geom_label(data = dat_df_dist_marks, aes(lon, lat, label = dist_m_cumsum_km_floor),
              size = 3) +
-  labs(x = &quot;Longitude&quot;, y = &quot;Latitude&quot;, color = &quot;Elev. [m]&quot;,
-       title=&quot;Track of one Marta's run on 2022-01-01&quot;)
+  labs(x = &quot;Longitude&quot;, 
+       y = &quot;Latitude&quot;, 
+       color = &quot;Elev. [m]&quot;,
+       title = &quot;Track of one Marta's run on 2022-01-01&quot;)
 plt_path_fancy
 </code></pre>
 </details>
