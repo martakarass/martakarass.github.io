@@ -237,7 +237,7 @@ speed using e.g. 10 seconds intervals or using data smother such LOWESS.&lt;/p&g
 (Click to see the code.)
 &lt;/summary&gt;
 &lt;pre&gt;&lt;code&gt;plot(rev(dat_df$lon), rev(dat_df$lat), 
-     type = &amp;quot;l&amp;quot;, col = &amp;quot;red&amp;quot;, lwd = 3, bty = &amp;quot;n&amp;quot;, 
+     type = &amp;quot;l&amp;quot;, col = &amp;quot;blue&amp;quot;, lwd = 3, bty = &amp;quot;n&amp;quot;, 
      ylab = &amp;quot;Latitude&amp;quot;, xlab = &amp;quot;Longitude&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/details&gt;
