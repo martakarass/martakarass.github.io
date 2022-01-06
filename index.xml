@@ -266,7 +266,7 @@ dat_df_dist_marks &amp;lt;-
   group_by(dist_m_cumsum_km_floor) %&amp;gt;%
   filter(row_number() == 1, dist_m_cumsum_km_floor &amp;gt; 0) 
 
-# generate 
+# generate plot
 plt_path_fancy &amp;lt;- 
   ggmap(dat_df_map) + 
   geom_point(data = dat_df, aes(lon, lat, col = elev),
