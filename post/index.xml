@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>GPS data: parse and plot GPX data exported from Strava</title>
+      <title>GPS data in R: parse and plot GPX data exported from Strava</title>
       <link>/post/2022-01-05-gps_strava_read_and_viz/</link>
       <pubDate>Wed, 05 Jan 2022 17:19:28 -0400</pubDate>
       <guid>/post/2022-01-05-gps_strava_read_and_viz/</guid>
