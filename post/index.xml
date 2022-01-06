@@ -26,6 +26,7 @@ Strava from one running activity,&lt;/li&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#gpx-data-from-strava&#34;&gt;GPX data from Strava&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#parsing-gpx&#34;&gt;Parsing GPX&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#computing-distance-time-elapsed-and-speed&#34;&gt;Computing distance, time elapsed and speed&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#plot-elevation-speed&#34;&gt;Plot elevation, speed&lt;/a&gt;&lt;/li&gt;
@@ -33,6 +34,7 @@ Strava from one running activity,&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#acknowledgements&#34;&gt;Acknowledgements&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
+&lt;h2 id=&#34;gpx-data-from-strava&#34;&gt;GPX data from Strava&lt;/h2&gt;
 &lt;p&gt;GPX stands for “GPS Exchange Format”. It is an XML schema commonly used
 for storing GPS data.&lt;/p&gt;
 &lt;p&gt;Strava (Strava, Inc; San Francisco, CA) is a popular activity tracker
