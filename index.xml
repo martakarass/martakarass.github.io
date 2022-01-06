@@ -230,7 +230,7 @@ plt_speed_km_per_h
 &lt;/details&gt;
 &lt;p&gt;&lt;img src=&#34;plt_speed_km_per_h.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The above plot is very wiggly due to small time increment over which the
-speed statistic was computed. It could be made smoother by aggregating distance and time elapsed to compute temporal speed (e.g. in 10 seconds intervals), or by using data smoothing (e.g. LOWESS).&lt;/p&gt;
+speed statistic was computed. It could be made smoother by first aggregating distance covered and time elapsed over a larger time interval (e.g. 10 seconds), or by using data smoothing (e.g. LOWESS).&lt;/p&gt;
 &lt;h2 id=&#34;plot-run-path&#34;&gt;Plot run path&lt;/h2&gt;
 &lt;p&gt;The simple, &lt;code&gt;graphics&lt;/code&gt;-based version of the trajectory plot:&lt;/p&gt;
 &lt;details&gt;
@@ -254,7 +254,6 @@ could also &lt;a href=&#34;https://cran.r-project.org/web/packages/ggmap/readme/
 &lt;/summary&gt;
 &lt;pre&gt;&lt;code&gt;# get the map background 
 bbox &amp;lt;- make_bbox(range(dat_df$lon), range(dat_df$lat))
-dat_df_map &amp;lt;- get_map(bbox, maptype = &amp;quot;roadmap&amp;quot;, source = &amp;quot;google&amp;quot;)
 dat_df_map &amp;lt;- get_googlemap(center = c(mean(range(dat_df$lon)), mean(range(dat_df$lat))), zoom = 15)
 # no Google token alternative: 
 # dat_df_map &amp;lt;- get_map(bbox, maptype = &amp;quot;toner-lite&amp;quot;, source = &amp;quot;stamen&amp;quot;)
