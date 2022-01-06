@@ -244,8 +244,8 @@ their content on &lt;a href=&#34;https://rpubs.com/ials2un/gpx1&#34; target=&#34
 R&lt;/a&gt; by Sascha Wolfer. My main
 contributions are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;identifying (TTBOMK) an error in their (shared) code for computing
-of subsequent locations distance, and using alternative way,&lt;/li&gt;
+&lt;li&gt;identifying (TTBOMK) an error in their shared code for computing
+of subsequent locations distance, and using an alternative way,&lt;/li&gt;
 &lt;li&gt;parsing GPX timestamp with &lt;code&gt;lubridate&lt;/code&gt; function,&lt;/li&gt;
 &lt;li&gt;ggplots, including Google maps-based ggplot of the run path,&lt;/li&gt;
 &lt;li&gt;providing my run data as open source GPS data set.&lt;/li&gt;
