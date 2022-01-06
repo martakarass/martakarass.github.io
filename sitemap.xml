@@ -11,10 +11,16 @@
     <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>/talk/2021-11-05-adds/</loc>
-    <lastmod>2021-11-05T10:05:00+00:00</lastmod>
+    <loc>/post/2022-01-05-gps_strava_read_and_viz/</loc>
+    <lastmod>2022-01-05T17:19:28-04:00</lastmod>
   </url><url>
     <loc>/</loc>
+    <lastmod>2022-01-05T17:19:28-04:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2022-01-05T17:19:28-04:00</lastmod>
+  </url><url>
+    <loc>/talk/2021-11-05-adds/</loc>
     <lastmod>2021-11-05T10:05:00+00:00</lastmod>
   </url><url>
     <loc>/talk/</loc>
@@ -69,9 +75,6 @@
     <lastmod>2021-07-28T09:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/2021-06-29-pa_measures_and_summarizedactigraphy/</loc>
-    <lastmod>2021-07-10T17:19:28-04:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
     <lastmod>2021-07-10T17:19:28-04:00</lastmod>
   </url><url>
     <loc>/publication-type/2/</loc>

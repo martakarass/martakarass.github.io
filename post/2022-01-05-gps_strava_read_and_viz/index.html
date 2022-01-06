@@ -1,0 +1,1581 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.0 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Marta Karas">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="In this post, we:
+
+use a GPX file with with geographic information, exported from
+Strava from one running activity,
+parse and plot the data.
+">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/2022-01-05-gps_strava_read_and_viz/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111897145-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-111897145-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/2022-01-05-gps_strava_read_and_viz/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Home">
+  <meta property="og:url" content="/post/2022-01-05-gps_strava_read_and_viz/">
+  <meta property="og:title" content="GPS data: parse and plot GPX data exported from Strava | Home">
+  <meta property="og:description" content="In this post, we:
+
+use a GPX file with with geographic information, exported from
+Strava from one running activity,
+parse and plot the data.
+"><meta property="og:image" content="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2022-01-05T17:19:28-04:00">
+    
+    <meta property="article:modified_time" content="2022-01-05T17:19:28-04:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/2022-01-05-gps_strava_read_and_viz/"
+  },
+  "headline": "GPS data: parse and plot GPX data exported from Strava",
+  
+  "datePublished": "2022-01-05T17:19:28-04:00",
+  "dateModified": "2022-01-05T17:19:28-04:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Marta Karas"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Home",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "\u003cp\u003eIn this post, we:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003euse a GPX file with with geographic information, exported from\nStrava from one running activity,\u003c/li\u003e\n\u003cli\u003eparse and plot the data.\u003c/li\u003e\n\u003c/ul\u003e"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>GPS data: parse and plot GPX data exported from Strava | Home</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+    <script>window.wcDarkLightEnabled = true;</script>
+  
+  
+    <script>const isSiteThemeDark = false;</script>
+  
+  
+  <script src="/js/load-theme.js"></script>
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#resources"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/docs/mkaras_cv.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>GPS data: parse and plot GPX data exported from Strava</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 5, 2022
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>In this post, we:</p>
+<ul>
+<li>use a GPX file with with geographic information, exported from
+Strava from one running activity,</li>
+<li>parse and plot the data.</li>
+</ul>
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#parsing-gpx">Parsing GPX</a></li>
+    <li><a href="#computing-distance-time-elapsed-and-speed">Computing distance, time elapsed and speed</a></li>
+    <li><a href="#plot-elevation-speed">Plot elevation, speed</a></li>
+    <li><a href="#plot-run-path">Plot run path</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ul>
+</nav>
+<p>GPX stands for “GPS Exchange Format”. It is an XML schema commonly used
+for storing GPS data.</p>
+<p>Strava (Strava, Inc; San Francisco, CA) is a popular activity tracker
+app I have been using for a few weeks. Strava allows to export GPS data
+collected during a recorded activity in a GPX format. To export the
+data, go to Strava activity page &gt; “three dots” button &gt; Export
+GPX.</p>
+<p>I downloaded GPX data from a run I did on Jan 1, 2022. The run distance
+is 10.88 km and spans 1:03:49 time. The data is available on my GitHub
+and can be downloaded using the code below.</p>
+<details>
+<summary>
+(Click to see the code to download the data.)
+</summary>
+<pre><code>url &lt;- paste0(
+  &quot;https://raw.githubusercontent.com/martakarass/gps-stats/main/data/&quot;,
+  &quot;/Morning_Run_2022-01-01.gpx&quot;)
+fpath &lt;- paste0(
+  &quot;/Users/martakaras/Downloads&quot;,
+  &quot;/Morning_Run_2022-01-01.gpx&quot;)
+# download 
+result &lt;- curl::curl_download(url, destfile = fpath, quiet = FALSE)
+</code></pre>
+</details>
+</br>
+<h2 id="parsing-gpx">Parsing GPX</h2>
+<p>First, we parse the GPX file and put the extracted data trajectories
+into a data frame:</p>
+<ul>
+<li>timestamp,</li>
+<li>latitude,</li>
+<li>longitude,</li>
+<li>elevation.</li>
+</ul>
+<details>
+<summary>
+(Click to see the code.)
+</summary>
+<pre><code># rm(list = ls())
+library(tidyverse)
+library(here)
+library(XML)
+library(lubridate)
+library(ggmap)
+library(geosphere)
+options(digits.secs = 3)
+options(scipen = 999)
+
+# parse GPX file
+path_tmp &lt;- paste0(&quot;/Users/martakaras/Downloads/Morning_Run_2022-01-01.gpx&quot;)
+parsed &lt;- htmlTreeParse(file = path_tmp, useInternalNodes = T)
+
+# get values via via the respective xpath
+coords &lt;- xpathSApply(parsed, path = &quot;//trkpt&quot;, xmlAttrs)
+elev   &lt;- xpathSApply(parsed, path = &quot;//trkpt/ele&quot;, xmlValue)
+ts_chr &lt;- xpathSApply(parsed, path = &quot;//trkpt/time&quot;, xmlValue)
+
+# combine into df 
+dat_df &lt;- data.frame(
+  ts_POSIXct = ymd_hms(ts_chr, tz = &quot;EST&quot;),
+  lat = as.numeric(coords[&quot;lat&quot;,]), 
+  lon = as.numeric(coords[&quot;lon&quot;,]), 
+  elev = as.numeric(elev)
+)
+head(dat_df)
+</code></pre>
+</details>
+<pre><code>           ts_POSIXct      lat       lon elev
+1 2022-01-01 09:42:01 42.32791 -71.10868 23.0
+2 2022-01-01 09:42:06 42.32791 -71.10868 23.0
+3 2022-01-01 09:42:08 42.32795 -71.10866 23.2
+4 2022-01-01 09:42:10 42.32817 -71.10872 24.7
+5 2022-01-01 09:42:11 42.32816 -71.10875 24.7
+6 2022-01-01 09:42:12 42.32814 -71.10875 23.8
+</code></pre>
+<h2 id="computing-distance-time-elapsed-and-speed">Computing distance, time elapsed and speed</h2>
+<p>Next, we compute:</p>
+<ul>
+<li>distance (in meters) between subsequent GPS recordings</li>
+<li>time elapsed (in seconds) between subsequent GPS recordings,</li>
+<li>speed (metres per seconds, kilometres per hour) – temporal, based on
+subsequent GPS recordings.</li>
+</ul>
+<details>
+<summary>
+(Click to see the code.)
+</summary>
+<pre><code># compute distance (in meters) between subsequent GPS points
+dat_df &lt;- 
+  dat_df %&gt;%
+  mutate(lat_lead = lead(lat)) %&gt;%
+  mutate(lon_lead = lead(lon)) %&gt;%
+  rowwise() %&gt;%
+  mutate(dist_to_lead_m = distm(c(lon, lat), c(lon_lead, lat_lead), fun = distHaversine)[1,1]) %&gt;%
+  ungroup()
+
+# compute time elapsed (in seconds) between subsequent GPS points
+dat_df &lt;- 
+  dat_df %&gt;%
+  mutate(ts_POSIXct_lead = lead(ts_POSIXct)) %&gt;%
+  mutate(ts_diff_s = as.numeric(difftime(ts_POSIXct_lead, ts_POSIXct, units = &quot;secs&quot;))) 
+
+# compute metres per seconds, kilometres per hour 
+dat_df &lt;- 
+  dat_df %&gt;%
+  mutate(speed_m_per_sec = dist_to_lead_m / ts_diff_s) %&gt;%
+  mutate(speed_km_per_h = speed_m_per_sec * 3.6)
+
+# remove some columns we won't use anymore 
+dat_df &lt;- 
+  dat_df %&gt;% 
+  select(-c(lat_lead, lon_lead, ts_POSIXct_lead, ts_diff_s))
+head(dat_df) %&gt;% as.data.frame()
+</code></pre>
+</details>
+<pre><code>           ts_POSIXct      lat       lon elev dist_to_lead_m ts_diff_s speed_m_per_sec speed_km_per_h
+1 2022-01-01 09:42:01 42.32791 -71.10868 23.0       0.000000         5        0.000000       0.000000
+2 2022-01-01 09:42:06 42.32791 -71.10868 23.0       4.406590         2        2.203295       7.931862
+3 2022-01-01 09:42:08 42.32795 -71.10866 23.2      25.403927         2       12.701963      45.727068
+4 2022-01-01 09:42:10 42.32817 -71.10872 24.7       2.510645         1        2.510645       9.038324
+5 2022-01-01 09:42:11 42.32816 -71.10875 24.7       2.264098         1        2.264098       8.150751
+6 2022-01-01 09:42:12 42.32814 -71.10875 23.8       1.899407         1        1.899407       6.837864
+</code></pre>
+<h2 id="plot-elevation-speed">Plot elevation, speed</h2>
+<p>Plot elevation</p>
+<details>
+<summary>
+(Click to see the code.)
+</summary>
+<pre><code>plt_elev &lt;- 
+  ggplot(dat_df, aes(x = ts_POSIXct, y = elev)) + 
+  geom_line() + labs(x = &quot;Time&quot;, y = &quot;Elevation [m]&quot;) + 
+  theme_grey(base_size = 14)
+plt_elev
+</code></pre>
+</details>
+<p><img src="plt_elev.png" alt=""></p>
+<p>Plot speed</p>
+<details>
+<summary>
+(Click to see the code.)
+</summary>
+<pre><code>plt_speed_km_per_h &lt;- 
+  ggplot(dat_df, aes(x = ts_POSIXct, y = speed_km_per_h)) + 
+  geom_line() + labs(x = &quot;Time&quot;, y = &quot;Speed [km/h]&quot;) + 
+  theme_grey(base_size = 14)
+plt_speed_km_per_h
+</code></pre>
+</details>
+<p><img src="plt_speed_km_per_h.png" alt=""></p>
+<p>The above plot is very wiggly due to small time increment over which the
+speed statistic was computed. It could be made more smooth by computing
+speed using e.g. 10 seconds intervals or using data smother such LOWESS.</p>
+<h2 id="plot-run-path">Plot run path</h2>
+<p>The simple, <code>graphics</code>-based version of the trajectory plot:</p>
+<details>
+<summary>
+(Click to see the code.)
+</summary>
+<pre><code>plot(rev(dat_df$lon), rev(dat_df$lat), 
+     type = &quot;l&quot;, col = &quot;red&quot;, lwd = 3, bty = &quot;n&quot;, 
+     ylab = &quot;Latitude&quot;, xlab = &quot;Longitude&quot;)
+</code></pre>
+</details>
+<p><img src="plt_path_simple.png" alt=""></p>
+<p>More fancy plot can be generated with <code>ggmap</code> package. I used labels to
+mark each kilometer passed. My Google API key is registered hence I
+could also <a href="https://cran.r-project.org/web/packages/ggmap/readme/README.html" target="_blank" rel="noopener">access the Google map for use with
+<code>ggmap</code></a>
+(code for API key registration not showed.)</p>
+<details>
+<summary>
+(Click to see the code.)
+</summary>
+<pre><code># get the map background 
+bbox &lt;- make_bbox(range(dat_df$lon), range(dat_df$lat))
+dat_df_map &lt;- get_map(bbox, maptype = &quot;roadmap&quot;, source = &quot;google&quot;)
+dat_df_map &lt;- get_googlemap(center = c(mean(range(dat_df$lon)), mean(range(dat_df$lat))), zoom = 15)
+# no Google token alternative: 
+# dat_df_map &lt;- get_map(bbox, maptype = &quot;toner-lite&quot;, source = &quot;stamen&quot;)
+
+# data frame to add distance marks
+dat_df_dist_marks &lt;- 
+  dat_df %&gt;% 
+  mutate(dist_m_cumsum = cumsum(dist_to_lead_m)) %&gt;%
+  mutate(dist_m_cumsum_km_floor = floor(dist_m_cumsum / 1000)) %&gt;%
+  group_by(dist_m_cumsum_km_floor) %&gt;%
+  filter(row_number() == 1, dist_m_cumsum_km_floor &gt; 0) 
+
+# generate 
+plt_path_fancy &lt;- 
+  ggmap(dat_df_map) + 
+  geom_point(data = dat_df, aes(lon, lat, col = elev),
+             size = 1, alpha = 0.7) +
+  geom_label(data = dat_df_dist_marks, aes(lon, lat, label = dist_m_cumsum_km_floor),
+             size = 3) +
+  labs(x = &quot;Longitude&quot;, y = &quot;Latitude&quot;, color = &quot;Elev. [m]&quot;,
+       title=&quot;Track of one Marta's run on 2022-01-01&quot;)
+plt_path_fancy
+</code></pre>
+</details>
+<p><img src="plt_path_fancy.png" alt=""></p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>The above content is inspired by AND borrows some code from <a href="https://rpubs.com/ials2un/gpx1" target="_blank" rel="noopener">Plotting GPS tracks with
+R</a> by Ivan Lizarazo, who in turn based
+their content on <a href="https://rpubs.com/ials2un/gpx1" target="_blank" rel="noopener">Stay on track: Plotting GPS tracks with
+R</a> by Sascha Wolfer. My main
+contributions are:</p>
+<ul>
+<li>identifying (TTBOMK) an error in their (shared) code for computing
+of subsequent locations distance, and using alternative way,</li>
+<li>parsing GPX timestamp with <code>lubridate</code> function,</li>
+<li>ggplots, including Google maps-based ggplot of the run path,</li>
+<li>providing my run data as open source GPS data set.</li>
+</ul>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/2022-01-05-gps_strava_read_and_viz/&amp;text=GPS%20data:%20parse%20and%20plot%20GPX%20data%20exported%20from%20Strava" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/2022-01-05-gps_strava_read_and_viz/&amp;t=GPS%20data:%20parse%20and%20plot%20GPX%20data%20exported%20from%20Strava" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=GPS%20data:%20parse%20and%20plot%20GPX%20data%20exported%20from%20Strava&amp;body=/post/2022-01-05-gps_strava_read_and_viz/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/2022-01-05-gps_strava_read_and_viz/&amp;title=GPS%20data:%20parse%20and%20plot%20GPX%20data%20exported%20from%20Strava" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=GPS%20data:%20parse%20and%20plot%20GPX%20data%20exported%20from%20Strava%20/post/2022-01-05-gps_strava_read_and_viz/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/2022-01-05-gps_strava_read_and_viz/&amp;title=GPS%20data:%20parse%20and%20plot%20GPX%20data%20exported%20from%20Strava" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="/"><img class="avatar mr-3 avatar-circle" src="/author/marta-karas/avatar_hud72ccb91bce59b1d73702ea67c67cfd3_241597_270x270_fill_q90_lanczos_center.jpeg" alt="Marta Karas"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Marta Karas</a></h5>
+      <h6 class="card-subtitle">PhD candidate in Biostatistics</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/martakarass" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=S27sttcAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/martakarass" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/martakaras/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/wowchemy.min.a30e17c6197f21f7f966f9a6cd022a55.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

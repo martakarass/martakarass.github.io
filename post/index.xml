@@ -5,12 +5,250 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 10 Jul 2021 17:19:28 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 05 Jan 2022 17:19:28 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>GPS data: parse and plot GPX data exported from Strava</title>
+      <link>/post/2022-01-05-gps_strava_read_and_viz/</link>
+      <pubDate>Wed, 05 Jan 2022 17:19:28 -0400</pubDate>
+      <guid>/post/2022-01-05-gps_strava_read_and_viz/</guid>
+      <description>&lt;p&gt;In this post, we:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;use a GPX file with with geographic information, exported from
+Strava from one running activity,&lt;/li&gt;
+&lt;li&gt;parse and plot the data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#parsing-gpx&#34;&gt;Parsing GPX&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#computing-distance-time-elapsed-and-speed&#34;&gt;Computing distance, time elapsed and speed&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#plot-elevation-speed&#34;&gt;Plot elevation, speed&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#plot-run-path&#34;&gt;Plot run path&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#acknowledgements&#34;&gt;Acknowledgements&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;p&gt;GPX stands for “GPS Exchange Format”. It is an XML schema commonly used
+for storing GPS data.&lt;/p&gt;
+&lt;p&gt;Strava (Strava, Inc; San Francisco, CA) is a popular activity tracker
+app I have been using for a few weeks. Strava allows to export GPS data
+collected during a recorded activity in a GPX format. To export the
+data, go to Strava activity page &amp;gt; “three dots” button &amp;gt; Export
+GPX.&lt;/p&gt;
+&lt;p&gt;I downloaded GPX data from a run I did on Jan 1, 2022. The run distance
+is 10.88 km and spans 1:03:49 time. The data is available on my GitHub
+and can be downloaded using the code below.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code to download the data.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;url &amp;lt;- paste0(
+  &amp;quot;https://raw.githubusercontent.com/martakarass/gps-stats/main/data/&amp;quot;,
+  &amp;quot;/Morning_Run_2022-01-01.gpx&amp;quot;)
+fpath &amp;lt;- paste0(
+  &amp;quot;/Users/martakaras/Downloads&amp;quot;,
+  &amp;quot;/Morning_Run_2022-01-01.gpx&amp;quot;)
+# download 
+result &amp;lt;- curl::curl_download(url, destfile = fpath, quiet = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/br&gt;
+&lt;h2 id=&#34;parsing-gpx&#34;&gt;Parsing GPX&lt;/h2&gt;
+&lt;p&gt;First, we parse the GPX file and put the extracted data trajectories
+into a data frame:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;timestamp,&lt;/li&gt;
+&lt;li&gt;latitude,&lt;/li&gt;
+&lt;li&gt;longitude,&lt;/li&gt;
+&lt;li&gt;elevation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;# rm(list = ls())
+library(tidyverse)
+library(here)
+library(XML)
+library(lubridate)
+library(ggmap)
+library(geosphere)
+options(digits.secs = 3)
+options(scipen = 999)
+
+# parse GPX file
+path_tmp &amp;lt;- paste0(&amp;quot;/Users/martakaras/Downloads/Morning_Run_2022-01-01.gpx&amp;quot;)
+parsed &amp;lt;- htmlTreeParse(file = path_tmp, useInternalNodes = T)
+
+# get values via via the respective xpath
+coords &amp;lt;- xpathSApply(parsed, path = &amp;quot;//trkpt&amp;quot;, xmlAttrs)
+elev   &amp;lt;- xpathSApply(parsed, path = &amp;quot;//trkpt/ele&amp;quot;, xmlValue)
+ts_chr &amp;lt;- xpathSApply(parsed, path = &amp;quot;//trkpt/time&amp;quot;, xmlValue)
+
+# combine into df 
+dat_df &amp;lt;- data.frame(
+  ts_POSIXct = ymd_hms(ts_chr, tz = &amp;quot;EST&amp;quot;),
+  lat = as.numeric(coords[&amp;quot;lat&amp;quot;,]), 
+  lon = as.numeric(coords[&amp;quot;lon&amp;quot;,]), 
+  elev = as.numeric(elev)
+)
+head(dat_df)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code&gt;           ts_POSIXct      lat       lon elev
+1 2022-01-01 09:42:01 42.32791 -71.10868 23.0
+2 2022-01-01 09:42:06 42.32791 -71.10868 23.0
+3 2022-01-01 09:42:08 42.32795 -71.10866 23.2
+4 2022-01-01 09:42:10 42.32817 -71.10872 24.7
+5 2022-01-01 09:42:11 42.32816 -71.10875 24.7
+6 2022-01-01 09:42:12 42.32814 -71.10875 23.8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;computing-distance-time-elapsed-and-speed&#34;&gt;Computing distance, time elapsed and speed&lt;/h2&gt;
+&lt;p&gt;Next, we compute:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;distance (in meters) between subsequent GPS recordings&lt;/li&gt;
+&lt;li&gt;time elapsed (in seconds) between subsequent GPS recordings,&lt;/li&gt;
+&lt;li&gt;speed (metres per seconds, kilometres per hour) – temporal, based on
+subsequent GPS recordings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;# compute distance (in meters) between subsequent GPS points
+dat_df &amp;lt;- 
+  dat_df %&amp;gt;%
+  mutate(lat_lead = lead(lat)) %&amp;gt;%
+  mutate(lon_lead = lead(lon)) %&amp;gt;%
+  rowwise() %&amp;gt;%
+  mutate(dist_to_lead_m = distm(c(lon, lat), c(lon_lead, lat_lead), fun = distHaversine)[1,1]) %&amp;gt;%
+  ungroup()
+
+# compute time elapsed (in seconds) between subsequent GPS points
+dat_df &amp;lt;- 
+  dat_df %&amp;gt;%
+  mutate(ts_POSIXct_lead = lead(ts_POSIXct)) %&amp;gt;%
+  mutate(ts_diff_s = as.numeric(difftime(ts_POSIXct_lead, ts_POSIXct, units = &amp;quot;secs&amp;quot;))) 
+
+# compute metres per seconds, kilometres per hour 
+dat_df &amp;lt;- 
+  dat_df %&amp;gt;%
+  mutate(speed_m_per_sec = dist_to_lead_m / ts_diff_s) %&amp;gt;%
+  mutate(speed_km_per_h = speed_m_per_sec * 3.6)
+
+# remove some columns we won&#39;t use anymore 
+dat_df &amp;lt;- 
+  dat_df %&amp;gt;% 
+  select(-c(lat_lead, lon_lead, ts_POSIXct_lead, ts_diff_s))
+head(dat_df) %&amp;gt;% as.data.frame()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code&gt;           ts_POSIXct      lat       lon elev dist_to_lead_m ts_diff_s speed_m_per_sec speed_km_per_h
+1 2022-01-01 09:42:01 42.32791 -71.10868 23.0       0.000000         5        0.000000       0.000000
+2 2022-01-01 09:42:06 42.32791 -71.10868 23.0       4.406590         2        2.203295       7.931862
+3 2022-01-01 09:42:08 42.32795 -71.10866 23.2      25.403927         2       12.701963      45.727068
+4 2022-01-01 09:42:10 42.32817 -71.10872 24.7       2.510645         1        2.510645       9.038324
+5 2022-01-01 09:42:11 42.32816 -71.10875 24.7       2.264098         1        2.264098       8.150751
+6 2022-01-01 09:42:12 42.32814 -71.10875 23.8       1.899407         1        1.899407       6.837864
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;plot-elevation-speed&#34;&gt;Plot elevation, speed&lt;/h2&gt;
+&lt;p&gt;Plot elevation&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;plt_elev &amp;lt;- 
+  ggplot(dat_df, aes(x = ts_POSIXct, y = elev)) + 
+  geom_line() + labs(x = &amp;quot;Time&amp;quot;, y = &amp;quot;Elevation [m]&amp;quot;) + 
+  theme_grey(base_size = 14)
+plt_elev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;img src=&#34;plt_elev.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Plot speed&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;plt_speed_km_per_h &amp;lt;- 
+  ggplot(dat_df, aes(x = ts_POSIXct, y = speed_km_per_h)) + 
+  geom_line() + labs(x = &amp;quot;Time&amp;quot;, y = &amp;quot;Speed [km/h]&amp;quot;) + 
+  theme_grey(base_size = 14)
+plt_speed_km_per_h
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;img src=&#34;plt_speed_km_per_h.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The above plot is very wiggly due to small time increment over which the
+speed statistic was computed. It could be made more smooth by computing
+speed using e.g. 10 seconds intervals or using data smother such LOWESS.&lt;/p&gt;
+&lt;h2 id=&#34;plot-run-path&#34;&gt;Plot run path&lt;/h2&gt;
+&lt;p&gt;The simple, &lt;code&gt;graphics&lt;/code&gt;-based version of the trajectory plot:&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;plot(rev(dat_df$lon), rev(dat_df$lat), 
+     type = &amp;quot;l&amp;quot;, col = &amp;quot;red&amp;quot;, lwd = 3, bty = &amp;quot;n&amp;quot;, 
+     ylab = &amp;quot;Latitude&amp;quot;, xlab = &amp;quot;Longitude&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;img src=&#34;plt_path_simple.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;More fancy plot can be generated with &lt;code&gt;ggmap&lt;/code&gt; package. I used labels to
+mark each kilometer passed. My Google API key is registered hence I
+could also &lt;a href=&#34;https://cran.r-project.org/web/packages/ggmap/readme/README.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;access the Google map for use with
+&lt;code&gt;ggmap&lt;/code&gt;&lt;/a&gt;
+(code for API key registration not showed.)&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see the code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;# get the map background 
+bbox &amp;lt;- make_bbox(range(dat_df$lon), range(dat_df$lat))
+dat_df_map &amp;lt;- get_map(bbox, maptype = &amp;quot;roadmap&amp;quot;, source = &amp;quot;google&amp;quot;)
+dat_df_map &amp;lt;- get_googlemap(center = c(mean(range(dat_df$lon)), mean(range(dat_df$lat))), zoom = 15)
+# no Google token alternative: 
+# dat_df_map &amp;lt;- get_map(bbox, maptype = &amp;quot;toner-lite&amp;quot;, source = &amp;quot;stamen&amp;quot;)
+
+# data frame to add distance marks
+dat_df_dist_marks &amp;lt;- 
+  dat_df %&amp;gt;% 
+  mutate(dist_m_cumsum = cumsum(dist_to_lead_m)) %&amp;gt;%
+  mutate(dist_m_cumsum_km_floor = floor(dist_m_cumsum / 1000)) %&amp;gt;%
+  group_by(dist_m_cumsum_km_floor) %&amp;gt;%
+  filter(row_number() == 1, dist_m_cumsum_km_floor &amp;gt; 0) 
+
+# generate 
+plt_path_fancy &amp;lt;- 
+  ggmap(dat_df_map) + 
+  geom_point(data = dat_df, aes(lon, lat, col = elev),
+             size = 1, alpha = 0.7) +
+  geom_label(data = dat_df_dist_marks, aes(lon, lat, label = dist_m_cumsum_km_floor),
+             size = 3) +
+  labs(x = &amp;quot;Longitude&amp;quot;, y = &amp;quot;Latitude&amp;quot;, color = &amp;quot;Elev. [m]&amp;quot;,
+       title=&amp;quot;Track of one Marta&#39;s run on 2022-01-01&amp;quot;)
+plt_path_fancy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;img src=&#34;plt_path_fancy.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;The above content is inspired by AND borrows some code from &lt;a href=&#34;https://rpubs.com/ials2un/gpx1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plotting GPS tracks with
+R&lt;/a&gt; by Ivan Lizarazo, who in turn based
+their content on &lt;a href=&#34;https://rpubs.com/ials2un/gpx1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stay on track: Plotting GPS tracks with
+R&lt;/a&gt; by Sascha Wolfer. My main
+contributions are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;identifying (TTBOMK) an error in their (shared) code for computing
+of subsequent locations distance, and using alternative way,&lt;/li&gt;
+&lt;li&gt;parsing GPX timestamp with &lt;code&gt;lubridate&lt;/code&gt; function,&lt;/li&gt;
+&lt;li&gt;ggplots, including Google maps-based ggplot of the run path,&lt;/li&gt;
+&lt;li&gt;providing my run data as open source GPS data set.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>Computing minute-level summary measures of physical activity from raw accelerometry data in R: AC, MIMS, ENMO, MAD, and AI</title>
