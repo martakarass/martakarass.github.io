@@ -979,7 +979,7 @@ options(scipen = 999)
 
 # parse GPX file
 path_tmp &lt;- paste0(&quot;/Users/martakaras/Downloads/Morning_Run_2022-01-01.gpx&quot;)
-parsed &lt;- htmlTreeParse(file = path_tmp, useInternalNodes = T)
+parsed &lt;- htmlTreeParse(file = path_tmp, useInternalNodes = TRUE)
 
 # get values via via the respective xpath
 coords &lt;- xpathSApply(parsed, path = &quot;//trkpt&quot;, xmlAttrs)

@@ -85,7 +85,7 @@ options(scipen = 999)
 
 # parse GPX file
 path_tmp &amp;lt;- paste0(&amp;quot;/Users/martakaras/Downloads/Morning_Run_2022-01-01.gpx&amp;quot;)
-parsed &amp;lt;- htmlTreeParse(file = path_tmp, useInternalNodes = T)
+parsed &amp;lt;- htmlTreeParse(file = path_tmp, useInternalNodes = TRUE)
 
 # get values via via the respective xpath
 coords &amp;lt;- xpathSApply(parsed, path = &amp;quot;//trkpt&amp;quot;, xmlAttrs)
