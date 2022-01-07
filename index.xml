@@ -231,9 +231,9 @@ plt_speed_km_per_h
 &lt;p&gt;&lt;img src=&#34;plt_speed_km_per_h.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The above plot is very wiggly due to small time increment over which the
 speed statistic was computed. It could be made smoother by first aggregating distance covered and time elapsed over a fixed time interval longer than GPS recordings interval (e.g. 10 seconds), or by using data smoothing (e.g. LOWESS).&lt;/p&gt;
-&lt;p&gt;The dips in the plot are, to my judgement, correct representations of the times I briefly stopped during a run for various reasons.&lt;/p&gt;
+&lt;p&gt;The dips in the plot are, to my judgement, correct representations of the times I briefly stopped during the run for various reasons.&lt;/p&gt;
 &lt;h2 id=&#34;plot-run-path&#34;&gt;Plot run path&lt;/h2&gt;
-&lt;p&gt;The simple, &lt;code&gt;graphics&lt;/code&gt;-based version of the trajectory plot:&lt;/p&gt;
+&lt;p&gt;A simple, &lt;code&gt;graphics&lt;/code&gt;-based version of the trajectory plot:&lt;/p&gt;
 &lt;details&gt;
 &lt;summary&gt;
 (Click to see the code.)
@@ -244,7 +244,7 @@ speed statistic was computed. It could be made smoother by first aggregating dis
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;img src=&#34;plt_path_simple.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;More fancy plot can be generated with &lt;code&gt;ggmap&lt;/code&gt; package. I used labels to
+&lt;p&gt;A more fancy plot can be generated with &lt;code&gt;ggmap&lt;/code&gt; package. I used labels to
 mark each kilometer passed. My Google API key is registered hence I
 could also &lt;a href=&#34;https://cran.r-project.org/web/packages/ggmap/readme/README.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;access the Google map for use with
 &lt;code&gt;ggmap&lt;/code&gt;&lt;/a&gt;
