@@ -5,7 +5,7 @@
     <link>/tag/wearable-accelerometers/</link>
       <atom:link href="/tag/wearable-accelerometers/index.xml" rel="self" type="application/rss+xml" />
     <description>wearable accelerometers</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 28 May 2021 18:08:38 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Jan 2022 18:08:38 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>wearable accelerometers</title>
@@ -13,18 +13,34 @@
     </image>
     
     <item>
+      <title>Quantification of acceleration as activity counts in ActiGraph wearables</title>
+      <link>/publication/9_quantification_of_acceleration_as_activity_counts/</link>
+      <pubDate>Mon, 24 Jan 2022 18:08:38 -0400</pubDate>
+      <guid>/publication/9_quantification_of_acceleration_as_activity_counts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Free-living gait cadence measured by wearable accelerometer. A promising alternative to traditional measures of mobility for assessing fall risk</title>
+      <link>/publication/8_free_living_gait_cadence_measured/</link>
+      <pubDate>Thu, 13 Jan 2022 18:08:38 -0400</pubDate>
+      <guid>/publication/8_free_living_gait_cadence_measured/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores</title>
-      <link>/publication/estimating_free_living_walking_cadence/</link>
+      <link>/publication/6_estimating_free_living_walking_cadence/</link>
       <pubDate>Fri, 28 May 2021 18:08:38 -0400</pubDate>
-      <guid>/publication/estimating_free_living_walking_cadence/</guid>
+      <guid>/publication/6_estimating_free_living_walking_cadence/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Predicting Subjective Recovery from Lower Limb Surgery Using Consumer Wearables</title>
-      <link>/publication/predicting-subjective-recovery/</link>
+      <link>/publication/5_predicting-subjective-recovery/</link>
       <pubDate>Wed, 09 Dec 2020 18:08:38 -0400</pubDate>
-      <guid>/publication/predicting-subjective-recovery/</guid>
+      <guid>/publication/5_predicting-subjective-recovery/</guid>
       <description></description>
     </item>
     
@@ -114,9 +130,9 @@ Conversely to CWT&amp;rsquo;s mother wavelet $\Psi(\cdot)$, ADEPT  uses a data-b
     
     <item>
       <title>Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation</title>
-      <link>/publication/adept/</link>
+      <link>/publication/4_adept/</link>
       <pubDate>Mon, 23 Sep 2019 18:08:38 -0400</pubDate>
-      <guid>/publication/adept/</guid>
+      <guid>/publication/4_adept/</guid>
       <description></description>
     </item>
     
@@ -213,9 +229,9 @@ acc_running %&amp;gt;%
     
     <item>
       <title>Accelerometry Data in Health Research - Challenges and Opportunities. Review and Examples</title>
-      <link>/publication/accelerometry-data-in-health-research/</link>
+      <link>/publication/3_accelerometry-data-in-health-research/</link>
       <pubDate>Sat, 12 Jan 2019 18:08:38 +0000</pubDate>
-      <guid>/publication/accelerometry-data-in-health-research/</guid>
+      <guid>/publication/3_accelerometry-data-in-health-research/</guid>
       <description></description>
     </item>
     

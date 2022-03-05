@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wyatt | Home</title>
+    <link>/author/wyatt/</link>
+      <atom:link href="/author/wyatt/index.xml" rel="self" type="application/rss+xml" />
+    <description>Wyatt</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Jan 2022 18:08:38 -0400</lastBuildDate>
+    <image>
+      <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
+      <title>Wyatt</title>
+      <link>/author/wyatt/</link>
+    </image>
+    
+    <item>
+      <title>Quantification of acceleration as activity counts in ActiGraph wearables</title>
+      <link>/publication/9_quantification_of_acceleration_as_activity_counts/</link>
+      <pubDate>Mon, 24 Jan 2022 18:08:38 -0400</pubDate>
+      <guid>/publication/9_quantification_of_acceleration_as_activity_counts/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
