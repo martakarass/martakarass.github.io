@@ -5,68 +5,12 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Feb 2022 17:19:28 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 05 Jan 2022 17:19:28 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
-    
-    <item>
-      <title>PhD life dos and donts: reflections from 4.5 years of earning a doctoral degree in USA</title>
-      <link>/post/2022-02-07-phd_dos_and_donts/</link>
-      <pubDate>Mon, 07 Feb 2022 17:19:28 -0400</pubDate>
-      <guid>/post/2022-02-07-phd_dos_and_donts/</guid>
-      <description>&lt;p&gt;In this post, we:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;use a GPX file with with geographic information, exported from
-Strava from one running activity,&lt;/li&gt;
-&lt;li&gt;parse and plot the data.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&#34;#work-hard-and-be-nice&#34;&gt;&amp;ldquo;Work hard and be nice&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#set-yourself-yourself-specific-benchmarks-and-goals&#34;&gt;Set yourself yourself-specific benchmarks and goals&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#leverage-the-social-environment&#34;&gt;Leverage the social environment&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#balance-between-first-things-first-and-catch-em-all&#34;&gt;Balance between &amp;ldquo;first things first&amp;rdquo; and &amp;ldquo;catch &amp;lsquo;em all&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#deal-with-formalities-as-soon-and-as-possible&#34;&gt;Deal with formalities as soon and as possible&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#start-maintaining-your-online-presence-early&#34;&gt;Start maintaining your online presence early&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;h2 id=&#34;work-hard-and-be-nice&#34;&gt;&amp;ldquo;Work hard and be nice&amp;rdquo;&lt;/h2&gt;
-&lt;p&gt;For the first part,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;split work time into chunks of 1.5-2 hours of working into different tasks (e.g., homework from one course, then switch to working at homework into other course etc)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;with research, split work into &amp;ldquo;actionable items&amp;rdquo; for which you can state what is the outcome that once you see it it means that work list item is done. For example, if you plan to do exploratory analysis of a data set, list what checks, data summaries and plots you want to generate.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Its second part is what I want to stress to actively work on. It is about being mindful of how one acts (and how one does not act) so they grow into a better co-worker, lab member, talk audience member, colleague, friend.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Observe, learn and practice how to discuss and provide feedback (positive and negative), e.g. a question during Q&amp;amp;A of a conference talk or lab meeting presentation. To best frame a comment, it helped me to imagine I am a mentor or a thesis advisor of the speaker, and want to comment/ask in a way that supports the speaker best.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Find time to approach your peers with positive feedback. This well could be done in private (via email or a spoken word).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Be on time. Do follow up when said so. Respond to others following on without a huge time lag.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;set-yourself-yourself-specific-benchmarks-and-goals&#34;&gt;Set yourself yourself-specific benchmarks and goals&lt;/h2&gt;
-&lt;p&gt;TODO&lt;/p&gt;
-&lt;h2 id=&#34;leverage-the-social-environment&#34;&gt;Leverage the social environment&lt;/h2&gt;
-&lt;p&gt;TODO&lt;/p&gt;
-&lt;h2 id=&#34;balance-between-first-things-first-and-catch-em-all&#34;&gt;Balance between &amp;ldquo;first things first&amp;rdquo; and &amp;ldquo;catch &amp;lsquo;em all&amp;rdquo;&lt;/h2&gt;
-&lt;p&gt;TODO&lt;/p&gt;
-&lt;h2 id=&#34;deal-with-formalities-as-soon-and-as-possible&#34;&gt;Deal with formalities as soon and as possible&lt;/h2&gt;
-&lt;p&gt;TODO Dont hesitate to escalate&lt;/p&gt;
-&lt;h2 id=&#34;start-maintaining-your-online-presence-early&#34;&gt;Start maintaining your online presence early&lt;/h2&gt;
-&lt;p&gt;TODO&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>GPS data in R: parse and plot GPX data exported from Strava</title>
