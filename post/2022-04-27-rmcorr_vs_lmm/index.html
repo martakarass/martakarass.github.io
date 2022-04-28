@@ -318,7 +318,7 @@ I recently learned about the rmcorr approach and explored it with a view of appl
   
   <meta property="og:site_name" content="Home">
   <meta property="og:url" content="/post/2022-04-27-rmcorr_vs_lmm/">
-  <meta property="og:title" content="Repeated Measures Correlation (rmcorr): few notes | Home">
+  <meta property="og:title" content="Repeated Measures Correlation (rmcorr): when may be not an ideal choice to quantify the association | Home">
   <meta property="og:description" content="In this post, we use the Repeated Measures Correlation (rmcorr) approach to quantify association between two continuous measures recorded multiple times per study subject.
 I recently learned about the rmcorr approach and explored it with a view of applying in one of the current projects."><meta property="og:image" content="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
@@ -352,7 +352,7 @@ I recently learned about the rmcorr approach and explored it with a view of appl
     "@type": "WebPage",
     "@id": "/post/2022-04-27-rmcorr_vs_lmm/"
   },
-  "headline": "Repeated Measures Correlation (rmcorr): few notes",
+  "headline": "Repeated Measures Correlation (rmcorr): when may be not an ideal choice to quantify the association",
   
   "datePublished": "2022-04-26T17:19:28-04:00",
   "dateModified": "2022-04-26T17:19:28-04:00",
@@ -388,7 +388,7 @@ I recently learned about the rmcorr approach and explored it with a view of appl
 
 
 
-  <title>Repeated Measures Correlation (rmcorr): few notes | Home</title>
+  <title>Repeated Measures Correlation (rmcorr): when may be not an ideal choice to quantify the association | Home</title>
 
 </head>
 
@@ -837,7 +837,7 @@ I recently learned about the rmcorr approach and explored it with a view of appl
   
   
 <div class="article-container pt-3">
-  <h1>Repeated Measures Correlation (rmcorr): few notes</h1>
+  <h1>Repeated Measures Correlation (rmcorr): when may be not an ideal choice to quantify the association</h1>
 
   
 
@@ -903,27 +903,21 @@ I recently learned about the rmcorr approach and explored it with a view of appl
   <div class="article-container">
 
     <div class="article-style">
-      <p>In this post, we use the Repeated Measures Correlation (<em><strong>rmcorr</strong></em>)
-approach to quantify association between two continuous measures
-recorded multiple times per study subject.</p>
-<p>I recently learned about the <em><strong>rmcorr</strong></em> approach and explored it with
-a view of applying in one of the current projects. Here, I highlight my
-key notes from how the <em><strong>rmcorr</strong></em> works, and I point to a few cases
-where I expect that <em><strong>rmcorr</strong></em> may be not an ideal choice to quantify
-the association.</p>
-<p>This post is to encourage caution when considering one’s data fit for
-methods selection and results interpretation, and also to serve for me
-as a handy reference if needed in the future.</p>
+      <p>In this post, we use the Repeated Measures Correlation (<em><strong>rmcorr</strong></em>) approach to quantify association between two continuous measures recorded multiple times per study subject.</p>
+<p>I recently learned about the <em><strong>rmcorr</strong></em> approach and explored it with a view of applying in one of the current projects. I think <em><strong>rmcorr</strong></em> is a very interesting method with neat interpretation. Here, I highlight my key notes from how the <em><strong>rmcorr</strong></em> works, and I point to a few cases where I expect that <em><strong>rmcorr</strong></em> may be not an ideal choice to quantify the association.</p>
 <h2>Table of Contents</h2>
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#repeated-measures-correlation">Repeated Measures Correlation</a>
+    <li>
       <ul>
         <li><a href="#method">Method</a></li>
         <li><a href="#key-notes">Key notes</a></li>
       </ul>
     </li>
-    <li><a href="#scenarios">Scenarios</a>
+  </ul>
+
+  <ul>
+    <li>
       <ul>
         <li><a href="#scenario-1a">Scenario 1a</a></li>
         <li><a href="#scenario-1b">Scenario 1b</a></li>
@@ -935,12 +929,10 @@ as a handy reference if needed in the future.</p>
         <li><a href="#scenario-4b">Scenario 4b</a></li>
       </ul>
     </li>
-    <li><a href="#observations">Observations</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
-<h2 id="repeated-measures-correlation">Repeated Measures Correlation</h2>
-<p>The Bakdash et al. (2017) paper <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2017.00456/full" target="_blank" rel="noopener">Repeated Measures
+<h1 id="repeated-measures-correlation">Repeated Measures Correlation</h1>
+<p>The Bakdash et al. (2017) paper <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2017.00456/full" target="_blank" rel="noopener">Repeated Measures
 Correlation</a>
 discusses within-participants correlation to analyze the common
 intra-individual association for paired repeated measures. The paper
@@ -950,67 +942,51 @@ multilevel modeling.</p>
 <h3 id="method">Method</h3>
 <p>In short, <em><strong>rmcorr</strong></em>:</p>
 <ul>
-<li>Is based on ANCOVA analysis: it considers a subject as a
-factor-level variable to remove between-person variation. ANCOVA
-model is set to estimate subjects’ common regression slope $\beta$.</li>
-<li>The rmcorr correlation coefficient is calculated using sums of
-squares for the Measure and for the error from the above ANCOVA
-model:
-and its sign is determined by the sign (positive vs. negative) of
-estimated $\beta$.</li>
+<li>Is based on ANCOVA analysis: it considers a subject as a factor-level variable to remove between-person variation. ANCOVA model is set to estimate subjects' common regression slope $\beta$.</li>
+<li>The rmcorr correlation coefficient is calculated using sums of squares for the Measure and for the error from the above ANCOVA model and its sign is determined by the sign (positive vs. negative) of estimated $\beta$.</li>
 <li>It has a nice, intuitive interpretation.</li>
-<li>Authors argue is &ldquo;comparable to linear multilevel model (<em><strong>LMM</strong></em>)
-with random intercept only and a fixed effect&rdquo;.</li>
+<li>Authors argue is &ldquo;comparable to linear multilevel model (<em><strong>LMM</strong></em>) with random intercept only and a fixed effect&rdquo;.</li>
 </ul>
 <h3 id="key-notes">Key notes</h3>
-<p>My key notes on <em><strong>rmcorr</strong></em>:</p>
+<p>Key notes on <em><strong>rmcorr</strong></em>:</p>
 <ul>
 <li><em><strong>rmcorr</strong></em> does not allow for slope variation by subject,</li>
-<li><em><strong>rmcorr</strong></em> does not utilize any of <em><strong>LMM</strong></em>’s partial-pooling
-idea (i.e., where for subjects with a relatively smaller number of
-observations, their estimates are &ldquo;shrunk&rdquo; closer to the overall
-population average);</li>
+<li><em><strong>rmcorr</strong></em> does not utilize any of <em><strong>LMM</strong></em>&rsquo;s partial-pooling idea (i.e., where for subjects with a relatively smaller number of observations, their estimates are &ldquo;shrunk&rdquo; closer to the overall population average);</li>
 </ul>
-<p>and hence, to my judgement, <em><strong>rmcorr</strong></em> may be not an ideal choice to
-quantify the association when:</p>
+<p>and hence, as the authors noted, <em><strong>rmcorr</strong></em> may be not an ideal choice to quantify the association:</p>
 <ul>
-<li>when the effect slope varies between subjects,</li>
-<li>when the number of observations varies between subjects (e.g.,
-varies between 2-10),</li>
-<li>when there are influential observation(s) (e.g., subject(s) with
-wide $x$ values range).</li>
+<li>when the effect slope varies between subjects.</li>
 </ul>
-<h2 id="scenarios">Scenarios</h2>
-<p>To illustrate the above notes, 8 simple data scenarios are considered.</p>
+<p>I also thought having random slopes is even more problematic:</p>
 <ul>
-<li>In each scenario, data on N = 20 subjects with 2 continuous
-variables ($x$, $y$), recorded at multiple occasions for each
-subject, are simulated.</li>
-<li>The scenarios differ in true data-generating model that is assumed
-in a scenario.</li>
-<li>For each scenario, 1 data set is used and results from applying 2
-approaches are shown:
+<li>when the number of observations varies between subjects (e.g., varies between 2-10),</li>
+<li>when there are influential observation(s) (e.g., subject(s) with wide $x$ values range).</li>
+</ul>
+<h1 id="scenarios">Scenarios</h1>
+<p>To illustrate the above notes, 4x2 simple data scenarios are considered.</p>
 <ul>
-<li>
-<ol>
-<li>left plot: <em><strong>rmcorr</strong></em> with an estimate of &ldquo;repeated
-measures correlation&rdquo;,</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>right plot: <em><strong>LMM</strong></em> fit with an estimate of fixed effect
-slope.</li>
-</ol>
-</li>
+<li>In each scenario, data on N = 20 subjects with 2 continuous variables ($x$, $y$), recorded at multiple occasions for each subject, are simulated.</li>
+<li>The scenarios differ in true data-generating model that is assumed:
+<ul>
+<li>Scenario 1: random intercept only;</li>
+<li>Scenario 2: random intercept and random slope (uncorrelated);</li>
+<li>Scenario 3: random intercept and random slope (uncorrelated), added one subject with influential observations;</li>
+<li>Scenario 4: random intercept and random slope (uncorrelated), unbalanced number of observations per subject.</li>
 </ul>
 </li>
-<li>For all scenarios, left plot points same as right plot points (the
-same data used for 2 approaches).</li>
-<li>For all scenarios, population-level effect $x$ on $y$ was assumed to
-be equal 2.0.</li>
-<li>For all scenarios, <em><strong>LMM</strong></em> assumes random intercept and random
-slope for $x$, and a fixed effect for $x$.</li>
+<li>For each scenario, two versions are considered, assuming: (a): small variance of residual error; (b) large variance of residual error.</li>
+</ul>
+<p>To show the results:</p>
+<ul>
+<li>For each scenario, 1 data set is used and results from applying 2 approaches are shown:
+<ul>
+<li>left plot: <em><strong>rmcorr</strong></em> with an estimate of &ldquo;repeated measures correlation&rdquo;,</li>
+<li>right plot: <em><strong>LMM</strong></em> fit with an estimate of fixed effect slope.</li>
+</ul>
+</li>
+<li>For all scenarios, left plot points same as right plot points (the same data used for 2 approaches).</li>
+<li>For all scenarios, population-level effect $x$ on $y$ was assumed to be equal $2.0$.</li>
+<li>For all scenarios, <em><strong>LMM</strong></em> assumes random intercept and random slope for $x$, and a fixed effect for $x$.</li>
 </ul>
 <details>
 <summary>
@@ -1479,11 +1455,11 @@ est_and_plot(dat)
 </tr>
 </tbody>
 </table>
-<h2 id="observations">Observations</h2>
+<h1 id="observations">Observations</h1>
 <ul>
 <li>
 <p><strong>When the &ldquo;true&rdquo; effect slope varies between subjects</strong>, the estimated
-<em><strong>rmcorr</strong></em> correlation, <em>r</em>, might be tanking. See Scenario 2a
+<em><strong>rmcorr</strong></em> correlation, $r_{rm}$, might be tanking. See Scenario 2a
 ($r_{rm}$ = 0.652) and 2b ($r_{rm}$ = 0.458) where data-generating model
 assumed varying slope, and compare with Scenario 1a ($r_{rm}$ = 0.992)
 and 1b ($r_{rm}$ = 0.623) where data-generating model assumed the same
@@ -1491,7 +1467,7 @@ population-effect as 2a and 2b but no varying slope. </br></br></p>
 </li>
 <li>
 <p><strong>In presence of influential observation</strong>, the estimated <em><strong>rmcorr</strong></em>
-correlation, <em>r</em>, appear to be prone to be largely affected. See
+correlation, $r_{rm}$, appear to be prone to be further affected. See
 Scenario 3a and 3b where influential observation was added (data for
 one subject, assumed wide x-axis range, simulate 0 $x$ effect on $y$
 for that subject). Compare scenario 2a and 3a ($r_{rm}$ = 0.652 =&gt;
@@ -1512,12 +1488,8 @@ subject (while the average number of observations per subject is set
 the same).</p>
 </li>
 </ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>In conclusion: <em><strong>rmcorr</strong></em> is IMO a very interesting method with neat
-&ldquo;repeated measures correlation interpretation&rdquo;. However, in some data
-scenarios demonstrated above (e.g., if true effect slope varies between
-subjects) the correlation estmated by <em><strong>rmcorr</strong></em> might be not an ideal
-choice to quantify the association between two measures.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In conclusion: <em><strong>rmcorr</strong></em> is IMO a very interesting method with neat &ldquo;repeated measures correlation interpretation&rdquo;. However, in some data scenarios demonstrated above, the correlation estmated by <em><strong>rmcorr</strong></em> might be not an ideal choice to quantify the association between two measures.</p>
 
     </div>
 
@@ -1541,7 +1513,7 @@ choice to quantify the association between two measures.</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/2022-04-27-rmcorr_vs_lmm/&amp;text=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20few%20notes" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/2022-04-27-rmcorr_vs_lmm/&amp;text=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20when%20may%20be%20not%20an%20ideal%20choice%20to%20quantify%20the%20association" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1554,7 +1526,7 @@ choice to quantify the association between two measures.</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/2022-04-27-rmcorr_vs_lmm/&amp;t=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20few%20notes" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/2022-04-27-rmcorr_vs_lmm/&amp;t=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20when%20may%20be%20not%20an%20ideal%20choice%20to%20quantify%20the%20association" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1567,7 +1539,7 @@ choice to quantify the association between two measures.</p>
       
       
       <li>
-        <a href="mailto:?subject=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20few%20notes&amp;body=/post/2022-04-27-rmcorr_vs_lmm/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20when%20may%20be%20not%20an%20ideal%20choice%20to%20quantify%20the%20association&amp;body=/post/2022-04-27-rmcorr_vs_lmm/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1580,7 +1552,7 @@ choice to quantify the association between two measures.</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/2022-04-27-rmcorr_vs_lmm/&amp;title=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20few%20notes" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/2022-04-27-rmcorr_vs_lmm/&amp;title=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20when%20may%20be%20not%20an%20ideal%20choice%20to%20quantify%20the%20association" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1593,7 +1565,7 @@ choice to quantify the association between two measures.</p>
       
       
       <li>
-        <a href="whatsapp://send?text=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20few%20notes%20/post/2022-04-27-rmcorr_vs_lmm/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20when%20may%20be%20not%20an%20ideal%20choice%20to%20quantify%20the%20association%20/post/2022-04-27-rmcorr_vs_lmm/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1606,7 +1578,7 @@ choice to quantify the association between two measures.</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/2022-04-27-rmcorr_vs_lmm/&amp;title=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20few%20notes" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/2022-04-27-rmcorr_vs_lmm/&amp;title=Repeated%20Measures%20Correlation%20%28rmcorr%29:%20when%20may%20be%20not%20an%20ideal%20choice%20to%20quantify%20the%20association" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
