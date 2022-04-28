@@ -64,16 +64,13 @@
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
-    &lt;li&gt;
+    &lt;li&gt;&lt;a href=&#34;#repeated-measures-correlation&#34;&gt;Repeated Measures Correlation&lt;/a&gt;
       &lt;ul&gt;
         &lt;li&gt;&lt;a href=&#34;#method&#34;&gt;Method&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&#34;#key-notes&#34;&gt;Key notes&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
-  &lt;/ul&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;
+    &lt;li&gt;&lt;a href=&#34;#scenarios&#34;&gt;Scenarios&lt;/a&gt;
       &lt;ul&gt;
         &lt;li&gt;&lt;a href=&#34;#scenario-1a&#34;&gt;Scenario 1a&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&#34;#scenario-1b&#34;&gt;Scenario 1b&lt;/a&gt;&lt;/li&gt;
@@ -85,9 +82,11 @@
         &lt;li&gt;&lt;a href=&#34;#scenario-4b&#34;&gt;Scenario 4b&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#observations&#34;&gt;Observations&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
-&lt;h1 id=&#34;repeated-measures-correlation&#34;&gt;Repeated Measures Correlation&lt;/h1&gt;
+&lt;h2 id=&#34;repeated-measures-correlation&#34;&gt;Repeated Measures Correlation&lt;/h2&gt;
 &lt;p&gt;The Bakdash et al. (2017) paper &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fpsyg.2017.00456/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Repeated Measures
 Correlation&lt;/a&gt;
 discusses within-participants correlation to analyze the common
@@ -118,7 +117,7 @@ multilevel modeling.&lt;/p&gt;
 &lt;li&gt;when the number of observations varies between subjects (e.g., varies between 2-10),&lt;/li&gt;
 &lt;li&gt;when there are influential observation(s) (e.g., subject(s) with wide $x$ values range).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;scenarios&#34;&gt;Scenarios&lt;/h1&gt;
+&lt;h2 id=&#34;scenarios&#34;&gt;Scenarios&lt;/h2&gt;
 &lt;p&gt;To illustrate the above notes, 4x2 simple data scenarios are considered.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In each scenario, data on N = 20 subjects with 2 continuous variables ($x$, $y$), recorded at multiple occasions for each subject, are simulated.&lt;/li&gt;
@@ -611,7 +610,7 @@ est_and_plot(dat)
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h1 id=&#34;observations&#34;&gt;Observations&lt;/h1&gt;
+&lt;h2 id=&#34;observations&#34;&gt;Observations&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;When the &amp;ldquo;true&amp;rdquo; effect slope varies between subjects&lt;/strong&gt;, the estimated
@@ -644,7 +643,7 @@ subject (while the average number of observations per subject is set
 the same).&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;In conclusion: &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; is IMO a very interesting method with neat &amp;ldquo;repeated measures correlation interpretation&amp;rdquo;. However, in some data scenarios demonstrated above, the correlation estmated by &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; might be not an ideal choice to quantify the association between two measures.&lt;/p&gt;
 </description>
     </item>

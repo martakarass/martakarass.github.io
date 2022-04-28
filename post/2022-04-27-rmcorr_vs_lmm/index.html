@@ -908,16 +908,13 @@ I recently learned about the rmcorr approach and explored it with a view of appl
 <h2>Table of Contents</h2>
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#repeated-measures-correlation">Repeated Measures Correlation</a>
       <ul>
         <li><a href="#method">Method</a></li>
         <li><a href="#key-notes">Key notes</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li>
+    <li><a href="#scenarios">Scenarios</a>
       <ul>
         <li><a href="#scenario-1a">Scenario 1a</a></li>
         <li><a href="#scenario-1b">Scenario 1b</a></li>
@@ -929,9 +926,11 @@ I recently learned about the rmcorr approach and explored it with a view of appl
         <li><a href="#scenario-4b">Scenario 4b</a></li>
       </ul>
     </li>
+    <li><a href="#observations">Observations</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
-<h1 id="repeated-measures-correlation">Repeated Measures Correlation</h1>
+<h2 id="repeated-measures-correlation">Repeated Measures Correlation</h2>
 <p>The Bakdash et al. (2017) paper <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2017.00456/full" target="_blank" rel="noopener">Repeated Measures
 Correlation</a>
 discusses within-participants correlation to analyze the common
@@ -962,7 +961,7 @@ multilevel modeling.</p>
 <li>when the number of observations varies between subjects (e.g., varies between 2-10),</li>
 <li>when there are influential observation(s) (e.g., subject(s) with wide $x$ values range).</li>
 </ul>
-<h1 id="scenarios">Scenarios</h1>
+<h2 id="scenarios">Scenarios</h2>
 <p>To illustrate the above notes, 4x2 simple data scenarios are considered.</p>
 <ul>
 <li>In each scenario, data on N = 20 subjects with 2 continuous variables ($x$, $y$), recorded at multiple occasions for each subject, are simulated.</li>
@@ -1455,7 +1454,7 @@ est_and_plot(dat)
 </tr>
 </tbody>
 </table>
-<h1 id="observations">Observations</h1>
+<h2 id="observations">Observations</h2>
 <ul>
 <li>
 <p><strong>When the &ldquo;true&rdquo; effect slope varies between subjects</strong>, the estimated
@@ -1488,7 +1487,7 @@ subject (while the average number of observations per subject is set
 the same).</p>
 </li>
 </ul>
-<h1 id="conclusion">Conclusion</h1>
+<h2 id="conclusion">Conclusion</h2>
 <p>In conclusion: <em><strong>rmcorr</strong></em> is IMO a very interesting method with neat &ldquo;repeated measures correlation interpretation&rdquo;. However, in some data scenarios demonstrated above, the correlation estmated by <em><strong>rmcorr</strong></em> might be not an ideal choice to quantify the association between two measures.</p>
 
     </div>
