@@ -18,7 +18,7 @@
       <pubDate>Tue, 26 Apr 2022 17:19:28 -0400</pubDate>
       <guid>/post/2022-04-27-rmcorr_vs_lmm/</guid>
       <description>&lt;p&gt;In this post, we use the Repeated Measures Correlation (&lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt;) approach to quantify association between two continuous measures recorded multiple times per study subject.&lt;/p&gt;
-&lt;p&gt;I recently learned about the &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; approach and explored it with a view of applying in one of the current projects. I think &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; is a very interesting method with neat interpretation. Here, I highlight my key notes from how the &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; works, and I point to a few cases where I expect that &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; may be not an ideal choice to quantify the association.&lt;/p&gt;
+&lt;p&gt;I recently learned about the &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; approach and explored it with a view of applying in one of the current projects. I think &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; is a very interesting method with neat interpretation. Here, I highlight  key notes from how the &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; works, and I point to a few cases where I expect that &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; may be not an ideal choice to quantify the association.&lt;/p&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
