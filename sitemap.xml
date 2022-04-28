@@ -11,13 +11,19 @@
     <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>/</loc>
+    <lastmod>2022-04-26T17:19:28-04:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2022-04-26T17:19:28-04:00</lastmod>
+  </url><url>
+    <loc>/post/2022-04-27-rmcorr_vs_lmm/</loc>
+    <lastmod>2022-04-26T17:19:28-04:00</lastmod>
+  </url><url>
     <loc>/tag/digital-health/</loc>
     <lastmod>2022-03-04T10:00:00+00:00</lastmod>
   </url><url>
     <loc>/tag/digital-phenotyping/</loc>
-    <lastmod>2022-03-04T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
     <lastmod>2022-03-04T10:00:00+00:00</lastmod>
   </url><url>
     <loc>/talk/</loc>
@@ -126,9 +132,6 @@
     <lastmod>2022-01-13T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/post/2022-01-05-gps_strava_read_and_viz/</loc>
-    <lastmod>2022-01-05T17:19:28-04:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
     <lastmod>2022-01-05T17:19:28-04:00</lastmod>
   </url><url>
     <loc>/talk/2021-11-05-adds/</loc>

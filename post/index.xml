@@ -5,12 +5,635 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 05 Jan 2022 17:19:28 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 26 Apr 2022 17:19:28 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Repeated Measures Correlation (rmcorr): few notes</title>
+      <link>/post/2022-04-27-rmcorr_vs_lmm/</link>
+      <pubDate>Tue, 26 Apr 2022 17:19:28 -0400</pubDate>
+      <guid>/post/2022-04-27-rmcorr_vs_lmm/</guid>
+      <description>&lt;p&gt;In this post, we use the Repeated Measures Correlation (&lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt;)
+approach to quantify association between two continuous measures
+recorded multiple times per study subject.&lt;/p&gt;
+&lt;p&gt;I recently learned about the &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; approach and explored it with
+a view of applying in one of the current projects. Here, I highlight my
+key notes from how the &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; works, and I point to a few cases
+where I expect that &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; may be not an ideal choice to quantify
+the association.&lt;/p&gt;
+&lt;p&gt;This post is to encourage caution when considering one’s data fit for
+methods selection and results interpretation, and also to serve for me
+as a handy reference if needed in the future.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#repeated-measures-correlation&#34;&gt;Repeated Measures Correlation&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#method&#34;&gt;Method&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#key-notes&#34;&gt;Key notes&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#scenarios&#34;&gt;Scenarios&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#scenario-1a&#34;&gt;Scenario 1a&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#scenario-1b&#34;&gt;Scenario 1b&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#scenario-2a&#34;&gt;Scenario 2a&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#scenario-2b&#34;&gt;Scenario 2b&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#scenario-3a&#34;&gt;Scenario 3a&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#scenario-3b&#34;&gt;Scenario 3b&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#scenario-4a&#34;&gt;Scenario 4a&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#scenario-4b&#34;&gt;Scenario 4b&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#observations&#34;&gt;Observations&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;repeated-measures-correlation&#34;&gt;Repeated Measures Correlation&lt;/h2&gt;
+&lt;p&gt;The Bakdash et al. (2017) paper &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fpsyg.2017.00456/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Repeated Measures
+Correlation&lt;/a&gt;
+discusses within-participants correlation to analyze the common
+intra-individual association for paired repeated measures. The paper
+provides background information, methods description, R package
+reference, and discussion on tradeoffs with &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; as compared to
+multilevel modeling.&lt;/p&gt;
+&lt;h3 id=&#34;method&#34;&gt;Method&lt;/h3&gt;
+&lt;p&gt;In short, &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is based on ANCOVA analysis: it considers a subject as a
+factor-level variable to remove between-person variation. ANCOVA
+model is set to estimate subjects’ common regression slope $\beta$.&lt;/li&gt;
+&lt;li&gt;The rmcorr correlation coefficient is calculated using sums of
+squares for the Measure and for the error from the above ANCOVA
+model:
+and its sign is determined by the sign (positive vs. negative) of
+estimated $\beta$.&lt;/li&gt;
+&lt;li&gt;It has a nice, intuitive interpretation.&lt;/li&gt;
+&lt;li&gt;Authors argue is &amp;ldquo;comparable to linear multilevel model (&lt;em&gt;&lt;strong&gt;LMM&lt;/strong&gt;&lt;/em&gt;)
+with random intercept only and a fixed effect&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;key-notes&#34;&gt;Key notes&lt;/h3&gt;
+&lt;p&gt;My key notes on &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; does not allow for slope variation by subject,&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; does not utilize any of &lt;em&gt;&lt;strong&gt;LMM&lt;/strong&gt;&lt;/em&gt;’s partial-pooling
+idea (i.e., where for subjects with a relatively smaller number of
+observations, their estimates are &amp;ldquo;shrunk&amp;rdquo; closer to the overall
+population average);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and hence, to my judgement, &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; may be not an ideal choice to
+quantify the association when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;when the effect slope varies between subjects,&lt;/li&gt;
+&lt;li&gt;when the number of observations varies between subjects (e.g.,
+varies between 2-10),&lt;/li&gt;
+&lt;li&gt;when there are influential observation(s) (e.g., subject(s) with
+wide $x$ values range).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;scenarios&#34;&gt;Scenarios&lt;/h2&gt;
+&lt;p&gt;To illustrate the above notes, 8 simple data scenarios are considered.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In each scenario, data on N = 20 subjects with 2 continuous
+variables ($x$, $y$), recorded at multiple occasions for each
+subject, are simulated.&lt;/li&gt;
+&lt;li&gt;The scenarios differ in true data-generating model that is assumed
+in a scenario.&lt;/li&gt;
+&lt;li&gt;For each scenario, 1 data set is used and results from applying 2
+approaches are shown:
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;left plot: &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; with an estimate of &amp;ldquo;repeated
+measures correlation&amp;rdquo;,&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;right plot: &lt;em&gt;&lt;strong&gt;LMM&lt;/strong&gt;&lt;/em&gt; fit with an estimate of fixed effect
+slope.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;For all scenarios, left plot points same as right plot points (the
+same data used for 2 approaches).&lt;/li&gt;
+&lt;li&gt;For all scenarios, population-level effect $x$ on $y$ was assumed to
+be equal 2.0.&lt;/li&gt;
+&lt;li&gt;For all scenarios, &lt;em&gt;&lt;strong&gt;LMM&lt;/strong&gt;&lt;/em&gt; assumes random intercept and random
+slope for $x$, and a fixed effect for $x$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see R code shared for all simulations.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;library(tidyverse)
+library(lme4)
+library(lmerTest)
+library(rmcorr)
+library(MASS)
+
+# define simulation parameters
+# number of subjects 
+M &amp;lt;- 20 
+# number of repeated measures per subjects (for all except last two scenarios)
+k &amp;lt;- 5  
+
+#&#39; Function to apply two approaches to `dat` data set: 
+#&#39; (1) rmcorr with an estimate of &amp;quot;repeated measures correlation&amp;quot;,
+#&#39; (2) LMM fit with an estimate of fixed effect slope 
+est_and_plot &amp;lt;- function(dat){
+  # approach 1 
+  rmcorr_out &amp;lt;- rmcorr(subj_id, x, y, dat)
+  plt_label &amp;lt;- paste0(&amp;quot;r = &amp;quot;, round(rmcorr_out$r, 3), &amp;quot; (95% CI: [&amp;quot;, paste0(round(rmcorr_out$CI, 3), collapse = &amp;quot;, &amp;quot;), &amp;quot;])&amp;quot;)
+  par(mar = rep(2, 4))
+  plot(rmcorr_out, main = plt_label)
+  
+  # approach 2 
+  lmm_out &amp;lt;- lmer(y ~ x + (1 + x | subj_id), data = dat)
+  conf_est &amp;lt;- summary(lmm_out)$coef[2, 1]
+  conf_out &amp;lt;- as.vector(confint(lmm_out, parm = &amp;quot;x&amp;quot;))
+  plt_label &amp;lt;- paste0(&amp;quot;beta = &amp;quot;, round(conf_est, 3), &amp;quot; (95% CI: [&amp;quot;, paste0(round(conf_out, 3), collapse = &amp;quot;, &amp;quot;), &amp;quot;])&amp;quot;)
+  dat$mu &amp;lt;- getME(lmm_out, &amp;quot;mu&amp;quot;)[1 : nrow(dat)]
+  plt &amp;lt;- 
+    ggplot(dat, aes(x = x, y = y, color = subj_id, group = subj_id)) + 
+    # geom_line(color = &amp;quot;black&amp;quot;) + 
+    geom_line(aes(x = x, y = mu), size = 0.3) + 
+    geom_point() + 
+    theme_classic(base_size = 12) + 
+    theme(
+      legend.position = &amp;quot;none&amp;quot;,
+    )  + 
+    labs(x = &amp;quot;x&amp;quot;, y = &amp;quot;y&amp;quot;, title = plt_label)
+  plot(plt) 
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/br&gt;
+&lt;h3 id=&#34;scenario-1a&#34;&gt;Scenario 1a&lt;/h3&gt;
+&lt;p&gt;Data-generating model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;random intercept only&lt;/li&gt;
+&lt;li&gt;small residual error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see R code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(1)
+eps_sd &amp;lt;- 0.25
+alpha = 1
+beta = 2
+ai = rnorm(M, mean = 0, sd = 3)
+bi = rnorm(M, mean = 0, sd = 0)
+
+subj_id_vec &amp;lt;- numeric()
+x_vec &amp;lt;- numeric()
+y_vec &amp;lt;- numeric()
+for (i in 1 : M){ # i &amp;lt;- 2
+  x_a &amp;lt;- runif(1, 0, 5)
+  x_b &amp;lt;- x_a + 2 + rnorm(1)
+  x &amp;lt;- seq(x_a, x_b, length.out = k)
+  eps &amp;lt;- rnorm(k, mean = 0, sd = eps_sd)
+  y &amp;lt;- (alpha + ai[i]) + (beta + bi[i]) * x + eps
+  subj_id_vec &amp;lt;- c(subj_id_vec, rep(paste0(&amp;quot;subj_id_&amp;quot;, i), k))
+  x_vec &amp;lt;- c(x_vec, x)
+  y_vec &amp;lt;- c(y_vec, y)
+}
+dat &amp;lt;- data.frame(subj_id = factor(subj_id_vec), x = x_vec, y = y_vec)
+est_and_plot(dat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rmcorr&lt;/th&gt;
+&lt;th&gt;LMM&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_1a_plot-1.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_1a_plot-2.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;scenario-1b&#34;&gt;Scenario 1b&lt;/h3&gt;
+&lt;p&gt;Data-generating model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;random intercept only&lt;/li&gt;
+&lt;li&gt;large residual error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see R code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(1)
+eps_sd &amp;lt;- 2
+alpha = 1
+beta = 2
+ai = rnorm(M, mean = 0, sd = 3)
+bi = rnorm(M, mean = 0, sd = 0)
+
+subj_id_vec &amp;lt;- numeric()
+x_vec &amp;lt;- numeric()
+y_vec &amp;lt;- numeric()
+for (i in 1 : M){ # i &amp;lt;- 2
+  x_a &amp;lt;- runif(1, 0, 5)
+  x_b &amp;lt;- x_a + 2 + rnorm(1)
+  x &amp;lt;- seq(x_a, x_b, length.out = k)
+  eps &amp;lt;- rnorm(k, mean = 0, sd = eps_sd)
+  y &amp;lt;- (alpha + ai[i]) + (beta + bi[i]) * x + eps
+  subj_id_vec &amp;lt;- c(subj_id_vec, rep(paste0(&amp;quot;subj_id_&amp;quot;, i), k))
+  x_vec &amp;lt;- c(x_vec, x)
+  y_vec &amp;lt;- c(y_vec, y)
+}
+dat &amp;lt;- data.frame(subj_id = factor(subj_id_vec), x = x_vec, y = y_vec)
+est_and_plot(dat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rmcorr&lt;/th&gt;
+&lt;th&gt;LMM&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_1b_plot-1.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_1b_plot-2.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;scenario-2a&#34;&gt;Scenario 2a&lt;/h3&gt;
+&lt;p&gt;Data-generating model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;random intercept and random slope (uncorrelated)&lt;/li&gt;
+&lt;li&gt;small residual error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see R code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(1)
+eps_sd &amp;lt;- 0.25
+alpha = 1
+beta = 2
+ai = rnorm(M, mean = 0, sd = 3)
+bi = rnorm(M, mean = 0, sd = 1.5)
+
+subj_id_vec &amp;lt;- numeric()
+x_vec &amp;lt;- numeric()
+y_vec &amp;lt;- numeric()
+for (i in 1 : M){ # i &amp;lt;- 2
+  x_a &amp;lt;- runif(1, 0, 5)
+  x_b &amp;lt;- x_a + 2 + rnorm(1)
+  x &amp;lt;- seq(x_a, x_b, length.out = k)
+  eps &amp;lt;- rnorm(k, mean = 0, sd = eps_sd)
+  y &amp;lt;- (alpha + ai[i]) + (beta + bi[i]) * x + eps
+  subj_id_vec &amp;lt;- c(subj_id_vec, rep(paste0(&amp;quot;subj_id_&amp;quot;, i), k))
+  x_vec &amp;lt;- c(x_vec, x)
+  y_vec &amp;lt;- c(y_vec, y)
+}
+dat &amp;lt;- data.frame(subj_id = factor(subj_id_vec), x = x_vec, y = y_vec)
+est_and_plot(dat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rmcorr&lt;/th&gt;
+&lt;th&gt;LMM&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_2a_plot-1.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_2a_plot-2.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;scenario-2b&#34;&gt;Scenario 2b&lt;/h3&gt;
+&lt;p&gt;Data-generating model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;random intercept and random slope (uncorrelated)&lt;/li&gt;
+&lt;li&gt;large residual error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see R code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(1)
+eps_sd &amp;lt;- 2
+alpha = 1
+beta = 2
+ai = rnorm(M, mean = 0, sd = 3)
+bi = rnorm(M, mean = 0, sd = 1.5)
+
+subj_id_vec &amp;lt;- numeric()
+x_vec &amp;lt;- numeric()
+y_vec &amp;lt;- numeric()
+for (i in 1 : M){ # i &amp;lt;- 2
+  x_a &amp;lt;- runif(1, 0, 5)
+  x_b &amp;lt;- x_a + 2 + rnorm(1)
+  x &amp;lt;- seq(x_a, x_b, length.out = k)
+  eps &amp;lt;- rnorm(k, mean = 0, sd = eps_sd)
+  y &amp;lt;- (alpha + ai[i]) + (beta + bi[i]) * x + eps
+  subj_id_vec &amp;lt;- c(subj_id_vec, rep(paste0(&amp;quot;subj_id_&amp;quot;, i), k))
+  x_vec &amp;lt;- c(x_vec, x)
+  y_vec &amp;lt;- c(y_vec, y)
+}
+dat &amp;lt;- data.frame(subj_id = factor(subj_id_vec), x = x_vec, y = y_vec)
+est_and_plot(dat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rmcorr&lt;/th&gt;
+&lt;th&gt;LMM&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_2b_plot-1.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_2b_plot-2.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;scenario-3a&#34;&gt;Scenario 3a&lt;/h3&gt;
+&lt;p&gt;Data-generating model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;random intercept and random slope (uncorrelated)&lt;/li&gt;
+&lt;li&gt;small residual error&lt;/li&gt;
+&lt;li&gt;add one influential observation (wide x-axis range, simulate 0 $x$
+effect on $y$ for that subject)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see R code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(1)
+eps_sd &amp;lt;- 0.25
+alpha = 1
+beta = 2
+ai = rnorm(M, mean = 0, sd = 3)
+bi = rnorm(M, mean = 0, sd = 1.5)
+
+subj_id_vec &amp;lt;- numeric()
+x_vec &amp;lt;- numeric()
+y_vec &amp;lt;- numeric()
+for (i in 1 : (M-1)){ # i &amp;lt;- 2
+  x_a &amp;lt;- runif(1, 0, 5)
+  x_b &amp;lt;- x_a + 2 + rnorm(1)
+  x &amp;lt;- seq(x_a, x_b, length.out = k)
+  eps &amp;lt;- rnorm(k, mean = 0, sd = eps_sd)
+  y &amp;lt;- (alpha + ai[i]) + (beta + bi[i]) * x + eps
+  subj_id_vec &amp;lt;- c(subj_id_vec, rep(paste0(&amp;quot;subj_id_&amp;quot;, i), k))
+  x_vec &amp;lt;- c(x_vec, x)
+  y_vec &amp;lt;- c(y_vec, y)
+}
+i &amp;lt;- M
+x_a &amp;lt;- runif(1, 0, 5)
+x_b &amp;lt;- x_a + 15
+x &amp;lt;- seq(x_a, x_b, length.out = k)
+eps &amp;lt;- rnorm(k, mean = 0, sd = eps_sd)
+# y &amp;lt;- (alpha + ai[i]) + rep(0, k) + eps
+y &amp;lt;- alpha + rep(0, k) + eps
+subj_id_vec &amp;lt;- c(subj_id_vec, rep(paste0(&amp;quot;subj_id_&amp;quot;, i), k))
+x_vec &amp;lt;- c(x_vec, x)
+y_vec &amp;lt;- c(y_vec, y)
+dat &amp;lt;- data.frame(subj_id = factor(subj_id_vec), x = x_vec, y = y_vec)
+est_and_plot(dat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rmcorr&lt;/th&gt;
+&lt;th&gt;LMM&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_3a_plot-1.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_3a_plot-2.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;scenario-3b&#34;&gt;Scenario 3b&lt;/h3&gt;
+&lt;p&gt;Data-generating model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;random intercept and random slope (uncorrelated)&lt;/li&gt;
+&lt;li&gt;large residual error&lt;/li&gt;
+&lt;li&gt;add one influential observation (wide x-axis range, simulate 0 $x$
+effect on $y$ for that subject)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see R code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(1)
+eps_sd &amp;lt;- 2
+alpha = 1
+beta = 2
+ai = rnorm(M, mean = 0, sd = 3)
+bi = rnorm(M, mean = 0, sd = 1.5)
+
+subj_id_vec &amp;lt;- numeric()
+x_vec &amp;lt;- numeric()
+y_vec &amp;lt;- numeric()
+for (i in 1 : (M-1)){ # i &amp;lt;- 2
+  x_a &amp;lt;- runif(1, 0, 5)
+  x_b &amp;lt;- x_a + 2 + rnorm(1)
+  x &amp;lt;- seq(x_a, x_b, length.out = k)
+  eps &amp;lt;- rnorm(k, mean = 0, sd = eps_sd)
+  y &amp;lt;- (alpha + ai[i]) + (beta + bi[i]) * x + eps
+  subj_id_vec &amp;lt;- c(subj_id_vec, rep(paste0(&amp;quot;subj_id_&amp;quot;, i), k))
+  x_vec &amp;lt;- c(x_vec, x)
+  y_vec &amp;lt;- c(y_vec, y)
+}
+i &amp;lt;- M
+x_a &amp;lt;- runif(1, 0, 5)
+x_b &amp;lt;- x_a + 15
+x &amp;lt;- seq(x_a, x_b, length.out = k)
+eps &amp;lt;- rnorm(k, mean = 0, sd = eps_sd)
+# y &amp;lt;- (alpha + ai[i]) + rep(0, k) + eps
+y &amp;lt;- (alpha + 0) + rep(0, k) + eps
+subj_id_vec &amp;lt;- c(subj_id_vec, rep(paste0(&amp;quot;subj_id_&amp;quot;, i), k))
+x_vec &amp;lt;- c(x_vec, x)
+y_vec &amp;lt;- c(y_vec, y)
+dat &amp;lt;- data.frame(subj_id = factor(subj_id_vec), x = x_vec, y = y_vec)
+est_and_plot(dat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rmcorr&lt;/th&gt;
+&lt;th&gt;LMM&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_3b_plot-1.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_3b_plot-2.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;scenario-4a&#34;&gt;Scenario 4a&lt;/h3&gt;
+&lt;p&gt;Data-generating model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;random intercept and random slope (uncorrelated)&lt;/li&gt;
+&lt;li&gt;small residual error&lt;/li&gt;
+&lt;li&gt;various number (between 2 and 8) of observations per subject&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see R code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(1)
+eps_sd &amp;lt;- 0.25
+alpha = 1
+beta = 2
+ai = rnorm(M, mean = 0, sd = 3)
+bi = rnorm(M, mean = 0, sd = 1.5)
+
+subj_id_vec &amp;lt;- numeric()
+x_vec &amp;lt;- numeric()
+y_vec &amp;lt;- numeric()
+for (i in 1 : M){ # i &amp;lt;- 2
+  k_i &amp;lt;- sample(2 : 8, 1)
+  x_a &amp;lt;- runif(1, 0, 5)
+  x_b &amp;lt;- x_a + 2 + rnorm(1)
+  x &amp;lt;- seq(x_a, x_b, length.out = k_i)
+  eps &amp;lt;- rnorm(k_i, mean = 0, sd = eps_sd)
+  y &amp;lt;- (alpha + ai[i]) + (beta + bi[i]) * x + eps
+  subj_id_vec &amp;lt;- c(subj_id_vec, rep(paste0(&amp;quot;subj_id_&amp;quot;, i), k_i))
+  x_vec &amp;lt;- c(x_vec, x)
+  y_vec &amp;lt;- c(y_vec, y)
+}
+dat &amp;lt;- data.frame(subj_id = factor(subj_id_vec), x = x_vec, y = y_vec)
+est_and_plot(dat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rmcorr&lt;/th&gt;
+&lt;th&gt;LMM&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_4a_plot-1.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_4a_plot-2.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;scenario-4b&#34;&gt;Scenario 4b&lt;/h3&gt;
+&lt;p&gt;Data-generating model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;random intercept and random slope (uncorrelated)&lt;/li&gt;
+&lt;li&gt;large residual error&lt;/li&gt;
+&lt;li&gt;various number (between 2 and 8) of observations per subject&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;
+(Click to see R code.)
+&lt;/summary&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(1)
+eps_sd &amp;lt;- 2
+alpha = 1
+beta = 2
+ai = rnorm(M, mean = 0, sd = 3)
+bi = rnorm(M, mean = 0, sd = 1.5)
+
+subj_id_vec &amp;lt;- numeric()
+x_vec &amp;lt;- numeric()
+y_vec &amp;lt;- numeric()
+for (i in 1 : M){ # i &amp;lt;- 2
+  k_i &amp;lt;- sample(2 : 8, 1)
+  x_a &amp;lt;- runif(1, 0, 5)
+  x_b &amp;lt;- x_a + 2 + rnorm(1)
+  x &amp;lt;- seq(x_a, x_b, length.out = k_i)
+  eps &amp;lt;- rnorm(k_i, mean = 0, sd = eps_sd)
+  y &amp;lt;- (alpha + ai[i]) + (beta + bi[i]) * x + eps
+  subj_id_vec &amp;lt;- c(subj_id_vec, rep(paste0(&amp;quot;subj_id_&amp;quot;, i), k_i))
+  x_vec &amp;lt;- c(x_vec, x)
+  y_vec &amp;lt;- c(y_vec, y)
+}
+dat &amp;lt;- data.frame(subj_id = factor(subj_id_vec), x = x_vec, y = y_vec)
+est_and_plot(dat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rmcorr&lt;/th&gt;
+&lt;th&gt;LMM&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_4b_plot-1.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;scenario_4b_plot-2.png&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;observations&#34;&gt;Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;When the &amp;ldquo;true&amp;rdquo; effect slope varies between subjects&lt;/strong&gt;, the estimated
+&lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; correlation, &lt;em&gt;r&lt;/em&gt;, might be tanking. See Scenario 2a
+($r_{rm}$ = 0.652) and 2b ($r_{rm}$ = 0.458) where data-generating model
+assumed varying slope, and compare with Scenario 1a ($r_{rm}$ = 0.992)
+and 1b ($r_{rm}$ = 0.623) where data-generating model assumed the same
+population-effect as 2a and 2b but no varying slope. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;In presence of influential observation&lt;/strong&gt;, the estimated &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt;
+correlation, &lt;em&gt;r&lt;/em&gt;, appear to be prone to be largely affected. See
+Scenario 3a and 3b where influential observation was added (data for
+one subject, assumed wide x-axis range, simulate 0 $x$ effect on $y$
+for that subject). Compare scenario 2a and 3a ($r_{rm}$ = 0.652 =&amp;gt;
+$r_{rm}$ = 0.349) and Scenario 2b and 3b ($r_{rm}$ = 0.458 =&amp;gt; $r_{rm}$ = 0.189)
+where data-generating models within these pairs differ only by how
+data for that one subject were simulated.  &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;When number of observations&lt;/strong&gt; varies between subjects (and especially
+when it is small for some), due to lack of partial-pooling
+mechanism, I expect &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; correlation results might be
+unstable too. See Scenario 4a and 4b where various number (between 2
+and 8) of observations per subject was assumed. Compare scenario 2a
+and 4a ($r_{rm}$ = 0.652 =&amp;gt; $r_{rm}$ = 0.885) and Scenario 2b and 4b
+($r_{rm}$ = 0.458 =&amp;gt; $r_{rm}$ = 0.594) which data-generating models only
+differ by assuming fixed or variate number of observations per
+subject (while the average number of observations per subject is set
+the same).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In conclusion: &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; is IMO a very interesting method with neat
+&amp;ldquo;repeated measures correlation interpretation&amp;rdquo;. However, in some data
+scenarios demonstrated above (e.g., if true effect slope varies between
+subjects) the correlation estmated by &lt;em&gt;&lt;strong&gt;rmcorr&lt;/strong&gt;&lt;/em&gt; might be not an ideal
+choice to quantify the association between two measures.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>GPS data in R: parse and plot GPX data exported from Strava</title>
