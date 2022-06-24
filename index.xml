@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Home</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 26 Apr 2022 17:19:28 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 13 Nov 2022 10:05:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Home</title>
@@ -52,6 +52,22 @@
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Comparison of accelerometry-based measures of physical activity</title>
+      <link>/talk/2022-11-13-adds/</link>
+      <pubDate>Sun, 13 Nov 2022 10:05:00 +0000</pubDate>
+      <guid>/talk/2022-11-13-adds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparison of accelerometry-based measures of physical activity</title>
+      <link>/talk/2022-08-02-jsm/</link>
+      <pubDate>Mon, 08 Aug 2022 10:05:00 +0000</pubDate>
+      <guid>/talk/2022-08-02-jsm/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -918,9 +934,9 @@ of subsequent locations distance, and using an alternative way,&lt;/li&gt;
     
     <item>
       <title>Harmonization of open-source and proprietary accelerometry-based physical activity measures</title>
-      <link>/talk/2021-11-05-adds/</link>
+      <link>/talk/2021-11-05-health_data_science_syposium/</link>
       <pubDate>Fri, 05 Nov 2021 10:05:00 +0000</pubDate>
-      <guid>/talk/2021-11-05-adds/</guid>
+      <guid>/talk/2021-11-05-health_data_science_syposium/</guid>
       <description></description>
     </item>
     
@@ -1766,6 +1782,9 @@ options&lt;/a&gt;).&lt;/p&gt;</description>
       <guid>/resources/recently-all/</guid>
       <description>&lt;h4 id=&#34;2022&#34;&gt;2022&lt;/h4&gt;
 &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;[2022-04-27] I was elected as a member of the &lt;a href=&#34;https://publichealth.jhu.edu/alumni/the-delta-omega-public-health-honorary-society-alpha-chapter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Alpha chapter&lt;/a&gt; of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Delta_Omega&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Delta Omega Society&lt;/a&gt;. A nice certificate I received is available &lt;a href=&#34;https://martakarass.github.io/docs/delta_omega_cert.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[2022-01-24] Our preprint &lt;a href=&#34;https://doi.org/10.21203/rs.3.rs-1370418/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Quantification of acceleration as activity counts in ActiGraph wearables&amp;rdquo;&lt;/a&gt; is out. This work publishes activity counts algorithm from ActiGraph&amp;rsquo;s ActiLife and CentrePoint software as a standalone Python package. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;

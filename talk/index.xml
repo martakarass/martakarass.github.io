@@ -5,12 +5,28 @@
     <link>/talk/</link>
       <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 04 Mar 2022 10:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 13 Nov 2022 10:05:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Recent &amp; Upcoming Talks</title>
       <link>/talk/</link>
     </image>
+    
+    <item>
+      <title>Comparison of accelerometry-based measures of physical activity</title>
+      <link>/talk/2022-11-13-adds/</link>
+      <pubDate>Sun, 13 Nov 2022 10:05:00 +0000</pubDate>
+      <guid>/talk/2022-11-13-adds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparison of accelerometry-based measures of physical activity</title>
+      <link>/talk/2022-08-02-jsm/</link>
+      <pubDate>Mon, 08 Aug 2022 10:05:00 +0000</pubDate>
+      <guid>/talk/2022-08-02-jsm/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Smartphone devices data in health research: opportunities and challenges</title>
@@ -22,9 +38,9 @@
     
     <item>
       <title>Harmonization of open-source and proprietary accelerometry-based physical activity measures</title>
-      <link>/talk/2021-11-05-adds/</link>
+      <link>/talk/2021-11-05-health_data_science_syposium/</link>
       <pubDate>Fri, 05 Nov 2021 10:05:00 +0000</pubDate>
-      <guid>/talk/2021-11-05-adds/</guid>
+      <guid>/talk/2021-11-05-health_data_science_syposium/</guid>
       <description></description>
     </item>
     
