@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>biomechanics | Home</title>
+    <link>/tag/biomechanics/</link>
+      <atom:link href="/tag/biomechanics/index.xml" rel="self" type="application/rss+xml" />
+    <description>biomechanics</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 27 Jul 2022 18:08:38 -0400</lastBuildDate>
+    <image>
+      <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
+      <title>biomechanics</title>
+      <link>/tag/biomechanics/</link>
+    </image>
+    
+    <item>
+      <title>Estimating knee movement patterns of recreational runners across training sessions using multilevel functional regression models</title>
+      <link>/publication/11_estimating_knee_movement_patterns/</link>
+      <pubDate>Wed, 27 Jul 2022 18:08:38 -0400</pubDate>
+      <guid>/publication/11_estimating_knee_movement_patterns/</guid>
+      <description>&lt;p&gt;NOTE: Matabuena and Karas joint first co-authorship.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

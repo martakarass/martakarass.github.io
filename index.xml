@@ -55,7 +55,7 @@
     </item>
     
     <item>
-      <title>Comparison of accelerometry-based measures of physical activity</title>
+      <title>Wearable devices can track ALS disease progression and may serve as novel clinical trial outcome measures</title>
       <link>/talk/2022-11-13-adds/</link>
       <pubDate>Sun, 13 Nov 2022 10:05:00 +0000</pubDate>
       <guid>/talk/2022-11-13-adds/</guid>
@@ -68,6 +68,24 @@
       <pubDate>Mon, 08 Aug 2022 10:05:00 +0000</pubDate>
       <guid>/talk/2022-08-02-jsm/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Estimating knee movement patterns of recreational runners across training sessions using multilevel functional regression models</title>
+      <link>/publication/11_estimating_knee_movement_patterns/</link>
+      <pubDate>Wed, 27 Jul 2022 18:08:38 -0400</pubDate>
+      <guid>/publication/11_estimating_knee_movement_patterns/</guid>
+      <description>&lt;p&gt;NOTE: Matabuena and Karas joint first co-authorship.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comparison of Accelerometry-Based Measures of Physical Activity. Retrospective Observational Data Analysis Study</title>
+      <link>/publication/10_comparison_of_accelerometry_based_measures/</link>
+      <pubDate>Wed, 13 Jul 2022 18:08:38 -0400</pubDate>
+      <guid>/publication/10_comparison_of_accelerometry_based_measures/</guid>
+      <description>&lt;p&gt;NOTE: Karas and Muschelli joint first co-authorship.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -1783,10 +1801,16 @@ options&lt;/a&gt;).&lt;/p&gt;</description>
       <description>&lt;h4 id=&#34;2022&#34;&gt;2022&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;[2022-04-27] I was elected as a member of the &lt;a href=&#34;https://publichealth.jhu.edu/alumni/the-delta-omega-public-health-honorary-society-alpha-chapter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Alpha chapter&lt;/a&gt; of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Delta_Omega&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Delta Omega Society&lt;/a&gt;. A nice certificate I received is available &lt;a href=&#34;https://martakarass.github.io/docs/delta_omega_cert.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;[2022-07-27] Our work &lt;a href=&#34;https://martakarass.github.io/docs/papers/Matabuena_2022_estimating_knee_movement_patterns.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Estimating knee movement patterns of recreational runners across training sessions using multilevel functional regression models&amp;rdquo;&lt;/a&gt; is accepted. This work can serve as a reference for practitioners modeling repeated functional measures at different resolution levels in the context of biomechanics and sports science applications. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;[2022-01-24] Our preprint &lt;a href=&#34;https://doi.org/10.21203/rs.3.rs-1370418/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Quantification of acceleration as activity counts in ActiGraph wearables&amp;rdquo;&lt;/a&gt; is out. This work publishes activity counts algorithm from ActiGraph&amp;rsquo;s ActiLife and CentrePoint software as a standalone Python package. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;[2022-07-22] Our paper &lt;a href=&#34;https://mhealth.jmir.org/2022/7/e38077&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Comparison of Accelerometry-Based Measures of Physical Activity: Retrospective Observational Data Analysis Study&amp;rdquo;&lt;/a&gt; is published. This work provides comparison and harmonization mapping between minute-level accelerometry-derived measures (ActiGraph AC, MIMS, ENMO, MAD, AI). &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[2022-07-13] Our paper &lt;a href=&#34;https://www.nature.com/articles/s41598-022-16003-x&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Quantification of acceleration as activity counts in ActiGraph wearables&amp;rdquo;&lt;/a&gt; is out. This work publishes activity counts algorithm from ActiGraph&amp;rsquo;s ActiLife and CentrePoint. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[2022-04-27] I was elected as a member of the &lt;a href=&#34;https://publichealth.jhu.edu/alumni/the-delta-omega-public-health-honorary-society-alpha-chapter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Alpha chapter&lt;/a&gt; of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Delta_Omega&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Delta Omega Society&lt;/a&gt;. A nice certificate I received is available &lt;a href=&#34;https://martakarass.github.io/docs/delta_omega_cert.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[2022-01-13] Our paper &lt;a href=&#34;https://doi.org/10.1093/gerona/glac013&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Free-living gait cadence measured by wearable accelerometer: a promising alternative to traditional measures of mobility for assessing fall risk&amp;rdquo;&lt;/a&gt; is published. We showed that in community-dwelling older adults, free-living walking cadence was significantly related to fall rates (while clinic-based mobility measures were not).&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
