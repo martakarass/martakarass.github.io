@@ -2919,12 +2919,36 @@ Three
     </item>
     
     <item>
+      <title>Books</title>
+      <link>/conflu/books/</link>
+      <pubDate>Sat, 26 Jan 2019 19:17:23 -0400</pubDate>
+      <guid>/conflu/books/</guid>
+      <description>&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#atomic-habits-james-clear&#34;&gt;Atomic Habits (James Clear)&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;atomic-habits-james-clear&#34;&gt;Atomic Habits (James Clear)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;foo&lt;/li&gt;
+&lt;li&gt;baar&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Confluence</title>
       <link>/conflu/land/</link>
       <pubDate>Sat, 26 Jan 2019 19:17:23 -0400</pubDate>
       <guid>/conflu/land/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://martakarass.github.io/conflu/land/cuisines/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cuisines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://martakarass.github.io/conflu/cuisines&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cuisines&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://martakarass.github.io/conflu/books&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Books&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -2939,22 +2963,20 @@ Three
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#cajun-cuisine&#34;&gt;Cajun cuisine&lt;/a&gt;
       &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#history&#34;&gt;History&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#sources&#34;&gt;Sources&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#creole-cuisine&#34;&gt;Creole cuisine&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;h2 id=&#34;cajun-cuisine&#34;&gt;Cajun cuisine&lt;/h2&gt;
-&lt;h3 id=&#34;history&#34;&gt;History&lt;/h3&gt;
+&lt;h4 id=&#34;history&#34;&gt;History&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;[kej-dżyn]&lt;/li&gt;
 &lt;li&gt;Style of food that was developed in the southern parts of the United States&lt;/li&gt;
 &lt;li&gt;It originated with Acadian immigrants, who ended up in the south after fleeing Canada in the 18th century.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;acadians&#34;&gt;Acadians&lt;/h4&gt;
+&lt;h5 id=&#34;acadians&#34;&gt;Acadians&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;The Acadians were the original French settlers who came to North America in 17t century&lt;/li&gt;
 &lt;li&gt;Lived in what is known today as Maritime Provinces.&lt;/li&gt;
@@ -2962,12 +2984,12 @@ Three
 &lt;li&gt;These recipes usually involved meat and vegetables cooked together in a large pot of thick sauce. In their new land, the Acadians caught new kinds of fish in the neighboring sea and grew new kinds of foods on land.&lt;/li&gt;
 &lt;li&gt;However, when the Acadians were pressured to swear allegiance to the British Crown in 1755, they refused. More than 14,000 of them were then deported (the Great Deportation). Many of those moved to Louisiana, where true Cajun cooking got its start.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;cajun-cuisine-in-development&#34;&gt;Cajun cuisine in development&lt;/h4&gt;
+&lt;h5 id=&#34;cajun-cuisine-in-development&#34;&gt;Cajun cuisine in development&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;After getting settled in this southern area of the United States, the Acadian farmers once again changed their cooking based on what ingredients were readily available to them.&lt;/li&gt;
 &lt;li&gt;This meant their cuisine developed to feature oysters [ostrygi], crab [krab], alligator, shrimp [krewetki], crawfish [langusta], catfish [sum], and redfish [karmazyn] — all of which could be caught in the Gulf of Mexico and the waters of the local bay. This was a stark contrast to the lobster [homar], cod [dorsz], and salmon [łosoś] which they caught in the North Atlantic Ocean outside Canada.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;
+&lt;h4 id=&#34;overview&#34;&gt;Overview&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;While Cajun dishes are  deeply rooted in seafood, they maintain the Acadian tradition of using whatever the environment provides.&lt;/li&gt;
 &lt;li&gt;The &amp;ldquo;Holy Trinity&amp;rdquo; of onion, celery, and green bell peppers are the basis for just about every dish. Additionally, a special roux [zasmażka] is almost always used, and spices are an integral key to developing Cajun food&amp;rsquo;s characteristic flavors.&lt;/li&gt;
@@ -2983,7 +3005,7 @@ Three
 &lt;li&gt;boudin and boudin balls (pork sausage and fried pork sausage);&lt;/li&gt;
 &lt;li&gt;rice with gravy.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;sources&#34;&gt;Sources&lt;/h3&gt;
+&lt;h4 id=&#34;sources&#34;&gt;Sources&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://crazyalanswampshack.com/blog/cajun-cuisine-a-brief-history/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cajun Cuisine: A Brief History&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
