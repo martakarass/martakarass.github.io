@@ -5,12 +5,21 @@
     <link>/author/straczkiewicz/</link>
       <atom:link href="/author/straczkiewicz/index.xml" rel="self" type="application/rss+xml" />
     <description>Straczkiewicz</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 23 Sep 2019 18:08:38 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 21 Nov 2022 18:08:38 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Straczkiewicz</title>
       <link>/author/straczkiewicz/</link>
     </image>
+    
+    <item>
+      <title>Wearable device and smartphone data can track ALS disease progression and may serve as novel clinical trial outcome measures</title>
+      <link>/publication/13_wearable_device_and_smartphone_can_track_als/</link>
+      <pubDate>Mon, 21 Nov 2022 18:08:38 -0400</pubDate>
+      <guid>/publication/13_wearable_device_and_smartphone_can_track_als/</guid>
+      <description>&lt;p&gt;NOTE: Johnson and Karas joint first co-authorship.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation</title>

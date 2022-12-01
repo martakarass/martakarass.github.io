@@ -11,8 +11,74 @@
     <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>/publication-type/3/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/actigraphy/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/amyotrophic-lateral-sclerosis/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/authors/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/berry/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/burke/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/clark/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/digital-biomarkers/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/digital-health/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
     <loc>/</loc>
-    <lastmod>2022-11-13T10:05:00+00:00</lastmod>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/iwasaki/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/iyer/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/johnson/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/karas/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/lahav/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/onnela/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/publication_types/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/publication/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/scheier/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/straczkiewicz/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/publication/13_wearable_device_and_smartphone_can_track_als/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/wearables/</loc>
+    <lastmod>2022-11-21T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/talk/</loc>
     <lastmod>2022-11-13T10:05:00+00:00</lastmod>
@@ -20,13 +86,64 @@
     <loc>/talk/2022-11-13-adds/</loc>
     <lastmod>2022-11-13T10:05:00+00:00</lastmod>
   </url><url>
+    <loc>/author/biggs/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/biomedical-step-count/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/ferrario/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/gerstel/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/guo/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/guthrie/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/lemay/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/moufawad-el-achkar/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/neishabouri/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/nguyen/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/patterson/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/publication/12_performance_analyses_of_step_counting_algorithms/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/pilkar/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/renevey/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/sloan/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/soltani/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/author/toole/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
+    <loc>/tag/wrist-accelerometry/</loc>
+    <lastmod>2022-10-25T18:08:38-04:00</lastmod>
+  </url><url>
     <loc>/talk/2022-08-02-jsm/</loc>
     <lastmod>2022-08-08T10:05:00+00:00</lastmod>
   </url><url>
     <loc>/publication-type/2/</loc>
-    <lastmod>2022-07-27T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/authors/</loc>
     <lastmod>2022-07-27T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/tag/biomechanics/</loc>
@@ -41,9 +158,6 @@
     <loc>/author/hayes/</loc>
     <lastmod>2022-07-27T18:08:38-04:00</lastmod>
   </url><url>
-    <loc>/author/karas/</loc>
-    <lastmod>2022-07-27T18:08:38-04:00</lastmod>
-  </url><url>
     <loc>/tag/knee-movement/</loc>
     <lastmod>2022-07-27T18:08:38-04:00</lastmod>
   </url><url>
@@ -56,28 +170,16 @@
     <loc>/tag/patterns/</loc>
     <lastmod>2022-07-27T18:08:38-04:00</lastmod>
   </url><url>
-    <loc>/publication_types/</loc>
-    <lastmod>2022-07-27T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/publication/</loc>
-    <lastmod>2022-07-27T18:08:38-04:00</lastmod>
-  </url><url>
     <loc>/author/riazati/</loc>
     <lastmod>2022-07-27T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/tag/subsecond-level-data/</loc>
     <lastmod>2022-07-27T18:08:38-04:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2022-07-27T18:08:38-04:00</lastmod>
-  </url><url>
     <loc>/tag/wearable-sensors/</loc>
     <lastmod>2022-07-27T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/tag/actigraph/</loc>
-    <lastmod>2022-07-13T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/tag/actigraphy/</loc>
     <lastmod>2022-07-13T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/tag/activity-counts/</loc>
@@ -134,9 +236,6 @@
     <loc>/post/2022-04-27-rmcorr_vs_lmm/</loc>
     <lastmod>2022-04-26T17:19:28-04:00</lastmod>
   </url><url>
-    <loc>/tag/digital-health/</loc>
-    <lastmod>2022-03-04T10:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tag/digital-phenotyping/</loc>
     <lastmod>2022-03-04T10:00:00+00:00</lastmod>
   </url><url>
@@ -146,31 +245,13 @@
     <loc>/tag/smartphones/</loc>
     <lastmod>2022-03-04T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication-type/3/</loc>
-    <lastmod>2022-01-24T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/author/biggs/</loc>
-    <lastmod>2022-01-24T18:08:38-04:00</lastmod>
-  </url><url>
     <loc>/author/cross/</loc>
-    <lastmod>2022-01-24T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/author/guo/</loc>
-    <lastmod>2022-01-24T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/author/guthrie/</loc>
     <lastmod>2022-01-24T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/author/khan/</loc>
     <lastmod>2022-01-24T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/author/migueles/</loc>
-    <lastmod>2022-01-24T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/author/neishabouri/</loc>
-    <lastmod>2022-01-24T18:08:38-04:00</lastmod>
-  </url><url>
-    <loc>/author/nguyen/</loc>
     <lastmod>2022-01-24T18:08:38-04:00</lastmod>
   </url><url>
     <loc>/publication/9_quantification_of_acceleration_as_activity_counts/</loc>
@@ -398,9 +479,6 @@
     <loc>/tag/methods/</loc>
     <lastmod>2019-09-23T18:08:38-04:00</lastmod>
   </url><url>
-    <loc>/author/straczkiewicz/</loc>
-    <lastmod>2019-09-23T18:08:38-04:00</lastmod>
-  </url><url>
     <loc>/talk/2019-06-26-icampam/</loc>
     <lastmod>2019-06-26T15:05:00-04:00</lastmod>
   </url><url>
@@ -532,6 +610,8 @@
   </url><url>
     <loc>/author/i./</loc>
   </url><url>
+    <loc>/author/j-p./</loc>
+  </url><url>
     <loc>/author/j./</loc>
   </url><url>
     <loc>/author/j.-a./</loc>
@@ -544,17 +624,25 @@
   </url><url>
     <loc>/author/j.k./</loc>
   </url><url>
+    <loc>/author/k./</loc>
+  </url><url>
     <loc>/author/l./</loc>
   </url><url>
     <loc>/author/l.-j./</loc>
   </url><url>
     <loc>/author/m./</loc>
   </url><url>
+    <loc>/author/m.r./</loc>
+  </url><url>
     <loc>/author/marta-karas/</loc>
   </url><url>
     <loc>/author/n./</loc>
   </url><url>
     <loc>/author/n.w./</loc>
+  </url><url>
+    <loc>/author/p./</loc>
+  </url><url>
+    <loc>/author/r./</loc>
   </url><url>
     <loc>/resources/computing_club_materials/2020-12-01-computing_club/</loc>
   </url><url>
@@ -575,5 +663,7 @@
     <loc>/author/w./</loc>
   </url><url>
     <loc>/author/y./</loc>
+  </url><url>
+    <loc>/author/z./</loc>
   </url>
 </urlset>

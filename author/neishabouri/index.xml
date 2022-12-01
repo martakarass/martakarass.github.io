@@ -5,12 +5,20 @@
     <link>/author/neishabouri/</link>
       <atom:link href="/author/neishabouri/index.xml" rel="self" type="application/rss+xml" />
     <description>Neishabouri</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Jan 2022 18:08:38 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 25 Oct 2022 18:08:38 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Neishabouri</title>
       <link>/author/neishabouri/</link>
     </image>
+    
+    <item>
+      <title>Performance analyses of step-counting algorithms using wrist accelerometry</title>
+      <link>/publication/12_performance_analyses_of_step_counting_algorithms/</link>
+      <pubDate>Tue, 25 Oct 2022 18:08:38 -0400</pubDate>
+      <guid>/publication/12_performance_analyses_of_step_counting_algorithms/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Quantification of acceleration as activity counts in ActiGraph wearables</title>

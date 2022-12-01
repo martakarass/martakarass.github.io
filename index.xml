@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Home</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 13 Nov 2022 10:05:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 21 Nov 2022 18:08:38 -0400</lastBuildDate>
     <image>
       <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
       <title>Home</title>
@@ -55,10 +55,27 @@
     </item>
     
     <item>
+      <title>Wearable device and smartphone data can track ALS disease progression and may serve as novel clinical trial outcome measures</title>
+      <link>/publication/13_wearable_device_and_smartphone_can_track_als/</link>
+      <pubDate>Mon, 21 Nov 2022 18:08:38 -0400</pubDate>
+      <guid>/publication/13_wearable_device_and_smartphone_can_track_als/</guid>
+      <description>&lt;p&gt;NOTE: Johnson and Karas joint first co-authorship.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Wearable devices can track ALS disease progression and may serve as novel clinical trial outcome measures</title>
       <link>/talk/2022-11-13-adds/</link>
       <pubDate>Sun, 13 Nov 2022 10:05:00 +0000</pubDate>
       <guid>/talk/2022-11-13-adds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Performance analyses of step-counting algorithms using wrist accelerometry</title>
+      <link>/publication/12_performance_analyses_of_step_counting_algorithms/</link>
+      <pubDate>Tue, 25 Oct 2022 18:08:38 -0400</pubDate>
+      <guid>/publication/12_performance_analyses_of_step_counting_algorithms/</guid>
       <description></description>
     </item>
     
@@ -1800,6 +1817,13 @@ options&lt;/a&gt;).&lt;/p&gt;</description>
       <guid>/resources/recently-all/</guid>
       <description>&lt;h4 id=&#34;2022&#34;&gt;2022&lt;/h4&gt;
 &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;[2022-11-21] Our preprint &lt;a href=&#34;https://doi.org/10.21203/rs.3.rs-2248487/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Wearable device and smartphone data can track ALS disease progression and may serve as novel clinical trial outcome measures&amp;rdquo;&lt;/a&gt; is out. This work
+investigates whether mobile applications and wearable devices can be used to quantify ALS disease progression through active (surveys) and passive (sensors) data collection. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[2022-10-25] Our preprint &lt;a href=&#34;https://doi.org/10.21203/rs.3.rs-2183645/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Performance analyses of step-counting algorithms using wrist accelerometry&amp;rdquo;&lt;/a&gt; is available online. This work evaluates  performance of several modern wrist-accelerometry-based algorithms for step count estimation using a common dataset with various continuous walking trials. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[2022-07-27] Our work &lt;a href=&#34;https://martakarass.github.io/docs/papers/Matabuena_2022_estimating_knee_movement_patterns.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Estimating knee movement patterns of recreational runners across training sessions using multilevel functional regression models&amp;rdquo;&lt;/a&gt; is accepted. This work can serve as a reference for practitioners modeling repeated functional measures at different resolution levels in the context of biomechanics and sports science applications. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
