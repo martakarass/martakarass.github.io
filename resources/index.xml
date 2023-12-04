@@ -2,21 +2,133 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resources | Home</title>
-    <link>/resources/</link>
-      <atom:link href="/resources/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://example.com/resources/</link>
+      <atom:link href="https://example.com/resources/index.xml" rel="self" type="application/rss+xml" />
     <description>Resources</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 25 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 03 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
+      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Resources</title>
-      <link>/resources/</link>
+      <link>https://example.com/resources/</link>
     </image>
     
     <item>
+      <title>Nature and the city</title>
+      <link>https://example.com/resources/gallery-all/</link>
+      <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.com/resources/gallery-all/</guid>
+      <description>&lt;p&gt;Welcome to my photo gallery! These are some of my favorite pictures taken in recent years. Click on any picture to enter the gallery view and see it in full size (this allows to see description of a picture&amp;rsquo;s location in the left-bottom). Thank you for visiting my website.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gallery-grid&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p1a.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p1a_hu170f95e267d240dd9c7fa0deca9dac7f_4199980_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;2023-01-02-p1a.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p1b.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p1b_hub785831a0d73d89d6d069da1956080e4_3031691_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;2023-01-02-p1b.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p2.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p2_hu85e2e90c5475e9a3f084c791f9b4bd16_3932898_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;2023-01-02-p2.jpg&#34; width=&#34;750&#34; height=&#34;569&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p3.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p3_hua925fd8e0ab18451c54a9ec36d3e8f9f_2590360_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;2023-01-02-p3.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p4.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p4_hu813db9b2a6a8d7db0f1ff252679ac6c3_2931649_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;2023-01-02-p4.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p5.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/2023-01-02-p5_hu7f8ad0671760588c355dce549821f4d8_5692286_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;2023-01-02-p5.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
       <title>All past updates</title>
-      <link>/resources/recently-all/</link>
-      <pubDate>Tue, 25 Aug 2020 00:00:00 -0400</pubDate>
-      <guid>/resources/recently-all/</guid>
+      <link>https://example.com/resources/recently-all/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/resources/recently-all/</guid>
       <description>&lt;h4 id=&#34;2023&#34;&gt;2023&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;[2023-03-06] Our paper &lt;a href=&#34;https://www.nature.com/articles/s41746-023-00778-y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Wearable device and smartphone data can track ALS disease progression and may serve as novel clinical trial outcome measures&amp;rdquo;&lt;/a&gt; is published. This work
@@ -101,7 +213,7 @@ investigates whether mobile applications and wearable devices can be used to qua
 &lt;p&gt;I passed my preliminary schoolwide oral exam. My Committee consisted of three faculty from the Dept. of Biostatistics, one faculty from Dept. of Epidemiology, and one faculty from the Dept. of Medicine. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;I received Leadership, Empowerment and Learning Culture &lt;a href=&#34;/docs/certificates/2019-10-09-Novartis_LELC_US_Bios_Award_Certificate_Marta_Karas.pdf&#34;&gt;Award&lt;/a&gt; during Novartis US Analytics Conference 2019. My conference talk presented the work done as a Sensor Data Analytics Intern with Novartis in Basel, Switzerland during summer 2019. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;I received Leadership, Empowerment and Learning Culture &lt;a href=&#34;https://example.com/docs/certificates/2019-10-09-Novartis_LELC_US_Bios_Award_Certificate_Marta_Karas.pdf&#34;&gt;Award&lt;/a&gt; during Novartis US Analytics Conference 2019. My conference talk presented the work done as a Sensor Data Analytics Intern with Novartis in Basel, Switzerland during summer 2019. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Our paper &amp;ldquo;&lt;em&gt;Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation&lt;/em&gt;&amp;rdquo; just got published in
@@ -136,10 +248,62 @@ investigates whether mobile applications and wearable devices can be used to qua
     </item>
     
     <item>
+      <title>All posts</title>
+      <link>https://example.com/resources/posts-all/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/resources/posts-all/</guid>
+      <description>&lt;h3 id=&#34;2022&#34;&gt;2022&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;../../post/2022-04-27-rmcorr_vs_lmm&#34;&gt;Repeated Measures Correlation (rmcorr): when may be not an ideal choice to quantify the association&lt;/a&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;../../post/2022-01-05-gps_strava_read_and_viz&#34;&gt;GPS data in R: parse and plot GPX data exported from Strava&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2021&#34;&gt;2021&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;../../post/2021-06-29-pa_measures_and_summarizedactigraphy&#34;&gt;Computing minute-level summary measures of physical activity from raw accelerometry data in R: AC, MIMS, ENMO, MAD, and AI&lt;/a&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;../../post/project_upstrap&#34;&gt;Upstrap for estimating power and sample size in complex models&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2019&#34;&gt;2019&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;../../post/2019-10-28-ttest-versus-ztest&#34;&gt;When to use t distribution versus normal distribution quantiles in constructing confidence interval for the mean&lt;/a&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;../../post/2019-01-26-favs-of-rstudio2019-conference&#34;&gt;Favourite topics seen at RStudio conference 2019&lt;/a&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;../../post/project_runstats&#34;&gt;runstats R package: fast computation of running statistics for time series&lt;/a&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;../../post/project_adeptdata&#34;&gt;adeptdata R package: raw accelerometry data sets and their derivatives&lt;/a&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;../../post/project_adept&#34;&gt;Adaptive empirical pattern transformation (ADEPT): a fast, scalable, and accurate method for pattern segmentation in time series&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2018&#34;&gt;2018&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../post/2018-09-02-applying-for-phd-in-usa&#34;&gt;(In Polish) Aplikacja na studia doktoranckie (Biostatystyka) w USA: notatki nt. procesu rekrutacji&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2017&#34;&gt;2017&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../post/project_mdpeer&#34;&gt;Brain connectivity-informed regularization methods for regression&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>All publications</title>
-      <link>/resources/publications-all/</link>
-      <pubDate>Tue, 25 Aug 2020 00:00:00 -0400</pubDate>
-      <guid>/resources/publications-all/</guid>
+      <link>https://example.com/resources/publications-all/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/resources/publications-all/</guid>
       <description>&lt;p&gt;* Joint first co-authorship.&lt;/p&gt;
 &lt;h3 id=&#34;2023&#34;&gt;2023&lt;/h3&gt;
 &lt;ul&gt;
@@ -260,641 +424,173 @@ Johnson, S. A.*, Karas, M.*, Burke, K. M., Straczkiewicz, M., Scheier, Z. A., Cl
     </item>
     
     <item>
-      <title>Teaching experience</title>
-      <link>/resources/teaching-all/</link>
-      <pubDate>Tue, 25 Aug 2020 00:00:00 -0400</pubDate>
-      <guid>/resources/teaching-all/</guid>
-      <description>&lt;h2 id=&#34;academic-year-2021-22&#34;&gt;Academic year 2021-22&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Term&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Course Number&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Course title&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Teaching role&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2021-22 Summer Institute&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;140.604&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/31613/2021/140.604.11/introduction-to-r-for-public-health-researchers&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction to R for Public Health Researchers&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;Co-instructor&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2021-22 Term 1&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;600.710&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/32051/2021/600.710.86/statistical-concepts-in-public-health-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistical Concepts in Public Health 2&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;TA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2021-22 Term 2&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;140.612&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/32187/2021/140.612.81/statistical-reasoning-in-public-health-ii&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistical Reasoning in Public Health II&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;TA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;academic-year-2020-21&#34;&gt;Academic year 2020-21&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Term&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Course Number&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Course title&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Teaching role&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2020-21 Term 1&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;140.651&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/25922/2018/140.651.01/methods-in-biostatistics-i&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Methods in Biostatistics I&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;Lead TA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2020-21 Term 2&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;140.651&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/17639/2013/140.652.01/methods-in-biostatistics-ii&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Methods in Biostatistics II&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;Lead TA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;academic-year-2019-20&#34;&gt;Academic year 2019-20&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Term&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Course Number&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Course title&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Teaching role&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2019-20 Term 1&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;140.850&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://martakarass.github.io/resources/specialtopics/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Special topics course: Biostatistical Methods for Wearable Computing&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;Co-instructor&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2019-20 Term 1&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;140.651&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/25922/2018/140.651.01/methods-in-biostatistics-i&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Methods in Biostatistics I&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;Lead TA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2019-20 Term 2&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;140.652&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/17639/2013/140.652.01/methods-in-biostatistics-ii&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Methods in Biostatistics II&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;Lead TA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;academic-year-2018-19&#34;&gt;Academic year 2018-19&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Term&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Course Number&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Course title&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Teaching role&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2018-19 Term 1&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;140.651&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/25922/2018/140.651.01/methods-in-biostatistics-i&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Methods in Biostatistics I&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;TA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2018-19 Term 2&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;140.652&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/17639/2013/140.652.01/methods-in-biostatistics-ii&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Methods in Biostatistics II&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;TA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2018-19 Term 3&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;140.623&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/courses/course/24892/2017/140.623.01/statistical-methods-in-public-health-iii&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistical Methods in Public Health III&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;TA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2018-19 Term 4&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;140.624&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;http://biostat.jhsph.edu/courses/bio624/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistical Methods in Public Health IV&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;TA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Special Topics course 2018-19: Biostatistical Methods for Wearable Computing</title>
-      <link>/resources/specialtopics/</link>
-      <pubDate>Mon, 30 Sep 2019 19:17:23 -0400</pubDate>
-      <guid>/resources/specialtopics/</guid>
-      <description>&lt;p&gt;Materials:&lt;/p&gt;
+      <title>All talks</title>
+      <link>https://example.com/resources/talks-all/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/resources/talks-all/</guid>
+      <description>&lt;h3 id=&#34;2023&#34;&gt;2023&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Wearable device and smartphone data for tracking ALS disease progression&lt;/strong&gt;, talk, Digital Health Innovation Summit, July 7, 2023, San Francisco, CA, 2023.
+&lt;/br&gt;
+&lt;a href=&#34;https://martakarass.github.io/docs/slides/2023-06-05-martakaras_ALS.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2022&#34;&gt;2022&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Oct 1, 2019: &lt;a href=&#34;../../resources/specialtopics_materials/intro&#34;&gt;Introduction to raw accelerometry data. Introduction to project raw accelerometry data set&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wearable devices can track ALS disease progression and may serve as novel clinical trial outcome measures&lt;/strong&gt;, poster, ActiGraph Digital Data Summit 2022, Nov 13, 2022, Pensacola Beach, FL, USA.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Oct 17, 2019: &lt;a href=&#34;https://docs.google.com/presentation/d/1W1PYSI9LvW2pqVCqvBR-xbIeB87diaQPNXhVAnNSyZI/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Time-series processing and pattern segmentation methods for high-dimensional time-series&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Comparison of accelerometry-based measures of physical activity&lt;/strong&gt;, talk, JSM, Aug 8, 2023, Washington, DC, USA.
+&lt;/br&gt;
+&lt;a href=&#34;https://martakarass.github.io/docs/slides/2022-08-05-JSM_2022.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Oct 24, 2019: &lt;a href=&#34;https://docs.google.com/presentation/d/14DpPvt_SA3g4rUWlWP0PoHugRSS_VKWsagB_opDUxAQ/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my class project slides&lt;/a&gt; and &lt;a href=&#34;https://github.com/martakarass/JHU-coursework/tree/master/PH-140-850-Wearables-Computing/class-project&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Smartphone devices data in health research: opportunities and challenges&lt;/strong&gt;, talk, Wearable and Implantable Technology group meeting (Department of Biostatistics, Johns Hopkins University), Mar 4, 2022, virtual.
+&lt;/br&gt;
+&lt;a href=&#34;https://martakarass.github.io/docs/slides/2022-03-04-wit.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>JH Biostat Computing Club 2018-19</title>
-      <link>/resources/computing-club/</link>
-      <pubDate>Sat, 26 Jan 2019 19:17:23 -0400</pubDate>
-      <guid>/resources/computing-club/</guid>
-      <description>&lt;p&gt;I and &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/directory/students/phd.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Guoqing Wang&lt;/a&gt; hosted the Department of Biostatistics students Computing Club in 2018-19 academic year.&lt;/p&gt;
+&lt;h3 id=&#34;2021&#34;&gt;2021&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Computing Club is one-hour session which gives students opportunities to share and develop computing skills useful for biostatisticians. It is held every other Tuesday 12:15-1:15 PM at JH SPH. Importantly, food 🍕🍌 is provided in every session!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Harmonization of open-source and proprietary accelerometry-based physical activity measures&lt;/strong&gt;, talk, 3rd Annual Health Data Science Symposium: Smartphones, Wearables, and Health, Nov 5, 2021, Boston, MA, USA.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Past and upcoming topics and locations for 2018-19 academic year are listed below.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Statistical methods and modeling of person-generated health data from wearable and mobile devices&lt;/strong&gt;, talk, Onnela Lab meeting (Department of Biostatistics, Harvard University), Jul 28, 2021, virtual.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Accelerometry-based physical activity measures across NHANES waves. Comparison of five minute-level measures: AC, MIMS, ENMO, MAD, AI&lt;/strong&gt;, talk, Wearable and Implantable Technology group meeting (Department of Biostatistics, Johns Hopkins University), May 13, 2021, virtual.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;National Health and Nutrition Examination Survey (NHANES) and comparability of accelerometry-derived physical activity measures across NHANES waves&lt;/strong&gt;, talk, ENGAGE lab meeting (Department of Epidemiology, Johns Hopkins University), May 6, 2021, virtual.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Comparison of accelerometry-derived physical activity summary measures by age, sex, and BMI&lt;/strong&gt;, talk, The Epidemiology and Biostatistics of Aging (EBA) Training Program: 6th Annual Joint Presentation of the SMART/ WIT, ENGAGE, and BHS Lab groups, Apr 27, 2021, virtual.
+&lt;/br&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=CyCN6X3kwng&amp;amp;t=117s&amp;amp;ab_channel=JohnsHopkinsEBATrainingProgram&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Date (Location)&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Topic&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Presenter&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Sep 18, 2018 (E9519)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Data science project workflow (&lt;a href=&#34;http://www.benjaminackerman.com/files/biostat_computing_club_slides.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;http://www.benjaminackerman.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ben Ackerman&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Oct 16, 2018 (W2029)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;The JHPCE Cluster: What does it do? Does it do things? Let&amp;rsquo;s find out! (&lt;a href=&#34;https://github.com/jfiksel/cluster-example&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cluster-example GitHub repo&lt;/a&gt;)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://github.com/jfiksel&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jacob Fiksel&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Nov 13, 2018 (E9519)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;R Packages for the first year PhD curriculum (useful for non-phd students too!)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/directory/students/phd.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lacey Etzkorn&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Nov 27, 2018 (W4030)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Speeding up R with Rcpp (&lt;a href=&#34;https://github.com/scristia/ComputingClubRcpp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;talk GitHub repo&lt;/a&gt;, &lt;a href=&#34;https://github.com/scristia/ComputingClubRcpp/blob/master/slides/rcpp_presentation.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;talk slides&lt;/a&gt;)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/directory/students/phd.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stephen Cristiano&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Jan 29, 2019 (W2029)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Intro to Deep Learning (&lt;a href=&#34;../../resources/computing_club_materials/2019-01-29-deep-learning&#34;&gt;slides&lt;/a&gt;)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/directory/students/phd.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Guoqing Wang&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Feb 12, 2019 (E9519)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Some topics seen at RStudio 2019 conference (&lt;a href=&#34;../../resources/computing_club_materials/2019-02-12-seen-at-rstudio2019-conf&#34;&gt;slides&lt;/a&gt;)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://martakarass.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marta Karas&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Feb 26, 2019 (W2029)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Blogdown tutorial: how to make your own personal academic website! (&lt;a href=&#34;http://www.benjaminackerman.com/talk/computing_club_website_tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;abstract and slides link&lt;/a&gt;)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;http://www.benjaminackerman.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ben Ackerman&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Apr 16, 2019 (W4030)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Computational and statistical methods in single-cell genomics (&lt;a href=&#34;/docs/slides/2019-04-16-comouting-club-ji_slides.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/~zji4/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zhicheng (Jason) Ji&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Apr 30, 2019 (W4030)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Simulation studies on the cluster, and parallel computing in R with limited memory (&lt;a href=&#34;/docs/slides/2019-04-20-LamarComputingClub.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://lamarhuntiii.com/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lamar Hunt&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;h3 id=&#34;2020&#34;&gt;2020&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Links to the previous years&#39; Computing Club could be found here:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;2017-18: -&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/~ydu/comp_club.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2016-17&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.junruidi.com/compclub.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2015-16&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2014-15: - (overwritten by 2016-17)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/~jbai/compclub.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2013-14&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/~afisher/ComputingClub/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2012-13&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/~afrazee/old/computingclub.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2011-12&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2010-11&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/index_0910.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2009-10&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/index_0809.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2008-09&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/index_0708.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2007-08&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/index_0607.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2006-07&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/bit/compintro/index_0506.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2005-06&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores&lt;/strong&gt;, talk, CMStatistics 2020, Dec 20, 2020, virtual.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;arctools R package: Processing and physical activity summaries of minute level activity data&lt;/strong&gt;, talk, Wearable and Implantable Technology group meeting (Department of Biostatistics, Johns Hopkins University), Dec 17, 2020, virtual.
+&lt;/br&gt;
+&lt;a href=&#34;https://cran.r-project.org/web/packages/arctools/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt; |
+&lt;a href=&#34;https://docs.google.com/presentation/d/1Ly-193VBn97WhuF8d9YFyeNVQzngLEPezLhtASSDgCw/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Predicting subjective recovery from lower limb surgery using consumer wearables&lt;/strong&gt;, talk, Workshop ‘The Future of Digital Health’, Dec 8, 2020, virtual.
+&lt;/br&gt;
+&lt;a href=&#34;https://docs.google.com/presentation/d/1qSS4wweLBAcqoxKZiUQZF0PGg3Y4e_161quQWdrVUL0/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt; |
+&lt;a href=&#34;https://www.youtube.com/watch?v=E74PiCg1vI8&amp;amp;feature=youtu.be&amp;amp;ab_channel=DimeSociety&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Recent developments in R tidyverse&lt;/strong&gt;, talk, Computing Club (Department of Biostatistics, Johns Hopkins University), Dec 1, 2020, virtual.
+&lt;/br&gt;
+&lt;a href=&#34;https://martakarass.github.io/talk/2020-12-01-computing_club/slides2.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt; |
+&lt;a href=&#34;https://drive.google.com/file/d/1G2HeuRUqseKHWBcpRV-gJlUjpu9cLwAt/view&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Summer internship project: Predicting subjective recovery from lower limb surgery using consumer wearables&lt;/strong&gt;, talk, Wearable and Implantable Technology group meeting (Department of Biostatistics, Johns Hopkins University), Sep 30, 2020, virtual.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Novel approach for precise walking cadence estimation from high-density tri-axial accelerometry data collected at wrist in free-living&lt;/strong&gt;, talk, 41st Annual Conference of the International Society for Clinical Biostatistics, Aug 27, 2020, virtual.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;arctools: R software for computing summaries of minute-level physical activity data&lt;/strong&gt;, talk, ENGAGE lab meeting (Department of Epidemiology, Johns Hopkins University), Jun 4, 2020, virtual.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Precise walking strides segmentation from raw accelerometry data: ADEPT method&lt;/strong&gt;, talk, Webinar for OSS developers in physical behavior field, Mar 11, 2020, virtual.
+&lt;/br&gt;
+&lt;a href=&#34;https://martakarass.github.io/adept/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt; |
+&lt;a href=&#34;https://docs.google.com/presentation/d/1ThrdQnFIfRH72fkNdpaiBaxdRB2brWvRgE1cT5hlA3A/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Towards precise walking strides segmentation from accelerometry data in free-living: ADEPT method and further developments&lt;/strong&gt;, talk,
+BIRS: Use of Wearable and Implantable Devices in Health Research, Feb 25, 2020, Banff, Alberta, Canada.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Recent developments in R tidyverse</title>
-      <link>/resources/computing_club_materials/2020-12-01-computing_club/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/resources/computing_club_materials/2020-12-01-computing_club/</guid>
-      <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;tidyverse&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;tidyverse&lt;/h2&gt;
-&lt;p&gt;The tidyverse is an ecosystem of packages designed with a shared underlying design philosophy, grammar, and data structures.&lt;/p&gt;
-&lt;p&gt;The tidyverse v1.3.0 loads 8 packages via &lt;code&gt;library(tidyverse)&lt;/code&gt;: ggplot2, dplyr, tidyr, purrr, tibble, stringr, forcats, readr.&lt;/p&gt;
-&lt;p&gt;It also includes (installs) but does not automatically load some other (i.e. lubridate).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;img/tidyverse-logo.png&#34; style=&#34;width:80.0%&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;presentation-motivation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Presentation motivation&lt;/h2&gt;
-&lt;div style=&#34;float: left; width: 45%;&#34;&gt;
-&lt;h4 id=&#34;me-using-tidyverse-packages-in-2015&#34;&gt;Me using tidyverse packages in &lt;strong&gt;2015&lt;/strong&gt;:&lt;/h4&gt;
-&lt;p&gt;&lt;/br&gt;
-Typically do stuff like&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dat %&amp;gt;%
-  filter(age &amp;gt;= 50) %&amp;gt;%
-  group_by(var1, var2) %&amp;gt;%
-  summarize(y_mean = mean(y),
-            y_median = median(y))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;and google “r ggplot2 rotate x axis labels”&lt;/p&gt;
-&lt;/div&gt;
-&lt;div style=&#34;float: right; width: 45%;&#34;&gt;
-&lt;h4 id=&#34;me-using-tidyverse-packages-in-2020&#34;&gt;Me using tidyverse packages in &lt;strong&gt;2020&lt;/strong&gt;:&lt;/h4&gt;
-&lt;p&gt;&lt;/br&gt;
-Typically do stuff like&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dat %&amp;gt;%
-  filter(age &amp;gt;= 50) %&amp;gt;%
-  group_by(var1, var2) %&amp;gt;%
-  summarize(y_mean = mean(y),
-            y_median = median(y))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;and google “r ggplot2 rotate x axis labels”&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;presentation-content-credits&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Presentation content credits&lt;/h2&gt;
-&lt;div style=&#34;float: left; width: 50%;&#34;&gt;
-&lt;p&gt;&lt;img src=&#34;img/twitter_q_long.png&#34; style=&#34;width:90.0%&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div style=&#34;float: right; width: 50%;&#34;&gt;
-&lt;p&gt;&lt;img src=&#34;img/twitter_a2.png&#34; style=&#34;width:90.0%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;(&lt;a href=&#34;https://towardsdatascience.com/ten-up-to-date-ways-to-do-common-data-tasks-in-r-4f15e56c92d&#34;&gt;Post link here.&lt;/a&gt;) These slides from now on are like 80-90% of this post content, with small alterations from my side.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Outline&lt;/h2&gt;
-&lt;p&gt;Palmer Penguins dataset&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Selecting columns in data&lt;/li&gt;
-&lt;li&gt;Reordering columns in data&lt;/li&gt;
-&lt;li&gt;Controlling mutated column location&lt;/li&gt;
-&lt;li&gt;Transforming from wide to long&lt;/li&gt;
-&lt;li&gt;Transforming from long to wide&lt;/li&gt;
-&lt;li&gt;Running group statistics across multiple columns&lt;/li&gt;
-&lt;li&gt;Control how output columns are named when summarising across multiple columns&lt;/li&gt;
-&lt;li&gt;Running models across subsets of data&lt;/li&gt;
-&lt;li&gt;Nesting data&lt;/li&gt;
-&lt;li&gt;Graphing across subsets&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;palmer-penguins-dataset&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Palmer Penguins dataset&lt;/h2&gt;
-&lt;div style=&#34;float: left; width: 75%;&#34;&gt;
-&lt;p&gt;“The goal of &lt;code&gt;palmerpenguins&lt;/code&gt; is to provide a great dataset for data exploration &amp;amp; visualization, as an alternative to &lt;code&gt;iris&lt;/code&gt;.”&lt;/p&gt;
-&lt;p&gt;Data set contains size measurements for three penguin species (Adelie, Chinstrap, Gentoo) observed on three islands in the Palmer Archipelago, Antarctica (Biscoe, Dream, Torgersen).&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
-library(palmerpenguins)
-str(penguins)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## tibble [344 × 8] (S3: tbl_df/tbl/data.frame)
-##  $ species          : Factor w/ 3 levels &amp;quot;Adelie&amp;quot;,&amp;quot;Chinstrap&amp;quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
-##  $ island           : Factor w/ 3 levels &amp;quot;Biscoe&amp;quot;,&amp;quot;Dream&amp;quot;,..: 3 3 3 3 3 3 3 3 3 3 ...
-##  $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
-##  $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
-##  $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
-##  $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
-##  $ sex              : Factor w/ 2 levels &amp;quot;female&amp;quot;,&amp;quot;male&amp;quot;: 2 1 1 NA 1 2 1 2 NA NA ...
-##  $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div style=&#34;float: right; width: 25%;&#34;&gt;
-&lt;p&gt;&lt;img src=&#34;img/penguin.jpeg&#34; style=&#34;width:99.0%&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;selecting-columns-in-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;1. Selecting columns in data&lt;/h2&gt;
-&lt;p&gt;To select columns using &lt;code&gt;dplyr::select()&lt;/code&gt; or &lt;code&gt;tidyr::pivot_longer()&lt;/code&gt; based on common conditions, use helper functions.&lt;/p&gt;
+&lt;h3 id=&#34;2019&#34;&gt;2019&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;To select variables contained in a character vector: &lt;code&gt;all_of()&lt;/code&gt;, &lt;code&gt;any_of()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;To select all (i.e. remaining) or last column: &lt;code&gt;everything()&lt;/code&gt;, &lt;code&gt;last_col()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;To select variables by matching patterns in their names: &lt;code&gt;starts_with()&lt;/code&gt;, &lt;code&gt;ends_with()&lt;/code&gt;, &lt;code&gt;contains()&lt;/code&gt;, &lt;code&gt;matches()&lt;/code&gt;, &lt;code&gt;num_range()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;To apply a custom function and select those for which the function returns TRUE: &lt;code&gt;where()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Functional registration of walking strides in high-density accelerometry data for estimation of gait asymmetry&lt;/strong&gt;, talk, CFE-CMStatistics 2019 conference, Dec 16, 2019, London, UK.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Methods for fast processing of time-series: runstats R package&lt;/strong&gt;, talk, Webinar for OSS developers in physical behavior field, Nov 5, 2019, virtual.
+&lt;/br&gt;
+&lt;a href=&#34;https://github.com/martakarass/runstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt; |
+&lt;a href=&#34;https://martakarass.github.io/docs/slides/2019-11-05-3rd-webinar-oss-runstats%20developers.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Considerations in statistical modeling of walking features derived from wrist-worn sensor in free-living&lt;/strong&gt;, talk, Wearable and Implantable Technology group meeting (Department of Biostatistics, Johns Hopkins University), Oct 31, 2019, Baltimore, MD, USA.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Overview of JHU Biostat Wearable and Implantable Technology (WIT) working group research&lt;/strong&gt;, talk, Journal Club (Department of Biostatistics, Johns Hopkins University), Oct 15, 2019, Baltimore, MD, USA.
+&lt;/br&gt;
+&lt;a href=&#34;https://docs.google.com/presentation/d/1TAPuMzQmeB9GP06FNKmoXAcPDt9A9_h4NhJSRtoapMY/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Walking measurements derived from free-living wrist-worn sensor as novel digital endpoints&lt;/strong&gt;, talk, Novartis 2019 US Analytics Conference - Digital Endpoint Analytics Session, Oct 8, 2019, East Hanover, NJ.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Automatic estimation of step asymmetry in a split-belt treadmill experiment using high-resolution accelerometry data&lt;/strong&gt;, talk, ICAMPAM 2019 conference, Jun 26, 2019, Maastricht, the Netherlands.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Physical activity monitoring with wearable accelerometers: strides segmentation, gait pattern estimation and walking detection from free-living data in R. Also: highlights from RStudio 2019 conference.&lt;/strong&gt;, talk, STWUR 11: Physical activity monitoring with wearable accelerometers, May 23, 2019, Wroclaw, Poland.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Stride segmentation and stride pattern estimation based on accelerometry data&lt;/strong&gt;, talk, Motion Analysis Laboratory meeting, May 14, 2019, Baltimore, MD, USA.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Simulation experiment project for Seminar on Adaptive Clinical Trials&lt;/strong&gt;, talk, PhD Seminar on Adaptive Clinical Trials (Department of Biostatistics, Johns Hopkins University), Apr 17, 2019, Baltimore, MD, USA.
+&lt;/br&gt;
+&lt;a href=&#34;https://martakarass.github.io/docs/slides/2019-04-17-Adaptive-Designs-Seminar-final-presentation.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Some of the topics seen at RStudio conference 2019&lt;/strong&gt;, talk, Computing Club (Department of Biostatistics, Johns Hopkins University), Feb 12, 2019, Baltimore, MD, USA.
+&lt;/br&gt;
+&lt;a href=&#34;https://martakarass.github.io/resources/computing_club_materials/2019-02-12-seen-at-rstudio2019-conf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;% 
-  dplyr::select(!contains(&amp;quot;_&amp;quot;), starts_with(&amp;quot;bill&amp;quot;)) %&amp;gt;% head(n = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 6
-##   species island    sex     year bill_length_mm bill_depth_mm
-##   &amp;lt;fct&amp;gt;   &amp;lt;fct&amp;gt;     &amp;lt;fct&amp;gt;  &amp;lt;int&amp;gt;          &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;
-## 1 Adelie  Torgersen male    2007           39.1          18.7
-## 2 Adelie  Torgersen female  2007           39.5          17.4
-## 3 Adelie  Torgersen female  2007           40.3          18&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;section&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;my_select_func &amp;lt;- function(var_name){
-  return(is.factor(var_name))
-}
-
-penguins %&amp;gt;% 
-  dplyr::select(where(my_select_func)) &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 344 x 3
-##    species island    sex   
-##    &amp;lt;fct&amp;gt;   &amp;lt;fct&amp;gt;     &amp;lt;fct&amp;gt; 
-##  1 Adelie  Torgersen male  
-##  2 Adelie  Torgersen female
-##  3 Adelie  Torgersen female
-##  4 Adelie  Torgersen &amp;lt;NA&amp;gt;  
-##  5 Adelie  Torgersen female
-##  6 Adelie  Torgersen male  
-##  7 Adelie  Torgersen female
-##  8 Adelie  Torgersen male  
-##  9 Adelie  Torgersen &amp;lt;NA&amp;gt;  
-## 10 Adelie  Torgersen &amp;lt;NA&amp;gt;  
-## # … with 334 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;reordering-columns-in-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2. Reordering columns in data&lt;/h2&gt;
-&lt;p&gt;To reorder specific columns or sets of columns, use &lt;code&gt;dplyr::relocate()&lt;/code&gt; with &lt;code&gt;.before&lt;/code&gt; or &lt;code&gt;.after&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;% 
-  dplyr::relocate(contains(&amp;quot;_&amp;quot;), .after = year) %&amp;gt;% head(n = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 8
-##   species island sex    year bill_length_mm bill_depth_mm flipper_length_…
-##   &amp;lt;fct&amp;gt;   &amp;lt;fct&amp;gt;  &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt;          &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;int&amp;gt;
-## 1 Adelie  Torge… male   2007           39.1          18.7              181
-## 2 Adelie  Torge… fema…  2007           39.5          17.4              186
-## 3 Adelie  Torge… fema…  2007           40.3          18                195
-## # … with 1 more variable: body_mass_g &amp;lt;int&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;% 
-  dplyr::relocate(species, .after = last_col()) %&amp;gt;% head(n = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 8
-##   island bill_length_mm bill_depth_mm flipper_length_… body_mass_g sex    year
-##   &amp;lt;fct&amp;gt;           &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;int&amp;gt;       &amp;lt;int&amp;gt; &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt;
-## 1 Torge…           39.1          18.7              181        3750 male   2007
-## 2 Torge…           39.5          17.4              186        3800 fema…  2007
-## 3 Torge…           40.3          18                195        3250 fema…  2007
-## # … with 1 more variable: species &amp;lt;fct&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;controlling-mutated-column-location&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3. Controlling mutated column location&lt;/h2&gt;
-&lt;p&gt;To control the location of the newly added column, use &lt;code&gt;dplyr::mutate()&lt;/code&gt;’s option (similar to above’s &lt;code&gt;dplyr::relocate()&lt;/code&gt;)&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins &amp;lt;- penguins %&amp;gt;% 
-  dplyr::mutate(penguinid = row_number(), .before = everything()) 
-
-penguins &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 344 x 9
-##    penguinid species island bill_length_mm bill_depth_mm flipper_length_…
-##        &amp;lt;int&amp;gt; &amp;lt;fct&amp;gt;   &amp;lt;fct&amp;gt;           &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;int&amp;gt;
-##  1         1 Adelie  Torge…           39.1          18.7              181
-##  2         2 Adelie  Torge…           39.5          17.4              186
-##  3         3 Adelie  Torge…           40.3          18                195
-##  4         4 Adelie  Torge…           NA            NA                 NA
-##  5         5 Adelie  Torge…           36.7          19.3              193
-##  6         6 Adelie  Torge…           39.3          20.6              190
-##  7         7 Adelie  Torge…           38.9          17.8              181
-##  8         8 Adelie  Torge…           39.2          19.6              195
-##  9         9 Adelie  Torge…           34.1          18.1              193
-## 10        10 Adelie  Torge…           42            20.2              190
-## # … with 334 more rows, and 3 more variables: body_mass_g &amp;lt;int&amp;gt;, sex &amp;lt;fct&amp;gt;,
-## #   year &amp;lt;int&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;transforming-from-wide-to-long&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4. Transforming from wide to long&lt;/h2&gt;
-&lt;p&gt;To transform data set from wide(r) to long(er) form, use &lt;code&gt;tidyr::pivot_longer()&lt;/code&gt; which is an updated approach to an older &lt;code&gt;tidyr::gather()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;% 
-  tidyr::pivot_longer(cols = contains(&amp;quot;_&amp;quot;),  # pivot these columns
-                      names_to = &amp;quot;variable_name&amp;quot;, # name of column containing &amp;quot;old columns&amp;quot; names
-                      values_to = &amp;quot;variable_value&amp;quot;)  # name of column containing &amp;quot;old columns&amp;quot; values&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 1,376 x 7
-##    penguinid species island    sex     year variable_name     variable_value
-##        &amp;lt;int&amp;gt; &amp;lt;fct&amp;gt;   &amp;lt;fct&amp;gt;     &amp;lt;fct&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;                      &amp;lt;dbl&amp;gt;
-##  1         1 Adelie  Torgersen male    2007 bill_length_mm              39.1
-##  2         1 Adelie  Torgersen male    2007 bill_depth_mm               18.7
-##  3         1 Adelie  Torgersen male    2007 flipper_length_mm          181  
-##  4         1 Adelie  Torgersen male    2007 body_mass_g               3750  
-##  5         2 Adelie  Torgersen female  2007 bill_length_mm              39.5
-##  6         2 Adelie  Torgersen female  2007 bill_depth_mm               17.4
-##  7         2 Adelie  Torgersen female  2007 flipper_length_mm          186  
-##  8         2 Adelie  Torgersen female  2007 body_mass_g               3800  
-##  9         3 Adelie  Torgersen female  2007 bill_length_mm              40.3
-## 10         3 Adelie  Torgersen female  2007 bill_depth_mm               18  
-## # … with 1,366 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;section-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# as previous example, but simultaneously split the names of columns 
-# which we pivot into longer format by &amp;quot;_&amp;quot; separator 
-penguins_longer &amp;lt;- penguins %&amp;gt;% 
-  tidyr::pivot_longer(cols = contains(&amp;quot;_&amp;quot;), # pivot these columns
-                      names_sep = &amp;quot;_&amp;quot;, 
-                      names_to = c(&amp;quot;part&amp;quot;, &amp;quot;measure&amp;quot;, &amp;quot;unit&amp;quot;), # name of column(s) containing &amp;quot;old columns&amp;quot; names
-                      values_to = &amp;quot;measure_value&amp;quot; ) # name of column containing &amp;quot;old columns&amp;quot; values
-
-penguins_longer &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 1,376 x 9
-##    penguinid species island    sex     year part    measure unit  measure_value
-##        &amp;lt;int&amp;gt; &amp;lt;fct&amp;gt;   &amp;lt;fct&amp;gt;     &amp;lt;fct&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;         &amp;lt;dbl&amp;gt;
-##  1         1 Adelie  Torgersen male    2007 bill    length  mm             39.1
-##  2         1 Adelie  Torgersen male    2007 bill    depth   mm             18.7
-##  3         1 Adelie  Torgersen male    2007 flipper length  mm            181  
-##  4         1 Adelie  Torgersen male    2007 body    mass    g            3750  
-##  5         2 Adelie  Torgersen female  2007 bill    length  mm             39.5
-##  6         2 Adelie  Torgersen female  2007 bill    depth   mm             17.4
-##  7         2 Adelie  Torgersen female  2007 flipper length  mm            186  
-##  8         2 Adelie  Torgersen female  2007 body    mass    g            3800  
-##  9         3 Adelie  Torgersen female  2007 bill    length  mm             40.3
-## 10         3 Adelie  Torgersen female  2007 bill    depth   mm             18  
-## # … with 1,366 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;transforming-from-long-to-wide&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;5. Transforming from long to wide&lt;/h2&gt;
-&lt;p&gt;To transform data set from long(er) to wide(r) form, use &lt;code&gt;tidyr::pivot_wider()&lt;/code&gt; which is an updated approach to an older &lt;code&gt;tidyr::spread()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# revert from long form from previous example 
-penguins_wider &amp;lt;- penguins_longer %&amp;gt;% 
-  tidyr::pivot_wider(names_from = c(&amp;quot;part&amp;quot;, &amp;quot;measure&amp;quot;, &amp;quot;unit&amp;quot;), # pivot these columns
-                     values_from = &amp;quot;measure_value&amp;quot;, # take the values from here
-                     names_sep = &amp;quot;_&amp;quot;) # combine col names using an underscore
-
-penguins_wider&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 344 x 9
-##    penguinid species island sex    year bill_length_mm bill_depth_mm
-##        &amp;lt;int&amp;gt; &amp;lt;fct&amp;gt;   &amp;lt;fct&amp;gt;  &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt;          &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;
-##  1         1 Adelie  Torge… male   2007           39.1          18.7
-##  2         2 Adelie  Torge… fema…  2007           39.5          17.4
-##  3         3 Adelie  Torge… fema…  2007           40.3          18  
-##  4         4 Adelie  Torge… &amp;lt;NA&amp;gt;   2007           NA            NA  
-##  5         5 Adelie  Torge… fema…  2007           36.7          19.3
-##  6         6 Adelie  Torge… male   2007           39.3          20.6
-##  7         7 Adelie  Torge… fema…  2007           38.9          17.8
-##  8         8 Adelie  Torge… male   2007           39.2          19.6
-##  9         9 Adelie  Torge… &amp;lt;NA&amp;gt;   2007           34.1          18.1
-## 10        10 Adelie  Torge… &amp;lt;NA&amp;gt;   2007           42            20.2
-## # … with 334 more rows, and 2 more variables: flipper_length_mm &amp;lt;dbl&amp;gt;,
-## #   body_mass_g &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;running-group-statistics-across-multiple-columns&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;6. Running group statistics across multiple columns&lt;/h2&gt;
-&lt;p&gt;To apply multiple summary statistics simultaneously in an efficient way, use &lt;code&gt;across()&lt;/code&gt; verb.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# calculate mean and sd for each variable  ending in mm, across three species 
-penguin_stats &amp;lt;- penguins %&amp;gt;% 
-  dplyr::group_by(species) %&amp;gt;% 
-  dplyr::summarise(across(.cols = ends_with(&amp;quot;mm&amp;quot;), 
-                          .fns = list(~mean(.x, na.rm = TRUE), 
-                                      ~sd(.x, na.rm = TRUE))))
-
-penguin_stats&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 7
-##   species bill_length_mm_1 bill_length_mm_2 bill_depth_mm_1 bill_depth_mm_2
-##   &amp;lt;fct&amp;gt;              &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;           &amp;lt;dbl&amp;gt;           &amp;lt;dbl&amp;gt;
-## 1 Adelie              38.8             2.66            18.3           1.22 
-## 2 Chinst…             48.8             3.34            18.4           1.14 
-## 3 Gentoo              47.5             3.08            15.0           0.981
-## # … with 2 more variables: flipper_length_mm_1 &amp;lt;dbl&amp;gt;, flipper_length_mm_2 &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;control-how-output-columns-are-named-when-summarising-across-multiple-columns&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;7. Control how output columns are named when summarising across multiple columns&lt;/h2&gt;
-&lt;p&gt;To apply multiple summary statistics simultaneously in an efficient way with &lt;code&gt;across()&lt;/code&gt; verb and to use other than default column names of summary variables, use the &lt;code&gt;.names&lt;/code&gt; argument.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins_stats &amp;lt;- penguins %&amp;gt;% 
-  dplyr::group_by(species) %&amp;gt;% 
-  dplyr::summarise(across(.cols = ends_with(&amp;quot;mm&amp;quot;), 
-                          .fns = list(mean = ~mean(.x, na.rm = TRUE), 
-                                      sd = ~sd(.x, na.rm = TRUE)),
-                          .names = &amp;quot;{gsub(&amp;#39;_|_mm&amp;#39;, &amp;#39;&amp;#39;, col)}_{.fn}&amp;quot;))
-penguins_stats&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 7
-##   species billlength_mean billlength_sd billdepth_mean billdepth_sd
-##   &amp;lt;fct&amp;gt;             &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;
-## 1 Adelie             38.8          2.66           18.3        1.22 
-## 2 Chinst…            48.8          3.34           18.4        1.14 
-## 3 Gentoo             47.5          3.08           15.0        0.981
-## # … with 2 more variables: flipperlength_mean &amp;lt;dbl&amp;gt;, flipperlength_sd &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;running-models-across-subsets-of-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;8. Running models across subsets of data&lt;/h2&gt;
-&lt;p&gt;Use &lt;code&gt;dplyr::summarise()&lt;/code&gt; to compute different &lt;em&gt;types&lt;/em&gt; of outcomes stored in a list, for example, summary vectors, data frames or other objects like models or graphs.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguin_models &amp;lt;- penguins %&amp;gt;% 
-  dplyr::group_by(species) %&amp;gt;% 
-  dplyr::summarise(model = list(lm(body_mass_g ~ flipper_length_mm + bill_length_mm + bill_depth_mm)))  
-penguin_models&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 2
-##   species   model 
-##   &amp;lt;fct&amp;gt;     &amp;lt;list&amp;gt;
-## 1 Adelie    &amp;lt;lm&amp;gt;  
-## 2 Chinstrap &amp;lt;lm&amp;gt;  
-## 3 Gentoo    &amp;lt;lm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;model_tmp &amp;lt;- penguin_models[1, 2][[1]][[1]]
-# summary(model_tmp)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;section-2&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(broom)
-
-penguin_models &amp;lt;- penguins %&amp;gt;% 
-  dplyr::group_by(species) %&amp;gt;% 
-  dplyr::summarise(broom::glance(lm(body_mass_g ~ flipper_length_mm + bill_length_mm + bill_depth_mm))) 
-
-penguin_models&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 13
-##   species r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC
-##   &amp;lt;fct&amp;gt;       &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
-## 1 Adelie      0.508         0.498  325.      50.6 1.55e-22     3 -1086. 2181.
-## 2 Chinst…     0.504         0.481  277.      21.7 8.48e-10     3  -477.  964.
-## 3 Gentoo      0.625         0.615  313.      66.0 3.39e-25     3  -879. 1768.
-## # … with 4 more variables: BIC &amp;lt;dbl&amp;gt;, deviance &amp;lt;dbl&amp;gt;, df.residual &amp;lt;int&amp;gt;,
-## #   nobs &amp;lt;int&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;nesting-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;9. Nesting data&lt;/h2&gt;
-&lt;p&gt;To partition data into subsets so that we can apply a common function or operation across all subsets of the data, use &lt;code&gt;dplyr::nest_by()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;% 
-  nest_by(species)  %&amp;gt;%
-  mutate(data_model = list(lm(body_mass_g ~ flipper_length_mm + bill_length_mm + bill_depth_mm, data = data)))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 3
-## # Rowwise:  species
-##   species                 data data_model
-##   &amp;lt;fct&amp;gt;     &amp;lt;list&amp;lt;tbl_df[,8]&amp;gt;&amp;gt; &amp;lt;list&amp;gt;    
-## 1 Adelie             [152 × 8] &amp;lt;lm&amp;gt;      
-## 2 Chinstrap           [68 × 8] &amp;lt;lm&amp;gt;      
-## 3 Gentoo             [124 × 8] &amp;lt;lm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;graphing-across-subsets&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;10. Graphing across subsets&lt;/h2&gt;
-&lt;p&gt;To generate plots across data subsets and store them for further usage, use &lt;code&gt;dplyr::nest_by()&lt;/code&gt; combined with plotting.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# generic function for generating a simple scatter plot in ggplot2
-scatter_fn &amp;lt;- function(df, col1, col2, title) {
-  df %&amp;gt;% 
-    ggplot2::ggplot(aes(x = {{col1}}, y = {{col2}})) +
-    ggplot2::geom_point() +
-    ggplot2::geom_smooth() +
-    ggplot2::labs(title = title)
-}
-
-# run function across species and store plots in a list column
-penguin_scatters &amp;lt;- penguins %&amp;gt;% 
-  dplyr::nest_by(species) %&amp;gt;% 
-  dplyr::mutate(plot = list(scatter_fn(data, bill_length_mm, bill_depth_mm, species))) &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;section-3&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguin_scatters&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 3
-## # Rowwise:  species
-##   species                 data plot  
-##   &amp;lt;fct&amp;gt;     &amp;lt;list&amp;lt;tbl_df[,8]&amp;gt;&amp;gt; &amp;lt;list&amp;gt;
-## 1 Adelie             [152 × 8] &amp;lt;gg&amp;gt;  
-## 2 Chinstrap           [68 × 8] &amp;lt;gg&amp;gt;  
-## 3 Gentoo             [124 × 8] &amp;lt;gg&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;section-4&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p_all &amp;lt;- scatter_fn(penguins, bill_length_mm, bill_depth_mm, &amp;quot;All Species&amp;quot;) 
-# get species scatters from penguin_scatters dataframe
-for (i in 1:3) {
- assign(paste(&amp;quot;p&amp;quot;, i, sep = &amp;quot;_&amp;quot;),
-        penguin_scatters$plot[i][[1]]) 
-}
-
-# display nicely using patchwork in R Markdown
-library(patchwork)
-p_all /
-(p_1 | p_2 | p_3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/talk/2020-12-01-computing_club/slides_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;thank-you&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Thank you!&lt;/h2&gt;
-&lt;p&gt;Credit:&lt;/p&gt;
+&lt;h3 id=&#34;2018&#34;&gt;2018&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Slides in this presentation are &lt;strong&gt;&lt;em&gt;very heavily&lt;/em&gt;&lt;/strong&gt; based on &lt;a href=&#34;https://towardsdatascience.com/ten-up-to-date-ways-to-do-common-data-tasks-in-r-4f15e56c92d&#34;&gt;“Ten Up-To-Date Ways to do Common Data Tasks in R” post&lt;/a&gt; by Keith McNulty.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ADaptive Empirical Pattern Transformation (ADEPT) with application to walking stride segmentation&lt;/strong&gt;, talk, JSM 2018, Aug 1, 2018, Vancouver, Canada.
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Wearable accelerometers, accelerometry data and automatic steps segmentation in R: strideter and convo R packages&lt;/strong&gt;, talk, Why R? 2018 Conference, Jul 3, 2018, Wroclaw, Poland.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Resources:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://vita.had.co.nz/papers/tidy-data.pdf&#34;&gt;Tidy data&lt;/a&gt; paper by Wickham, Hadley (2013). Journal of Statistical Software.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://joss.theoj.org/papers/10.21105/joss.01686&#34;&gt;Welcome to the Tidyverse&lt;/a&gt; paper by Wickham, Hadley et al. (2019). Journal of Open Source Software.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.tidyverse.org/blog/&#34;&gt;Tidyverse blog&lt;/a&gt; with updates (in a form of a blog post)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 </description>
     </item>
     

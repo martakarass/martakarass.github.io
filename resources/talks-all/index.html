@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: December 3, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.6" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.ca0136a1225e0f5a7cf4a3c148b229f1.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLEPDJKTQ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-FLEPDJKTQ9', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Marta Karas" />
+
+
+
+
+
+  
+
+<meta name="description" content="2023 Wearable device and smartphone data for tracking ALS disease progression, talk, Digital Health Innovation Summit, July 7, 2023, San Francisco, CA, 2023. Slides 2022 Wearable devices can track ALS disease progression and may serve as novel clinical trial outcome measures, poster, ActiGraph Digital Data Summit 2022, Nov 13, 2022, Pensacola Beach, FL, USA." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://example.com/resources/talks-all/" />
+<link rel="canonical" href="https://example.com/resources/talks-all/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@GetResearchDev" />
+  <meta property="twitter:creator" content="@GetResearchDev" />
+<meta property="twitter:image" content="https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Home" />
+<meta property="og:url" content="https://example.com/resources/talks-all/" />
+<meta property="og:title" content="All talks | Home" />
+<meta property="og:description" content="2023 Wearable device and smartphone data for tracking ALS disease progression, talk, Digital Health Innovation Summit, July 7, 2023, San Francisco, CA, 2023. Slides 2022 Wearable devices can track ALS disease progression and may serve as novel clinical trial outcome measures, poster, ActiGraph Digital Data Summit 2022, Nov 13, 2022, Pensacola Beach, FL, USA." /><meta property="og:image" content="https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2020-08-25T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2020-08-25T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>All talks | Home</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="076996b33761faafcf689785c4ba43f9" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.3a6bdbdff5d8a89d6e651adb3deec035.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#talks"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallerytab"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://twitter.com/martakarass" data-toggle="tooltip" data-placement="bottom" title="Follow me on Twitter" target="_blank" rel="noopener" aria-label="Follow me on Twitter">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>All talks</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Aug 25, 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h3 id="2023">2023</h3>
+<ul>
+<li><strong>Wearable device and smartphone data for tracking ALS disease progression</strong>, talk, Digital Health Innovation Summit, July 7, 2023, San Francisco, CA, 2023.
+</br>
+<a href="https://martakarass.github.io/docs/slides/2023-06-05-martakaras_ALS.pdf" target="_blank" rel="noopener">Slides</a>
+</br></br></li>
+</ul>
+<h3 id="2022">2022</h3>
+<ul>
+<li>
+<p><strong>Wearable devices can track ALS disease progression and may serve as novel clinical trial outcome measures</strong>, poster, ActiGraph Digital Data Summit 2022, Nov 13, 2022, Pensacola Beach, FL, USA.
+</br></br></p>
+</li>
+<li>
+<p><strong>Comparison of accelerometry-based measures of physical activity</strong>, talk, JSM, Aug 8, 2023, Washington, DC, USA.
+</br>
+<a href="https://martakarass.github.io/docs/slides/2022-08-05-JSM_2022.pdf" target="_blank" rel="noopener">Slides</a>
+</br></br></p>
+</li>
+<li>
+<p><strong>Smartphone devices data in health research: opportunities and challenges</strong>, talk, Wearable and Implantable Technology group meeting (Department of Biostatistics, Johns Hopkins University), Mar 4, 2022, virtual.
+</br>
+<a href="https://martakarass.github.io/docs/slides/2022-03-04-wit.pdf" target="_blank" rel="noopener">Slides</a></p>
+</li>
+</ul>
+<h3 id="2021">2021</h3>
+<ul>
+<li>
+<p><strong>Harmonization of open-source and proprietary accelerometry-based physical activity measures</strong>, talk, 3rd Annual Health Data Science Symposium: Smartphones, Wearables, and Health, Nov 5, 2021, Boston, MA, USA.
+</br></br></p>
+</li>
+<li>
+<p><strong>Statistical methods and modeling of person-generated health data from wearable and mobile devices</strong>, talk, Onnela Lab meeting (Department of Biostatistics, Harvard University), Jul 28, 2021, virtual.
+</br></br></p>
+</li>
+<li>
+<p><strong>Accelerometry-based physical activity measures across NHANES waves. Comparison of five minute-level measures: AC, MIMS, ENMO, MAD, AI</strong>, talk, Wearable and Implantable Technology group meeting (Department of Biostatistics, Johns Hopkins University), May 13, 2021, virtual.
+</br></br></p>
+</li>
+<li>
+<p><strong>National Health and Nutrition Examination Survey (NHANES) and comparability of accelerometry-derived physical activity measures across NHANES waves</strong>, talk, ENGAGE lab meeting (Department of Epidemiology, Johns Hopkins University), May 6, 2021, virtual.
+</br></br></p>
+</li>
+<li>
+<p><strong>Comparison of accelerometry-derived physical activity summary measures by age, sex, and BMI</strong>, talk, The Epidemiology and Biostatistics of Aging (EBA) Training Program: 6th Annual Joint Presentation of the SMART/ WIT, ENGAGE, and BHS Lab groups, Apr 27, 2021, virtual.
+</br>
+<a href="https://www.youtube.com/watch?v=CyCN6X3kwng&amp;t=117s&amp;ab_channel=JohnsHopkinsEBATrainingProgram" target="_blank" rel="noopener">Video</a></p>
+</li>
+</ul>
+<h3 id="2020">2020</h3>
+<ul>
+<li>
+<p><strong>Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores</strong>, talk, CMStatistics 2020, Dec 20, 2020, virtual.
+</br></br></p>
+</li>
+<li>
+<p><strong>arctools R package: Processing and physical activity summaries of minute level activity data</strong>, talk, Wearable and Implantable Technology group meeting (Department of Biostatistics, Johns Hopkins University), Dec 17, 2020, virtual.
+</br>
+<a href="https://cran.r-project.org/web/packages/arctools/index.html" target="_blank" rel="noopener">Code</a> |
+<a href="https://docs.google.com/presentation/d/1Ly-193VBn97WhuF8d9YFyeNVQzngLEPezLhtASSDgCw/edit?usp=sharing" target="_blank" rel="noopener">Slides</a>
+</br></br></p>
+</li>
+<li>
+<p><strong>Predicting subjective recovery from lower limb surgery using consumer wearables</strong>, talk, Workshop ‘The Future of Digital Health’, Dec 8, 2020, virtual.
+</br>
+<a href="https://docs.google.com/presentation/d/1qSS4wweLBAcqoxKZiUQZF0PGg3Y4e_161quQWdrVUL0/edit?usp=sharing" target="_blank" rel="noopener">Slides</a> |
+<a href="https://www.youtube.com/watch?v=E74PiCg1vI8&amp;feature=youtu.be&amp;ab_channel=DimeSociety" target="_blank" rel="noopener">Video</a>
+</br></br></p>
+</li>
+<li>
+<p><strong>Recent developments in R tidyverse</strong>, talk, Computing Club (Department of Biostatistics, Johns Hopkins University), Dec 1, 2020, virtual.
+</br>
+<a href="https://martakarass.github.io/talk/2020-12-01-computing_club/slides2.html" target="_blank" rel="noopener">Slides</a> |
+<a href="https://drive.google.com/file/d/1G2HeuRUqseKHWBcpRV-gJlUjpu9cLwAt/view" target="_blank" rel="noopener">Video</a>
+</br></br></p>
+</li>
+<li>
+<p><strong>Summer internship project: Predicting subjective recovery from lower limb surgery using consumer wearables</strong>, talk, Wearable and Implantable Technology group meeting (Department of Biostatistics, Johns Hopkins University), Sep 30, 2020, virtual.
+</br></br></p>
+</li>
+<li>
+<p><strong>Novel approach for precise walking cadence estimation from high-density tri-axial accelerometry data collected at wrist in free-living</strong>, talk, 41st Annual Conference of the International Society for Clinical Biostatistics, Aug 27, 2020, virtual.
+</br></br></p>
+</li>
+<li>
+<p><strong>arctools: R software for computing summaries of minute-level physical activity data</strong>, talk, ENGAGE lab meeting (Department of Epidemiology, Johns Hopkins University), Jun 4, 2020, virtual.
+</br></br></p>
+</li>
+<li>
+<p><strong>Precise walking strides segmentation from raw accelerometry data: ADEPT method</strong>, talk, Webinar for OSS developers in physical behavior field, Mar 11, 2020, virtual.
+</br>
+<a href="https://martakarass.github.io/adept/" target="_blank" rel="noopener">Code</a> |
+<a href="https://docs.google.com/presentation/d/1ThrdQnFIfRH72fkNdpaiBaxdRB2brWvRgE1cT5hlA3A/edit?usp=sharing" target="_blank" rel="noopener">Slides</a>
+</br></br></p>
+</li>
+<li>
+<p><strong>Towards precise walking strides segmentation from accelerometry data in free-living: ADEPT method and further developments</strong>, talk,
+BIRS: Use of Wearable and Implantable Devices in Health Research, Feb 25, 2020, Banff, Alberta, Canada.
+</br></br></p>
+</li>
+</ul>
+<h3 id="2019">2019</h3>
+<ul>
+<li>
+<p><strong>Functional registration of walking strides in high-density accelerometry data for estimation of gait asymmetry</strong>, talk, CFE-CMStatistics 2019 conference, Dec 16, 2019, London, UK.
+</br></br></p>
+</li>
+<li>
+<p><strong>Methods for fast processing of time-series: runstats R package</strong>, talk, Webinar for OSS developers in physical behavior field, Nov 5, 2019, virtual.
+</br>
+<a href="https://github.com/martakarass/runstats" target="_blank" rel="noopener">Code</a> |
+<a href="https://martakarass.github.io/docs/slides/2019-11-05-3rd-webinar-oss-runstats%20developers.pdf" target="_blank" rel="noopener">Slides</a>
+</br></br></p>
+</li>
+<li>
+<p><strong>Considerations in statistical modeling of walking features derived from wrist-worn sensor in free-living</strong>, talk, Wearable and Implantable Technology group meeting (Department of Biostatistics, Johns Hopkins University), Oct 31, 2019, Baltimore, MD, USA.
+</br></br></p>
+</li>
+<li>
+<p><strong>Overview of JHU Biostat Wearable and Implantable Technology (WIT) working group research</strong>, talk, Journal Club (Department of Biostatistics, Johns Hopkins University), Oct 15, 2019, Baltimore, MD, USA.
+</br>
+<a href="https://docs.google.com/presentation/d/1TAPuMzQmeB9GP06FNKmoXAcPDt9A9_h4NhJSRtoapMY/edit?usp=sharing" target="_blank" rel="noopener">Slides</a>
+</br></br></p>
+</li>
+<li>
+<p><strong>Walking measurements derived from free-living wrist-worn sensor as novel digital endpoints</strong>, talk, Novartis 2019 US Analytics Conference - Digital Endpoint Analytics Session, Oct 8, 2019, East Hanover, NJ.
+</br></br></p>
+</li>
+<li>
+<p><strong>Automatic estimation of step asymmetry in a split-belt treadmill experiment using high-resolution accelerometry data</strong>, talk, ICAMPAM 2019 conference, Jun 26, 2019, Maastricht, the Netherlands.
+</br></br></p>
+</li>
+<li>
+<p><strong>Physical activity monitoring with wearable accelerometers: strides segmentation, gait pattern estimation and walking detection from free-living data in R. Also: highlights from RStudio 2019 conference.</strong>, talk, STWUR 11: Physical activity monitoring with wearable accelerometers, May 23, 2019, Wroclaw, Poland.
+</br></br></p>
+</li>
+<li>
+<p><strong>Stride segmentation and stride pattern estimation based on accelerometry data</strong>, talk, Motion Analysis Laboratory meeting, May 14, 2019, Baltimore, MD, USA.
+</br></br></p>
+</li>
+<li>
+<p><strong>Simulation experiment project for Seminar on Adaptive Clinical Trials</strong>, talk, PhD Seminar on Adaptive Clinical Trials (Department of Biostatistics, Johns Hopkins University), Apr 17, 2019, Baltimore, MD, USA.
+</br>
+<a href="https://martakarass.github.io/docs/slides/2019-04-17-Adaptive-Designs-Seminar-final-presentation.pdf" target="_blank" rel="noopener">Slides</a>
+</br></br></p>
+</li>
+<li>
+<p><strong>Some of the topics seen at RStudio conference 2019</strong>, talk, Computing Club (Department of Biostatistics, Johns Hopkins University), Feb 12, 2019, Baltimore, MD, USA.
+</br>
+<a href="https://martakarass.github.io/resources/computing_club_materials/2019-02-12-seen-at-rstudio2019-conf" target="_blank" rel="noopener">Slides</a>
+</br></br></p>
+</li>
+</ul>
+<h3 id="2018">2018</h3>
+<ul>
+<li>
+<p><strong>ADaptive Empirical Pattern Transformation (ADEPT) with application to walking stride segmentation</strong>, talk, JSM 2018, Aug 1, 2018, Vancouver, Canada.
+</br></br></p>
+</li>
+<li>
+<p><strong>Wearable accelerometers, accelerometry data and automatic steps segmentation in R: strideter and convo R packages</strong>, talk, Why R? 2018 Conference, Jul 3, 2018, Wroclaw, Poland.</p>
+</li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fresources%2Ftalks-all%2F&amp;text=All&#43;talks" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fresources%2Ftalks-all%2F&amp;t=All&#43;talks" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=All%20talks&amp;body=https%3A%2F%2Fexample.com%2Fresources%2Ftalks-all%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fresources%2Ftalks-all%2F&amp;title=All&#43;talks" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=All&#43;talks%20https%3A%2F%2Fexample.com%2Fresources%2Ftalks-all%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fresources%2Ftalks-all%2F&amp;title=All&#43;talks" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://example.com/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hub87cc965849d0920d7a3e008da7cce97_44255_270x270_fill_q75_lanczos_center.jpg" alt="Marta Karas"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://example.com/">Marta Karas</a></h5>
+      <h6 class="card-subtitle">Senior Manager, Statistics</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/martakarass" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=S27sttcAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/martakarass" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/martakaras/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/docs/mkaras_cv.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+<p class="powered-by">
+  
+  <a href="/privacy/">Privacy Policy</a>
+  
+  
+   &middot; 
+  <a href="/terms/">Terms</a>
+  
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.62586ca65ca61821fe707eb9fa6268b7.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9137013a66774049159934c29c3f0205.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

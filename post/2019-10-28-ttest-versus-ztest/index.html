@@ -1,101 +1,102 @@
-<!DOCTYPE html><html lang="en-us" >
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: December 3, 2023 --><html lang="en-us" >
+
 
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
   
   
-  <meta name="generator" content="Wowchemy 5.0.0-beta.0 for Hugo">
-  
-
+    <meta name="generator" content="Hugo Blox Builder 5.9.6" />
   
 
   
   
 
+
+
+
+
+
+
+
+
+
+
+
   
   
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
   
   
   
     
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
-  
-  
 
-  <meta name="author" content="Marta Karas">
-
-  
-  
-  
     
-  
-  <meta name="description" content="To construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I&rsquo;d use quantiles of t-distribution versus quantiles of normal distribution for that purpose.
-Note: the below text could be directly translated to answer when to use t-test versus z-test in testing hypothesis about the mean parameter.">
-
-  
-  <link rel="alternate" hreflang="en-us" href="/post/2019-10-28-ttest-versus-ztest/">
-
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-  
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-
-  
-  
-  
-  <meta name="theme-color" content="#2962ff">
-  
-
-  
-  
-  
-  <script src="/js/mathjax-config.js"></script>
-  
-
-  
-  
-  
-  
-    
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
-
     
     
     
       
+      
     
     
-      
-      
-        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
-        
-      
     
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -103,12 +104,6 @@ Note: the below text could be directly translated to answer when to use t-test v
     
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -117,12 +112,6 @@ Note: the below text could be directly translated to answer when to use t-test v
       
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -131,12 +120,6 @@ Note: the below text could be directly translated to answer when to use t-test v
       
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -145,12 +128,6 @@ Note: the below text could be directly translated to answer when to use t-test v
       
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -159,12 +136,6 @@ Note: the below text could be directly translated to answer when to use t-test v
       
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -173,21 +144,6 @@ Note: the below text could be directly translated to answer when to use t-test v
       
     
       
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
-      
-    
       
 
       
@@ -196,12 +152,38 @@ Note: the below text could be directly translated to answer when to use t-test v
       
     
       
+      
 
       
       
 
       
     
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
       
 
       
@@ -212,12 +194,6 @@ Note: the below text could be directly translated to answer when to use t-test v
       
     
       
-
-      
-      
-
-      
-    
       
 
       
@@ -225,16 +201,13 @@ Note: the below text could be directly translated to answer when to use t-test v
 
       
     
-
-  
-
-  
-  
-  
-    
       
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+
+      
+      
+
+      
     
   
 
@@ -242,15 +215,36 @@ Note: the below text could be directly translated to answer when to use t-test v
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.css">
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.ca0136a1225e0f5a7cf4a3c148b229f1.css" />
 
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
   
 
 
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111897145-1"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLEPDJKTQ9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
 
@@ -280,56 +274,119 @@ Note: the below text could be directly translated to answer when to use t-test v
   }
 
   gtag('js', new Date());
-  gtag('config', 'UA-111897145-1', {});
+  gtag('config', 'G-FLEPDJKTQ9', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
 
   
   document.addEventListener('click', onClickCallback, false);
 </script>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Marta Karas" />
+
+
+
+
 
   
 
+<meta name="description" content="To construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I&rsquo;d use quantiles of t-distribution versus quantiles of normal distribution for that purpose.
+Note: the below text could be directly translated to answer when to use t-test versus z-test in testing hypothesis about the mean parameter." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://example.com/post/2019-10-28-ttest-versus-ztest/" />
+<link rel="canonical" href="https://example.com/post/2019-10-28-ttest-versus-ztest/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
 
   
   
 
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@GetResearchDev" />
+  <meta property="twitter:creator" content="@GetResearchDev" />
+<meta property="twitter:image" content="https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
+
+
+
   
 
-  <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_192x192_fill_lanczos_center_2.png">
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Home" />
+<meta property="og:url" content="https://example.com/post/2019-10-28-ttest-versus-ztest/" />
+<meta property="og:title" content="When to use t distribution versus normal distribution quantiles in constructing confidence interval for the mean | Home" />
+<meta property="og:description" content="To construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I&rsquo;d use quantiles of t-distribution versus quantiles of normal distribution for that purpose.
+Note: the below text could be directly translated to answer when to use t-test versus z-test in testing hypothesis about the mean parameter." /><meta property="og:image" content="https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
-  <link rel="canonical" href="/post/2019-10-28-ttest-versus-ztest/">
-
+  
+    <meta
+      property="article:published_time"
+      content="2019-10-28T17:19:28-04:00"
+    />
   
   
-  
-  
-  
-  
-  
-    
-    
-  
-  
-  <meta property="twitter:card" content="summary">
-  
-  <meta property="og:site_name" content="Home">
-  <meta property="og:url" content="/post/2019-10-28-ttest-versus-ztest/">
-  <meta property="og:title" content="When to use t distribution versus normal distribution quantiles in constructing confidence interval for the mean | Home">
-  <meta property="og:description" content="To construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I&rsquo;d use quantiles of t-distribution versus quantiles of normal distribution for that purpose.
-Note: the below text could be directly translated to answer when to use t-test versus z-test in testing hypothesis about the mean parameter."><meta property="og:image" content="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
-  
-    
-      <meta property="article:published_time" content="2019-10-28T17:19:28-04:00">
-    
     <meta property="article:modified_time" content="2019-10-28T17:19:28-04:00">
   
 
-  
+
+
+
 
 
     
@@ -350,7 +407,7 @@ Note: the below text could be directly translated to answer when to use t-test v
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/post/2019-10-28-ttest-versus-ztest/"
+    "@id": "https://example.com/post/2019-10-28-ttest-versus-ztest/"
   },
   "headline": "When to use t distribution versus normal distribution quantiles in constructing confidence interval for the mean",
   
@@ -367,7 +424,7 @@ Note: the below text could be directly translated to answer when to use t-test v
     "name": "Home",
     "logo": {
       "@type": "ImageObject",
-      "url": "/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_192x192_fill_lanczos_center_2.png"
+      "url": "https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "\u003cp\u003eTo construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I\u0026rsquo;d use quantiles of t-distribution versus quantiles of normal distribution for that purpose.\u003c/p\u003e\n\u003cp\u003eNote: the below text could be directly translated to answer when to use t-test versus z-test in testing hypothesis about the mean parameter.\u003c/p\u003e"
@@ -379,34 +436,56 @@ Note: the below text could be directly translated to answer when to use t-test v
   
 
 
+
+
+  
+  
+  
+
+  
+  
+
   
 
 
   
-
-
-
-
-
   <title>When to use t distribution versus normal distribution quantiles in constructing confidence interval for the mean | Home</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
 
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="d1bdde96b4cf824c5001d198319f10e4" >
 
   
   
   
-    <script>window.wcDarkLightEnabled = true;</script>
   
   
-    <script>const isSiteThemeDark = false;</script>
   
   
-  <script src="/js/load-theme.js"></script>
+  
+  
+  <script src="/js/wowchemy-init.min.3a6bdbdff5d8a89d6e651adb3deec035.js"></script>
 
-  <aside class="search-results" id="search">
+  
+
+
+<aside class="search-modal" id="search">
   <div class="container">
     <section class="search-header">
 
@@ -415,16 +494,22 @@ Note: the below text could be directly translated to answer when to use t-test v
           <h1>Search</h1>
         </div>
         <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
         </div>
       </div>
 
       <div id="search-box">
         
         <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
         
       </div>
+
+      
+      
+
+      
 
     </section>
     <section class="section-search-results">
@@ -438,8 +523,13 @@ Note: the below text could be directly translated to answer when to use t-test v
 </aside>
 
 
-  <div class="page-header">
-    
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
 
 
 
@@ -452,373 +542,292 @@ Note: the below text could be directly translated to answer when to use t-test v
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-  <div class="container">
-
-    
-    <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/">Home</a>
-    </div>
-    
-
-    
-    <button type="button" class="navbar-toggler" data-toggle="collapse"
-            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span><i class="fas fa-bars"></i></span>
-    </button>
-    
-
-    
-    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/">Home</a>
-    </div>
-    
-
-    
-    
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
 
       
-      <ul class="navbar-nav d-md-inline-flex">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
-            
-            
-            
-              
-            
-            
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#publications_mywidget"><span>Publications</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
-            
-            
-            
-              
-            
-            
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#projects"><span>Projects</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
-            
-            
-            
-              
-            
-            
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#talks"><span>Talks</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
-            
-            
-            
-              
-            
-            
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#posts"><span>Posts</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
-            
-            
-            
-              
-            
-            
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
-            
-            
-            
-              
-            
-            
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#resources"><span>Resources</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/docs/mkaras_cv.pdf"><span>CV</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
-            
-            
-            
-              
-            
-            
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#contact"><span>Contact</span></a>
-        </li>
-
-        
-        
-
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Home</a>
+      </div>
       
 
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
         
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#talks"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallerytab"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://twitter.com/martakarass" data-toggle="tooltip" data-placement="bottom" title="Follow me on Twitter" target="_blank" rel="noopener" aria-label="Follow me on Twitter">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
       </ul>
+
     </div>
-
-    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
-      
-      
-      <li class="nav-item">
-        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
-      </li>
-      
-
-      
-      
-      <li class="nav-item dropdown theme-dropdown">
-        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true">
-          <i class="fas fa-moon" aria-hidden="true"></i>
-        </a>
-        <div class="dropdown-menu">
-          <a href="#" class="dropdown-item js-set-theme-light">
-            <span>Light</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-dark">
-            <span>Dark</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-auto">
-            <span>Automatic</span>
-          </a>
-        </div>
-      </li>
-      
-
-      
-
-    </ul>
-
-  </div>
-</nav>
+  </nav>
+</header>
 
 
   </div>
 
   <div class="page-body">
+    
+    
+    
+
     <article class="article">
 
   
+
 
 
 
@@ -873,7 +882,6 @@ Note: the below text could be directly translated to answer when to use t-test v
   
   
   
-  
 
   
   
@@ -881,15 +889,6 @@ Note: the below text could be directly translated to answer when to use t-test v
 </div>
 
     
-
-
-
-
-
-
-
-
-
 
 
 
@@ -905,8 +904,9 @@ Note: the below text could be directly translated to answer when to use t-test v
     <div class="article-style">
       <p>To construct confidence interval for the mean, we often use quantiles of standardized sample mean distribution. Here, I include a list of cases where I&rsquo;d use quantiles of t-distribution versus quantiles of normal distribution for that purpose.</p>
 <p>Note: the below text could be directly translated to answer when to use t-test versus z-test in testing hypothesis about the mean parameter.</p>
-<h2>Table of Contents</h2>
-<nav id="TableOfContents">
+<details class="toc-inpage d-print-none  " open>
+  <summary class="font-weight-bold">Table of Contents</summary>
+  <nav id="TableOfContents">
   <ul>
     <li><a href="#span-stylecolordarkblueexample-1-constructing-confidence-interval-for-mu-with-z-quantilesspan"><span style="color:darkblue">Example 1: constructing confidence interval for $\mu$ with $z$-quantiles</span></a></li>
     <li><a href="#span-stylecolordarkblueexample-2-constructing-confidence-interval-for-mu-with-t-quantilesspan"><span style="color:darkblue">Example 2: constructing confidence interval for $\mu$ with $t$-quantiles</span></a></li>
@@ -922,6 +922,7 @@ Note: the below text could be directly translated to answer when to use t-test v
     <li><a href="#span-stylecolordarkbluecase-7-observations-from-any-distribution-sigma-unknown-large-nspan"><span style="color:darkblue">Case 7: observations from any distribution, $\sigma$ unknown, large $n$</span></a></li>
   </ul>
 </nav>
+</details>
 <h1 id="standardized-sample-mean">Standardized sample mean</h1>
 <p>Consider $X_1, \ldots, X_n$ &ndash; a sequence of i.i.d. random variables with mean $E(X_i) = \mu$ and  variance $\text{var}(X_i) = \sigma^2$. To construct confidence intervals for $\mu$ parameter, we often use a standardized sample mean,</p>
 <p>$$
@@ -988,7 +989,7 @@ $$</p>
 <li>$\sigma$ unknown.</li>
 <li>Moderate to large sample size ($n &gt; 50$).</li>
 </ul>
-<p>$\Rightarrow$ We use $S_{n}$ to approximate $\sigma$. Because of $n$ large enough, Slutsky&rsquo;s theorem asymptotic ``kicks in'' and allows to replace $\sigma$ with $S_n$ &ndash; a consistent estimator of true population standard deviation, and to write that $\frac{\bar{X}_{n}-\mu}{S_n / \sqrt{n}} \approx \sim N(0,1)$. Because of $n$ large enough, we assume $N(0,1)$ is approximated ($\approx$) well enough to use quantiles of normal distribution in constructing the CI.</p>
+<p>$\Rightarrow$ We use $S_{n}$ to approximate $\sigma$. Because of $n$ large enough, Slutsky&rsquo;s theorem asymptotic ``kicks in&rsquo;&rsquo; and allows to replace $\sigma$ with $S_n$ &ndash; a consistent estimator of true population standard deviation, and to write that $\frac{\bar{X}_{n}-\mu}{S_n / \sqrt{n}} \approx \sim N(0,1)$. Because of $n$ large enough, we assume $N(0,1)$ is approximated ($\approx$) well enough to use quantiles of normal distribution in constructing the CI.</p>
 <p>$\Rightarrow$ Another way to think about this case is that, as in Case 2, we have an exact result that $\frac{\bar{X}_{n}-\mu}{S_{n} / \sqrt{n}} \sim t_{n-1}$, and with large $n$, quantiles of $t$-distribution with $n-1$ degrees of freedom are almost equvalent to quantiles of normal distribution.</p>
 <h2 id="span-stylecolordarkbluecase-4-observations-from-any-distribution-sigma-known-small-nspan"><span style="color:darkblue">Case 4: observations from any distribution, $\sigma$ known, small $n$</span></h2>
 <ul>
@@ -998,7 +999,7 @@ $$</p>
 </ul>
 <p>$\Rightarrow$ Use CLT to get that standardized sample mean is approximately normal, $\frac{\bar{X}_{n}-\mu}{\sigma / \sqrt{n}} \approx \sim N(0,1)$. Since there is CLT approximation and we have a small sample size, in practice, we typically use quantiles of $t$ distribution with $n-1$ degrees of freedom to get more conservative (wider) CI.</p>
 <ul>
-<li><strong>Note</strong>: when $X_1, \ldots, X_n$ distribution of is very skewed (i.e. Poisson) it may be not plausible that CLT already ``kicks in'' and other techniques may be needed.</li>
+<li><strong>Note</strong>: when $X_1, \ldots, X_n$ distribution of is very skewed (i.e. Poisson) it may be not plausible that CLT already ``kicks in&rsquo;&rsquo; and other techniques may be needed.</li>
 </ul>
 <h2 id="span-stylecolordarkbluecase-5-observations-from-any-distribution-sigma-known-large-nspan"><span style="color:darkblue">Case 5: observations from any distribution, $\sigma$ known, large $n$</span></h2>
 <ul>
@@ -1006,7 +1007,7 @@ $$</p>
 <li>$\sigma$ known.</li>
 <li>Moderate to large sample size ($n &gt; 50$).</li>
 </ul>
-<p>$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal. We have $\frac{\bar{X}_{n}-\mu}{\sigma/ \sqrt{n}} \approx \sim N(0,1)$. Since we have a moderate to small sample size, we assume that CLT ``kicks in'' and the approximation ($\approx$) is good enough to use quantiles of normal distribution.</p>
+<p>$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal. We have $\frac{\bar{X}_{n}-\mu}{\sigma/ \sqrt{n}} \approx \sim N(0,1)$. Since we have a moderate to small sample size, we assume that CLT ``kicks in&rsquo;&rsquo; and the approximation ($\approx$) is good enough to use quantiles of normal distribution.</p>
 <h2 id="span-stylecolordarkbluecase-6-observations-from-any-distribution-sigma-unknown-small-nspan"><span style="color:darkblue">Case 6: observations from any distribution, $\sigma$ unknown, small $n$</span></h2>
 <ul>
 <li>Observations $X_1, \ldots, X_n$ are from (other than normal) distribution  of mean $E(X_i) = \mu$ and variance $\text{var}(X_i) = \sigma^2$ (<em>for normally distributed $X_i$&rsquo;s, see cases 1-3</em>).</li>
@@ -1016,7 +1017,7 @@ $$</p>
 <p>$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&rsquo;s theorem to replace $\sigma$ with $S_n$ &ndash; a consistent estimator of true population standard deviation. We have $\frac{\bar{X}_{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since there is CLT and Slutsky&rsquo;s theorem approximation and we have a small sample size, in practice, we typically use quantiles of $t$ distribution with $n-1$ degrees of freedom to get more conservative (wider) CI.</p>
 <ul>
 <li><strong>Note</strong>: two approximations are happening here!</li>
-<li><strong>Note</strong>: when $X_1, \ldots, X_n$ distribution of is very skewed (i.e. Poisson) it may be not plausible that CLT already ``kicks in'' and other techniques may be needed.</li>
+<li><strong>Note</strong>: when $X_1, \ldots, X_n$ distribution of is very skewed (i.e. Poisson) it may be not plausible that CLT already ``kicks in&rsquo;&rsquo; and other techniques may be needed.</li>
 </ul>
 <h2 id="span-stylecolordarkbluecase-7-observations-from-any-distribution-sigma-unknown-large-nspan"><span style="color:darkblue">Case 7: observations from any distribution, $\sigma$ unknown, large $n$</span></h2>
 <ul>
@@ -1024,7 +1025,7 @@ $$</p>
 <li>$\sigma$ unknown.</li>
 <li>Moderate to large sample size ($n &gt; 50$).</li>
 </ul>
-<p>$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&rsquo;s theorem to replace $\sigma$ with $S_n$ &ndash; a consistent estimator of true population standard deviation. We have $\frac{\bar{X}_{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since we have a moderate to small sample size, we assume that both CLT and Slutsky asymptotics ``kicks in'' and the approximation ($\approx$) is good enough to use quantiles of normal distribution.</p>
+<p>$\Rightarrow$   Use CLT to get that standardized sample mean is approximately normal  and we also use Slutsky&rsquo;s theorem to replace $\sigma$ with $S_n$ &ndash; a consistent estimator of true population standard deviation. We have $\frac{\bar{X}_{n}-\mu}{S_n/ \sqrt{n}} \approx \sim N(0,1)$. Since we have a moderate to small sample size, we assume that both CLT and Slutsky asymptotics ``kicks in&rsquo;&rsquo; and the approximation ($\approx$) is good enough to use quantiles of normal distribution.</p>
 <h1 id="disclaimer">Disclaimer</h1>
 <p><span style="color:red">The views, thoughts, and opinions expressed in the text belong solely to the author, and not necessarily to the author’s employer, organization, committee or other group or individual.</span></p>
 <h1 id="references">References</h1>
@@ -1039,8 +1040,7 @@ $$</p>
 
 
 
-
-<div class="share-box" aria-hidden="true">
+<div class="share-box">
   <ul class="share">
     
       
@@ -1050,8 +1050,12 @@ $$</p>
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/2019-10-28-ttest-versus-ztest/&amp;text=When%20to%20use%20t%20distribution%20versus%20normal%20distribution%20quantiles%20in%20constructing%20confidence%20interval%20for%20the%20mean" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2F2019-10-28-ttest-versus-ztest%2F&amp;text=When&#43;to&#43;use&#43;t&#43;distribution&#43;versus&#43;normal&#43;distribution&#43;quantiles&#43;in&#43;constructing&#43;confidence&#43;interval&#43;for&#43;the&#43;mean" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1063,8 +1067,12 @@ $$</p>
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/2019-10-28-ttest-versus-ztest/&amp;t=When%20to%20use%20t%20distribution%20versus%20normal%20distribution%20quantiles%20in%20constructing%20confidence%20interval%20for%20the%20mean" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2F2019-10-28-ttest-versus-ztest%2F&amp;t=When&#43;to&#43;use&#43;t&#43;distribution&#43;versus&#43;normal&#43;distribution&#43;quantiles&#43;in&#43;constructing&#43;confidence&#43;interval&#43;for&#43;the&#43;mean" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1076,8 +1084,14 @@ $$</p>
       
       
       
+      
+      
+      
+      
+        
+      
       <li>
-        <a href="mailto:?subject=When%20to%20use%20t%20distribution%20versus%20normal%20distribution%20quantiles%20in%20constructing%20confidence%20interval%20for%20the%20mean&amp;body=/post/2019-10-28-ttest-versus-ztest/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=When%20to%20use%20t%20distribution%20versus%20normal%20distribution%20quantiles%20in%20constructing%20confidence%20interval%20for%20the%20mean&amp;body=https%3A%2F%2Fexample.com%2Fpost%2F2019-10-28-ttest-versus-ztest%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1089,8 +1103,12 @@ $$</p>
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/2019-10-28-ttest-versus-ztest/&amp;title=When%20to%20use%20t%20distribution%20versus%20normal%20distribution%20quantiles%20in%20constructing%20confidence%20interval%20for%20the%20mean" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2F2019-10-28-ttest-versus-ztest%2F&amp;title=When&#43;to&#43;use&#43;t&#43;distribution&#43;versus&#43;normal&#43;distribution&#43;quantiles&#43;in&#43;constructing&#43;confidence&#43;interval&#43;for&#43;the&#43;mean" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1102,8 +1120,12 @@ $$</p>
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="whatsapp://send?text=When%20to%20use%20t%20distribution%20versus%20normal%20distribution%20quantiles%20in%20constructing%20confidence%20interval%20for%20the%20mean%20/post/2019-10-28-ttest-versus-ztest/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=When&#43;to&#43;use&#43;t&#43;distribution&#43;versus&#43;normal&#43;distribution&#43;quantiles&#43;in&#43;constructing&#43;confidence&#43;interval&#43;for&#43;the&#43;mean%20https%3A%2F%2Fexample.com%2Fpost%2F2019-10-28-ttest-versus-ztest%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1115,8 +1137,12 @@ $$</p>
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/2019-10-28-ttest-versus-ztest/&amp;title=When%20to%20use%20t%20distribution%20versus%20normal%20distribution%20quantiles%20in%20constructing%20confidence%20interval%20for%20the%20mean" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2F2019-10-28-ttest-versus-ztest%2F&amp;title=When&#43;to&#43;use&#43;t&#43;distribution&#43;versus&#43;normal&#43;distribution&#43;quantiles&#43;in&#43;constructing&#43;confidence&#43;interval&#43;for&#43;the&#43;mean" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1149,11 +1175,11 @@ $$</p>
   <div class="media author-card content-widget-hr">
     
       
-      <a href="/"><img class="avatar mr-3 avatar-circle" src="/author/marta-karas/avatar_hub87cc965849d0920d7a3e008da7cce97_44255_270x270_fill_q90_lanczos_center.jpg" alt="Marta Karas"></a>
+      <a href="https://example.com/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hub87cc965849d0920d7a3e008da7cce97_44255_270x270_fill_q75_lanczos_center.jpg" alt="Marta Karas"></a>
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="/">Marta Karas</a></h5>
+      <h5 class="card-title"><a href="https://example.com/">Marta Karas</a></h5>
       <h6 class="card-subtitle">Senior Manager, Statistics</h6>
       
       <ul class="network-icon" aria-hidden="true">
@@ -1243,6 +1269,21 @@ $$</p>
       </a>
     </li>
   
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/docs/mkaras_cv.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
 </ul>
 
     </div>
@@ -1263,11 +1304,6 @@ $$</p>
 
 
 
-  
-  
-
-
-
 
 
   </div>
@@ -1279,38 +1315,65 @@ $$</p>
     
     <div class="container">
       <footer class="site-footer">
+
   
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+<p class="powered-by">
+  
+  <a href="/privacy/">Privacy Policy</a>
+  
+  
+   &middot; 
+  <a href="/terms/">Terms</a>
+  
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
   <p class="powered-by">
     
-      <a href="/privacy/">Privacy Policy</a>
     
     
-       &middot; 
-      <a href="/terms/">Terms</a>
-    
-  </p>
-  
-
-  <p class="powered-by">
-    
-  </p>
-
-  
-  
-
-
-
-
-
-
-  <p class="powered-by">
-    
-    
-    
-    Published with
-    <a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy</a>  —
-    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
-    open source</a> website builder that empowers creators.
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
     
   </p>
 </footer>
@@ -1318,6 +1381,113 @@ $$</p>
     </div>
     
   </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.62586ca65ca61821fe707eb9fa6268b7.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
 
   
 <div id="modal" class="modal fade" role="dialog">
@@ -1330,7 +1500,8 @@ $$</p>
         </button>
       </div>
       <div class="modal-body">
-        <pre><code class="tex hljs"></code></pre>
+        
+        <pre><code></code></pre>
       </div>
       <div class="modal-footer">
         <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
@@ -1345,119 +1516,20 @@ $$</p>
   </div>
 </div>
 
-      
 
-    
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="/js/wowchemy-publication.9137013a66774049159934c29c3f0205.js" type="module"></script>
 
-      
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
 
-      
 
-      
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
-        
-      
 
-    
 
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
-    
 
-    
-    
-    <script>const code_highlighting = true;</script>
-    
 
-    
-    
-    
-    
-    
-    
-    <script>
-      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
-      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
-      const content_type = {
-        'post': "Posts",
-        'project': "Projects",
-        'publication' : "Publications",
-        'talk' : "Talks",
-        'slides' : "Slides"
-        };
-    </script>
-    
 
-    
-    
 
-    
-    
-    <script id="search-hit-fuse-template" type="text/x-template">
-      <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
-        </div>
-      </div>
-      </div>
-    </script>
-    
 
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-    
 
-    
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    
-    
-    
-    <script src="/js/wowchemy.min.a30e17c6197f21f7f966f9a6cd022a55.js"></script>
-
-    
 
 
 

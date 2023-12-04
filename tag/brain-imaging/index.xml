@@ -2,36 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>brain imaging | Home</title>
-    <link>/tag/brain-imaging/</link>
-      <atom:link href="/tag/brain-imaging/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://example.com/tag/brain-imaging/</link>
+      <atom:link href="https://example.com/tag/brain-imaging/index.xml" rel="self" type="application/rss+xml" />
     <description>brain imaging</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Feb 2021 17:59:50 -0400</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 06 Dec 2017 11:54:53 -0400</lastBuildDate>
     <image>
-      <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
+      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>brain imaging</title>
-      <link>/tag/brain-imaging/</link>
+      <link>https://example.com/tag/brain-imaging/</link>
     </image>
     
     <item>
-      <title>Connectivity-Informed Adaptive Regularization for Generalized Outcomes</title>
-      <link>/publication/2_brain-connectivity-informed-regularization-generalized/</link>
-      <pubDate>Mon, 15 Feb 2021 17:59:50 -0400</pubDate>
-      <guid>/publication/2_brain-connectivity-informed-regularization-generalized/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Brain connectivity-informed regularization methods for regression</title>
-      <link>/project/project_mdpeer/</link>
+      <link>https://example.com/post/project_mdpeer/</link>
       <pubDate>Wed, 06 Dec 2017 11:54:53 -0400</pubDate>
-      <guid>/project/project_mdpeer/</guid>
+      <guid>https://example.com/post/project_mdpeer/</guid>
       <description>&lt;p&gt;We propose to estimate association between the brain structure features and a scalar outcome in a regression model while utilizing additional information about structural connectivity between the brain regions.&lt;/p&gt;
 &lt;p&gt;Specifically, we propose a novel regularization method &amp;ndash; riPEER (ridgified Partially Empirical Eigenvectors for Regression) &amp;ndash; that defines a regularization penalty term based on the structural connectivity-derived Laplacian matrix.&lt;/p&gt;
 &lt;!---
 &lt;span style=&#34;color:purple&#34;&gt;**See images citation and/or credit information** [below](#custom)&lt;/span&gt;.
 --&gt;
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;
       &lt;ul&gt;
@@ -45,10 +38,38 @@
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
+&lt;/details&gt;
 &lt;h3 id=&#34;scientific-problem&#34;&gt;Scientific problem&lt;/h3&gt;
 &lt;p&gt;The motivation for the work was to quantify the association between alcohol abuse phenotypes (outcome) and cortical thickness of the brain (covariates) in a study sample of young social-to-heavy drinking males. The data included measurements of average cortical thickness estimated for 68 brain regions.&lt;/p&gt;
 &lt;p&gt;This image (see images credit &lt;a href=&#34;#custom&#34;&gt;below&lt;/a&gt;) visualizes process of obtaining cortical thickness measurements from structural MRI images.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;MRI_sequence.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /post/project_mdpeer/MRI_sequence_hud94671994637836497631a710e744dcb_160345_190cb1bb00563730165979831b93646a.webp 400w,
+               /post/project_mdpeer/MRI_sequence_hud94671994637836497631a710e744dcb_160345_5de9217bf34c51eda89f73b20a1581c4.webp 760w,
+               /post/project_mdpeer/MRI_sequence_hud94671994637836497631a710e744dcb_160345_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://example.com/post/project_mdpeer/MRI_sequence_hud94671994637836497631a710e744dcb_160345_190cb1bb00563730165979831b93646a.webp&#34;
+               width=&#34;699&#34;
+               height=&#34;400&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h3 id=&#34;challenges&#34;&gt;Challenges&lt;/h3&gt;
 &lt;p&gt;Commonly shared issues in such settings are:&lt;/p&gt;
 &lt;ol&gt;
@@ -82,7 +103,34 @@ $$&lt;/p&gt;
 &lt;li&gt;$\lambda_Q$ - regularization parameter for a graph-based penalty term,&lt;/li&gt;
 &lt;li&gt;$\lambda_R$ - regularization parameter for ridge penalty term.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /post/project_mdpeer/featured_hu4c8e0795ed81281ef6542e1e535a8949_306484_b5161e80ed6d48e44adb3ef8f3726180.webp 400w,
+               /post/project_mdpeer/featured_hu4c8e0795ed81281ef6542e1e535a8949_306484_cd69ab8ea4a45b62a1c57edae538231e.webp 760w,
+               /post/project_mdpeer/featured_hu4c8e0795ed81281ef6542e1e535a8949_306484_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://example.com/post/project_mdpeer/featured_hu4c8e0795ed81281ef6542e1e535a8949_306484_b5161e80ed6d48e44adb3ef8f3726180.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;421&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h5 id=&#34;ripeer-penalty-term&#34;&gt;riPEER penalty term&lt;/h5&gt;
 &lt;p&gt;In the riPEER penalty term  $(\lambda_Qb^TQb +  \lambda_Rb^Tb)$,&lt;/p&gt;
 &lt;ul&gt;
@@ -125,14 +173,6 @@ Graduate School of Journalism. Accessed at: &lt;a href=&#34;https://multimedia.j
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Brain Connectivity Informed Regularization Methods for Regression</title>
-      <link>/publication/1_brain-connectivity-informed-regularization/</link>
-      <pubDate>Thu, 23 Nov 2017 17:24:49 -0400</pubDate>
-      <guid>/publication/1_brain-connectivity-informed-regularization/</guid>
-      <description></description>
     </item>
     
   </channel>

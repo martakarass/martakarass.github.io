@@ -2,24 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cadence | Home</title>
-    <link>/tag/cadence/</link>
-      <atom:link href="/tag/cadence/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://example.com/tag/cadence/</link>
+      <atom:link href="https://example.com/tag/cadence/index.xml" rel="self" type="application/rss+xml" />
     <description>cadence</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 06 Dec 2019 11:54:53 -0400</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 06 Dec 2019 11:54:53 -0400</lastBuildDate>
     <image>
-      <url>/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png</url>
+      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>cadence</title>
-      <link>/tag/cadence/</link>
+      <link>https://example.com/tag/cadence/</link>
     </image>
     
     <item>
       <title>Adaptive empirical pattern transformation (ADEPT)</title>
-      <link>/project/project_adept/</link>
+      <link>https://example.com/post/project_adept/</link>
       <pubDate>Fri, 06 Dec 2019 11:54:53 -0400</pubDate>
-      <guid>/project/project_adept/</guid>
+      <guid>https://example.com/post/project_adept/</guid>
       <description>&lt;p&gt;We propose adaptive empirical pattern transformation (ADEPT), a fast, scalable, and accurate method for pattern segmentation in time-series.&lt;/p&gt;
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;
       &lt;ul&gt;
@@ -33,12 +34,40 @@
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
+&lt;/details&gt;
 &lt;h3 id=&#34;scientific-problem&#34;&gt;Scientific problem&lt;/h3&gt;
 &lt;p&gt;The motivation for the work was to provide fast and accurate open-source method for pattern segmentation from raw accelerometry data.&lt;/p&gt;
 &lt;p&gt;The methods were needed for automated walking strides segmentation from accelerometry recordings collected during continuous walking that we had across a number of health studies.&lt;/p&gt;
 &lt;h3 id=&#34;challenges&#34;&gt;Challenges&lt;/h3&gt;
 &lt;p&gt;The plot below shows an example of raw accelerometry data &amp;ndash; three-dimensional time-series of acceleration [&lt;em&gt;g&lt;/em&gt;] measurements. Data showed were collected 5 s of walking for two different individuals, with 4 wearable sensors worn simultaneously at wrist, hip, left, and right ankle.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;intro_3d_acc.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /post/project_adept/intro_3d_acc_huf4bf13b2a325ec4783166d44a7e48d77_620976_5694baef7845183fe6dfc1b2e790e3dd.webp 400w,
+               /post/project_adept/intro_3d_acc_huf4bf13b2a325ec4783166d44a7e48d77_620976_3e606f6be2732850c2a96a77265e0a22.webp 760w,
+               /post/project_adept/intro_3d_acc_huf4bf13b2a325ec4783166d44a7e48d77_620976_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://example.com/post/project_adept/intro_3d_acc_huf4bf13b2a325ec4783166d44a7e48d77_620976_5694baef7845183fe6dfc1b2e790e3dd.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;418&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;While the repetitive patterns of walking are relatively clear to a human observer, there are a few challenges in segmenting them accurately with an algorithm:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -65,7 +94,29 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The GIF below demonstrates the big picture of the algorithm.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;adept_concept3.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
+           src=&#34;https://example.com/post/project_adept/adept_concept3.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;The underlying template&amp;rsquo;s scaling and translating along the observed data signal is closely related to the Continuous Wavelet Transform (CWT), $$W_{\Psi}(s, \tau)  =
 \int_{-\infty}^{\infty} x(t) \frac{1}{\sqrt{s}}\Psi \left(\frac{t - \tau}{s} \right)dt.$$
 Conversely to CWT&amp;rsquo;s mother wavelet $\Psi(\cdot)$, ADEPT  uses a data-based pattern function (not required to satisfy the wavelet admissibility condition) and comes with a number of other algorithm features tailored for its target application.&lt;/p&gt;
@@ -83,7 +134,7 @@ Conversely to CWT&amp;rsquo;s mother wavelet $\Psi(\cdot)$, ADEPT  uses a data-b
 &lt;p&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/adept/vignettes/adept-strides-segmentation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Walking strides segmentation with adept&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;🎉 The adept R package was selected in Top 40 new CRAN packages in May 2019 (&lt;a href=&#34;https://rviews.rstudio.com/2019/06/25/may-2019-top-40-new-cran-packages/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;list link&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&amp;#x1f389; The adept R package was selected in Top 40 new CRAN packages in May 2019 (&lt;a href=&#34;https://rviews.rstudio.com/2019/06/25/may-2019-top-40-new-cran-packages/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;list link&lt;/a&gt;).&lt;/p&gt;
 &lt;h3 id=&#34;custom&#34;&gt;&lt;span style=&#34;color:purple&#34;&gt;&lt;strong&gt;Images used in the post &amp;ndash; credit/references&lt;/strong&gt;&lt;/span&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;

@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: December 3, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.6" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.ca0136a1225e0f5a7cf4a3c148b229f1.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLEPDJKTQ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-FLEPDJKTQ9', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Marta Karas" />
+
+
+
+
+
+  
+
+<meta name="description" content="Package runstats provides methods for fast computation of running sample statistics for time series via Fast Fourier Transform." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://example.com/post/project_runstats/" />
+<link rel="canonical" href="https://example.com/post/project_runstats/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+
+  <meta property="twitter:site" content="@GetResearchDev" />
+  <meta property="twitter:creator" content="@GetResearchDev" />
+<meta property="twitter:image" content="https://example.com/post/project_runstats/featured.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Home" />
+<meta property="og:url" content="https://example.com/post/project_runstats/" />
+<meta property="og:title" content="&#39;runstats&#39; R package: Fast Computation of Running Statistics for Time Series | Home" />
+<meta property="og:description" content="Package runstats provides methods for fast computation of running sample statistics for time series via Fast Fourier Transform." /><meta property="og:image" content="https://example.com/post/project_runstats/featured.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2019-03-15T11:54:53-04:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2019-03-15T11:54:53-04:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.com/post/project_runstats/"
+  },
+  "headline": "'runstats' R package: Fast Computation of Running Statistics for Time Series",
+  
+  "image": [
+    "https://example.com/post/project_runstats/featured.png"
+  ],
+  
+  "datePublished": "2019-03-15T11:54:53-04:00",
+  "dateModified": "2019-03-15T11:54:53-04:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Marta Karas"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Home",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Package runstats provides methods for fast computation of running sample statistics for time series via Fast Fourier Transform."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>&#39;runstats&#39; R package: Fast Computation of Running Statistics for Time Series | Home</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="4da29d14aa0d2e5c61810c41edab9aee" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.3a6bdbdff5d8a89d6e651adb3deec035.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#talks"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallerytab"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://twitter.com/martakarass" data-toggle="tooltip" data-placement="bottom" title="Follow me on Twitter" target="_blank" rel="noopener" aria-label="Follow me on Twitter">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>&#39;runstats&#39; R package: Fast Computation of Running Statistics for Time Series</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 15, 2019
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Package <code>runstats</code> provides methods for fast computation of running sample statistics for time series. The methods utilize Convolution Theorem to compute convolutions via Fast Fourier Transform (FFT). Implemented running statistics include:</p>
+<ol>
+<li>mean,</li>
+<li>standard deviation,</li>
+<li>variance,</li>
+<li>covariance,</li>
+<li>correlation,</li>
+<li>euclidean distance.</li>
+</ol>
+<details class="toc-inpage d-print-none  " open>
+  <summary class="font-weight-bold">Table of Contents</summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#compare-runningcov-runstats-with-a-conventional-method">Compare <code>RunningCov {runstats}</code> with a conventional method</a></li>
+    <li><a href="#compare-runningcov-runstats-with-sliding_cov-dvmisc-c-implementation">Compare <code>RunningCov {runstats}</code> with <code>sliding_cov {dvmisc}</code> c++ implementation</a></li>
+    <li><a href="#session-info">Session info</a></li>
+  </ul>
+</nav>
+</details>
+<h1 id="website">Website</h1>
+<p>Package website is located <a href="https://martakarass.github.io/runstats/" target="_blank" rel="noopener">here</a>.</p>
+<h1 id="installation">Installation</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;runstats&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h1 id="usage">Usage</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">runstats</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Example: running correlation</span>
+</span></span><span class="line"><span class="cl"><span class="n">x0</span> <span class="o">&lt;-</span> <span class="nf">sin</span><span class="p">(</span><span class="nf">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">2</span> <span class="o">*</span> <span class="kc">pi</span> <span class="o">*</span> <span class="m">5</span><span class="p">,</span> <span class="n">length.out</span> <span class="o">=</span> <span class="m">1000</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span>  <span class="o">&lt;-</span> <span class="n">x0</span> <span class="o">+</span> <span class="nf">rnorm</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span> <span class="n">sd</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pattern</span> <span class="o">&lt;-</span> <span class="n">x0[1</span><span class="o">:</span><span class="m">100</span><span class="n">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">out1</span> <span class="o">&lt;-</span> <span class="nf">RunningCor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pattern</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">out2</span> <span class="o">&lt;-</span> <span class="nf">RunningCor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">circular</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Example: running mean</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">cumsum</span><span class="p">(</span><span class="nf">rnorm</span><span class="p">(</span><span class="m">1000</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">out1</span> <span class="o">&lt;-</span> <span class="nf">RunningMean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="m">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">out2</span> <span class="o">&lt;-</span> <span class="nf">RunningMean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="m">100</span><span class="p">,</span> <span class="n">circular</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span></code></pre></div><h1 id="running-statistics">Running statistics</h1>
+<p>To better explain the details of running statistics, package&rsquo;s function <code>runstats.demo(func.name)</code> allows to visualize how the output of each running statistics method is generated. To run the demo, use <code>func.name</code> being one of the methods&rsquo; names:</p>
+<ol>
+<li><code>&quot;RunningMean&quot;</code>,</li>
+<li><code>&quot;RunningSd&quot;</code>,</li>
+<li><code>&quot;RunningVar&quot;</code>,</li>
+<li><code>&quot;RunningCov&quot;</code>,</li>
+<li><code>&quot;RunningCor&quot;</code>,</li>
+<li><code>&quot;RunningL2Norm&quot;</code>.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Example: demo for running correlation method  </span>
+</span></span><span class="line"><span class="cl"><span class="nf">runstats.demo</span><span class="p">(</span><span class="s">&#34;RunningCor&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt=""
+           src="/post/project_runstats/gif_1.gif"
+           loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Example: demo for running mean method </span>
+</span></span><span class="line"><span class="cl"><span class="nf">runstats.demo</span><span class="p">(</span><span class="s">&#34;RunningMean&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt=""
+           src="/post/project_runstats/gif_2.gif"
+           loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h1 id="performance">Performance</h1>
+<p>We use <code>rbenchmark</code> to measure elapsed time of <code>RunningCov</code> execution, for different lengths of time-series <code>x</code> and fixed length of the shorter pattern <code>y</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">rbenchmark</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">set.seed </span><span class="p">(</span><span class="m">20190315</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x.N.seq</span> <span class="o">&lt;-</span> <span class="m">10</span><span class="nf">^</span><span class="p">(</span><span class="m">3</span><span class="o">:</span><span class="m">7</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x.list</span>  <span class="o">&lt;-</span> <span class="nf">lapply</span><span class="p">(</span><span class="n">x.N.seq</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="nf">runif</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">runif</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Benchmark execution time of RunningCov </span>
+</span></span><span class="line"><span class="cl"><span class="n">out.df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kr">for</span> <span class="p">(</span><span class="n">x.tmp</span> <span class="kr">in</span> <span class="n">x.list</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="n">out.df.tmp</span> <span class="o">&lt;-</span> <span class="nf">benchmark</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;runstats&#34;</span> <span class="o">=</span> <span class="n">runstats</span><span class="o">::</span><span class="nf">RunningCov</span><span class="p">(</span><span class="n">x.tmp</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">replications</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">columns</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;test&#34;</span><span class="p">,</span> <span class="s">&#34;replications&#34;</span><span class="p">,</span> <span class="s">&#34;elapsed&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s">&#34;relative&#34;</span><span class="p">,</span> <span class="s">&#34;user.self&#34;</span><span class="p">,</span> <span class="s">&#34;sys.self&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="n">out.df.tmp</span><span class="o">$</span><span class="n">x_length</span> <span class="o">&lt;-</span> <span class="nf">length</span><span class="p">(</span><span class="n">x.tmp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">out.df.tmp</span><span class="o">$</span><span class="n">pattern_length</span> <span class="o">&lt;-</span> <span class="nf">length</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">out.df</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">out.df</span><span class="p">,</span> <span class="n">out.df.tmp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">knitr</span><span class="o">::</span><span class="nf">kable</span><span class="p">(</span><span class="n">out.df</span><span class="p">)</span>
+</span></span></code></pre></div><table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">test</th>
+<th style="text-align: right;">replications</th>
+<th style="text-align: right;">elapsed</th>
+<th style="text-align: right;">relative</th>
+<th style="text-align: right;">user.self</th>
+<th style="text-align: right;">sys.self</th>
+<th style="text-align: right;">x_length</th>
+<th style="text-align: right;">pattern_length</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">runstats</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">runstats</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.019</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">10000</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">runstats</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.183</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.148</td>
+<td style="text-align: right;">0.035</td>
+<td style="text-align: right;">100000</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">runstats</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1.700</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.592</td>
+<td style="text-align: right;">0.107</td>
+<td style="text-align: right;">1000000</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">runstats</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">19.852</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">17.185</td>
+<td style="text-align: right;">2.576</td>
+<td style="text-align: right;">10000000</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+<h2 id="compare-runningcov-runstats-with-a-conventional-method">Compare <code>RunningCov {runstats}</code> with a conventional method</h2>
+<p>To compare <code>runstats</code> performance with &ldquo;conventional&rdquo; loop-based way of computing running covariance in <code>R</code>, we use <code>rbenchmark</code> package to measure elapsed time of <code>runstats::RunningCov</code> and running covariance implemented with <code>sapply</code> loop, for different lengths of time-series <code>x</code> and fixed length of the shorter time-series <code>y</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Conventional approach </span>
+</span></span><span class="line"><span class="cl"><span class="n">RunningCov.sapply</span> <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="n">l_x</span> <span class="o">&lt;-</span> <span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">l_y</span> <span class="o">&lt;-</span> <span class="nf">length</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">sapply</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="p">(</span><span class="n">l_x</span> <span class="o">-</span> <span class="n">l_y</span> <span class="o">+</span> <span class="m">1</span><span class="p">),</span> <span class="kr">function</span><span class="p">(</span><span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">cov</span><span class="p">(</span><span class="n">x[i</span><span class="o">:</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">l_y</span><span class="m">-1</span><span class="p">)</span><span class="n">]</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">out.df2</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kr">for</span> <span class="p">(</span><span class="n">x.tmp</span> <span class="kr">in</span> <span class="n">x.list</span><span class="nf">[c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">)</span><span class="n">]</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="n">out.df.tmp</span> <span class="o">&lt;-</span> <span class="nf">benchmark</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;conventional&#34;</span> <span class="o">=</span> <span class="nf">RunningCov.sapply</span><span class="p">(</span><span class="n">x.tmp</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;runstats&#34;</span> <span class="o">=</span> <span class="n">runstats</span><span class="o">::</span><span class="nf">RunningCov</span><span class="p">(</span><span class="n">x.tmp</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">replications</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">columns</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;test&#34;</span><span class="p">,</span> <span class="s">&#34;replications&#34;</span><span class="p">,</span> <span class="s">&#34;elapsed&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s">&#34;relative&#34;</span><span class="p">,</span> <span class="s">&#34;user.self&#34;</span><span class="p">,</span> <span class="s">&#34;sys.self&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="n">out.df.tmp</span><span class="o">$</span><span class="n">x_length</span> <span class="o">&lt;-</span> <span class="nf">length</span><span class="p">(</span><span class="n">x.tmp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">out.df2</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">out.df2</span><span class="p">,</span> <span class="n">out.df.tmp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Benchmark results</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">plt1</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="n">out.df2</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x_length</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">elapsed</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">test</span><span class="p">))</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_line</span><span class="p">()</span> <span class="o">+</span> <span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">3</span><span class="p">)</span> <span class="o">+</span> <span class="nf">scale_x_log10</span><span class="p">()</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_minimal</span><span class="p">(</span><span class="n">base_size</span> <span class="o">=</span> <span class="m">14</span><span class="p">)</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&#34;Vector length of x&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="n">y</span> <span class="o">=</span> <span class="s">&#34;Elapsed [s]&#34;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">&#34;Method&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">       <span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Running covariance (x,y) rbenchmark&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">       <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&#34;Vector length of y = 100&#34;</span><span class="p">)</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&#34;bottom&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt2</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">plt1</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_y_log10</span><span class="p">()</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="s">&#34;Log of elapsed [s]&#34;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cowplot</span><span class="o">::</span><span class="nf">plot_grid</span><span class="p">(</span><span class="n">plt1</span><span class="p">,</span> <span class="n">plt2</span><span class="p">,</span> <span class="n">nrow</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">,</span> <span class="s">&#39;B&#39;</span><span class="p">))</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /post/project_runstats/benchmark_compare_conventional_plot_results-1_hu8c5045f93dd11c0a8751a52ffd8ded0c_149637_8a062b5ae3fc174100cec843201d84f1.webp 400w,
+               /post/project_runstats/benchmark_compare_conventional_plot_results-1_hu8c5045f93dd11c0a8751a52ffd8ded0c_149637_e57aea4b9ddb648493cb8658812031e7.webp 760w,
+               /post/project_runstats/benchmark_compare_conventional_plot_results-1_hu8c5045f93dd11c0a8751a52ffd8ded0c_149637_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/project_runstats/benchmark_compare_conventional_plot_results-1_hu8c5045f93dd11c0a8751a52ffd8ded0c_149637_8a062b5ae3fc174100cec843201d84f1.webp"
+               width="760"
+               height="380"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="compare-runningcov-runstats-with-sliding_cov-dvmisc-c-implementation">Compare <code>RunningCov {runstats}</code> with <code>sliding_cov {dvmisc}</code> c++ implementation</h2>
+<p><code>dvmisc</code> package (<a href="https://github.com/vandomed/dvmisc" target="_blank" rel="noopener">GitHub</a>, <a href="https://cran.r-project.org/web/packages/dvmisc/index.html" target="_blank" rel="noopener">CRAN</a>) is a package for <em>Convenience Functions, Moving Window Statistics, and Graphics</em>, and includes functions for calculating moving-window statistics efficiently via c++, written by <a href="https://vandomed.github.io/" target="_blank" rel="noopener">Dane Van Domelen</a>. Here, we compare <code>RunningCov {runstats}</code> performance with c++ implementation from <code>sliding_cov {dvmisc}</code>. Dane contributed the code in its large part.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># devtools::install_github(&#34;vandomed/dvmisc&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">dvmisc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">set.seed</span><span class="p">(</span><span class="m">20100315</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x.N.seq</span> <span class="o">&lt;-</span> <span class="m">10</span><span class="nf">^</span><span class="p">(</span><span class="m">3</span><span class="o">:</span><span class="m">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x.list</span>  <span class="o">&lt;-</span> <span class="nf">lapply</span><span class="p">(</span><span class="n">x.N.seq</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="nf">runif</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">get.out.df</span> <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span><span class="n">y</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="n">out.df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">for</span> <span class="p">(</span><span class="n">x.tmp</span> <span class="kr">in</span> <span class="n">x.list</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">if</span> <span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">x.tmp</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nf">length</span><span class="p">(</span><span class="n">y</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">      <span class="n">out.df.tmp</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">test</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span>  <span class="n">replications</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span> <span class="n">relative</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">user.self</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span> <span class="n">sys.self</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="kr">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">out.df.tmp</span> <span class="o">&lt;-</span> <span class="nf">benchmark</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;runstats&#34;</span> <span class="o">=</span> <span class="n">runstats</span><span class="o">::</span><span class="nf">RunningCov</span><span class="p">(</span><span class="n">x.tmp</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;dvmisc&#34;</span> <span class="o">=</span> <span class="n">dvmisc</span><span class="o">::</span><span class="nf">sliding_cov</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x.tmp</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">replications</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">columns</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;test&#34;</span><span class="p">,</span> <span class="s">&#34;replications&#34;</span><span class="p">,</span> <span class="s">&#34;elapsed&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s">&#34;relative&#34;</span><span class="p">,</span> <span class="s">&#34;user.self&#34;</span><span class="p">,</span> <span class="s">&#34;sys.self&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">out.df.tmp</span><span class="o">$</span><span class="n">x_length</span> <span class="o">&lt;-</span> <span class="nf">length</span><span class="p">(</span><span class="n">x.tmp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">out.df</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">out.df</span><span class="p">,</span> <span class="n">out.df.tmp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">return</span><span class="p">(</span><span class="n">out.df</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">out.df_y10</span>    <span class="o">&lt;-</span> <span class="nf">get.out.df</span><span class="p">(</span><span class="nf">runif</span><span class="p">(</span><span class="m">10</span><span class="n">^1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">out.df_y100</span>   <span class="o">&lt;-</span> <span class="nf">get.out.df</span><span class="p">(</span><span class="nf">runif</span><span class="p">(</span><span class="m">10</span><span class="n">^2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">out.df_y1000</span>  <span class="o">&lt;-</span> <span class="nf">get.out.df</span><span class="p">(</span><span class="nf">runif</span><span class="p">(</span><span class="m">10</span><span class="n">^3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">out.df_y10000</span> <span class="o">&lt;-</span> <span class="nf">get.out.df</span><span class="p">(</span><span class="nf">runif</span><span class="p">(</span><span class="m">10</span><span class="n">^4</span><span class="p">))</span>
+</span></span></code></pre></div><p>Benchmark results</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">get.plt</span> <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">subtitle</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x_length</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">elapsed</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">test</span><span class="p">))</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">geom_line</span><span class="p">()</span> <span class="o">+</span> <span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">3</span><span class="p">)</span> <span class="o">+</span> <span class="nf">scale_x_log10</span><span class="p">()</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">theme_minimal</span><span class="p">(</span><span class="n">base_size</span> <span class="o">=</span> <span class="m">14</span><span class="p">)</span> <span class="o">+</span>  <span class="nf">scale_y_log10</span><span class="p">()</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&#34;Vector length of x&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="n">y</span> <span class="o">=</span> <span class="s">&#34;Log of elapsed [s]&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">         <span class="n">color</span> <span class="o">=</span> <span class="s">&#34;Method&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">         <span class="n">subtitle</span> <span class="o">=</span> <span class="n">subtitle</span><span class="p">)</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&#34;bottom&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt1</span> <span class="o">&lt;-</span> <span class="nf">get.plt</span><span class="p">(</span><span class="n">out.df_y10</span><span class="p">,</span> <span class="s">&#34;Vector length of y = 10&#34;</span><span class="p">)</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Running covariance (x,y) rbenchmark&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt2</span> <span class="o">&lt;-</span> <span class="nf">get.plt</span><span class="p">(</span><span class="n">out.df_y100</span><span class="p">,</span>   <span class="s">&#34;Vector length of y = 100&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt3</span> <span class="o">&lt;-</span> <span class="nf">get.plt</span><span class="p">(</span><span class="n">out.df_y1000</span><span class="p">,</span>  <span class="s">&#34;Vector length of y = 1,000&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt4</span> <span class="o">&lt;-</span> <span class="nf">get.plt</span><span class="p">(</span><span class="n">out.df_y10000</span><span class="p">,</span> <span class="s">&#34;Vector length of y = 1,0000&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cowplot</span><span class="o">::</span><span class="nf">plot_grid</span><span class="p">(</span><span class="n">plt1</span><span class="p">,</span> <span class="n">plt2</span><span class="p">,</span> <span class="n">plt3</span><span class="p">,</span> <span class="n">plt4</span><span class="p">,</span> <span class="n">nrow</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">,</span> <span class="s">&#39;B&#39;</span><span class="p">,</span> <span class="s">&#39;C&#39;</span><span class="p">,</span> <span class="s">&#39;D&#39;</span><span class="p">))</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /post/project_runstats/benchmark_compare_dvmisc_plot_results-1_hu80f7659a715482dadfefccc529e863f6_287003_8313f18a73570e34986e15f0a8406573.webp 400w,
+               /post/project_runstats/benchmark_compare_dvmisc_plot_results-1_hu80f7659a715482dadfefccc529e863f6_287003_2f786c7aa2a89c98b5e20099ad5f62ce.webp 760w,
+               /post/project_runstats/benchmark_compare_dvmisc_plot_results-1_hu80f7659a715482dadfefccc529e863f6_287003_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/project_runstats/benchmark_compare_dvmisc_plot_results-1_hu80f7659a715482dadfefccc529e863f6_287003_8313f18a73570e34986e15f0a8406573.webp"
+               width="760"
+               height="608"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="session-info">Session info</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">sessioninfo</span><span class="o">::</span><span class="nf">session_info</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">## ─ Session info ───────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  setting  value                       </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  version  R version 3.5.2 (2018-12-20)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  os       macOS Mojave 10.14.2        </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  system   x86_64, darwin15.6.0        </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  ui       X11                         </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  language (EN)                        </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  collate  en_US.UTF-8                 </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  ctype    en_US.UTF-8                 </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  tz       America/New_York            </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  date     2019-11-14                  </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">## </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">## ─ Packages ───────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  package     * version date       lib source        </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  colorspace    1.4-1   2019-03-18 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  digest        0.6.22  2019-10-21 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  dplyr         0.8.3   2019-07-04 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  evaluate      0.14    2019-05-28 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  fftwtools     0.9-8   2017-03-25 [1] CRAN (R 3.5.0)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  ggplot2     * 3.2.1   2019-08-10 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  glue          1.3.1   2019-03-12 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  gtable        0.3.0   2019-03-25 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  knitr         1.26    2019-11-12 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  lazyeval      0.2.2   2019-03-15 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  magrittr      1.5     2014-11-22 [1] CRAN (R 3.5.0)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  munsell       0.5.0   2018-06-12 [1] CRAN (R 3.5.0)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  pillar        1.4.2   2019-06-29 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  purrr         0.3.3   2019-10-18 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  R6            2.4.1   2019-11-12 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  rbenchmark  * 1.0.0   2012-08-30 [1] CRAN (R 3.5.0)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  Rcpp          1.0.3   2019-11-08 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  rlang         0.4.1   2019-10-24 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  rmarkdown     1.15    2019-08-21 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  rstudioapi    0.10    2019-03-19 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  runstats    * 1.1.0   2019-11-14 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  scales        1.0.0   2018-08-09 [1] CRAN (R 3.5.0)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.5.0)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  stringi       1.4.3   2019-03-12 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  stringr       1.4.0   2019-02-10 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  tibble        2.1.3   2019-06-06 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  tidyselect    0.2.5   2018-10-11 [1] CRAN (R 3.5.0)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  withr         2.1.2   2018-03-15 [1] CRAN (R 3.5.0)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  xfun          0.11    2019-11-12 [1] CRAN (R 3.5.2)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">##  yaml          2.2.0   2018-07-25 [1] CRAN (R 3.5.0)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">## </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">## [1] /Library/Frameworks/R.framework/Versions/3.5/Resources/library</span>
+</span></span></code></pre></div>
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/rstats/">rstats</a>
+  
+  <a class="badge badge-light" href="/tag/signal-processing/">signal processing</a>
+  
+  <a class="badge badge-light" href="/tag/methods/">methods</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2Fproject_runstats%2F&amp;text=%27runstats%27&#43;R&#43;package%3A&#43;Fast&#43;Computation&#43;of&#43;Running&#43;Statistics&#43;for&#43;Time&#43;Series" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2Fproject_runstats%2F&amp;t=%27runstats%27&#43;R&#43;package%3A&#43;Fast&#43;Computation&#43;of&#43;Running&#43;Statistics&#43;for&#43;Time&#43;Series" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=%27runstats%27%20R%20package%3A%20Fast%20Computation%20of%20Running%20Statistics%20for%20Time%20Series&amp;body=https%3A%2F%2Fexample.com%2Fpost%2Fproject_runstats%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2Fproject_runstats%2F&amp;title=%27runstats%27&#43;R&#43;package%3A&#43;Fast&#43;Computation&#43;of&#43;Running&#43;Statistics&#43;for&#43;Time&#43;Series" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=%27runstats%27&#43;R&#43;package%3A&#43;Fast&#43;Computation&#43;of&#43;Running&#43;Statistics&#43;for&#43;Time&#43;Series%20https%3A%2F%2Fexample.com%2Fpost%2Fproject_runstats%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2Fproject_runstats%2F&amp;title=%27runstats%27&#43;R&#43;package%3A&#43;Fast&#43;Computation&#43;of&#43;Running&#43;Statistics&#43;for&#43;Time&#43;Series" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://example.com/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hub87cc965849d0920d7a3e008da7cce97_44255_270x270_fill_q75_lanczos_center.jpg" alt="Marta Karas"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://example.com/">Marta Karas</a></h5>
+      <h6 class="card-subtitle">Senior Manager, Statistics</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/martakarass" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=S27sttcAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/martakarass" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/martakaras/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/docs/mkaras_cv.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+<p class="powered-by">
+  
+  <a href="/privacy/">Privacy Policy</a>
+  
+  
+   &middot; 
+  <a href="/terms/">Terms</a>
+  
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.62586ca65ca61821fe707eb9fa6268b7.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9137013a66774049159934c29c3f0205.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
