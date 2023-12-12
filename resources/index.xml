@@ -48,6 +48,32 @@
   
   
   &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/28056_1.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/28056_1_hu03c1798293cab15ef5448e0df3ff5ee3_4426778_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;28056_1.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/28056_4.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/28056_4_hu0621452eee15c30a09408dd70d199f8b_3068848_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;28056_4.jpg&#34; width=&#34;563&#34; height=&#34;750&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
     &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/28056_8.jpg&#34; &gt;
       &lt;img src=&#34;https://example.com/media/albums/gallery_all/28056_8_hu130d7ee688e540a62680a75cadd88ed3_2309268_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;28056_8.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
     &lt;/a&gt;
