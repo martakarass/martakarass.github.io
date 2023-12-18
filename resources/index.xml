@@ -217,6 +217,19 @@
   
   
   &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/28258_8.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/28258_8_hu8bdcc5d1cc3dcc9e5b351e66c2e03688_2983430_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;28258_8.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
     &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/28260_3.jpg&#34; &gt;
       &lt;img src=&#34;https://example.com/media/albums/gallery_all/28260_3_huad4c8de92b9a30716296eab911225236_5216525_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;28260_3.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
     &lt;/a&gt;
