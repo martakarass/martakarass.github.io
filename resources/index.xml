@@ -61,6 +61,45 @@
   
   
   &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27944_39.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/27944_39_hu83028a415f83d2b722b9e3297608de8b_2096733_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27944_39.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27944_57.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/27944_57_hu94349f62af59317a8db10421bf612ac2_5830027_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27944_57.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27944_59.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/27944_59_hu3772ace1dc634b5e1a514e8a874457cc_1602862_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27944_59.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
     &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/28056_1.jpg&#34; &gt;
       &lt;img src=&#34;https://example.com/media/albums/gallery_all/28056_1_hu6162d3cd8f51760d824b9d66ebb70eea_4357023_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;28056_1.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
     &lt;/a&gt;
