@@ -17,7 +17,7 @@
       <link>https://example.com/resources/gallery-all/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://example.com/resources/gallery-all/</guid>
-      <description>&lt;p&gt;Welcome to my photo gallery! These are some of my favorite pictures taken in recent years. Click on any picture to enter the gallery view and see it in full size (this allows to see description of a picture&amp;rsquo;s location in the left-bottom). Thank you for visiting my website.&lt;/p&gt;
+      <description>&lt;p&gt;Welcome to my photo gallery! These are some of my favorite pictures taken in recent years. Click on any picture to enter the gallery view and see it in full size (this allows to see description of a picture&amp;rsquo;s location). Thank you for visiting my website.&lt;/p&gt;
 
 
 
@@ -50,6 +50,45 @@
   &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
     &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27775_1.jpg&#34; &gt;
       &lt;img src=&#34;https://example.com/media/albums/gallery_all/27775_1_hu7fdb06d1e2941f3550a1473359f92f78_3755450_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27775_1.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27839_55.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/27839_55_hu627872d483d0a5328d75a2409aec52b2_2332679_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27839_55.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27839_95.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/27839_95_hu6e578157fb3f392fcebcfb820bb4d491_2514997_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27839_95.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27909_5.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/27909_5_hu588fb7c90101b0278bbb43cf69961d69_3199325_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27909_5.jpg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
     &lt;/a&gt;
   &lt;/div&gt;
   
