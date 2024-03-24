@@ -2648,7 +2648,12 @@ options&lt;/a&gt;).&lt;/p&gt;</description>
       <link>https://example.com/resources/recently-all/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://example.com/resources/recently-all/</guid>
-      <description>&lt;h4 id=&#34;2023&#34;&gt;2023&lt;/h4&gt;
+      <description>&lt;h4 id=&#34;2024&#34;&gt;2024&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;[2024-03-01] Our paper &lt;a href=&#34;https://doi.org/10.1016/j.ebiom.2024.105036&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Upper limb movements as digital biomarkers in people with ALS&amp;rdquo;&lt;/a&gt; is published. This work
+proposes several measures that quantify count and duration of upper limb movements: flexion, extension, supination, and pronation from wearable accelerometer data. &lt;/br&gt;&lt;/br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2023&#34;&gt;2023&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;[2023-03-06] Our paper &lt;a href=&#34;https://www.nature.com/articles/s41746-023-00778-y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Wearable device and smartphone data can track ALS disease progression and may serve as novel clinical trial outcome measures&amp;rdquo;&lt;/a&gt; is published. This work
 investigates whether mobile applications and wearable devices can be used to quantify ALS disease progression through active (surveys) and passive (sensors) data collection. &lt;/br&gt;&lt;/br&gt;&lt;/li&gt;
@@ -2823,13 +2828,27 @@ investigates whether mobile applications and wearable devices can be used to qua
       <link>https://example.com/resources/publications-all/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://example.com/resources/publications-all/</guid>
-      <description>&lt;p&gt;* Joint first co-authorship.&lt;/p&gt;
+      <description>&lt;p&gt;* Joint first co-authorship. &lt;/br&gt;
+$^+$ Joint last co-authorship.&lt;/p&gt;
+&lt;h3 id=&#34;2024&#34;&gt;2024&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Upper limb movements as digital biomarkers in people with ALS&lt;/strong&gt; by Straczkiewicz, M., Karas, M., Johnson, S. A., Burke, K. M., Scheier, Z., Royse, T. B., Calcagno, N., Clark, A., Iyer, A., Berry, J. D., &amp;amp; Onnela, J.-P. (2024). eBioMedicine, 101.
+&lt;/br&gt;
+&lt;a href=&#34;https://doi.org/10.1016/j.ebiom.2024.105036&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
+&lt;a href=&#34;https://github.com/onnela-lab/als-forearm-movements&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code (biomarker derivation)&lt;/a&gt; | &lt;a href=&#34;https://github.com/martakarass/DP-Berry-Beiwe_novel_acc_metrics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code (statistical analysis)&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Advancing clinical development for neuronopathic Hunter Syndrome through a quantitatively-driven reverse translation framework&lt;/strong&gt; by Latzman, R.D., Campagne, O., Modi, M.E., Karas, M., Malinga, C.J., Whiteman, D.A.H. (2024). Clinical and Translational Science. In press.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;2023&#34;&gt;2023&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Tracking ALS disease progression using passively collected smartphone sensor data&lt;/strong&gt; by Karas, M.*, Olsen, J.*, Straczkiewicz, M., Johnson, S. A., Burke, K. M., Iwasaki, S., Lahav, A., Scheier, Z. A., Clark, A. P., Iyer, A. S., Huang, E., Berry, J. D., &amp;amp; Onnela, J.-P. (2023). [Preprint].
+&lt;p&gt;&lt;strong&gt;Tracking ALS disease progression using passively collected smartphone sensor data&lt;/strong&gt; by Karas, M.*, Olsen, J.*, Straczkiewicz, M., Johnson, S. A., Burke, K. M., Iwasaki, S., Lahav, A., Scheier, Z. A., Clark, A. P., Iyer, A. S., Huang, E., Berry, J. D.$^+$, &amp;amp; Onnela, J.-P.$^+$ (2023). [Preprint].
 &lt;/br&gt;
-&lt;a href=&#34;https://doi.org/10.2139/ssrn.4526533&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Preprint&lt;/a&gt; |
+&lt;a href=&#34;https://doi.org/10.2139/ssrn.4526533&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
 &lt;a href=&#34;https://github.com/onnela-lab/als-beiwe-passive-data&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -2844,7 +2863,7 @@ Johnson, S. A.*, Karas, M.*, Burke, K. M., Straczkiewicz, M., Scheier, Z. A., Cl
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Estimating knee movement patterns of recreational runners across training sessions using multilevel functional regression models&lt;/strong&gt; by Matabuena, M.*, Karas, M.*, Riazati, S., Caplan, N., &amp;amp; Hayes, P. R. (2023).  The American Statistician, 77(2), 169–181.
 &lt;/br&gt;
-&lt;a href=&#34;https://martakarass.github.io/docs/papers/Matabuena_2022_estimating_knee_movement_patterns.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Preprint&lt;/a&gt; |
+&lt;a href=&#34;https://martakarass.github.io/docs/papers/Matabuena_2022_estimating_knee_movement_patterns.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Preprint (free)&lt;/a&gt; |
 &lt;a href=&#34;https://doi.org/10.1080/00031305.2022.2105950&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
 &lt;a href=&#34;https://github.com/martakarass/biomechanics-manuscript&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
@@ -2852,7 +2871,7 @@ Johnson, S. A.*, Karas, M.*, Burke, K. M., Straczkiewicz, M., Scheier, Z. A., Cl
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Free-living gait cadence measured by wearable accelerometer: a promising alternative to traditional measures of mobility for assessing fall risk&lt;/strong&gt; by Urbanek, J. K., Roth, D. L., Karas, M., Wanigatunga, A. A., Mitchell, C. M., Juraschek, S. P., Cai, Y., Appel, L. J., &amp;amp; Schrack, J. A. (2023). The Journals of Gerontology: Series A, 78(5), 802–810.
 &lt;/br&gt;
-&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10172982/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PubMed&lt;/a&gt; |
+&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10172982/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PubMed (free)&lt;/a&gt; |
 &lt;a href=&#34;https://doi.org/10.1093/gerona/glac013&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
