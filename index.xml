@@ -81,6 +81,19 @@
   
   
   &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27675_5.jpg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/27675_5_hu53a2c1b53a168d1d3a839045f6e361bc_4790345_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27675_5.jpg&#34; width=&#34;750&#34; height=&#34;614&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
     &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27767_5.jpg&#34; &gt;
       &lt;img src=&#34;https://example.com/media/albums/gallery_all/27767_5_huef161186b1c0a7210951db3445fc4efa_3458141_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27767_5.jpg&#34; width=&#34;587&#34; height=&#34;750&#34;&gt;
     &lt;/a&gt;
