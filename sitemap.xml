@@ -26,24 +26,100 @@
     <lastmod>2023-11-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://example.com/talk/</loc>
+    <lastmod>2022-11-13T10:05:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2022-11-13-adds/</loc>
+    <lastmod>2022-11-13T10:05:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://example.com/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2022-08-02-jsm/</loc>
+    <lastmod>2022-08-08T10:05:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/post/2022-04-27-rmcorr_vs_lmm/</loc>
     <lastmod>2022-04-26T17:19:28-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://example.com/tag/digital-health/</loc>
+    <lastmod>2022-03-04T10:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/tag/digital-phenotyping/</loc>
+    <lastmod>2022-03-04T10:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2022-03-04-wit_opportunities_and_challenges/</loc>
+    <lastmod>2022-03-04T10:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/tag/smartphones/</loc>
+    <lastmod>2022-03-04T10:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/tags/</loc>
+    <lastmod>2022-03-04T10:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://example.com/post/2022-01-05-gps_strava_read_and_viz/</loc>
     <lastmod>2022-01-05T17:19:28-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2021-11-05-health_data_science_syposium/</loc>
+    <lastmod>2021-11-05T10:05:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/post/project_upstrap/</loc>
     <lastmod>2021-09-01T11:54:53-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://example.com/talk/2021-07-28-onnela_lab_meeting/</loc>
+    <lastmod>2021-07-28T09:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://example.com/post/2021-06-29-pa_measures_and_summarizedactigraphy/</loc>
     <lastmod>2021-07-10T17:19:28-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2021-05-13-wit_lab_meeting/</loc>
+    <lastmod>2021-05-13T14:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2021-05-06-engage_lab_meeting/</loc>
+    <lastmod>2021-05-06T12:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2021-04-27-eba_training_program/</loc>
+    <lastmod>2021-04-27T14:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2020-12-20-cmsstatistics/</loc>
+    <lastmod>2020-12-20T11:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2020-12-17-wit_arctools/</loc>
+    <lastmod>2020-12-17T14:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2020-12-08-krager_workshop/</loc>
+    <lastmod>2020-12-08T11:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2020-12-01-computing_club/</loc>
+    <lastmod>2020-12-01T12:15:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2020-09-31-wit_summer_project_evidation/</loc>
+    <lastmod>2020-09-30T14:30:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2020-08-17-iscb_krakow/</loc>
+    <lastmod>2020-08-27T15:50:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/resources/recently-all/</loc>
@@ -60,6 +136,22 @@
   </url><url>
     <loc>https://example.com/resources/talks-all/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2020-06-04-engage_arcstats/</loc>
+    <lastmod>2020-06-04T11:00:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2020-03-11-kth-oss-webinar-adept/</loc>
+    <lastmod>2020-03-11T14:00:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2020-02-25-banff/</loc>
+    <lastmod>2020-02-25T02:15:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2019-12-03-cmstatistics-london/</loc>
+    <lastmod>2019-12-16T08:40:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/tag/actigraphy/</loc>
@@ -82,10 +174,6 @@
     <lastmod>2019-12-06T11:54:53-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/tags/</loc>
-    <lastmod>2019-12-06T11:54:53-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://example.com/tag/walking/</loc>
     <lastmod>2019-12-06T11:54:53-04:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -94,8 +182,36 @@
     <lastmod>2019-12-06T11:54:53-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://example.com/talk/2019-11-05-3rd-oss-webinar/</loc>
+    <lastmod>2019-11-05T15:00:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2019-10-31-wit-novartis/</loc>
+    <lastmod>2019-10-31T14:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://example.com/post/2019-10-28-ttest-versus-ztest/</loc>
     <lastmod>2019-10-28T17:19:28-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2019-10-15-journal-club-wit/</loc>
+    <lastmod>2019-10-15T12:15:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2019-10-06-novartis-internal/</loc>
+    <lastmod>2019-10-08T09:40:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2019-06-26-icampam/</loc>
+    <lastmod>2019-06-26T15:05:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2019-05-23-stwur-meeting-talk/</loc>
+    <lastmod>2019-05-23T18:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2019-05-14-motion-lab-talk/</loc>
+    <lastmod>2019-05-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/post/project_adeptdata/</loc>
@@ -112,6 +228,10 @@
   </url><url>
     <loc>https://example.com/tag/rstats/</loc>
     <lastmod>2019-04-22T11:54:53-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2019-04-16-adaptive-trials-semminar/</loc>
+    <lastmod>2019-04-17T12:30:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/publication/preprint/</loc>
@@ -146,6 +266,10 @@
     <lastmod>2019-03-15T11:54:53-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://example.com/talk/2019-02-12-computing_club/</loc>
+    <lastmod>2019-02-12T12:15:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://example.com/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -160,6 +284,14 @@
   </url><url>
     <loc>https://example.com/post/2018-09-02-applying-for-phd-in-usa/</loc>
     <lastmod>2018-09-02T19:17:23-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2018-08-01-jsm/</loc>
+    <lastmod>2018-08-01T15:05:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/talk/2018-07-03-whyr/</loc>
+    <lastmod>2018-07-03T10:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/privacy/</loc>

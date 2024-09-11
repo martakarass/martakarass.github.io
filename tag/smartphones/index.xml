@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>smartphones | Home</title>
+    <link>https://example.com/tag/smartphones/</link>
+      <atom:link href="https://example.com/tag/smartphones/index.xml" rel="self" type="application/rss+xml" />
+    <description>smartphones</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 04 Mar 2022 10:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>smartphones</title>
+      <link>https://example.com/tag/smartphones/</link>
+    </image>
+    
+    <item>
+      <title>Smartphone devices data in health research: opportunities and challenges</title>
+      <link>https://example.com/talk/2022-03-04-wit_opportunities_and_challenges/</link>
+      <pubDate>Fri, 04 Mar 2022 10:00:00 +0000</pubDate>
+      <guid>https://example.com/talk/2022-03-04-wit_opportunities_and_challenges/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
