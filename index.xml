@@ -2775,8 +2775,19 @@ options&lt;/a&gt;).&lt;/p&gt;</description>
       <guid>https://example.com/resources/recently-all/</guid>
       <description>&lt;h4 id=&#34;2024&#34;&gt;2024&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;[2024-03-01] Our paper &lt;a href=&#34;https://doi.org/10.1016/j.ebiom.2024.105036&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Upper limb movements as digital biomarkers in people with ALS&amp;rdquo;&lt;/a&gt; is published. This work
-proposes several measures that quantify count and duration of upper limb movements: flexion, extension, supination, and pronation from wearable accelerometer data. &lt;/br&gt;&lt;/br&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[2024-10-11] Our paper &lt;a href=&#34;https://doi.org/10.2196/57439&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Smartphone screen time characteristics in people with suicidal thoughts: retrospective observational data analysis study&amp;rdquo;&lt;/a&gt; is published. This work shows the feasibility of using passively collected phone logs for studying smartphone screen time characteristics as an alternative to self-report measures in people with suicidal thinking. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[2024-05-30] Our paper &lt;a href=&#34;https://doi.org/10.1002/acn3.52050&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Tracking amyotrophic lateral sclerosis disease progression using passively collected smartphone sensor data&amp;rdquo;&lt;/a&gt; is published. This study demonstrates how passively collected GPS and accelerometer data from smartphones can be used to quantify changes in mobility, walking, and other motor functions in individuals with ALS. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[2024-03-30] I obtained a green card through the EB-2 National Interest Waiver (NIW) process. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[2024-03-01] Our paper &lt;a href=&#34;https://doi.org/10.1016/j.ebiom.2024.105036&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Upper limb movements as digital biomarkers in people with ALS&amp;rdquo;&lt;/a&gt; is published. This work
+proposes several measures that quantify count and duration of upper limb movements: flexion, extension, supination, and pronation from wearable accelerometer data. &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;2023&#34;&gt;2023&lt;/h4&gt;
 &lt;ul&gt;
@@ -2958,35 +2969,45 @@ $^+$ Joint last co-authorship.&lt;/p&gt;
 &lt;h3 id=&#34;2024&#34;&gt;2024&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Upper limb movements as digital biomarkers in people with ALS&lt;/strong&gt; by Straczkiewicz, M., Karas, M., Johnson, S. A., Burke, K. M., Scheier, Z., Royse, T. B., Calcagno, N., Clark, A., Iyer, A., Berry, J. D., &amp;amp; Onnela, J.-P. (2024). eBioMedicine, 101.
+&lt;p&gt;&lt;strong&gt;Smartphone screen time characteristics in people with suicidal thoughts: retrospective observational data analysis study&lt;/strong&gt; by Karas, M., Huang, D., Clement, Z., Millner, A. J., Kleiman, E. M., Bentley, K. H., Zuromski, K. L., Fortgang, R. G., DeMarco, D., Haim, A., Donovan, A., Buonopane, R. J., Bird, S. A., Smoller, J. W., Nock, M. K., Onnela, J.-P. (2024). JMIR mHealth and uHealth, 12(1), e57439.
+&lt;/br&gt;
+&lt;a href=&#34;https://doi.org/10.2196/57439&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
+&lt;a href=&#34;https://github.com/onnela-lab/stb-beiwe-screen-time&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tracking amyotrophic lateral sclerosis disease progression using passively collected smartphone sensor data&lt;/strong&gt; by Karas*, M., Olsen*, J., Straczkiewicz, M., Johnson, S. A., Burke, K. M., Iwasaki, S., Lahav, A., Scheier, Z. A., Clark, A. P., Iyer, A. S., Huang, E., Berry, J. D., Onnela, J.-P. (2024). Annals of Clinical and Translational Neurology, 11(6), 1380–1392.
+&lt;/br&gt;
+&lt;a href=&#34;https://doi.org/10.1002/acn3.52050&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
+&lt;a href=&#34;https://github.com/onnela-lab/als-beiwe-passive-data&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Upper limb movements as digital biomarkers in people with ALS&lt;/strong&gt; by Straczkiewicz, M., Karas, M., Johnson, S. A., Burke, K. M., Scheier, Z., Royse, T. B., Calcagno, N., Clark, A., Iyer, A., Berry, J. D., Onnela, J.-P. (2024). eBioMedicine, 101.
 &lt;/br&gt;
 &lt;a href=&#34;https://doi.org/10.1016/j.ebiom.2024.105036&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
 &lt;a href=&#34;https://github.com/onnela-lab/als-forearm-movements&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code (biomarker derivation)&lt;/a&gt; | &lt;a href=&#34;https://github.com/martakarass/DP-Berry-Beiwe_novel_acc_metrics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code (statistical analysis)&lt;/a&gt;
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Advancing clinical development for neuronopathic Hunter Syndrome through a quantitatively-driven reverse translation framework&lt;/strong&gt; by Latzman, R.D., Campagne, O., Modi, M.E., Karas, M., Malinga, C.J., Whiteman, D.A.H. (2024). Clinical and Translational Science. In press.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Advancing clinical development for neuronopathic Hunter Syndrome through a quantitatively-driven reverse translation framework&lt;/strong&gt; by Latzman, R.D., Campagne, O., Modi, M.E., Karas, M., Malinga, C.J., Whiteman, D.A.H. (2024). Clinical and Translational Science. Clinical and Translational Science, 17(4), e13776.
+&lt;/br&gt;
+&lt;a href=&#34;https://pmc.ncbi.nlm.nih.gov/articles/PMC10974710/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PubMed (free)&lt;/a&gt; |
+&lt;a href=&#34;https://doi.org/10.1111/cts.13776&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;2023&#34;&gt;2023&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Tracking ALS disease progression using passively collected smartphone sensor data&lt;/strong&gt; by Karas, M.*, Olsen, J.*, Straczkiewicz, M., Johnson, S. A., Burke, K. M., Iwasaki, S., Lahav, A., Scheier, Z. A., Clark, A. P., Iyer, A. S., Huang, E., Berry, J. D.$^+$, &amp;amp; Onnela, J.-P.$^+$ (2023). [Preprint].
-&lt;/br&gt;
-&lt;a href=&#34;https://doi.org/10.2139/ssrn.4526533&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
-&lt;a href=&#34;https://github.com/onnela-lab/als-beiwe-passive-data&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;
-&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Wearable device and smartphone data quantify ALS progression and may provide novel outcome measures&lt;/strong&gt; by
-Johnson, S. A.*, Karas, M.*, Burke, K. M., Straczkiewicz, M., Scheier, Z. A., Clark, A. P., Iwasaki, S., Lahav, A., Iyer, A. S., Onnela, J.-P., &amp;amp; Berry, J. D. (2023). Npj Digital Medicine, 6(1), 34.
+Johnson, S. A.*, Karas, M.*, Burke, K. M., Straczkiewicz, M., Scheier, Z. A., Clark, A. P., Iwasaki, S., Lahav, A., Iyer, A. S., Onnela, J.-P., Berry, J. D. (2023). Npj Digital Medicine, 6(1), 34.
 &lt;/br&gt;
 &lt;a href=&#34;https://doi.org/10.1038/s41746-023-00778-y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
 &lt;a href=&#34;https://github.com/onnela-lab/als-wearables&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Estimating knee movement patterns of recreational runners across training sessions using multilevel functional regression models&lt;/strong&gt; by Matabuena, M.*, Karas, M.*, Riazati, S., Caplan, N., &amp;amp; Hayes, P. R. (2023).  The American Statistician, 77(2), 169–181.
+&lt;p&gt;&lt;strong&gt;Estimating knee movement patterns of recreational runners across training sessions using multilevel functional regression models&lt;/strong&gt; by Matabuena, M.*, Karas, M.*, Riazati, S., Caplan, N., Hayes, P. R. (2023).  The American Statistician, 77(2), 169–181.
 &lt;/br&gt;
 &lt;a href=&#34;https://martakarass.github.io/docs/papers/Matabuena_2022_estimating_knee_movement_patterns.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Preprint (free)&lt;/a&gt; |
 &lt;a href=&#34;https://doi.org/10.1080/00031305.2022.2105950&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
@@ -2994,7 +3015,7 @@ Johnson, S. A.*, Karas, M.*, Burke, K. M., Straczkiewicz, M., Scheier, Z. A., Cl
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Free-living gait cadence measured by wearable accelerometer: a promising alternative to traditional measures of mobility for assessing fall risk&lt;/strong&gt; by Urbanek, J. K., Roth, D. L., Karas, M., Wanigatunga, A. A., Mitchell, C. M., Juraschek, S. P., Cai, Y., Appel, L. J., &amp;amp; Schrack, J. A. (2023). The Journals of Gerontology: Series A, 78(5), 802–810.
+&lt;p&gt;&lt;strong&gt;Free-living gait cadence measured by wearable accelerometer: a promising alternative to traditional measures of mobility for assessing fall risk&lt;/strong&gt; by Urbanek, J. K., Roth, D. L., Karas, M., Wanigatunga, A. A., Mitchell, C. M., Juraschek, S. P., Cai, Y., Appel, L. J., Schrack, J. A. (2023). The Journals of Gerontology: Series A, 78(5), 802–810.
 &lt;/br&gt;
 &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10172982/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PubMed (free)&lt;/a&gt; |
 &lt;a href=&#34;https://doi.org/10.1093/gerona/glac013&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt;&lt;/p&gt;
@@ -3003,27 +3024,27 @@ Johnson, S. A.*, Karas, M.*, Burke, K. M., Straczkiewicz, M., Scheier, Z. A., Cl
 &lt;h3 id=&#34;2022&#34;&gt;2022&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Quantification of acceleration as activity counts in ActiGraph wearable.&lt;/strong&gt; by Neishabouri, A., Nguyen, J., Samuelsson, J., Guthrie, T., Biggs, M., Wyatt, J., Cross, D., Karas, M., Migueles, J. H., Khan, S., &amp;amp; Guo, C. C. (2022). Scientific Reports, 12(1), 11958.
+&lt;p&gt;&lt;strong&gt;Quantification of acceleration as activity counts in ActiGraph wearable.&lt;/strong&gt; by Neishabouri, A., Nguyen, J., Samuelsson, J., Guthrie, T., Biggs, M., Wyatt, J., Cross, D., Karas, M., Migueles, J. H., Khan, S., Guo, C. C. (2022). Scientific Reports, 12(1), 11958.
 &lt;/br&gt;
 &lt;a href=&#34;https://doi.org/10.1038/s41598-022-16003-x&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
 &lt;a href=&#34;https://github.com/actigraph/agcounts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Software&lt;/a&gt;
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Comparison of accelerometry-based measures of physical activity: retrospective observational data analysis study&lt;/strong&gt; by Karas, M.*, Muschelli, J.*, Leroux, A., Urbanek, J. K., Wanigatunga, A. A., Bai, J., Crainiceanu, C. M., &amp;amp; Schrack, J. A. (2022). JMIR mHealth and uHealth, 10(7), e38077.
+&lt;p&gt;&lt;strong&gt;Comparison of accelerometry-based measures of physical activity: retrospective observational data analysis study&lt;/strong&gt; by Karas, M.*, Muschelli, J.*, Leroux, A., Urbanek, J. K., Wanigatunga, A. A., Bai, J., Crainiceanu, C. M., Schrack, J. A. (2022). JMIR mHealth and uHealth, 10(7), e38077.
 &lt;/br&gt;
 &lt;a href=&#34;https://doi.org/10.2196/38077&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
 &lt;a href=&#34;https://github.com/muschellij2/blsa_mims&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Performance analyses of step-counting algorithms using wrist accelerometry&lt;/strong&gt; by Pilkar, R., Gerstel, D., Toole, E., Biggs, M., Guthrie, T., Karas, M., Achkar, C. M. E., Renevey, P., Soltani, A., Sloan, S., Nguyen, J., Patterson, M. R., Ferrario, D., Lemay, M., Neishabouri, A., &amp;amp; Guo, C. (2022). [Preprint].
+&lt;p&gt;&lt;strong&gt;Performance analyses of step-counting algorithms using wrist accelerometry&lt;/strong&gt; by Pilkar, R., Gerstel, D., Toole, E., Biggs, M., Guthrie, T., Karas, M., Achkar, C. M. E., Renevey, P., Soltani, A., Sloan, S., Nguyen, J., Patterson, M. R., Ferrario, D., Lemay, M., Neishabouri, A., Guo, C. (2022). [Preprint].
 &lt;/br&gt;
 &lt;a href=&#34;https://doi.org/10.21203/rs.3.rs-2183645/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Preprint&lt;/a&gt;
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Smartphone-based gait cadence to identify older adults with decreased functional capacity&lt;/strong&gt; by Rubin, D. S., Ranjeva, S. L., Urbanek, J. K., Karas, M., Madariaga, M. L. L., &amp;amp; Huisingh-Scheetz, M. (2022). Digital Biomarkers, 6(2), 61–70.
+&lt;p&gt;&lt;strong&gt;Smartphone-based gait cadence to identify older adults with decreased functional capacity&lt;/strong&gt; by Rubin, D. S., Ranjeva, S. L., Urbanek, J. K., Karas, M., Madariaga, M. L. L., Huisingh-Scheetz, M. (2022). Digital Biomarkers, 6(2), 61–70.
 &lt;/br&gt;
 &lt;a href=&#34;https://doi.org/10.1159/000525344&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -3031,14 +3052,14 @@ Johnson, S. A.*, Karas, M.*, Burke, K. M., Straczkiewicz, M., Scheier, Z. A., Cl
 &lt;h3 id=&#34;2021&#34;&gt;2021&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Upstrap for estimating power and sample size in complex models&lt;/strong&gt; by Karas, M., &amp;amp; Crainiceanu, C. M. (2021).  [Preprint].
+&lt;p&gt;&lt;strong&gt;Upstrap for estimating power and sample size in complex models&lt;/strong&gt; by Karas, M., Crainiceanu, C. M. (2021).  [Preprint].
 &lt;/br&gt;
 &lt;a href=&#34;https://doi.org/10.1101/2021.08.21.457220&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Preprint&lt;/a&gt; |
 &lt;a href=&#34;https://github.com/martakarass/upstrap_manuscript&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation&lt;/strong&gt; by Karas, M., Straczkiewicz, M., Fadel, W., Harezlak, J., Crainiceanu, C. M., &amp;amp; Urbanek, J. K. (2021). Biostatistics, 22(2), 331–347.
+&lt;p&gt;&lt;strong&gt;Adaptive empirical pattern transformation (ADEPT) with application to walking stride segmentation&lt;/strong&gt; by Karas, M., Straczkiewicz, M., Fadel, W., Harezlak, J., Crainiceanu, C. M., Urbanek, J. K. (2021). Biostatistics, 22(2), 331–347.
 &lt;/br&gt;
 &lt;a href=&#34;https://doi.org/10.1093/biostatistics/kxz033&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
 &lt;a href=&#34;https://github.com/martakarass/adept-manuscript&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt; |
@@ -3047,7 +3068,7 @@ Johnson, S. A.*, Karas, M.*, Burke, K. M., Straczkiewicz, M., Scheier, Z. A., Cl
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores&lt;/strong&gt; by Karas, M., Urbanek, J. K., Illiano, V. P., Bogaarts, G., Crainiceanu, C. M., &amp;amp; Dorn, J. F. (2021). Physiological Measurement, 42(6), 065006.
+&lt;p&gt;&lt;strong&gt;Estimation of free-living walking cadence from wrist-worn sensor accelerometry data and its association with SF-36 quality of life scores&lt;/strong&gt; by Karas, M., Urbanek, J. K., Illiano, V. P., Bogaarts, G., Crainiceanu, C. M., Dorn, J. F. (2021). Physiological Measurement, 42(6), 065006.
 &lt;/br&gt;
 &lt;a href=&#34;https://martakarass.github.io/docs/papers/Karas_2021_estimation_of_free_living_walking_cadence_from_wrist.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Preprint&lt;/a&gt; |
 &lt;a href=&#34;https://doi.org/10.1088/1361-6579/ac067b&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
@@ -3056,27 +3077,27 @@ Johnson, S. A.*, Karas, M.*, Burke, K. M., Straczkiewicz, M., Scheier, Z. A., Cl
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Connectivity‐informed adaptive regularization for generalized outcomes&lt;/strong&gt; by Brzyski, D., Karas, M., M Ances, B., Dzemidzic, M., Goñi, J., W Randolph, T., &amp;amp; Harezlak, J. (2021). Canadian Journal of Statistics, 49(1), 203–227. &lt;/br&gt;
+&lt;p&gt;&lt;strong&gt;Connectivity‐informed adaptive regularization for generalized outcomes&lt;/strong&gt; by Brzyski, D., Karas, M., M Ances, B., Dzemidzic, M., Goñi, J., W Randolph, T., Harezlak, J. (2021). Canadian Journal of Statistics, 49(1), 203–227. &lt;/br&gt;
 &lt;a href=&#34;https://onlinelibrary.wiley.com/share/author/UZEZIW4R9KMHH4URWJH4?target=10.1002/cjs.11606&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;2020&#34;&gt;2020&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Predicting subjective recovery from lower limb surgery using consumer wearables&lt;/strong&gt; by Karas, M., Marinsek, N., Goldhahn, J., Foschini, L., Ramirez, E., &amp;amp; Clay, I. (2020). Digital Biomarkers, 4(Suppl. 1), 73–86.
+&lt;li&gt;&lt;strong&gt;Predicting subjective recovery from lower limb surgery using consumer wearables&lt;/strong&gt; by Karas, M., Marinsek, N., Goldhahn, J., Foschini, L., Ramirez, E., Clay, I. (2020). Digital Biomarkers, 4(Suppl. 1), 73–86.
 &lt;/br&gt;
 &lt;a href=&#34;https://doi.org/10.1159/000511531&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;2019&#34;&gt;2019&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Accelerometry data in health research: challenges and opportunities. Review and examples&lt;/strong&gt; by Karas, M., Bai, J., Strączkiewicz, M., Harezlak, J., Glynn, N. W., Harris, T., Zipunnikov, V., Crainiceanu, C., &amp;amp; Urbanek, J. K. (2019). Statistics in Biosciences, 11(2), 210–237.
+&lt;p&gt;&lt;strong&gt;Accelerometry data in health research: challenges and opportunities. Review and examples&lt;/strong&gt; by Karas, M., Bai, J., Strączkiewicz, M., Harezlak, J., Glynn, N. W., Harris, T., Zipunnikov, V., Crainiceanu, C., Urbanek, J. K. (2019). Statistics in Biosciences, 11(2), 210–237.
 &lt;/br&gt;
 &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6874221/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PubMed&lt;/a&gt; |
 &lt;a href=&#34;https://doi.org/10.1007/s12561-018-9227-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt;
 &lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Brain connectivity-informed regularization methods for regression&lt;/strong&gt; by Karas, M., Brzyski, D., Dzemidzic, M., Goñi, J., Kareken, D. A., Randolph, T. W., &amp;amp; Harezlak, J. (2019). Statistics in Biosciences, 11(1), 47–90.
+&lt;p&gt;&lt;strong&gt;Brain connectivity-informed regularization methods for regression&lt;/strong&gt; by Karas, M., Brzyski, D., Dzemidzic, M., Goñi, J., Kareken, D. A., Randolph, T. W., Harezlak, J. (2019). Statistics in Biosciences, 11(1), 47–90.
 &lt;/br&gt;
 &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6583926/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PubMed&lt;/a&gt; |
 &lt;a href=&#34;https://doi.org/10.1007/s12561-017-9208-x&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Journal&lt;/a&gt; |
