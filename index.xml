@@ -68,6 +68,58 @@
   
   
   &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27432_50.jpeg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/27432_50_hu3129c6477fcce11c012220ff0f3b6d01_3114720_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27432_50.jpeg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27432_70_C.jpeg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/27432_70_C_hu375ff9299cca83af7ec25a26b72da97c_4206465_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27432_70_C.jpeg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27432_80.jpeg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/27432_80_huda82e49051ab4d52d0f91ceaa4451d81_2852634_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27432_80.jpeg&#34; width=&#34;750&#34; height=&#34;524&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27432_90.jpeg&#34; &gt;
+      &lt;img src=&#34;https://example.com/media/albums/gallery_all/27432_90_hue05d666b054e55a1220c1346f5275398_5103452_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27432_90.jpeg&#34; width=&#34;750&#34; height=&#34;574&#34;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+    
+    
+    
+    
+    
+  
+  
+  &lt;div class=&#34;gallery-item gallery-item--medium&#34;&gt;
     &lt;a data-fancybox=&#34;gallery-gallery_all&#34; href=&#34;https://example.com/media/albums/gallery_all/27474_5.jpeg&#34; &gt;
       &lt;img src=&#34;https://example.com/media/albums/gallery_all/27474_5_huc2b2a85d734faac6c02264922b1fd880_4715362_750x750_fit_q75_h2_lanczos.webp&#34; loading=&#34;lazy&#34; alt=&#34;27474_5.jpeg&#34; width=&#34;750&#34; height=&#34;563&#34;&gt;
     &lt;/a&gt;
